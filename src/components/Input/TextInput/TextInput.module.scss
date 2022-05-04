@@ -1,0 +1,107 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/fonts.scss';
+@import '../../../styles/mixins.scss';
+
+.textXs {
+    width: 100%;
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    appearance: none;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 200ms;
+    padding-inline-start: 0.625rem;;
+    padding-inline-end: 0.625rem;;
+    height: 15px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 14px;
+    border-image: initial;
+    border-color: #bbb5b5;
+    @include generate-default-font(default);
+}
+
+.textXs:focus {
+    border-width: 2px;
+    border-color: rgba(66, 153, 225, 0.6);
+}
+
+.textSm {
+    width: 100%;
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    appearance: none;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 200ms;
+    padding-inline-start: 0.625rem;;
+    padding-inline-end: 0.625rem;;
+    height: 18px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 14px;
+    border-image: initial;
+    border-color: #bbb5b5;
+    @include generate-default-font(default);
+}
+
+.textSm:focus {
+    border-width: 2px;
+    border-color: rgba(66, 153, 225, 0.6);
+}
+
+.textMd {
+    width: 100%;
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    appearance: none;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 200ms;
+    padding-inline-start: 0.625rem;;
+    padding-inline-end: 0.625rem;;
+    height: 24px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 14px;
+    border-image: initial;
+    border-color: #bbb5b5;
+    @include generate-default-font(default);
+}
+
+.textMd:focus {
+    border-width: 2px;
+    border-color: rgba(66, 153, 225, 0.6);
+}
+
+.textLg {
+    width: 100%;
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    appearance: none;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 200ms;
+    padding-inline-start: 0.625rem;;
+    padding-inline-end: 0.625rem;;
+    height: 38px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 14px;
+    border-image: initial;
+    border-color: #bbb5b5;
+    @include generate-default-font(default);
+}
+
+.textLg:focus {
+    border-width: 2px;
+    border-color: rgba(66, 153, 225, 0.6);
+}

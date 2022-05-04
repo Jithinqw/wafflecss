@@ -1,0 +1,58 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts.scss';
+
+.rootText {
+    @include generate-default-font(default);
+    color: $black;
+}
+
+// Font sizes 
+.fontExtraSmall {
+    font-size: 8px;
+}
+
+.fontSmall {
+    font-size: 10px
+}
+
+.fontSizeRegular {
+    font-size: 12px;
+}
+
+.fontLarge {
+    font-size: 20px;
+}
+
+.fontExtraLarge {
+    font-size: 24px;
+}
+
+// Text Styles
+.fontItalics {
+    font-style: italic;
+}
+
+.fontRegular {
+    font-style: normal;
+}
+
+.fontBold {
+    font-weight: bold;
+}
+
+.wiggle {
+    @include resolve-animation(wiggle)
+}
+
+.fadeout {
+    @include resolve-animation(fadeout)
+}
+
+.fadein {
+    @include resolve-animation(fadein)
+}
+
+.blink {
+    @include resolve-animation(blink)
+}
