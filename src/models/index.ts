@@ -8,7 +8,7 @@ import {
     TextInputStyle 
 } from './Text';
 
-export {
+export default {
     ButtonSize, ButtonStyle,
     ButtonType, AnimationType,
     FontSize, TextStyle, 
