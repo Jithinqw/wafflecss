@@ -8,4 +8,4 @@ enum AnimationType {
     WIGGLE = 'wiggle',
 }
 
-export default AnimationType;
+export {AnimationType};

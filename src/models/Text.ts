@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export enum FontSize {
+enum FontSize {
     EXTRASMALL = 'extrasmall',
     SMALL = 'small',
     REGULAR = 'regular',
@@ -8,15 +8,21 @@ export enum FontSize {
     EXTRALARGE = 'extralarge'
 }
 
-export enum TextStyle {
+enum TextStyle {
     REGULAR = 'regular',
     ITALICS = 'italics',
     BOLD = 'bold'
 }
 
-export enum TextInputStyle {
+enum TextInputStyle {
     XS = 'xs',
     SM = 'sm',
     MD = 'md',
     LG = 'lg'
+}
+
+export {
+    TextInputStyle,
+    TextStyle,
+    FontSize
 }

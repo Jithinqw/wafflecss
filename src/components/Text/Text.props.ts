@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimationType from '../../models/Animation';
+import {AnimationType} from '../../models/Animation';
 import { FontSize, TextStyle } from "../../models/Text";
 import styles from './Text.module.scss';
 

@@ -1,19 +1,19 @@
 /* eslint-disable */
 
-export enum ButtonSize {
+enum ButtonSize {
     ROUNDED = 'rounded',
     SQUARE = 'square',
     PILL = 'pill',
     OUTLINE = 'outline',
 }
 
-export enum ButtonType {
+enum ButtonType {
     RESET = 'reset',
     SUBMIT = 'submit',
     BUTTON = 'button',
 }
 
-export enum ButtonStyle {
+enum ButtonStyle {
     DEFAULT = 'default',
     DRIBBLE = 'dribble',
     STACKOVERFLOWDEFAULT = 'stackoverflowdefault',
@@ -26,4 +26,10 @@ export enum ButtonStyle {
     BIGSURWHITE = 'bigsurwhite',
     BIGSURGREY = 'bigsurgrey',
     BIGSURPRIMARY = 'bigsurprimary',
+}
+
+export {
+    ButtonStyle,
+    ButtonSize,
+    ButtonType
 }
