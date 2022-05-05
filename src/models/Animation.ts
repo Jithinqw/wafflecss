@@ -1,9 +1,11 @@
 /* eslint-disable */
 
-export enum AnimationType {
+enum AnimationType {
     FADEIN = 'fadein',
     FADEOUT = 'fadeout',
     BLINK = 'blink',
     SHAKE = 'shake',
     WIGGLE = 'wiggle',
 }
+
+export default AnimationType;
