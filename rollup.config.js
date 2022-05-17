@@ -13,10 +13,12 @@ export default [
     output: [
       {
         file: "dist/index.js",
+        sourcemap: true,
         format: "cjs",
       },
       {
         file: "dist/index.es.js",
+        sourcemap: true,
         format: "es",
         exports: "named",
       },
