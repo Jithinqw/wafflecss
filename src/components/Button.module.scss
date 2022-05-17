@@ -21,7 +21,7 @@
     touch-action: manipulation;
   }
   
-.buttonDribble {
+  .buttonDribble {
     background-color: #EA4C89;
     border-radius: 8px;
     border-style: none;
@@ -46,14 +46,14 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
+  }
   
-.buttonDribble:hover,
-.buttonDribble:focus {
+  .buttonDribble:hover,
+  .buttonDribble:focus {
     background-color: #F082AC;
-}
+  }
   
-.buttonStackOverflow {
+  .buttonStackOverflow {
     background-color: #e1ecf4;
     border-radius: 3px;
     border: 1px solid #7aa7c7;
@@ -77,25 +77,25 @@
     touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
-}
+  }
   
-.buttonStackOverflow:hover,
-.buttonStackOverflow:focus {
+  .buttonStackOverflow:hover,
+  .buttonStackOverflow:focus {
     background-color: #b3d3ea;
     color: #2c5777;
-}
+  }
   
-.buttonStackOverflowbutton-8:focus {
+  .buttonStackOverflowbutton-8:focus {
     box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
+  }
   
-.buttonStackOverflow:active {
+  .buttonStackOverflow:active {
     background-color: #a0c7e4;
     box-shadow: none;
     color: #2c5777;
-}
+  }
   
-.buttonStackoverflowDefault {
+  .buttonStackoverflowDefault {
     background-color: #0095ff;
     border: 1px solid transparent;
     border-radius: 3px;
@@ -119,23 +119,23 @@
     touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
-}
+  }
   
-.buttonStackoverflowDefault:hover,
-.buttonStackoverflowDefault:focus {
+  .buttonStackoverflowDefault:hover,
+  .buttonStackoverflowDefault:focus {
     background-color: #07c;
-}
+  }
   
-.buttonStackoverflowDefault:focus {
+  .buttonStackoverflowDefault:focus {
     box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
+  }
   
-.buttonStackoverflowDefault:active {
+  .buttonStackoverflowDefault:active {
     background-color: #0064bd;
     box-shadow: none;
-}
+  }
   
-.buttonStripe {
+  .buttonStripe {
     appearance: button;
     backface-visibility: hidden;
     background-color: #405cf5;
@@ -162,18 +162,18 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100%;
-}
+  }
   
-.buttonStripe:disabled {
+  .buttonStripe:disabled {
     cursor: default;
-}
+  }
   
-.buttonStripe:focus {
+  .buttonStripe:focus {
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
-}
+  }
   
   
-.buttonMacOsPrimary {
+  .buttonMacOsPrimary {
     background-image: linear-gradient(#42A1EC, #0070C9);
     border: 1px solid #0077CC;
     border-radius: 4px;
@@ -191,36 +191,35 @@
     overflow: visible;
     padding: 4px 15px;
     text-align: center;
-    vertical-align: baseline;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-}
+  }
   
-.buttonMacOsPrimary:disabled {
+  .buttonMacOsPrimary:disabled {
     cursor: default;
     opacity: .3;
-}
+  }
   
-.buttonMacOsPrimary:hover {
+  .buttonMacOsPrimary:hover {
     background-image: linear-gradient(#51A9EE, #147BCD);
     border-color: #1482D0;
     text-decoration: none;
-}
+  }
   
-.buttonMacOsPrimary:active {
+  .buttonMacOsPrimary:active {
     background-image: linear-gradient(#3D94D9, #0067B9);
     border-color: #006DBC;
     outline: none;
-}
+  }
   
-.buttonMacOsPrimary:focus {
+  .buttonMacOsPrimary:focus {
     box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
     outline: none;
-}
+  }
   
-.bigSurPrimary {
+  .bigSurPrimary {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,14 +235,14 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
+  }
   
-.bigSurPrimary:focus {
+  .bigSurPrimary:focus {
     box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
     outline: 0;
-}
+  }
   
-.bigSurGrey {
+  .bigSurGrey {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,14 +257,14 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
+  }
   
-.bigSurGrey:focus {
+  .bigSurGrey:focus {
     box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
     outline: 0;
-}
+  }
   
-.bigSurWhite {
+  .bigSurWhite {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,14 +278,14 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
+  }
   
-.bigSurWhite:focus {
+  .bigSurWhite:focus {
     box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
     outline: 0;
-}
+  }
   
-.buttonLikedIn {
+  .buttonLikedIn {
     align-items: center;
     background-color: #0A66C2;
     border: 0;
@@ -313,26 +312,26 @@
     user-select: none;
     -webkit-user-select: none;
     vertical-align: middle;
-}
+  }
   
-.buttonLikedIn:hover,
-.buttonLikedIn:focus { 
+  .buttonLikedIn:hover,
+  .buttonLikedIn:focus { 
     background-color: #16437E;
     color: #ffffff;
-}
+  }
   
-.buttonLikedIn:active {
+  .buttonLikedIn:active {
     background: #09223b;
     color: rgba(247, 244, 244, 0.7);
-}
+  }
   
-.buttonLikedIn:disabled { 
+  .buttonLikedIn:disabled { 
     cursor: not-allowed;
     background: rgba(0, 0, 0, .08);
     color: rgba(0, 0, 0, .3);
-}
+  }
   
-.buttonAirbnb {
+  .buttonAirbnb {
     background-color: #FFFFFF;
     border: 1px solid #222222;
     border-radius: 8px;
@@ -355,27 +354,27 @@
     user-select: none;
     -webkit-user-select: none;
     width: auto;
-}
+  }
   
-.buttonAirbnb:focus-visible {
+  .buttonAirbnb:focus-visible {
     box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
     transition: box-shadow .2s;
-}
+  }
   
-.buttonAirbnb:active {
+  .buttonAirbnb:active {
     background-color: #F7F7F7;
     border-color: #000000;
     transform: scale(.96);
-}
+  }
   
-.buttonAirbnb:disabled {
+  .buttonAirbnb:disabled {
     border-color: #DDDDDD;
     color: #DDDDDD;
     cursor: not-allowed;
     opacity: 1;
-}
+  }
   
-.buttonCoinbase {
+  .buttonCoinbase {
     appearance: button;
     background-color: #1652F0;
     border: 1px solid #1652F0;
@@ -396,22 +395,22 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     width: fit-content;
-}
+  }
   
-.buttonCoinbase:disabled {
+  .buttonCoinbase:disabled {
     opacity: .5;
-}
+  }
   
-.buttonCoinbase:focus {
+  .buttonCoinbase:focus {
     outline: 0;
-}
+  }
   
-.buttonCoinbase:hover {
+  .buttonCoinbase:hover {
     background-color: #0A46E4;
     border-color: #0A46E4;
-}
+  }
   
-.buttonCoinbase:active {
+  .buttonCoinbase:active {
     background-color: #0039D7;
     border-color: #0039D7;
-}
+  }

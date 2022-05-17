@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
-import { ButtonStyle } from "../../models/Button";
-import styles from './Button.module.scss';
+import { ButtonStyle } from "../models/Button";
+import * as styles from './Button.module.scss';
 
 export interface IButtonProps {
     data: IButtonData,

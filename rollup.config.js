@@ -1,56 +1,44 @@
+import { babel } from "@rollup/plugin-babel";
+import external from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
+import postcss from 'postcss'
+import autoprefixer from 'autoprefixer'
+import scss from "rollup-plugin-scss";
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
-import { terser } from 'rollup-plugin-terser';
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import autoprefixer from 'autoprefixer';
-import filesize from 'rollup-plugin-filesize';
-import postcss from 'rollup-plugin-postcss';
-import json from '@rollup/plugin-json'
-const packageJson = require("./package.json");
+import { terser } from "rollup-plugin-terser";
 
 export default [
   {
-    input: "src/index.ts",
+    input: "./src/index.ts",
     output: [
       {
-        file: packageJson.main,
+        file: "dist/index.js",
         format: "cjs",
-        sourcemap: true,
       },
       {
-        file: packageJson.module,
-        format: "esm",
-        sourcemap: true,
-      }
+        file: "dist/index.es.js",
+        format: "es",
+        exports: "named",
+      },
     ],
+    external: ['react'],
     plugins: [
+      scss({
+        processor: () => postcss([autoprefixer()]),
+        output: true,
+        failOnError: true,
+        outputStyle: "compressed",
+        sass: require('node-sass'),
+      }),
+      babel({
+        exclude: "node_modules/**",
+        presets: ["@babel/preset-react"],
+        babelHelpers: "bundled",
+      }),
+      external(),
       resolve(),
-      commonjs(),
-      peerDepsExternal(),
-      json({
-        compact: true
-      }),
-      typescript({ 
-        tsconfig: "./tsconfig.json"
-      }),
-      filesize(),
-      postcss({
-            writeDefinitions: true,
-            plugins:[autoprefixer],
-      }),
-      terser()
+      typescript(),
+      terser(),
     ],
-    external: [
-      'react',
-      'react-dom'
-    ],
-  },
-  {
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
-    external: [/\.scss$/],
-    plugins: [dts()],
   },
 ];

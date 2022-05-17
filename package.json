@@ -1,39 +1,46 @@
 {
   "name": "wafflecss",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
-    "rollup": "rollup -c",
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jithinqw/wafflecss.git"
+  },
+  "keywords": [],
+  "author": "Jithinqw",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jithinqw/wafflecss/issues"
+  },
+  "homepage": "https://github.com/Jithinqw/wafflecss#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@rollup/plugin-commonjs": "^22.0.0",
+    "@babel/preset-react": "^7.17.12",
+    "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
-    "@types/react": "^18.0.8",
-    "babel-loader": "^8.2.5",
+    "@types/react": "^18.0.9",
+    "autoprefixer": "^10.4.7",
+    "css-loader": "^6.7.1",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.4.13",
     "react": "^18.1.0",
-    "rollup": "^2.71.1",
-    "rollup-plugin-dts": "^4.2.1",
-    "rollup-plugin-filesize": "^9.1.2",
-    "rollup-plugin-postcss": "^4.0.2",
+    "react-dom": "^18.1.0",
+    "rollup": "^2.73.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.51.0",
+    "sass-loader": "^10.2.0",
+    "style-loader": "^3.3.1",
     "typescript": "^4.6.4"
   },
-  "dependencies": {
-    "@rollup/plugin-json": "^4.1.0",
-    "autoprefixer": "^10.4.7",
-    "node-sass": "^7.0.1",
-    "rollup-plugin-extension-mapper": "^1.0.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-terser": "^7.0.2"
-  }
+  "files": [
+    "dist/*"
+  ]
 }
