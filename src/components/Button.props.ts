@@ -31,6 +31,7 @@ export interface IButtonOptions {
 export interface IButtonData {
     /**
      * Text to display in button
+     * @type {string}
      */
     buttonText: string,
     /**
