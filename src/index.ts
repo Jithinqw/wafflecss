@@ -1,9 +1,5 @@
-import Button from './components/Button/Button';
-import Heading from './components/Heading/Heading';
-import TimerClock from './components/Clock/Clock';
-import StackedImage from './components/Image/StackedImage/StackedImage';
-
-export {
-    Button, Heading,
-    TimerClock, StackedImage
-};
+export * from './components/Button/Button';
+export * from './components/Heading/Heading';
+export * from './components/Clock/Clock';
+export * from './components/Image/StackedImage/StackedImage';
+export * from './components/Image/Avatar/Avatar';
