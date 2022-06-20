@@ -1,13 +1,8 @@
-import Button from './components/Button/Button'; 
-import Heading from './components/Heading/Heading';
-import LegalText from './components/Heading/LegalText/LegalText';
-import TimerClock from './components/Clock/Clock';
-import StackedImage from './components/Image/StackedImage/StackedImage';
-import Avatar from './components/Image/Avatar/Avatar';
 
-export { Button };
-export {Heading};
-export {LegalText};
-export {TimerClock};
-export{StackedImage};
-export {Avatar};
+export { default as Button } from './components/Button/Button';
+export { default as Heading } from './components/Heading/Heading';
+export {default as LegalText } from './components/Heading/LegalText/LegalText';
+export { default as TimerClock} from './components/Clock/Clock';
+export { default as StackedImage} from './components/Image/StackedImage/StackedImage';
+export { default as Avatar } from './components/Image/Avatar/Avatar';
+
