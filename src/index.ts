@@ -5,9 +5,9 @@ import TimerClock from './components/Clock/Clock';
 import StackedImage from './components/Image/StackedImage/StackedImage';
 import Avatar from './components/Image/Avatar/Avatar';
 
-
-export { 
-    Button, Heading, 
-    LegalText, TimerClock, 
-    StackedImage, Avatar as default 
-};
+export { Button };
+export {Heading};
+export {LegalText};
+export {TimerClock};
+export{StackedImage};
+export {Avatar};
