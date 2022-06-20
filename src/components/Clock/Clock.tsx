@@ -1,9 +1,55 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { IClockProps } from "./Clock.props";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { IClockProps } from './Clock.props';
+
+const StyledDivClock = styled.div`
+    color: #333;
+    display: flex;
+    font-family: sans-serif;
+`;
+
+const StyledDiv = styled.div`
+    align-items: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    justify-content: center;
+    margin: 4px 0px 0px 4px;
+`;
+
+const StyledDigit = styled.span`
+    color: #333;
+    font-family: sans-serif;
+    font-size: 2em;
+`;
+
+const StyledLabel = styled.span`
+    color: #333;
+    font-family: sans-serif;
+    font-size: .7em;
+`;
+
+const StyledColon = styled.div`
+    align-items: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    justify-content: center;
+    margin-top: -24px;
+`;
 
 const TimerClock = (props: IClockProps) => {
 
+    /**
+     * @function pad
+     * @description Append `0` if value 
+     * length less than 2.
+     * @param {number} value
+     * @returns {string}
+     */
     const pad = (value: number) => {
         let str = value.toString();
         while (str.length < 2) {
@@ -12,6 +58,12 @@ const TimerClock = (props: IClockProps) => {
         return str === `60` ? `00`: str;
     }
 
+    /**
+     * @function calculateTimeLeft
+     * @description calculate remiaining
+     * time from date in props.
+     * @returns {string}
+     */
     const calculateTimeLeft = () => {
         const deadlineStr = props.endtime;
         const deadline = deadlineStr ? Date.parse(deadlineStr) : 0;
@@ -34,13 +86,14 @@ const TimerClock = (props: IClockProps) => {
                 days,
                 hours,
                 minutes,
-                seconds
+                seconds,
             }
         }
         return null;
     }
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
+    const timerLabel: ReadonlyArray<string> = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -50,66 +103,45 @@ const TimerClock = (props: IClockProps) => {
         return () => clearTimeout(timer);
     }, [timeLeft]);
 
-    const StyledDivClock = styled.div`
-        color: #333;
-        display: flex;
-        font-family: CerebriSans-Regular,-apple-system,"system-ui",Roboto,sans-serif;
-        justify-content: space-between;
-        margin: 2em 0;
-        width: 55%;
-    `;
-    const StyledDiv = styled.div`
-        align-items: center;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        font-family: CerebriSans-Regular,-apple-system,"system-ui",Roboto,sans-serif;
-        justify-content: center
-    `;
-    const StyledDigit = styled.span`
-        color: #333;
-        font-family: CerebriSans-Regular,-apple-system,"system-ui",Roboto,sans-serif;
-        font-size: 2em
-    `;
-    const StyledLabel = styled.span`
-        color: #333;
-        font-family: CerebriSans-Regular,-apple-system,"system-ui",Roboto,sans-serif;
-        font-size: .7em
-    `;
+    /**
+     * @function resolveTimerLabel
+     * @description Resolve label type from props.
+     * @param {string} label 
+     * @returns {string}
+     */
+    const resolveTimerLabel = (label: string) => {
+        if(props.labelType === 'lower') {
+            return label?.toString()?.toLowerCase();
+        }
+        return label?.toString()?.toUpperCase();
+    }
 
-    const StyledColon = styled.div`
-        align-items: center;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        font-family: CerebriSans-Regular,-apple-system,"system-ui",Roboto,sans-serif;
-        font-size: 1.5em;
-        justify-content: center;
-        margin-top: -24px;
-    `;
     return (
         <>
-            <StyledDivClock>
-                <StyledDiv>
-                    <StyledDigit>{timeLeft?.days}</StyledDigit>
-                    <StyledLabel>{"days"}</StyledLabel>
-                </StyledDiv>
-                <StyledColon>:</StyledColon>
-                <StyledDiv>
-                    <StyledDigit>{timeLeft?.hours}</StyledDigit>
-                    <StyledLabel>{"hours"}</StyledLabel>
-                </StyledDiv>
-                <StyledColon>:</StyledColon>
-                <StyledDiv>
-                    <StyledDigit>{timeLeft?.minutes}</StyledDigit>
-                    <StyledLabel>{"minutes"}</StyledLabel>
-                </StyledDiv>
-                <StyledColon>:</StyledColon>
-                <StyledDiv>
-                    <StyledDigit>{timeLeft?.seconds}</StyledDigit>
-                    <StyledLabel>{"seconds"}</StyledLabel>
-                </StyledDiv>
-            </StyledDivClock>
+            { timeLeft ? 
+                <StyledDivClock>
+                    <StyledDiv>
+                        <StyledDigit>{timeLeft?.days}</StyledDigit>
+                        <StyledLabel>{resolveTimerLabel(timerLabel[0])}</StyledLabel>
+                    </StyledDiv>
+                    <StyledColon>:</StyledColon>
+                    <StyledDiv>
+                        <StyledDigit>{timeLeft?.hours}</StyledDigit>
+                        <StyledLabel>{resolveTimerLabel(timerLabel[1])}</StyledLabel>
+                    </StyledDiv>
+                    <StyledColon>:</StyledColon>
+                    <StyledDiv>
+                        <StyledDigit>{timeLeft?.minutes}</StyledDigit>
+                        <StyledLabel>{resolveTimerLabel(timerLabel[2])}</StyledLabel>
+                    </StyledDiv>
+                    <StyledColon>:</StyledColon>
+                    <StyledDiv>
+                        <StyledDigit>{timeLeft?.seconds}</StyledDigit>
+                        <StyledLabel>{resolveTimerLabel(timerLabel[3])}</StyledLabel>
+                    </StyledDiv>
+                </StyledDivClock>
+                : null
+            }
         </>
     )
 }

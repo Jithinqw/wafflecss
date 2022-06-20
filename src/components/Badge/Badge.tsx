@@ -7,15 +7,15 @@ const generateBadgeStyle = (badgeColor: 'warn' | 'success' | 'danger') => {
         case 'warn':
             return '#edf2f7';
         case 'success':
-            return ''
+            return 'green'
         case 'danger':
-            return '';
+            return 'red';
         default:
             return '#edf2f7';
     }
 }
 
-const StyledBadge = styled.span`
+const StyledBadge = styled.span<IBadgeProps>`
     display: inline-block;
     white-space: nowrap;
     vertical-align: middle;
@@ -24,8 +24,8 @@ const StyledBadge = styled.span`
     font-size: 0.75rem;
     border-radius: 0.75rem;
     font-weight: 700;
-    background: var(--chakra-colors-gray-100);
-    color: rgb(56, 161, 105);
+    background: ${props => props.data.background ? props.data.background : 'white'}
+    color: ${props => props.options?.color ? generateBadgeStyle(props.options.color) : 'white'}
     box-shadow: rgb(56 161 105) 0px 0px 0px 1px inset;
 `;
 

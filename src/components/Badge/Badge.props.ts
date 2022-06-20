@@ -6,7 +6,6 @@ export default interface IBadgeProps {
 
 interface IBadgeData {
     displayText: string;
-    color?: string;
     background?: string;
 }
 
