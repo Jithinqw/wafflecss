@@ -13,7 +13,7 @@ const generateFontSize = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
         case 'lg':
             return '1.125rem';
         default:
-            return '0.75rem';
+            return '0.875rem';
     }
 }
 
@@ -28,7 +28,7 @@ const generateButtonHeight = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
         case 'lg':
             return '3rem';
         default:
-            return '1.5rem'
+            return '2rem'
     }
 }
 
@@ -43,7 +43,7 @@ const generateButtonSpace = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
         case 'lg':
             return '1.25rem';
         default:
-            return '1.5rem'
+            return '0.75rem'
     }
 }
 const StyledButton = styled.button<IButtonProps>`
