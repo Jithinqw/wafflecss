@@ -1,12 +1,14 @@
 {
   "name": "wafflecss",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -19,28 +21,42 @@
   },
   "homepage": "https://github.com/Jithinqw/wafflecss#readme",
   "dependencies": {
-    "styled-components": "^5.3.5",
-    "react": "^18.1.0"
+    "react": "^18.1.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.0",
     "@babel/preset-env": "^7.18.0",
     "@babel/preset-react": "^7.17.12",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
+    "@storybook/addon-actions": "^6.5.5",
+    "@storybook/addon-essentials": "^6.5.5",
+    "@storybook/addon-interactions": "^6.5.5",
+    "@storybook/addon-links": "^6.5.5",
+    "@storybook/builder-webpack4": "^6.5.5",
+    "@storybook/manager-webpack4": "^6.5.5",
+    "@storybook/react": "^6.5.5",
+    "@storybook/testing-library": "^0.0.11",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
+    "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
-    "@types/jest": "^27.5.1",
+    "@types/enzyme": "^3.10.12",
+    "@types/jest": "^27.5.2",
     "@types/react": "^18.0.9",
     "@types/styled-components": "^5.1.25",
+    "babel-loader": "^8.2.5",
+    "enzyme": "^3.11.0",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "rollup": "^2.74.1",
     "rollup-plugin-dts": "^4.2.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
+    "sb": "^6.5.5",
     "styled-components": "^5.3.5",
     "typescript": "^4.6.4"
   },
