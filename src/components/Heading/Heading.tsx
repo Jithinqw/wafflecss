@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import Animation from "../Animation/Animation";
 import { IHeadingProps } from "./Heading.props";
 
-const makeFontStyle = (style?: 'italics' | 'normal' | 'oblique' | undefined) => {
+/**
+ * @function makeFontStyle
+ * @description generate font style
+ * @param {string} style 
+ * @returns {string}
+ */
+const makeFontStyle = (style: 'italics' | 'normal' | 'oblique' | undefined) => {
     switch (style) {
         case 'italics':
             return 'italic';
@@ -13,6 +20,12 @@ const makeFontStyle = (style?: 'italics' | 'normal' | 'oblique' | undefined) => 
     }
 }
 
+/**
+ * @function makeHeadingSize
+ * @description makes font size
+ * @param {string} fontSize
+ * @returns {string}
+ */
 const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge' | undefined) => {
     switch(fontSize) {
         case 'normal':
@@ -30,6 +43,11 @@ const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' |
     }
 } 
 
+/**
+ * @function makeHeadingWeight
+ * @param {string} fontSize 
+ * @returns {string}
+ */
 const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold' | undefined) => {
     switch(fontSize) {
         case 'extrasmall':
@@ -52,10 +70,11 @@ const StyledHeading = styled.p<IHeadingProps>`
     text-align: center;
     text-transform: none;
     letter-spacing: -.003em;
-    font-family: "inherit";
+    font-family: inherit;
     font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : '300'};
     font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : '16px'};
     font-style: ${props => makeFontStyle(props.options?.style)};
+    animation: ${props => props.options?.animationType ? Animation(props.options.animationType) : ''}
 `;
 
 const Heading = (props: IHeadingProps) => {

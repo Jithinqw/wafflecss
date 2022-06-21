@@ -1,0 +1,15 @@
+export enum AnimationType {
+    ROTATE = 'rotate',
+    BOUNCE = 'bounce',
+    FLASH = 'flash',
+    PULSE = 'pulse',
+    RUBBER = 'rubber',
+    SHAKEX = 'shakex',
+    SHAKEY = 'shakey',
+    HEADSHAKE = 'headshake',
+    SWING = 'swing',
+    TADA = 'tada',
+    WOBBLE = 'wobble',
+    JELLO = 'jello',
+    HEADBEAT = 'headbeat',
+}

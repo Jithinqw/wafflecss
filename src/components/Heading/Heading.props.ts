@@ -1,3 +1,5 @@
+import { AnimationType } from "../../models/Animation";
+
 export interface IHeadingProps {
     data?: IHeadingData;
     events?: IHeadingEvents;
@@ -18,4 +20,5 @@ interface IHeadingOptions {
     weight?: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold';
     size?: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge';
     headingColor?: string;
+    animationType?: AnimationType;
 }
