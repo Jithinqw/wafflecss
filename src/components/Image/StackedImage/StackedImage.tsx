@@ -52,7 +52,7 @@ const StackedImage = (props: IStackedImageProps) => {
                                 {
                                     props.data?.imageData && props.data.imageData && props.data.imageData.map((e, i:number) => {
                                         return (
-                                            <StyledflexAvatarTackItem>
+                                            <StyledflexAvatarTackItem key={i}>
                                                 <img 
                                                     src={e.imageSource}
                                                     height={e.height}
