@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Animation from "../Animation/Animation";
-import { IHeadingProps } from "./Heading.props";
+import React from 'react';
+import styled from 'styled-components';
+import Animation from '../Animation/Animation';
+import { IHeadingProps } from './Heading.props';
 
 /**
  * @function makeFontStyle
@@ -67,13 +67,12 @@ const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' 
 
 const StyledHeading = styled.p<IHeadingProps>`
     color: ${props => props.options?.headingColor ? props.options?.headingColor + ' !important' : `rgb(42, 42, 51)`};
-    text-align: center;
     text-transform: none;
     letter-spacing: -.003em;
     font-family: inherit;
     font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : '300'};
     font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : '16px'};
-    font-style: ${props => makeFontStyle(props.options?.style)};
+    font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : 'normal'};
     animation: ${props => props.options?.animationType ? Animation(props.options.animationType) : ''}
 `;
 

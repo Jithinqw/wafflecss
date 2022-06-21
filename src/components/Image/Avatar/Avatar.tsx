@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { IAvatarProps } from "./Avatar.props";
+import React from 'react';
+import styled from 'styled-components';
+import { IAvatarProps } from './Avatar.props';
 
 const StyledRoundedAvatarImage = styled.img<IAvatarProps>`
     border-radius: 9999px;
@@ -31,16 +32,21 @@ const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
 
 const Avatar = (props: IAvatarProps) => {
 
+    /**
+     * @function resolveAvatar
+     * @description Returns a styled component
+     * @returns {React.ReactNode}
+     */
     const resolveAvatar = () => {
         switch(props.options?.avatarType) {
             case 'rounded':
-                return StyledRoundedAvatarImage;
+                return <StyledRoundedAvatarImage {...props}/>;
             case 'rect':
-                return StyledRectAvatarImage;
+                return <StyledRectAvatarImage {...props}/>;
             case 'bordered':
-                return StyledBorderedAvatarImage;
+                return <StyledBorderedAvatarImage {...props}/>;
             default: 
-                return StyledRectAvatarImage;
+                return <StyledRectAvatarImage {...props}/>;
         }
     }
 
