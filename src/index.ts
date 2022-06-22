@@ -14,6 +14,7 @@ export { default as Progress } from './components/Progress/Progress';
 export { default as Center } from './components/Center/Center';
 export { default as SnackBar } from './components/SnackBar/SnackBar';
 export { default as Backdrop } from './components/Backdrop/Backdrop';
+export { default as Link } from './components/Link/Link';
 
 export {
     AnimationType,
