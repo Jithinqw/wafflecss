@@ -16,6 +16,9 @@ const LegalTextTemplate: ComponentStory<typeof LegalText> = (args) => {
     const propArgs = {
         data: {
             displayText: 'This is a Legal Text',
+        },
+        options:{
+            legalTextSize: 'sm'
         }
     }
     return (

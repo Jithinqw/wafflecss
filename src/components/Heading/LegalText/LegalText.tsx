@@ -21,7 +21,7 @@ const StyledLegalText = styled.span<ILegalTextProps>`
     font-weight: 400;
     letter-spacing: -.01em;
     color: ${props => props.options?.color ? props.options?.color : 'black'};
-    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-family: "inherit";
 `;
 
 

@@ -1,6 +1,9 @@
-<h1 align="center">Waffle CSS</h1>
+<div align="center">
+    <img src="https://en.wikipedia.org/wiki/Waffle#/media/File:Waffles_with_Strawberries.jpg"/>
+</div>
+<h1 align="center">WaffleCSS</h1>
 
-<p align="center">A React based implementation on components.</p>
+<p align="center">A React component library for ease of use.</p>
 
 ## Install
 This repository is distributed with [npm]. After [installing npm][install-npm], you can install `wafflecss` with this command:
