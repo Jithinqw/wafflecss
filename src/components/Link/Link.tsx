@@ -7,7 +7,6 @@ const StyledLink = styled.span<ILinkProps>`
     color: rgb(25, 118, 210);
     text-decoration: none;
     box-sizing: inherit;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
