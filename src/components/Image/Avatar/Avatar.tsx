@@ -4,8 +4,8 @@ import { IAvatarProps } from './Avatar.props';
 
 const StyledRoundedAvatarImage = styled.img<IAvatarProps>`
     border-radius: 9999px;
-    width: ${props => props.data.weight ? props.data.weight : '2.5rem'}
-    height: ${props => props.data.height ? props.data.height : '2.5rem'};
+    width: ${props => props.data.weight ? props.data?.weight : '2.5rem'}
+    height: ${props => props.data.height ? props.data?.height : '2.5rem'};
     max-width: 100%;
     display: block;
     vertical-align: middle;
@@ -13,8 +13,8 @@ const StyledRoundedAvatarImage = styled.img<IAvatarProps>`
 
 const StyledRectAvatarImage = styled.img<IAvatarProps>`
     border-radius: 0.25rem;
-    width: ${props => props.data.weight ? props.data.weight : '2.5rem'}
-    height: ${props => props.data.height ? props.data.height : '2.5rem'};
+    width: ${props => props.data.weight ? props.data?.weight : '2.5rem'}
+    height: ${props => props.data.height ? props.data?.height : '2.5rem'};
     max-width: 100%;
     display: block;
     vertical-align: middle;
@@ -23,7 +23,7 @@ const StyledRectAvatarImage = styled.img<IAvatarProps>`
 
 const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
     border-radius: 9999px;
-    width: ${props => props.data.weight ? props.data.weight : '2.5rem'}
+    width: ${props => props.data.weight ? props.data.weight : '2.5rem'};
     height: ${props => props.data.height ? props.data.height : '2.5rem'};
     max-width: 100%;
     display: block;

@@ -24,8 +24,8 @@ const StyledBadge = styled.span<IBadgeProps>`
     font-size: 0.75rem;
     border-radius: 0.75rem;
     font-weight: 700;
-    background: ${props => props.data.background ? props.data.background : 'white'}
-    color: ${props => props.options?.color ? generateBadgeStyle(props.options.color) : 'white'}
+    background: ${props => props.data.background ? props.data.background : 'white'};
+    color: ${props => props.options?.color ? generateBadgeStyle(props.options.color) : 'white'};
     box-shadow: rgb(56 161 105) 0px 0px 0px 1px inset;
 `;
 

@@ -1,7 +1,7 @@
 import { AnimationType } from "../../models/Animation";
 
 export interface IHeadingProps {
-    data?: IHeadingData;
+    data: IHeadingData;
     events?: IHeadingEvents;
     options?: IHeadingOptions;
 }

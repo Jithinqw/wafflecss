@@ -23,7 +23,7 @@ const StyledSnackBar = styled.div`
     left: 50%;
     bottom: 30px;
     font-size: 17px;
-    animation: ${animationSnack}
+    animation: ${animationSnack};
 `;
 
 const SnackBar = (props: ISnackBarProps) => {
