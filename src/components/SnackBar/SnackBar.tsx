@@ -27,12 +27,11 @@ const StyledSnackBar = styled.div`
 `;
 
 const SnackBar = (props: ISnackBarProps) => {
-    {
+    return (
         props.data.isVisible ? (
             <StyledSnackBar {...props} onClick={props.events?.onClick} />
-        ) :  null
-    }
-    
+        ) : null
+    )
 }
 
 export default SnackBar;
