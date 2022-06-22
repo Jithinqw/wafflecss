@@ -11,6 +11,8 @@ export { default as Counter } from './components/Label/Counter/Counter';
 export { default as Badge } from './components/Badge/Badge';
 export { default as Animation } from './components/Animation/Animation';
 export { default as Progress } from './components/Progress/Progress';
+export { default as Center } from './components/Center/Center';
+export { default as SnackBar } from './components/SnackBar/SnackBar';
 
 export {
     AnimationType,
