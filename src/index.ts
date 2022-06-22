@@ -8,6 +8,9 @@ export { default as TimerClock } from './components/Clock/Clock';
 export { default as StackedImage } from './components/Image/StackedImage/StackedImage';
 export { default as Avatar } from './components/Image/Avatar/Avatar';
 export { default as Counter } from './components/Label/Counter/Counter';
+export { default as Badge } from './components/Badge/Badge';
+export { default as Animation } from './components/Animation/Animation';
+export { default as Progress } from './components/Progress/Progress';
 
 export {
     AnimationType,
