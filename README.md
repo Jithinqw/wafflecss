@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg" width="300px" alt=""/>
 </div>
 <h1 align="center">WaffleCSS</h1>
 
