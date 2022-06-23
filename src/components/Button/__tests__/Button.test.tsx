@@ -1,15 +1,21 @@
-import Enzyme, {shallow} from 'enzyme';
+import renderer from 'react-test-renderer';
 import Button from '../Button';
 
 describe('Unit test for Button', () => {
 
     it('Button should render', () => {
-        const Button = shallow(
+        const ButtonTempl = renderer.create(
             <Button 
                 data={{
-                  displayTex:"asdasd"
+                  displayText:"asdasd"
+                }}
+                options={{
+                    size: 'md',
+                    buttonType: 'button'
                 }}
             />
         )
+        let tree = ButtonTempl.toJSON();
+        expect(tree).toMatchSnapshot();
     })
 })

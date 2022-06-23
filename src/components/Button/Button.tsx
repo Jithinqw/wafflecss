@@ -46,6 +46,7 @@ const generateButtonSpace = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
             return '0.75rem'
     }
 }
+
 const StyledButton = styled.button<IButtonProps>`
     display: inline-flex;
     appearance: none;
