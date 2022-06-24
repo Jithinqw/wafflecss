@@ -7,7 +7,7 @@ import { IButtonProps } from "./Button.props";
  * @param buttonStyle 
  * @returns 
  */
-const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'invisible') => {
+const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return 'rgb(36, 41, 47)';
@@ -15,8 +15,8 @@ const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'invisib
             return 'rgb(207, 34, 46)';
         case 'outline':
             return 'rgb(9, 105, 218)';
-        case 'invisible':
-            return 'rgb(9, 105, 218)';
+        case 'primary':
+            return '#2da44e';
         default:
             return 'rgb(36, 41, 47)';
     }
@@ -27,7 +27,7 @@ const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'invisib
  * @param buttonStyle 
  * @returns 
  */
-const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
+const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return '#f6f8fa';
@@ -35,6 +35,8 @@ const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline') 
             return 'rgb(207, 34, 46)';
         case 'outline':
             return 'rgb(9, 105, 218)';
+        case 'primary':
+            return '#2da44e'
         default:
             return '#f6f8fa';
     }
@@ -45,7 +47,7 @@ const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline') 
  * @param buttonStyle 
  * @returns 
  */
-const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
+const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return 'rgb(36, 41, 47)';
@@ -53,6 +55,8 @@ const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
             return '#f6f8fa';
         case 'outline':
             return '#f6f8fa';
+        case 'primary':
+            return '#f6f8fa'
         default:
             return 'rgb(36, 41, 47)';
     }
@@ -64,7 +68,7 @@ const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
  * @param buttonStyle 
  * @returns 
  */
-const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
+const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
         case 'danger':
@@ -120,14 +124,13 @@ const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
  * @param buttonStyle 
  * @returns 
  */
-const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'outline') => {
+const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset';
         case 'danger':
-            return 'rgb(27 31 36 / 4%) 0px 1px 0px';
         case 'outline':
-            return 'rgb(27 31 36 / 4%) 0px 1px 0px';
+            return 'rgb(27 31 36 / 4%) 0px 1px 0px';        
         default:
             return 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset';
     }
@@ -173,6 +176,9 @@ const Button = (props: IButtonProps) => {
             disabled={props.data.isDisabled ? props.data.isDisabled : false}
             type={props.options?.buttonType ? props.options?.buttonType : 'button'}
             onClick={props.events?.onClick}
+            onFocus={props.events?.onFocus}
+            id={props.data.id}
+            role={'button'}
         >
             <StyledButtonSpan {...props}>
                 {props.data.displayText}

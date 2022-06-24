@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Animation from '../Animation/Animation';
+import Animation from '../../Animation/Animation';
 import { IHeadingProps } from './Heading.props';
 
 /**

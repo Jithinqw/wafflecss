@@ -56,6 +56,11 @@ Unit testing is done using Jest. After installing [Jest](https://jestjs.io/), yo
 ```sh
 run run unittest
 ```
+
+## Style Accessibility Guide
+WaffleCSS follows [A11y](https://a11y-style-guide.com/style-guide/section-general.html) for 
+accessibility features.
+
 ## License
 
 [MIT](./LICENSE) &copy; [Jithin Zacharia](https://jithinqw.github.io/)
