@@ -6,9 +6,10 @@ export interface IButtonProps {
 
 interface IButtonData {
     displayText: string;
-    color?: string;
     isDisabled?: boolean;
-    background?: string;
+    radius?: string;
+    fontWeight?: string;
+    width?: string;
 }
 
 interface IButtonEvents {
@@ -18,5 +19,5 @@ interface IButtonEvents {
 interface IButtonOptions {
     size?: 'xs' | 'sm' | 'md' | 'lg';
     buttonType: 'button' | 'submit';
-    variants?: 'solid' | 'ghost' | 'outline' | 'link';
+    variants?: 'default' | 'danger' | 'outline';
 }

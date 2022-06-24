@@ -1,84 +1,168 @@
 import React from "react";
 import styled from "styled-components";
+import Heading from "../Heading/Heading";
 import { IButtonProps } from "./Button.props";
 
-const generateFontSize = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
-    switch(buttonSize) {
-        case 'xs':
-            return '0.75rem';
-        case 'sm':
-            return '0.875rem';
-        case 'md':
-            return '1rem';
-        case 'lg':
-            return '1.125rem';
+/**
+ * @function getButtonColor
+ * @param buttonStyle 
+ * @returns 
+ */
+const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'invisible') => {
+    switch(buttonStyle) {
+        case 'default':
+            return 'rgb(36, 41, 47)';
+        case 'danger':
+            return 'rgb(207, 34, 46)';
+        case 'outline':
+            return 'rgb(9, 105, 218)';
+        case 'invisible':
+            return 'rgb(9, 105, 218)';
         default:
-            return '0.875rem';
+            return 'rgb(36, 41, 47)';
     }
 }
 
-const generateButtonHeight = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
-    switch(buttonSize) {
-        case 'xs':
-            return '1.5rem';
-        case 'sm':
-            return '2rem';
-        case 'md':
-            return '2.5rem';
-        case 'lg':
-            return '3rem';
+/**
+ * @function getButtonBackgoudColor
+ * @param buttonStyle 
+ * @returns 
+ */
+const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
+    switch(buttonStyle) {
+        case 'default':
+            return 'white';
+        case 'danger':
+            return 'rgb(207, 34, 46)';
+        case 'outline':
+            return 'rgb(9, 105, 218)';
         default:
-            return '2rem'
+            return 'white';
     }
 }
 
-const generateButtonSpace = (buttonSize: 'xs' | 'sm' | 'md' | 'lg') => {
-    switch(buttonSize) {
-        case 'xs':
-            return '0.5rem';
-        case 'sm':
-            return '0.75rem';
-        case 'md':
-            return '1rem';
-        case 'lg':
-            return '1.25rem';
+const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
+    switch(buttonStyle) {
+        case 'default':
+            return 'rgb(36, 41, 47)';
+        case 'danger':
+            return 'white';
+        case 'outline':
+            return 'white';
         default:
-            return '0.75rem'
+            return 'rgb(36, 41, 47)';
     }
 }
 
-const StyledButton = styled.button<IButtonProps>`
-    display: inline-flex;
-    appearance: none;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    user-select: none;
-    position: relative;
+
+/**
+ * @function getButtonBorderColor
+ * @param buttonStyle 
+ * @returns 
+ */
+const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
+    switch(buttonStyle) {
+        case 'default':
+        case 'danger':
+        case 'outline':
+            return ' 1px solid rgba(27, 31, 36, 0.15)';
+        default:
+            return ' 1px solid rgba(27, 31, 36, 0.15)';
+    }
+}
+
+/**
+ * @function getButtonWidth
+ * @param buttonType 
+ * @returns 
+ */
+const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
+    switch(buttonType) {
+        case 'sm':
+            return 'width:10%';
+        case 'md':
+            return 'width: 30%';
+        case 'xs':
+            return 'width: 50%';
+        case 'lg':
+            return 'width: 100%';
+        default:
+            return 'width: 30%';
+    }
+}
+
+const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
+    switch(buttonType) {
+        case 'sm':
+            return '8px';
+        case 'md':
+            return '12px';
+        case 'xs':
+            return '18px';
+        case 'lg':
+            return '24px';
+        default:
+            return '12px';
+    }
+}
+
+const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'outline') => {
+    switch(buttonStyle) {
+        case 'default':
+            return 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset';
+        case 'danger':
+            return 'rgb(27 31 36 / 4%) 0px 1px 0px';
+        case 'outline':
+            return 'rgb(27 31 36 / 4%) 0px 1px 0px';
+        default:
+            return 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset';
+    }
+}
+
+const StyledDefault = styled.button<IButtonProps>`
+    border-radius: ${props => props.data.radius ? props.data.radius : '6px'};
+    border: ${props => props.options?.variants ? getButtonBorderColor(props.options?.variants) : getButtonBorderColor('default')};
+    font-family: inherit;
+    font-weight: ${props => props.data.fontWeight ? props.data.fontWeight : '300'};
     white-space: nowrap;
     vertical-align: middle;
-    outline: transparent solid 2px;
-    outline-offset: 2px;
-    line-height: 1.2;
-    border-radius: 0.375rem;
-    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-    transition-duration: 200ms;
-    height: ${props => props.options?.size ? generateButtonHeight(props.options.size) : generateButtonHeight('sm')};
-    min-width: ${props => props.options?.size ? generateButtonHeight(props.options.size) : generateButtonHeight('sm')};
-    font-size: ${props =>props.options?.size ? generateFontSize(props.options.size) : generateFontSize('sm')};
-    padding-inline-start: ${props =>props.options?.size ? generateButtonSpace(props.options.size) : generateButtonSpace('sm')};
-    padding-inline-end: ${props =>props.options?.size ? generateButtonSpace(props.options.size) : generateButtonSpace('sm')};
-    background: ${props => props.data?.background ? props.data?.background : 'black'};
-    color: ${props => props.data?.color ? props.data?.color : 'white'};
     cursor: pointer;
+    appearance: none;
+    user-select: none;
+    text-decoration: none;
+    text-align: center;
+    display: grid;
+    grid-template-areas: "leadingIcon text trailingIcon";
+    padding: 5px 16px;
+    width: ${props => props.data?.width ? props.data?.width : ''};
+    font-size: ${props => props.options?.size ? getFontSize(props.options?.size) : getFontSize('md')};
+    color: ${props => props.options?.variants ? getButtonColor(props.options?.variants) : getButtonColor('default')};
+    box-shadow: ${props => props.options?.variants ? getButtonShadow(props.options?.variants) : getButtonShadow('default')};
+    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
+    transition-property: color,background-color,box-shadow,border-color;
+
+    &:hover {
+        color: ${props => props.options?.variants ? getHoverColor(props.options?.variants) : 'none'};
+        background-color: ${props => props.options?.variants ? getButtonBackgroudColor(props.options?.variants) : 'none'};
+    }
+`;
+
+const StyledButtonSpan = styled.span<IButtonProps>`
+    grid-area: text / text / text / text;
 `;
 
 const Button = (props: IButtonProps) => {
     return (
-        <StyledButton {...props}>
-            {props.data?.displayText}
-        </StyledButton>
+        <StyledDefault 
+            {...props} 
+            disabled={props.data.isDisabled ? props.data.isDisabled : false}
+            type={props.options?.buttonType ? props.options?.buttonType : 'button'}
+            onClick={props.events?.onClick}
+        >
+            <StyledButtonSpan {...props}>
+                {props.data.displayText}
+            </StyledButtonSpan>
+        </StyledDefault>
     )
 }
 
