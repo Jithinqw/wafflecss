@@ -140,7 +140,7 @@ const StyledDefault = styled.button<IButtonProps>`
     font-weight: ${props => props.data.fontWeight ? props.data.fontWeight : '300'};
     white-space: nowrap;
     vertical-align: middle;
-    cursor: pointer;
+    cursor: ${props => props.data.isDisabled ? 'not-allowed' : 'pointer'};
     appearance: none;
     user-select: none;
     text-decoration: none;
@@ -154,7 +154,7 @@ const StyledDefault = styled.button<IButtonProps>`
     box-shadow: ${props => props.options?.variants ? getButtonShadow(props.options?.variants) : getButtonShadow('default')};
     transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
     transition-property: color,background-color,box-shadow,border-color;
-
+    opacity: ${props => props.data.isDisabled ? '0.3' : '1'};
     &:hover {
         color: ${props => props.options?.variants ? getHoverColor(props.options?.variants) : 'none'};
         background-color: ${props => props.options?.variants ? getButtonBackgroudColor(props.options?.variants) : 'none'};
@@ -162,6 +162,7 @@ const StyledDefault = styled.button<IButtonProps>`
 `;
 
 const StyledButtonSpan = styled.span<IButtonProps>`
+    font-family: inherit;
     grid-area: text / text / text / text;
 `;
 
