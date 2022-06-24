@@ -16,6 +16,8 @@ export { default as SnackBar } from './components/SnackBar/SnackBar';
 export { default as Backdrop } from './components/Backdrop/Backdrop';
 export { default as Link } from './components/Basic/Link/Link';
 export { default as Skeleton } from  './components/Skeleton/Skeleton';
+export { default as TextInput } from './components/Basic/Input/TextInput/TextInput';
+export { default as TextArea } from './components/Basic/Input/TextArea/TextArea';
 
 export {
     AnimationType,
