@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Heading from "../Heading/Heading";
 import { IButtonProps } from "./Button.props";
 
 /**
@@ -31,24 +30,29 @@ const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'invisib
 const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
     switch(buttonStyle) {
         case 'default':
-            return 'white';
+            return '#f6f8fa';
         case 'danger':
             return 'rgb(207, 34, 46)';
         case 'outline':
             return 'rgb(9, 105, 218)';
         default:
-            return 'white';
+            return '#f6f8fa';
     }
 }
 
+/**
+ * @function getHoverColor
+ * @param buttonStyle 
+ * @returns 
+ */
 const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline') => {
     switch(buttonStyle) {
         case 'default':
             return 'rgb(36, 41, 47)';
         case 'danger':
-            return 'white';
+            return '#f6f8fa';
         case 'outline':
-            return 'white';
+            return '#f6f8fa';
         default:
             return 'rgb(36, 41, 47)';
     }
@@ -79,18 +83,23 @@ const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline') => 
 const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(buttonType) {
         case 'sm':
-            return 'width:10%';
+            return '5px 16px';
         case 'md':
-            return 'width: 30%';
+            return '8px 20px';
         case 'xs':
-            return 'width: 50%';
+            return '12px 24px';
         case 'lg':
-            return 'width: 100%';
+            return '18px 32px';
         default:
-            return 'width: 30%';
+            return '5px 16px';
     }
 }
 
+/**
+ * @function getFontSize
+ * @param buttonType 
+ * @returns 
+ */
 const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(buttonType) {
         case 'sm':
@@ -106,6 +115,11 @@ const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
     }
 }
 
+/**
+ * @function getButtonShadow
+ * @param buttonStyle 
+ * @returns 
+ */
 const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'outline') => {
     switch(buttonStyle) {
         case 'default':
@@ -133,7 +147,7 @@ const StyledDefault = styled.button<IButtonProps>`
     text-align: center;
     display: grid;
     grid-template-areas: "leadingIcon text trailingIcon";
-    padding: 5px 16px;
+    padding: ${props => props.options?.size ? getButtonWidth(props.options.size) : '5px 16px'};
     width: ${props => props.data?.width ? props.data?.width : ''};
     font-size: ${props => props.options?.size ? getFontSize(props.options?.size) : getFontSize('md')};
     color: ${props => props.options?.variants ? getButtonColor(props.options?.variants) : getButtonColor('default')};

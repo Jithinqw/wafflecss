@@ -18,12 +18,11 @@ const Template: ComponentStory<typeof Button> = (args) => {
             displayText: 'This is a Extra Small text',
         },
         options: {
-            variants: 'default'
+            variants: 'default',
+            size: 'xs'
         }
     }
-    return (
-        <Button {...propArgs}/>
-    )
+    return <Button {...propArgs}/>
 }
 export const DefaultButton = Template.bind({});
 
@@ -33,7 +32,8 @@ const DangerButtonTempl: ComponentStory<typeof Button> = (args) => {
             displayText: 'This is a Extra Small text',
         },
         options: {
-            variants: 'danger'
+            variants: 'danger',
+            size: 'lg'
         }
     }
     return (
@@ -48,7 +48,8 @@ const OutlineButtonTempl: ComponentStory<typeof Button> = (args) => {
             displayText: 'This is a Extra Small text',
         },
         options: {
-            variants: 'outline'
+            variants: 'outline',
+            size: 'md'
         }
     }
     return (
