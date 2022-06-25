@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import Heading from '../Basic/Heading/Heading';
 import { IClockProps } from './Clock.props';
 
 const StyledDivClock = styled.div`
     color: #333;
     display: flex;
-    font-family: sans-serif;
+`;
+
+const BlinkAnimation = keyframes`
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
 `;
 
 const StyledDiv = styled.div`
@@ -13,32 +25,13 @@ const StyledDiv = styled.div`
     color: #333;
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
     justify-content: center;
-    margin: 4px 0px 0px 4px;
-`;
-
-const StyledDigit = styled.span`
-    color: #333;
-    font-family: sans-serif;
-    font-size: 2em;
-`;
-
-const StyledLabel = styled.span`
-    color: #333;
-    font-family: sans-serif;
-    font-size: .7em;
 `;
 
 const StyledColon = styled.div`
-    align-items: center;
     color: #333;
     display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    font-size: 1.5em;
-    justify-content: center;
-    margin-top: -24px;
+    animation: ${BlinkAnimation} 1s linear infinite
 `;
 
 const TimerClock = (props: IClockProps) => {
@@ -94,6 +87,7 @@ const TimerClock = (props: IClockProps) => {
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
     const timerLabel: ReadonlyArray<string> = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
+    const [noTimeLeftEventTrigger, setNoTimeLeftEventTrigger] = useState(0);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -110,34 +104,140 @@ const TimerClock = (props: IClockProps) => {
      * @returns {string}
      */
     const resolveTimerLabel = (label: string) => {
-        if(props.labelType === 'lower') {
+        if(props?.labelType === 'lower') {
             return label?.toString()?.toLowerCase();
         }
         return label?.toString()?.toUpperCase();
     }
 
+    /**
+     * @function findIfanyDaysRemaining
+     * @description If no days are remaining
+     * trigger no days events if provided any.
+     */
+    const findIfanyDaysRemaining = () => {
+        if(props?.events?.onNoDaysRemaining && timeLeft?.days === '0') {
+            props.events.onNoDaysRemaining();
+        }
+    }
+
+    /**
+     * @function findIfanyHoursRemaining
+     * @description If no days are remaining
+     * trigger no days events if provided any.
+     */
+     const findIfanyHoursRemaining = () => {
+        if(props?.events?.onNoHourRemaining && timeLeft?.hours === '0') {
+            props.events.onNoHourRemaining();
+        }
+    }
+
+    /**
+     * @function findIfanyMinutesRemaining
+     * @description If no days are remaining
+     * trigger no days events if provided any.
+     */
+     const findIfanyMinutesRemaining = () => {
+        if(props?.events?.onNoMinutesRemaining && timeLeft?.minutes === '0') {
+            props.events.onNoMinutesRemaining();
+        }
+    }
+
+    /**
+     * @function findIfAnyTimeLeft
+     * @description If no time is left 
+     * trigger an event once
+     */
+    const findIfAnyTimeLeft = () => {
+        if(
+            props.events?.onNoTimeRemaining &&
+            timeLeft?.days === '0' &&
+            timeLeft.hours === '0' &&
+            timeLeft.minutes === '0' &&
+            timeLeft.seconds === '0' &&
+            noTimeLeftEventTrigger <= 0
+        ) {
+            setNoTimeLeftEventTrigger(noTimeLeftEventTrigger + 1);
+            props.events.onNoTimeRemaining();
+        }
+    }
+
     return (
         <>
             { timeLeft ? 
-                <StyledDivClock>
+                <StyledDivClock 
+                >
                     <StyledDiv>
-                        <StyledDigit>{timeLeft?.days}</StyledDigit>
-                        <StyledLabel>{resolveTimerLabel(timerLabel[0])}</StyledLabel>
+                        <Heading 
+                            data={{
+                                headingText: timeLeft?.days
+                            }}
+                            options={{
+                                ...props.clockOptions
+                            }}
+                        />
+                        <Heading 
+                            data={{
+                                headingText: resolveTimerLabel(timerLabel[0])
+                            }}
+                            options={{
+                                ...props.labelOptions
+                            }}
+                        />
                     </StyledDiv>
-                    <StyledColon>:</StyledColon>
                     <StyledDiv>
-                        <StyledDigit>{timeLeft?.hours}</StyledDigit>
-                        <StyledLabel>{resolveTimerLabel(timerLabel[1])}</StyledLabel>
+                        <Heading 
+                            data={{
+                                headingText: timeLeft?.hours
+                            }}
+                            options={{
+                                ...props.clockOptions
+                            }}
+                        />
+                        <Heading 
+                            data={{
+                                headingText: resolveTimerLabel(timerLabel[1])
+                            }}
+                            options={{
+                                ...props.labelOptions
+                            }}
+                        />
                     </StyledDiv>
-                    <StyledColon>:</StyledColon>
                     <StyledDiv>
-                        <StyledDigit>{timeLeft?.minutes}</StyledDigit>
-                        <StyledLabel>{resolveTimerLabel(timerLabel[2])}</StyledLabel>
+                        <Heading 
+                            data={{
+                                headingText: timeLeft?.minutes
+                            }}
+                            options={{
+                                ...props.clockOptions
+                            }}
+                        />
+                        <Heading 
+                            data={{
+                                headingText: resolveTimerLabel(timerLabel[2])
+                            }}
+                            options={{
+                                ...props.labelOptions
+                            }}
+                        />
                     </StyledDiv>
-                    <StyledColon>:</StyledColon>
                     <StyledDiv>
-                        <StyledDigit>{timeLeft?.seconds}</StyledDigit>
-                        <StyledLabel>{resolveTimerLabel(timerLabel[3])}</StyledLabel>
+                        <Heading 
+                            data={{
+                                headingText: timeLeft?.seconds
+                            }}
+                            options={{
+                                ...props.clockOptions
+                            }}
+                        />
+                        <Heading 
+                            data={{
+                                headingText: resolveTimerLabel(timerLabel[3])
+                            }}
+                            options={{
+                                ...props.labelOptions
+                            }}
+                        />
                     </StyledDiv>
                 </StyledDivClock>
                 : null

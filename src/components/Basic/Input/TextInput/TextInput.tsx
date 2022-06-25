@@ -80,7 +80,7 @@ const TextInput = (props: ITextInputProps) => {
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setCurrentText(e.currentTarget.value);
         if(props?.events?.onChange) {
-            props.events.onChange(e)
+            props.events.onChange(e);
         }
     }
 
@@ -129,7 +129,7 @@ const TextInput = (props: ITextInputProps) => {
             onChange={onChange}
             onKeyPress={onKeyPress}
             onBlur={onBlur}
-            onFocus = {onFocus}
+            onFocus={onFocus}
         /> 
     )
 }
