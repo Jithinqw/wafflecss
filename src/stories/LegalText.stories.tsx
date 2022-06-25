@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import LegalText from '../components/Heading/LegalText/LegalText';
+import LegalText from '../components/Basic/Heading/LegalText/LegalText';
 
 export default {
     title: 'LegalText',
