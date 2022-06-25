@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from '@storybook/jest';
 import { within, userEvent } from '@storybook/testing-library';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Link from '../components/Link/Link';
+import Link from '../components/Basic/Link/Link';
 
 export default {
     title: 'Link',

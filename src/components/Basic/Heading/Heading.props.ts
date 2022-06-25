@@ -1,4 +1,4 @@
-import { AnimationType } from "../../models/Animation";
+import { AnimationType } from "../../../models/Animation";
 
 export interface IHeadingProps {
     data: IHeadingData;
@@ -15,7 +15,7 @@ interface IHeadingEvents {
     onClick?:() => void;
 }
 
-interface IHeadingOptions {
+export interface IHeadingOptions {
     style?: 'italics' | 'normal' | 'oblique';
     weight?: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold';
     size?: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge';
