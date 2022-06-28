@@ -54,10 +54,10 @@ const StackedImage = (props: IStackedImageProps) => {
                                         return (
                                             <StyledflexAvatarTackItem key={i}>
                                                 <img 
-                                                    src={e.imageSource}
-                                                    height={e.height}
-                                                    width={e.width}
-                                                    alt={e.alt} 
+                                                    src={e?.imageSource}
+                                                    height={e?.height}
+                                                    width={e?.width}
+                                                    alt={e?.alt} 
                                                     key={i}
                                                     onClick={e?.onClick}
                                                 />

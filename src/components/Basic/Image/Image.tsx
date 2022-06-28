@@ -8,11 +8,12 @@ const Image = (props: IImageProps) => {
      * @function resolveImageError
      * @description If error in loading image
      * render fallback image if any.
+     * @param {any} event
      */
     const resolveImageError = (event: any) => {
         if(event && event != undefined) {
-            return (props.data.fallbackImageSrc && 
-                setImageSrc(props.data.fallbackImageSrc)
+            return (props.data?.fallbackImageSrc && 
+                setImageSrc(props.data?.fallbackImageSrc)
             );
         }
     }

@@ -71,7 +71,6 @@ const StyledTextInput = styled.input<ITextInputProps>`
 const TextInput = (props: ITextInputProps) => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
-
     /**
      * @function onChange
      * @description change handler for input
@@ -120,12 +119,12 @@ const TextInput = (props: ITextInputProps) => {
     return (
         <StyledTextInput 
             {...props}
-            placeholder={props.data.placeholder}
+            placeholder={props.data?.placeholder}
             id={props.data.id}
-            name={props.data.name}
-            disabled={props.data.isDisabled ? props.data.isDisabled : false}
+            name={props.data?.name}
+            disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             value={props.data.value}
-            type={props.options?.type ? props.options.type : 'text'}
+            type={props.options?.type ? props.options?.type : 'text'}
             onChange={onChange}
             onKeyPress={onKeyPress}
             onBlur={onBlur}
