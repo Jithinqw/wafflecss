@@ -1,7 +1,7 @@
 /**
  * Expose APIs for package.
  */
-import { AnimationType } from './models/Animation';
+import { AnimationType } from './models/animation';
 import { HeadingType } from './models/Heading';
 
 export { default as Button } from './components/Basic/Button/Button';

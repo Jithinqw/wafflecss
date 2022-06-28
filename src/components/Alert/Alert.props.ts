@@ -1,18 +1,28 @@
+import React from "react";
+
 export interface IAlertProps {
     data: IAlertData;
     events?: IAlertEvents;
-    option?: IAlertOptions;
+    options?: IAlertOptions;
 }
 
 interface IAlertEvents {
+    /**
+     * trigger event if click on alert
+     */
     onBodyClick?:() => void;
-    onDismiss?:() => void;
 }
 
 interface IAlertData {
-    displayText: string | HTMLHtmlElement;
+    /**
+     * Text to display
+     */
+    displayText: string | React.ReactNode;
 }
 
 interface IAlertOptions {
-    isDismissable?: boolean;
+    /**
+     * type of alert variant to display
+     */
+    variants?: 'error' | 'success' | 'warning' | 'info';
 }

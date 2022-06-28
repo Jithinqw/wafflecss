@@ -19,8 +19,8 @@ const ProgressBar = styled.div<IProgressProps>`
     color: white;
     text-align: center;
     white-space: nowrap;
-    width: ${props => props.data.width ? props.data.width : '30%'};
-    background-color: ${props => props.data.color ? props.data.color : 'blue'};
+    width: ${props => props.data?.width ? props.data?.width : '30%'};
+    background-color: ${props => props.data?.color ? props.data?.color : 'blue'};
     transition: width .6s ease;
 `;
 

@@ -1,7 +1,7 @@
 export interface ICounterProps {
     data: ICounterData;
     events?: ICounterEvents;
-    option?: ICounterOptions;
+    options?: ICounterOptions;
 }
 
 interface ICounterData {

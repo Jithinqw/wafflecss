@@ -1,3 +1,5 @@
+import { IStyleOptions } from "../../../models/defaultStyle";
+
 export interface ILinkProps {
     data: ILinkData;
     options?: ILinkOptions;
@@ -13,7 +15,7 @@ interface ILinkData {
 }
 
 interface ILinkOptions {
-    color?: string;
     underline?: boolean;
     hoverUnderline?: boolean;
+    styleOptions?: IStyleOptions;
 }

@@ -1,4 +1,4 @@
-import { AnimationType } from "../../../models/Animation";
+import { AnimationType } from "../../../models/animation";
 
 export interface IHeadingProps {
     data: IHeadingData;

@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { 
+    colorPalette, commonConstant,
+    headingConstant 
+} from '../../../models/constants';
 import Animation from '../../Animation/Animation';
 import { IHeadingProps } from './Heading.props';
 
@@ -29,17 +33,17 @@ const makeFontStyle = (style: 'italics' | 'normal' | 'oblique' | undefined) => {
 const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge' | undefined) => {
     switch(fontSize) {
         case 'normal':
-            return '16px';
+            return headingConstant.headingSizeScale.normal;
         case 'small':
-            return '12px';
+            return headingConstant.headingSizeScale.small;
         case 'extrasmall':
-            return '8px';
+            return headingConstant.headingSizeScale.extrasmall;
         case 'large':
-            return '18px';
+            return headingConstant.headingSizeScale.large;
         case 'extralarge':
-            return '24px';
+            return headingConstant.headingSizeScale.extralarge;
         default:
-            return '16px';
+            return headingConstant.headingSizeScale.normal;
     }
 } 
 
@@ -51,29 +55,29 @@ const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' |
 const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold' | undefined) => {
     switch(fontSize) {
         case 'extrasmall':
-            return '90';
+            return headingConstant.headingWeightScale.extrasmall;
         case 'small':
-            return '100';
+            return headingConstant.headingWeightScale.small;
         case 'normal':
-            return '300';
+            return headingConstant.headingWeightScale.normal;
         case 'bold':
-            return '500';
+            return headingConstant.headingWeightScale.bold;
         case 'extrabold':
-            return '700';
+            return headingConstant.headingWeightScale.extrabold;
         default:
-            return '300';
+            return headingConstant.headingWeightScale.normal;
     }
 }
 
 const StyledHeading = styled.p<IHeadingProps>`
-    color: ${props => props.options?.headingColor ? props.options?.headingColor + ' !important' : `rgb(42, 42, 51)`};
-    text-transform: none;
-    letter-spacing: -.003em;
-    font-family: inherit;
-    font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : '300'};
-    font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : '16px'};
-    font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : 'normal'};
-    animation: ${props => props.options?.animationType ? Animation(props.options.animationType) : ''}
+    color: ${props => props.options?.headingColor ? props.options?.headingColor + ' !important' : colorPalette.defaultBlackColor};
+    text-transform: ${commonConstant.textTransform};
+    letter-spacing: ${headingConstant.defaultLetterSpacing};
+    font-family: ${commonConstant.fontFamily};
+    font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : headingConstant.fontWeight};
+    font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : headingConstant.fontSize};
+    font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : headingConstant.fontStyle};
+    animation: ${props => props.options?.animationType ? Animation(props.options.animationType) : commonConstant.defaultNone}
 `;
 
 const Heading = (props: IHeadingProps) => {
