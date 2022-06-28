@@ -4,6 +4,9 @@ import { ListData } from "../../../models/basicModal";
 import { commonConstant } from "../../../models/constants";
 import { IListProps } from "./List.props";
 
+interface ListSpace {
+    spacing?: string | undefined;
+}
 const StyledOrderedList = styled.ol`
     list-style-type: decimal;
     margin-inline-start: 1em;
@@ -11,9 +14,13 @@ const StyledOrderedList = styled.ol`
     padding: 0;
 `;
 
-const StyledListItem = styled.li`
+const StyledListItem = styled.li<ListSpace>`
     border-color: #e2e8f0;
     word-wrap: break-word;
+    padding-top: ${props => props.spacing ? props.spacing : ''};
+    padding-bottom: ${props => props.spacing ? props.spacing : ''};
+    padding-left: ${props => props.spacing ? props.spacing : ''};
+    padding-right: ${props => props.spacing ? props.spacing : ''};
     font-family: ${commonConstant.fontFamily}
 `;
 
@@ -30,7 +37,7 @@ const StyledUnorderedList = styled.ul`
  * @param listData 
  * @returns {React.ReactNode}
  */
-const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[]) => {
+const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[], spacing?: string) => {
     switch(listType) {
         case 'ordered':
             return (
@@ -38,7 +45,7 @@ const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[]) =>
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
-                                <StyledListItem key={i}>
+                                <StyledListItem key={i} spacing={spacing}>
                                     {e.listItem}
                                 </StyledListItem>
                             )
@@ -52,7 +59,7 @@ const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[]) =>
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
-                                <StyledListItem key={i}>
+                                <StyledListItem key={i} spacing={spacing}>
                                     {e.listItem}
                                 </StyledListItem>
                             )
@@ -66,7 +73,7 @@ const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[]) =>
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
-                                <StyledListItem key={i}>
+                                <StyledListItem key={i} spacing={spacing}>
                                     {e.listItem}
                                 </StyledListItem>
                             )
@@ -81,7 +88,7 @@ const List = (props: IListProps) => {
     return (
         resolveList(
             props.options?.listType ? props.options?.listType : 'unordered',
-            props.data.listData
+            props.data.listData, props.options?.spacing
         )
     )
 }

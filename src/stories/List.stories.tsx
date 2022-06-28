@@ -27,7 +27,8 @@ const ListTemplate: ComponentStory<typeof List> = (args) => {
             ]
         },
         options: {
-            listType: 'unordered'
+            listType: 'unordered',
+            spacing: '2px'
         }
     }
     return (
@@ -58,7 +59,8 @@ const OrderedListTemplate: ComponentStory<typeof List> = (args) => {
             ]
         },
         options: {
-            listType: 'ordered'
+            listType: 'ordered',
+            spacing: '12px'
         }
     }
     return (

@@ -11,4 +11,5 @@ interface IListData {
 
 interface IListOptions {
     listType?: 'ordered' | 'unordered';
+    spacing?: string;
 }
