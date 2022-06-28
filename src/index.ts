@@ -21,7 +21,9 @@ export { default as Link } from './components/Basic/Link/Link';
 export { default as Skeleton } from  './components/Skeleton/Skeleton';
 export { default as TextInput } from './components/Basic/Input/TextInput/TextInput';
 export { default as TextArea } from './components/Basic/Input/TextArea/TextArea';
+export { default as Switch } from './components/Basic/Input/Switch/Switch';
 export { default as Hidden } from './components/Layout/Hide/Hidden';
+export { default as Container } from './components/Layout/Container/Container';
 
 export {
     AnimationType,

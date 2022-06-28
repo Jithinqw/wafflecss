@@ -18,4 +18,5 @@ interface ILinkOptions {
     underline?: boolean;
     hoverUnderline?: boolean;
     styleOptions?: IStyleOptions;
+    size?: 'sm' | 'md' | 'lg';
 }

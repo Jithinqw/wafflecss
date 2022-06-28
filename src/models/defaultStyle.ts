@@ -1,5 +1,5 @@
 /**
- * Default 
+ * Default styles applied
  */
 export interface IStyleOptions {
     backgroundColor?: string;

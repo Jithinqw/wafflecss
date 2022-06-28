@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { buttonConstant, 
+import { 
+    buttonConstant, 
     colorPalette, commonConstant 
 } from "../../../models/constants";
 import { IButtonProps } from "./Button.props";
