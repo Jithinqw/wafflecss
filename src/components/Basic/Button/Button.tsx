@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import { 
     buttonConstant, 
@@ -195,4 +195,4 @@ const Button = (props: IButtonProps) => {
     )
 }
 
-export default Button;
+export default memo(Button);

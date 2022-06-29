@@ -1,5 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { colorPalette, 
+    commonConstant 
+} from "../../models/constants";
 import { ISkeletonProps } from "./Skeleton.props";
 
 const resolveHeight = (width: 'sm' | 'xs' | 'lg') => {
@@ -28,25 +31,37 @@ const resolveCircleRadius = (width: 'sm' | 'xs' | 'lg') => {
     }
 }
 
+const glowAnimation = keyframes`
+    50% {
+        opacity: .2;
+    }
+`;
+
 const StyledSkeletonCol = styled.span<ISkeletonProps>`
     display: inline-block;
-    min-height: ${props => props.options?.height ? resolveHeight(props.options?.height) : resolveHeight('sm')};
+    min-height: 1em;
     vertical-align: middle;
-    cursor: wait;
-    background-color: ${props => props.options?.color ? props.options.color : 'grey'};
+    background-color: ${props => props.options?.color ? props.options?.color : colorPalette.defaultGreyColor};
     opacity: .5;
-    webkit-animation: placeholder-glow 2s ease-in-out infinite;
-    animation: placeholder-glow 2s ease-in-out infinite;
+    cursor: ${commonConstant.cursorWait};
+    width: ${props => props.options?.height ? resolveHeight(props.options?.height) : resolveHeight('sm')};
+    height: ${props => props.options?.height ? resolveHeight(props.options?.height) : resolveHeight('sm')};
+    webkit-animation: ${glowAnimation} 2s ease-in-out infinite;
+    animation: ${glowAnimation} 2s ease-in-out infinite;
 `;
 
 const StyledSkeletonircle = styled.span<ISkeletonProps>`
-    background-color: ${props => props.options?.color ? props.options.color : 'grey'};
+    display: inline-block;
+    min-height: 1em;
+    vertical-align: middle;
+    background-color: ${props => props.options?.color ? props.options?.color : colorPalette.defaultGreyColor};
     width: ${props => props.options?.height ? resolveCircleRadius(props.options?.height) : resolveCircleRadius('sm')};
-    height:${props => props.options?.height ? resolveCircleRadius(props.options?.height) : resolveCircleRadius('sm')};;
+    height:${props => props.options?.height ? resolveCircleRadius(props.options?.height) : resolveCircleRadius('sm')};
     border-radius: 50%;
     opacity: .5;
-    webkit-animation: placeholder-glow 2s ease-in-out infinite;
-    animation: placeholder-glow 2s ease-in-out infinite;
+    cursor: ${commonConstant.cursorWait};
+    webkit-animation: ${glowAnimation} 2s ease-in-out infinite;
+    animation: ${glowAnimation} 2s ease-in-out infinite;
 `;
 
 /**
@@ -55,10 +70,12 @@ const StyledSkeletonircle = styled.span<ISkeletonProps>`
  * @returns {StyledComponent}
  */
 const resolveSkeletonType = (props: ISkeletonProps) => {
+    console.log(props);
     switch(props.options?.type) {
         case 'col':
             return <StyledSkeletonCol {...props}/>
         case 'circle':
+            console.log(' I')
             return <StyledSkeletonircle {...props}/>
         default:
             return <StyledSkeletonCol {...props}/>

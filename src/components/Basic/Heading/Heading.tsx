@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import styled from 'styled-components';
 import { 
     colorPalette, commonConstant,
@@ -91,4 +91,4 @@ const Heading = (props: IHeadingProps) => {
     )
 }
 
-export default Heading;
+export default memo(Heading);

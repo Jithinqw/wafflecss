@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import { ListData } from "../../../models/basicModal";
 import { commonConstant } from "../../../models/constants";
@@ -93,4 +93,4 @@ const List = (props: IListProps) => {
     )
 }
 
-export default List;
+export default memo(List);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import { 
     colorPalette, commonConstant
@@ -50,4 +50,4 @@ const Link = (props: ILinkProps) => {
     )
 }
 
-export default Link;
+export default memo(Link)

@@ -9,6 +9,7 @@ export const commonConstant = {
     // Cursor
     cursorPointer: 'pointer',
     cursorNotAllowed: 'not-allowed',
+    cursorWait: 'wait',
     // Text decoration
     defaultTextDecoration: 'none',
     textTransform: 'none',
@@ -37,6 +38,7 @@ export const colorPalette = {
     defaultBlackColor: 'rgb(42, 42, 51)',
     defaultWhite: 'rgb(246, 248, 250)',
     defaultDefaultLinkColor: 'rgb(25, 118, 210)',
+    defaultGreyColor: 'rgb(84, 87, 92)',
     // Button Text Color
     defaultButtonColor: 'rgb(36, 41, 47)',
     defaultDangerButtonColor: 'rgb(207, 34, 46)',
@@ -132,3 +134,24 @@ export const backDropConstants = {
     insetDefault: '0px',
     defaultTransition: 'opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
 }
+
+export const size = {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
+}
+
+export const deviceSizes = {
+    mobileS: `(min-width: ${size.mobileS})`,
+    mobileM: `(min-width: ${size.mobileM})`,
+    mobileL: `(min-width: ${size.mobileL})`,
+    tablet: `(min-width: ${size.tablet})`,
+    laptop: `(min-width: ${size.laptop})`,
+    laptopL: `(min-width: ${size.laptopL})`,
+    desktop: `(min-width: ${size.desktop})`,
+    desktopL: `(min-width: ${size.desktop})`,
+};
