@@ -19,4 +19,4 @@ const Status = (props: IStatusProps) =>{
     )
 }
 
-export default Status;
+export default React.memo(Status);

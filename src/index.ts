@@ -24,6 +24,7 @@ export { default as TextArea } from './components/Basic/Input/TextArea/TextArea'
 export { default as Switch } from './components/Basic/Input/Switch/Switch';
 export { default as Hidden } from './components/Layout/Hide/Hidden';
 export { default as Container } from './components/Layout/Container/Container';
+export { default as Status } from './components/Status/Status';
 
 export {
     AnimationType,
