@@ -1,33 +1,44 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { colorPalette, 
-    commonConstant 
+    commonConstant, 
+    skeletonConstants
 } from "../../models/constants";
 import { ISkeletonProps } from "./Skeleton.props";
 
+/**
+ * @function resolveHeight
+ * @param {} width 
+ * @returns {string}
+ */
 const resolveHeight = (width: 'sm' | 'xs' | 'lg') => {
     switch(width) {
         case 'sm':
-            return '0.8em';
+            return skeletonConstants.heightSm;
         case 'xs':
-            return '0.6em';
+            return skeletonConstants.heightXs;
         case 'lg':
-            return '1.2em';
+            return skeletonConstants.heightLg;
         default:
-            return '0.8em';
+            return skeletonConstants.heightSm;
     }
 }
 
+/**
+ * @function resolveCircleRadius
+ * @param width 
+ * @returns {string}
+ */
 const resolveCircleRadius = (width: 'sm' | 'xs' | 'lg') => {
     switch(width) {
         case 'sm':
-            return '50px';
+            return skeletonConstants.widthSm;
         case 'xs':
-            return '100px';
+            return skeletonConstants.widthXs;
         case 'lg':
-            return '200px';
+            return skeletonConstants.widthLg;
         default:
-            return '50px';
+            return skeletonConstants.widthSm;
     }
 }
 
@@ -70,12 +81,10 @@ const StyledSkeletonircle = styled.span<ISkeletonProps>`
  * @returns {StyledComponent}
  */
 const resolveSkeletonType = (props: ISkeletonProps) => {
-    console.log(props);
     switch(props.options?.type) {
         case 'col':
             return <StyledSkeletonCol {...props}/>
         case 'circle':
-            console.log(' I')
             return <StyledSkeletonircle {...props}/>
         default:
             return <StyledSkeletonCol {...props}/>

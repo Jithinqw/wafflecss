@@ -1,32 +1,53 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import { colorPalette, commonConstant } from "../../models/constants";
 import { IProgressProps } from "./Progress.props";
 
-const ProgressWrapper = styled.div`
-    display: flex;
-    height: 1rem;
+const ProgressWrapper = styled.div<IProgressProps>`
+    display: ${commonConstant.flexDisplay};
+    height: ${props => props.data.height ? props.data?.height : '0.75rem'};
     overflow: hidden;
     font-size: .75rem;
-    background-color: grey;
+    background-color: ${colorPalette.defaultGreyColor};
     border-radius: .25rem;
 `;
 
+/**
+ * @function addStrippedBar
+ * @returns {string}
+ */
+const addStrippedBar = () => `
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+`;
+
+const AnimateStripes = keyframes`
+    0% {
+        background-position-x: 1rem;
+    }
+`;
+
 const ProgressBar = styled.div<IProgressProps>`
-    display: flex;
-    flex-direction: column;
+    display: ${commonConstant.flexDisplay};
+    flex-direction: ${commonConstant.flexColDirection};
     justify-content: center;
     overflow: hidden;
-    color: white;
+    color: ${colorPalette.defaultWhite};
     text-align: center;
     white-space: nowrap;
     width: ${props => props.data?.width ? props.data?.width : '30%'};
-    background-color: ${props => props.data?.color ? props.data?.color : 'blue'};
+    background-color: ${props => props.data?.color ? props.data?.color : colorPalette.defaultPrimaryButtonColor};
     transition: width .6s ease;
+    ${props => props.data?.enableStripe ? addStrippedBar() : ''};
+    animation: ${props=> props.data.animateStripe ?  css`${AnimateStripes} 1s linear infinite` : ''};
 `;
 
 const Progress = (props: IProgressProps) => {
     return (
-        <ProgressWrapper onClick={props.events?.onClick}>
+        <ProgressWrapper 
+            onClick={props.events?.onClick} 
+            {...props}
+        >
             <ProgressBar {...props}>
                 {props.data?.children}
             </ProgressBar>

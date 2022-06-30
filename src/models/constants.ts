@@ -1,6 +1,8 @@
 export const commonConstant = {
     // display
     flexDisplay: 'flex',
+    flexColDirection: 'column',
+    flexRowDirection: 'row',
     alignItemCenter: 'center',
     defaultNone: '',
     //Font 
@@ -155,3 +157,21 @@ export const deviceSizes = {
     desktop: `(min-width: ${size.desktop})`,
     desktopL: `(min-width: ${size.desktop})`,
 };
+
+export const skeletonConstants = {
+    // Width
+    widthSm: '50px',
+    widthXs: '100px',
+    widthLg: '200px',
+    // Height
+    heightSm: '0.8em',
+    heightXs: '0.6em',
+    heightLg: '1.2em',
+    defaultSettings: {
+        verticalAlign: 'middle',
+        minHeight: '1rem',
+        displayDefault: 'inline-block',
+        opacity: '0.5',
+        borderRadius: '50%',
+    }
+}
