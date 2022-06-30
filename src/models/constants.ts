@@ -167,6 +167,10 @@ export const skeletonConstants = {
     heightSm: '0.8em',
     heightXs: '0.6em',
     heightLg: '1.2em',
+    // Col Width
+    widthColSm: '150px',
+    widthColXs: '200px',
+    widthColLg: '300px',
     defaultSettings: {
         verticalAlign: 'middle',
         minHeight: '1rem',

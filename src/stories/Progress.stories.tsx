@@ -15,10 +15,10 @@ export default {
 const ProgressTemplate: ComponentStory<typeof Progress> = (args) => {
     const propArgs = {
         data: {
-            color: 'rgb(90, 0, 51)',
-            width: '70%',
-            height: '30px',
-            enableStripe: 'false',
+            color: 'teal',
+            width: '10%',
+            height: '5px',
+            enableStripe: true,
             animateStripe: true
         }
     }

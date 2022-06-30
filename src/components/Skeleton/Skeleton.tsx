@@ -8,11 +8,11 @@ import { ISkeletonProps } from "./Skeleton.props";
 
 /**
  * @function resolveHeight
- * @param {} width 
+ * @param {'sm' | 'xs' | 'lg'} height 
  * @returns {string}
  */
-const resolveHeight = (width: 'sm' | 'xs' | 'lg') => {
-    switch(width) {
+const resolveHeight = (height: 'sm' | 'xs' | 'lg') => {
+    switch(height) {
         case 'sm':
             return skeletonConstants.heightSm;
         case 'xs':
@@ -21,6 +21,24 @@ const resolveHeight = (width: 'sm' | 'xs' | 'lg') => {
             return skeletonConstants.heightLg;
         default:
             return skeletonConstants.heightSm;
+    }
+}
+
+/**
+ * @function resolveWidth
+ * @param width 
+ * @returns {string}
+ */
+const resolveWidth = (width: 'sm' | 'xs' | 'lg') => {
+    switch(width) {
+        case 'sm':
+            return skeletonConstants.widthColSm;
+        case 'xs':
+            return skeletonConstants.widthColXs;
+        case 'lg':
+            return '100%';
+        default:
+            return skeletonConstants.widthColSm;
     }
 }
 
@@ -55,7 +73,7 @@ const StyledSkeletonCol = styled.span<ISkeletonProps>`
     background-color: ${props => props.options?.color ? props.options?.color : colorPalette.defaultGreyColor};
     opacity: .5;
     cursor: ${commonConstant.cursorWait};
-    width: ${props => props.options?.height ? resolveHeight(props.options?.height) : resolveHeight('sm')};
+    width: ${props => props.options?.height ? resolveWidth(props.options?.height) : resolveWidth('sm')};
     height: ${props => props.options?.height ? resolveHeight(props.options?.height) : resolveHeight('sm')};
     webkit-animation: ${glowAnimation} 2s ease-in-out infinite;
     animation: ${glowAnimation} 2s ease-in-out infinite;

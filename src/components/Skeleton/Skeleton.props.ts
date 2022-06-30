@@ -5,5 +5,6 @@ export interface ISkeletonProps {
 interface ISkeletonOptions {
     color?: string;
     height?: 'sm' | 'xs' | 'lg';
+    weight?: 'sm' | 'xs' | 'lg';
     type?: 'col' | 'circle';
 }

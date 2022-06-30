@@ -11,7 +11,7 @@ export default {
 const CircleTemplate: ComponentStory<typeof Skeleton> = (args) => {
     const propArgs = {
         options: {
-            color: 'pink',
+            color: 'teal',
             type: 'circle',
             height: 'lg'
         }
@@ -27,9 +27,10 @@ export const CircleSkeleton = CircleTemplate.bind({});
 const ColTemplate: ComponentStory<typeof Skeleton> = (args) => {
     const propArgs = {
         options: {
-            color: 'pink',
+            color: 'red',
             type: 'col',
-            height: 'lg'
+            height: 'lg',
+            width: 'lg'
         }
     }
     return (
