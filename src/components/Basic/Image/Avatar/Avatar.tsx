@@ -4,7 +4,7 @@ import { IAvatarProps } from './Avatar.props';
 
 const StyledRoundedAvatarImage = styled.img<IAvatarProps>`
     border-radius: 9999px;
-    width: ${props => props.data?.weight ? props.data?.weight : '2.5rem'}
+    width: ${props => props.data?.width ? props.data?.width : '2.5rem'};
     height: ${props => props.data?.height ? props.data?.height : '2.5rem'};
     max-width: 100%;
     display: block;
@@ -13,17 +13,17 @@ const StyledRoundedAvatarImage = styled.img<IAvatarProps>`
 
 const StyledRectAvatarImage = styled.img<IAvatarProps>`
     border-radius: 0.25rem;
-    width: ${props => props.data?.weight ? props.data?.weight : '2.5rem'}
+    width: ${props => props.data?.width ? props.data?.width : '2.5rem'};
     height: ${props => props.data?.height ? props.data?.height : '2.5rem'};
     max-width: 100%;
     display: block;
     vertical-align: middle;
-    src: ${props => props.data.imageSrc ? props.data.imageSrc : ''},
+    src: ${props => props.data.imageSrc ? props.data.imageSrc : ''};
 `;
 
 const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
     border-radius: 9999px;
-    width: ${props => props.data?.weight ? props.data?.weight : '2.5rem'};
+    width: ${props => props.data?.width ? props.data?.width : '2.5rem'};
     height: ${props => props.data?.height ? props.data?.height : '2.5rem'};
     max-width: 100%;
     display: block;
@@ -40,13 +40,45 @@ const Avatar = (props: IAvatarProps) => {
     const resolveAvatar = () => {
         switch(props.options?.avatarType) {
             case 'rounded':
-                return <StyledRoundedAvatarImage {...props}/>;
+                return (
+                    <StyledRoundedAvatarImage {...props}
+                        src={props.data.imageSrc}
+                        height={props.data.height}
+                        width={props.data.width}
+                        alt={props.data.alt}
+                        onClick={props.events?.onClick}
+                    />
+                );
             case 'rect':
-                return <StyledRectAvatarImage {...props}/>;
+                return (
+                    <StyledRectAvatarImage {...props}
+                        src={props.data.imageSrc}
+                        height={props.data.height}
+                        width={props.data.width}
+                        alt={props.data.alt}
+                        onClick={props.events?.onClick}
+                    />
+                );
             case 'bordered':
-                return <StyledBorderedAvatarImage {...props}/>;
+                return (
+                    <StyledBorderedAvatarImage {...props}
+                        src={props.data.imageSrc}
+                        height={props.data.height}
+                        width={props.data.width}
+                        alt={props.data.alt}
+                        onClick={props.events?.onClick}
+                    />
+                )
             default: 
-                return <StyledRectAvatarImage {...props}/>;
+                return (
+                    <StyledRectAvatarImage {...props}
+                        src={props.data.imageSrc}
+                        height={props.data.height}
+                        width={props.data.width}
+                        alt={props.data.alt}
+                        onClick={props.events?.onClick}
+                    />
+                );
         }
     }
 

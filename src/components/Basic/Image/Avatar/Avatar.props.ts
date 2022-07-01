@@ -7,7 +7,8 @@ export interface IAvatarProps {
 interface IAvatarData {
     imageSrc: string;
     height?: string;
-    weight?: string;
+    width?: string;
+    alt?: string
 }
 
 interface IAvatarEvents {
