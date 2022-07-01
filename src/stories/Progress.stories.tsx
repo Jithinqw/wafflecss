@@ -15,9 +15,9 @@ export default {
 const ProgressTemplate: ComponentStory<typeof Progress> = (args) => {
     const propArgs = {
         data: {
-            color: 'teal',
+            color: 'red',
             width: '10%',
-            height: '5px',
+            height: '15px',
             enableStripe: true,
             animateStripe: true
         }

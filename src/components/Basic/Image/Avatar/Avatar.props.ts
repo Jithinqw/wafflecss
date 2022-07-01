@@ -8,7 +8,8 @@ interface IAvatarData {
     imageSrc: string;
     height?: string;
     width?: string;
-    alt?: string
+    alt?: string;
+    borderColor?: string;
 }
 
 interface IAvatarEvents {

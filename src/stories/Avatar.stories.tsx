@@ -48,9 +48,10 @@ const AvatarBoardedTemplate: ComponentStory<typeof Avatar> = (args) => {
     const propArgs = {
         data: {
             imageSrc: 'https://bit.ly/dan-abramov',
+            borderColor: 'rgb(255, 0, 0)'
         },
         options: {
-            avatarType: 'bordered'
+            avatarType: 'bordered',
         }
     }
     return (

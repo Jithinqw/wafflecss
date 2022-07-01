@@ -27,6 +27,8 @@ const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
     height: ${props => props.data?.height ? props.data?.height : '2.5rem'};
     max-width: 100%;
     display: block;
+    box-shadow: ${
+        props => props.data?.borderColor ? props.data?.borderColor + ' 0px 0px 0px 3px' : 'rgba(3, 102, 214, 0.3) 0px 0px 0px 3px'};
     vertical-align: middle;
 `;
 
