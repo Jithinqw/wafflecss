@@ -1,60 +1,108 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import Utilities from "../../utils/common";
+import styled from "styled-components";
 import { IToastProps } from "./Toast.props";
 
-const StyledToast = styled.div<IToastProps>`
-    position: fixed;
-    left: 0;
-    bottom: 1;
-    height: 0;
-    width: 100%;
-    overflow: visible;
-`;
-const AnimatedToast = keyframes`
-    from {
-        transform: translateY(100%);
-        opacity: 0;
+const StyledToastDivContiner = styled.div`
+    width: 400px;
+    position: absolute;
+    bottom: 0px;
+    transition: transform 400ms ease-in-out 0s;
+    &:first-of-type {
+        transform: translate(0px, 0px);
+        transition: none 0s ease 0s;
+    }
+    &:nth-of-type(1) {
+        z-index: 5;
     }
 `;
 
-const StyledToastContainer = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
+const StyledToastWrapper = styled.div`
+    overflow-wrap: break-word;
+`;
+
+const StyledAlert = styled.div`
+    color: #42526E;
+    background-color: var(--ds-surface-overlay, #FFFFFF);
+    box-shadow: var(--ds-shadow-overlay, 0 0 1px rgba(9, 30, 66, 0.31), 0 20px 32px -8px rgba(9, 30, 66, 0.25));
     width: 100%;
+    z-index: 600;
+    border-radius: 3px;
+    transition: background-color 200ms ease 0s;
+`;
+
+const StyledToastBody = styled.div`
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    border-radius: 3px;
+`;
+
+const StyledToastHead = styled.div`
+    color: var(--ds-icon-subtle, #42526E);
     display: flex;
+    -webkit-box-align: start;
+    align-items: start;
+`;
+
+const StyledCloseButton = styled.button`
+    margin-left: 8px;
+    padding: 8px 0px 0px;
+    flex: 0 0 auto;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
+`;
+
+const StyledCloseHolder = styled.span`
+    display: inline-block;
+    flex-shrink: 0;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+`;
+
+const StyledToastBodyWrapper = styled.div`
+    display: flex;
+    min-width: 0px;
+    padding: 0px 0px 0px 40px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex: 1 1 100%;
     flex-direction: column;
-    align-items: center;
-    /* justify-content: flex-end; */
-    flex: 1;
-    transition: transform 250ms ease;
-    overflow: hidden;
+    transition: max-height 0.3s ease 0s;
+    max-height: 150px;
 `;
 
-const StyledToastRoot = styled.span`
-    display: flex;
-    flex: 1;
-    padding: 10px 20px;
-    margin: 0 0 10px;
-    border-radius: 5px;
-    background: rgba(0,0,0,0.95);
-    color: #fff;
-    z-index: 999;
-    animation: ${AnimatedToast} 500ms ease forwards 1;
+const StyledToastBodyText = styled.div`
+    max-height: 100px;
+    overflow: auto;
+    overflow-wrap: break-word;
 `;
-
-
-
 const Toast = (props: IToastProps) => {
     return (
-        <StyledToast {...props} id="rootMessage">
-            <StyledToastContainer>
-                <StyledToastRoot>
-                    {props.data.displayText}
-                </StyledToastRoot>
-            </StyledToastContainer>
-        </StyledToast>
+        <StyledToastDivContiner>
+            <StyledToastWrapper>
+                <StyledAlert>
+                    <StyledToastBody>
+                        <StyledToastHead>
+                            {props.data.toastHeadNode}
+                                <StyledCloseButton onClick={props.events?.onDismiss}>
+                                    <StyledCloseHolder>X</StyledCloseHolder>
+                                </StyledCloseButton>
+                        </StyledToastHead>
+                        <StyledToastBodyWrapper>
+                            <StyledToastBodyText>
+                                {props.data.toastHeadTextNode}
+                            </StyledToastBodyText>
+                        </StyledToastBodyWrapper>
+                    </StyledToastBody>
+                </StyledAlert>
+            </StyledToastWrapper>
+        </StyledToastDivContiner>
     )
 }
 
