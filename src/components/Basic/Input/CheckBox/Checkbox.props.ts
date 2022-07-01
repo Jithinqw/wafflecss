@@ -10,7 +10,7 @@ interface ICheckboxData {
 }
 
 interface ICheckboxEvents {
-    onClick?:() => void;
+    onCheckboxChange(isChecked: boolean): void;
 }
 
 interface ICheckboxOptions {
