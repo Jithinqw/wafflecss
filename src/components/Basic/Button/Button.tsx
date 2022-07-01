@@ -157,6 +157,9 @@ const StyledDefault = styled.button<IButtonProps>`
     text-decoration: none;
     text-align: center;
     display: grid;
+    :where(button, input):where(:not(:active)):focus-visible {
+        outline-offset: 5px;
+    }
     grid-template-areas: "leadingIcon text trailingIcon";
     padding: ${props => props.options?.size ? getButtonWidth(props.options.size) : buttonConstant.padding};
     width: ${props => props.data?.width ? props.data?.width : ''};

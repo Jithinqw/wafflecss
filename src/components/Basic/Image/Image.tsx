@@ -1,6 +1,7 @@
 import React from "react";
 import { IImageProps } from "./Image.props";
-
+import Utilities from '../../../utils/common'
+import DateUtilities from "../../../utils/dateUtil";
 const Image = (props: IImageProps) => {
     const [imgSrc, setImageSrc] = React.useState(props.data.imageSrc);
 
@@ -11,13 +12,14 @@ const Image = (props: IImageProps) => {
      * @param {any} event
      */
     const resolveImageError = (event: any) => {
-        if(event && event != undefined) {
+        if(!Utilities.isEmptyObject(event)) {
             return (props.data?.fallbackImageSrc && 
                 setImageSrc(props.data?.fallbackImageSrc)
             );
         }
     }
 
+    console.log(DateUtilities.isLeap(2010));
     return (
         <img 
             src={imgSrc}
