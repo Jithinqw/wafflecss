@@ -11,6 +11,7 @@ export const commonConstant = {
     // Cursor
     cursorPointer: 'pointer',
     cursorNotAllowed: 'not-allowed',
+    cursorNone: 'none',
     cursorWait: 'wait',
     // Text decoration
     defaultTextDecoration: 'none',
@@ -65,6 +66,9 @@ export const colorPalette = {
     errorColor: 'rgb(254, 215, 215)',
     // Container color
     defaultColor: 'rgb(246, 248, 250)',
+    // Modal color
+    bgColor: 'rgb(255, 255, 255)',
+    colorDefault: 'rgb(9, 30, 66)'
 }
 
 export const ImageConstant = {
@@ -178,4 +182,11 @@ export const skeletonConstants = {
         opacity: '0.5',
         borderRadius: '50%',
     }
+}
+
+export const modalConstants = {
+    ZIndex: '510',
+    width: '400px',
+    boxShadow: 'rgb(9 30 66 / 8%) 0px 0px 0px 1px, rgb(9 30 66 / 8%) 0px 2px 1px, rgb(9 30 66 / 31%) 0px 0px 20px -6px',
+    transition: 'transform 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s'
 }

@@ -64,4 +64,4 @@ const ModalTemplate: ComponentStory<typeof Modal> = (args) => {
         <Modal {...propArgs} />
     )
 };
-export const Primary = ModalTemplate.bind({});
+export const Default = ModalTemplate.bind({});

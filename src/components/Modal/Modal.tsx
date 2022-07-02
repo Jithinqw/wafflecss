@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { colorPalette, commonConstant, modalConstants } from "../../models/constants";
 import { IModalProps } from "./Modal.props";
 
 const StyledDivContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: ${commonConstant.flexDisplay};
+    flex-direction: ${commonConstant.flexColDirection};
     height: calc(100% - 119px);
     left: 0px;
     right: 0px;
@@ -12,20 +13,20 @@ const StyledDivContainer = styled.div`
     margin-right: auto;
     max-width: calc(100% - 120px);
     top: 60px;
-    width: 400px;
-    z-index: 510;
-    pointer-events: none;
+    width: ${modalConstants.width};
+    z-index: ${modalConstants.ZIndex};
+    pointer-events: ${commonConstant.cursorNone};
     position: absolute;
-    transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    transition: ${modalConstants.transition};
 `;
 
 const StyledDialog = styled.div`
-    background-color: rgb(255, 255, 255);
+    background-color: ${colorPalette.bgColor};
     border-radius: 3px;
-    box-shadow: rgb(9 30 66 / 8%) 0px 0px 0px 1px, rgb(9 30 66 / 8%) 0px 2px 1px, rgb(9 30 66 / 31%) 0px 0px 20px -6px;
-    color: rgb(9, 30, 66);
-    display: flex;
-    flex-direction: column;
+    box-shadow: ${modalConstants.boxShadow};
+    color: ${colorPalette.colorDefault};
+    display: ${commonConstant.flexDisplay};
+    flex-direction: ${commonConstant.flexColDirection};
     height: auto;
     max-height: 100%;
     outline: 0px;
