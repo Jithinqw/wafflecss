@@ -1,64 +1,42 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Avatar from '../components/Basic/Image/Avatar/Avatar'
+import Avatar from '../components/Basic/Image/Avatar/Avatar';
+import { action } from "@storybook/addon-actions";
 
 export default {
     title: 'Avatar',
     component: Avatar,
-    argTypes: {},
-} as ComponentMeta<typeof Avatar>
-
-const AvatarRoundedTemplate: ComponentStory<typeof Avatar> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             imageSrc: 'https://bit.ly/dan-abramov',
         },
         options: {
             avatarType: 'rounded'
-        }
-    }
-    return (
-        <Avatar 
-            {...propArgs}
-        />
-    )
-}
-
-export const AvatarRounded= AvatarRoundedTemplate.bind({});
-
-const AvatarRectTemplate: ComponentStory<typeof Avatar> = (args) => {
-    const propArgs = {
-        data: {
-            imageSrc: 'https://bit.ly/dan-abramov',
         },
-        options: {
-            avatarType: 'rect'
+        events: {
+            onClick: Function.prototype
         }
-    }
+    },
+} as ComponentMeta<typeof Avatar>;
+
+const AvatarTemplate: ComponentStory<typeof Avatar> = (args) => {
     return (
         <Avatar 
-            {...propArgs}
+            {...args}
         />
     )
 }
 
-export const AvatarRect = AvatarRectTemplate.bind({});
-
-const AvatarBoardedTemplate: ComponentStory<typeof Avatar> = (args) => {
-    const propArgs = {
-        data: {
-            imageSrc: 'https://bit.ly/dan-abramov',
-            borderColor: 'rgb(255, 0, 0)'
-        },
-        options: {
-            avatarType: 'bordered',
-        }
-    }
+const AvatarActionTemplete: ComponentStory<typeof Avatar> = (args) => {
     return (
         <Avatar 
-            {...propArgs}
+            {...args}
+            events={{
+                onClick: action('User click on Image')
+            }}
         />
     )
 }
 
-export const AvatarBordered = AvatarBoardedTemplate.bind({});
+export const AvatarDefault = AvatarTemplate.bind({});
+export const AvatarActionTest = AvatarActionTemplete.bind({});

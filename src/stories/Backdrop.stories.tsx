@@ -6,22 +6,29 @@ import Heading from '../components/Basic/Heading/Heading';
 export default {
     title: 'BackDrop',
     component: BackDrop,
-    argTypes: {},
-} as ComponentMeta<typeof BackDrop>
-
-const Template: ComponentStory<typeof BackDrop> = (args) => {
-    const propArgs = {
+    argTypes: {
+        data: {
+            isVisible: { control: 'boolean' },
+            children: { control: { type: 'object' } }
+        }
+    },
+    args: {
         data: {
             isVisible: true,
             children: (
                 <Heading 
                     data={{
-                        headingText: 'Free express shipping. No activation fee online. No credit check.'
+                        headingText: 'Free express shipping. \
+                        No activation fee online. No credit check.'
                     }}
                 />
             ),
         }
-    }
-    return <BackDrop {...propArgs}/>
-}
+    },
+} as ComponentMeta<typeof BackDrop>
+
+const Template: ComponentStory<typeof BackDrop> = (args) => {
+    return <BackDrop {...args} />
+};
+
 export const DefaultBackdrop = Template.bind({});

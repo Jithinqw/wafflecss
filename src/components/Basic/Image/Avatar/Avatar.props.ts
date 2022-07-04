@@ -14,6 +14,7 @@ interface IAvatarData {
 
 interface IAvatarEvents {
     onClick?:() => void;
+    onLoad?:() => void;
 }
 
 interface IAvatarOptions {

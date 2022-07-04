@@ -49,6 +49,7 @@ const Avatar = (props: IAvatarProps) => {
                         width={props.data.width}
                         alt={props.data.alt}
                         onClick={props.events?.onClick}
+                        onLoad={props.events?.onLoad}
                     />
                 );
             case 'rect':
@@ -59,6 +60,7 @@ const Avatar = (props: IAvatarProps) => {
                         width={props.data.width}
                         alt={props.data.alt}
                         onClick={props.events?.onClick}
+                        onLoad={props.events?.onLoad}
                     />
                 );
             case 'bordered':
@@ -69,6 +71,7 @@ const Avatar = (props: IAvatarProps) => {
                         width={props.data.width}
                         alt={props.data.alt}
                         onClick={props.events?.onClick}
+                        onLoad={props.events?.onLoad}
                     />
                 )
             default: 
@@ -79,6 +82,7 @@ const Avatar = (props: IAvatarProps) => {
                         width={props.data.width}
                         alt={props.data.alt}
                         onClick={props.events?.onClick}
+                        onLoad={props.events?.onLoad}
                     />
                 );
         }
