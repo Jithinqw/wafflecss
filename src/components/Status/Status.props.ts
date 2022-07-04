@@ -1,5 +1,5 @@
 export interface IStatusProps {
-    options?: IStatusOptions;
+    options: IStatusOptions;
     events?: IStatusEvents;
 }
 
@@ -16,6 +16,10 @@ interface IStatusOptions {
      * @type {string}
      */
     bgColor?: string;
+    /**
+     * @type {string}
+     */
+    variants?: 'rounded' | 'rect';
 }
 
 interface IStatusEvents {

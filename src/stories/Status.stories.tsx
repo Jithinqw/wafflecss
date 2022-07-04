@@ -5,18 +5,18 @@ import Status from '../components/Status/Status';
 export default {
     title: 'Status',
     component: Status,
-    argTypes: {},
+    args: {
+        options: {
+            bgColor: 'purple',
+            variants: 'rect',
+        }
+    },
 } as ComponentMeta<typeof Status>
 
 const StatusTemplate: ComponentStory<typeof Status> = (args) => {
-    const propArgs = {
-        options: {
-            bgColor: 'teal'
-        }
-    }
     return (
         <Status
-            {...propArgs} 
+            {...args} 
         />
     )
 };
