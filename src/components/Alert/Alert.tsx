@@ -34,6 +34,7 @@ const StyledAlert = styled.div<IAlertProps>`
     padding-inline-end: 1rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    border-radius: 10px;
     background: ${props => props.options?.variants ? resolveAlertColor(props.options?.variants) : resolveAlertColor('info')};
 `;
 
