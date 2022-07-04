@@ -24,5 +24,5 @@ interface IAlertOptions {
     /**
      * type of alert variant to display
      */
-    variants?: 'error' | 'success' | 'warning' | 'info';
+    variants?: 'error' | 'success' | 'warning' | 'info' | 'dark';
 }

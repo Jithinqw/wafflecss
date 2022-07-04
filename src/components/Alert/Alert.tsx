@@ -8,7 +8,9 @@ import { colorPalette, commonConstant } from "../../models/constants";
  * @param color 
  * @returns 
  */
-const resolveAlertColor = (color: 'error' | 'success' | 'warning' | 'info') => {
+const resolveAlertColor = (
+        color: 'error' | 'success' | 'warning' | 'info' | 'dark'
+    ) => {
     switch(color) {
         case 'error':
             return colorPalette.errorColor;
@@ -18,6 +20,8 @@ const resolveAlertColor = (color: 'error' | 'success' | 'warning' | 'info') => {
             return colorPalette.successColor;
         case 'warning':
             return colorPalette.warningColor;
+        case 'dark':
+            return colorPalette.defaultGreyColor;
         default:
             return colorPalette.infoColor;
     }
