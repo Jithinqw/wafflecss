@@ -6,6 +6,7 @@ export interface IDropdownProps {
 
 interface IDropdownData {
     optionData: ISelectOption[];
+    disabled?: boolean;
 }
 
 interface IDropdownOptions {

@@ -22,6 +22,7 @@ const StyledOption = styled.select<IDropdownProps>`
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    cursor: ${props => props.data.disabled ? 'not-allowed' : 'pointer'};
     &:after {
         display: block;
         clear: both;
@@ -36,7 +37,7 @@ const Dropdown = (props: IDropdownProps) => {
     /**
      * @function onChange
      * @description change handler for input
-     * @param e {changeEvent}
+     * @param {changeEvent} e 
      */
      const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
         setSelectedValue(e.currentTarget.value);
@@ -50,6 +51,7 @@ const Dropdown = (props: IDropdownProps) => {
             onChange={onChange} 
             value={selectedValue} 
             {...props}
+            disabled={props.data?.disabled ? props.data?.disabled : false}
         >
             {
                 props.data.optionData && props.data.optionData.map((e, i) => {
