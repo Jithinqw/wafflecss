@@ -53,7 +53,7 @@ const CheckBox = (props: ICheckboxProps) => {
      */
     const onCheckbokStateChange = (e: React.FormEvent<HTMLInputElement>) => {
         setIsChecked(e.currentTarget.checked);
-        props.events?.onCheckboxChange(isChecked);
+        props.events?.onCheckboxChange(e.currentTarget.checked);
     }
 
     return(

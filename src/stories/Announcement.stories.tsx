@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta, storiesOf } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Announcement from '../components/Announcement/Announcement';
 import LegalText from "../components/Basic/Heading/LegalText/LegalText";
