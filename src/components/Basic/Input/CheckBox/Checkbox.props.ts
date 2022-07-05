@@ -14,5 +14,7 @@ interface ICheckboxEvents {
 }
 
 interface ICheckboxOptions {
-    checkboxOption?: 'columncheckbox'
+    variant?: 'sm' | 'md' | 'lg';
+    borderColor?: string;
+    bgColor?: string;
 }

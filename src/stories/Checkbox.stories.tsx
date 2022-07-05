@@ -5,20 +5,23 @@ import Checkbox from '../components/Basic/Input/CheckBox/Checkbox';
 export default {
     title: 'Checkbox',
     component: Checkbox,
-    argTypes: {},
-} as ComponentMeta<typeof Checkbox>
-
-const CheckboxTemplate: ComponentStory<typeof Checkbox> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             displayText: 'Demo',
             value: 'demo'
+        },
+        options:{
+            variant: 'sm'
         }
-    }
+    },
+} as ComponentMeta<typeof Checkbox>
+
+const CheckboxTemplate: ComponentStory<typeof Checkbox> = (args) => {
     return (
         <Checkbox 
-            {...propArgs} 
+            {...args} 
         />
     )
 };
+
 export const CheckboxDefault = CheckboxTemplate.bind({});
