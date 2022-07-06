@@ -7,6 +7,7 @@ import { IListProps } from "./List.props";
 interface ListSpace {
     spacing?: string | undefined;
 }
+
 const StyledOrderedList = styled.ol`
     list-style-type: decimal;
     margin-inline-start: 1em;
@@ -21,7 +22,7 @@ const StyledListItem = styled.li<ListSpace>`
     padding-bottom: ${props => props.spacing ? props.spacing : ''};
     padding-left: ${props => props.spacing ? props.spacing : ''};
     padding-right: ${props => props.spacing ? props.spacing : ''};
-    font-family: ${commonConstant.fontFamily}
+    font-family: ${commonConstant.fontFamily};
 `;
 
 const StyledUnorderedList = styled.ul`
@@ -33,8 +34,8 @@ const StyledUnorderedList = styled.ul`
 
 /**
  * @function resolveList
- * @param listType 
- * @param listData 
+ * @param {'ordered' | 'unordered'} listType 
+ * @param {Array<ListData>} listData 
  * @returns {React.ReactNode}
  */
 const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[], spacing?: string) => {

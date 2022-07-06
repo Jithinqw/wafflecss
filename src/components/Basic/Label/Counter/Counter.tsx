@@ -35,23 +35,37 @@ const CounterDark = styled.span`
 
 const Counter = (props: ICounterProps) => {
 
+    /**
+     * @function resolveCounterTheme
+     * @description Resolve counter theme
+     * @returns {React.ReactNode}
+     */
     const resolveCounterTheme = () => {
         switch(props.options?.counterType) {
             case 'primary':
                 return  (
-                    <CounterPrimary {...props}>
+                    <CounterPrimary 
+                        {...props}
+                        onClick={props.events?.onClick}
+                    >
                         {props.data.displayText}
                     </CounterPrimary>
                 );
             case 'dark':
                 return (
-                    <CounterDark {...props}>
+                    <CounterDark 
+                        {...props}
+                        onClick={props.events?.onClick}
+                    >
                         {props.data.displayText}
                     </CounterDark>
                 );
             default:
                 return  (
-                    <CounterPrimary {...props}>
+                    <CounterPrimary 
+                        {...props}
+                        onClick={props.events?.onClick}
+                    >
                         {props.data.displayText}
                     </CounterPrimary>
                 );

@@ -50,4 +50,4 @@ const Link = (props: ILinkProps) => {
     )
 }
 
-export default memo(Link)
+export default memo(Link);

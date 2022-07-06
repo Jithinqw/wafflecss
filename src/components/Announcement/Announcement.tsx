@@ -4,8 +4,8 @@ import LegalText from "../Basic/Heading/LegalText/LegalText";
 import { IAnnouncementProps } from "./Announcement.props";
 
 const StyledAnnouncement = styled.div`
-    background-color: var(--ds-background-boldNeutral-resting, #42526E);
-    color: var(--ds-text-onBold, #FFFFFF);
+    background-color: #42526E;
+    color: #FFFFFF;
     overflow: hidden;
     max-height: 88px;
     overflow: scroll;
@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledSpanAlert = styled.span`
-    fill: var(--ds-background-boldNeutral-resting, #42526E);
+    fill: #42526E;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -57,8 +57,8 @@ const StyledDismissContainer = styled.div`
     float: right;
     position: relative;
     z-index: 1;
-    background-color: var(--ds-background-neutral-bold,#42526E);
-    color: var(--ds-icon-inverse,#FFFFFF);
+    background-color: #42526E;
+    color: #FFFFFF;
 `;
 
 const Announcement = (props: IAnnouncementProps) => {
@@ -85,7 +85,6 @@ const Announcement = (props: IAnnouncementProps) => {
                     />
                 </StyledDismissContainer>
             </StyledWrapper>
-            
         </StyledAnnouncement>
     )
 }

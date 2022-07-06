@@ -5,13 +5,25 @@ export interface ICounterProps {
 }
 
 interface ICounterData {
+    /**
+     * @type {string}
+     * display text to render
+     */
     displayText: string;
 }
 
 interface ICounterEvents {
+    /**
+     * trigger an event if 
+     * click on counter component
+     */
     onClick?:() => void;
 }
 
 interface ICounterOptions {
-    counterType?: 'primary' | 'dark'
+    /**
+     * @type {'primary' | 'dark'}
+     * type of counter to render
+     */
+    counterType?: 'primary' | 'dark';
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IPinInputProps } from "./PinInput.props";
 
 const StyledPinInput = styled.input`
-    width: 2.5rem;;
+    width: 2.5rem;
     min-width: 0px;
     outline: transparent solid 2px;
     outline-offset: 2px;
@@ -26,9 +26,11 @@ const PinInput = (props: IPinInputProps) => {
     return (
         <StyledPinInput 
             value={props.data.value}
-            placeholder={'○'}
+            id={props.data?.id}
+            placeholder={props.data.placeholder ? props.data.placeholder : '○'}
             onChange={props.events?.onChange}
             autoComplete="off"
+            disabled={props.data.isDisabled}
         />
     )
 }

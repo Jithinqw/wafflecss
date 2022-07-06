@@ -8,22 +8,27 @@ export interface IPinInputProps {
 
 interface IPinInputData {
     /**
+     * @type {string}
      * Placeholder for input
      */
     placeholder?: string;
     /**
+     * @type {string}
      * id of textinput
      */
     id?: string;
     /**
+     * @type {boolean}
      * toggle disabled 
      */
     isDisabled?: boolean;
     /**
+     * @type {string}
      * default value
      */
     value?: string;
     /**
+     * @type {string}
      * Name of text input
      */
     name?: string;

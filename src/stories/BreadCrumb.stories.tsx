@@ -7,11 +7,7 @@ import BreadCrumb from '../components/BreadCrumb/BreadCrumb'
 export default {
     title: 'BreadCrumb',
     component: BreadCrumb,
-    argTypes: {},
-} as ComponentMeta<typeof BreadCrumb>
-
-const BadgeTemplate: ComponentStory<typeof BreadCrumb> = (args) => {
-    const propArgs = {
+    args: {
         data: [
             {displayText: "dfsdfsdf"},
             {displayText: "dfsdfsdf"},
@@ -21,9 +17,12 @@ const BadgeTemplate: ComponentStory<typeof BreadCrumb> = (args) => {
         options: {
             color: 'danger',
         }
-    }
+    },
+} as ComponentMeta<typeof BreadCrumb>
+
+const BadgeTemplate: ComponentStory<typeof BreadCrumb> = (args) => {
     return (
-        <BreadCrumb {...propArgs}/>
+        <BreadCrumb {...args}/>
     )
 }
 

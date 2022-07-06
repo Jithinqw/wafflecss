@@ -31,6 +31,9 @@ const BreadCrumb = (props: IBreadCrumbProps) => {
                                 data={{
                                     displayText: e.displayText
                                 }}
+                                events={{
+                                    onClick: props.events?.onClick
+                                }}
                             />
                         </StyledListItem>
                     )

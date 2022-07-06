@@ -1,10 +1,4 @@
-export interface ImageData {
-    imageSource: string;
-    height: number;
-    width: number;
-    alt: string;
-    onClick?:() => void;
-}
+import { ImageData } from "../../../../models/defaultStyle"
 
 export interface IStackedImageProps {
     data?: IStackedImageData,
@@ -13,15 +7,29 @@ export interface IStackedImageProps {
 }
 
 interface IStackedImageEvents {
-    onClick?(): void,
-    onLoad?(): void,
+    /**
+     * Trigger an event on click of image
+     */
+    onClick?(): void;
+    /**
+     * Trigger an event on load of image
+     */
+    onLoad?(): void;
 }
 
 interface IStackedImageOptions {
-    style?: React.CSSProperties,
+    /**
+     * @type {boolean}
+     * Add a wiggle animation
+     * to stacked image
+     */
     wiggleAnimation?: boolean
 }
 
 interface IStackedImageData {
+    /**
+     * Image properties
+     * @type {ImageData}
+     */
     imageData: Array<ImageData>
 }

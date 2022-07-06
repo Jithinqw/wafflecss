@@ -5,15 +5,34 @@ export default interface IBadgeProps {
 }
 
 interface IBadgeData {
+    /**
+     * @type {string}
+     * text to display
+     */
     displayText: string;
+    /**
+     * @type {string}
+     * background color 
+     */
     background?: string;
 }
 
 interface IBadgeEvents {
+    /**
+     * trigger an event on click
+     */
     onClick?:() => void;
 }
 
 interface IBadgeOptions {
+    /**
+     * @type {'subtle' | 'solid' | 'outline'}
+     * badge variant
+     */
     variant: 'subtle' | 'solid' | 'outline';
+    /**
+     * @type {'warn' | 'success' | 'danger'}
+     * color for badge
+     */
     color: 'warn' | 'success' | 'danger';
 }

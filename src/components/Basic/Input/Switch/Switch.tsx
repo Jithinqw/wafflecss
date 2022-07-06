@@ -42,7 +42,10 @@ const Input = styled.input`
 const Switch = (props: ISwitchProps) => {
     return (
         <Label>
-            <Input type={'checkbox'}/>
+            <Input 
+                type={'checkbox'} 
+                onClick={props.events?.onClick}
+            />
             <StyledSwitch />
         </Label>
     )

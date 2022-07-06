@@ -6,14 +6,36 @@ export interface IProgressProps {
 }
 
 interface IProgressData {
+    /**
+     * @type {string}
+     */
     width: string;
+    /**
+     * @type {string}
+     */
     color?: string;
+    /**
+     * @type {string}
+     */
     height?: string;
+    /**
+     * @type {React.ReactNode}
+     */
     children?: React.ReactNode;
+    /**
+     * @type {boolean}
+     */
     enableStripe?: boolean;
+    /**
+     * @type {boolean}
+     */
     animateStripe?: boolean;
 }
 
 interface IProgressEvents {
-    onClick?:() => void
+    /**
+     * Trigger an event if click
+     * on progress component
+     */
+    onClick?:() => void;
 }

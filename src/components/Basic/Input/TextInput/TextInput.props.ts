@@ -8,22 +8,27 @@ export interface ITextInputProps {
 
 interface ITextInputData {
     /**
+     * @type {string}
      * Placeholder for input
      */
     placeholder?: string;
     /**
+     * @type {string}
      * id of textinput
      */
     id?: string;
     /**
+     * @type {boolean}
      * toggle disabled 
      */
     isDisabled?: boolean;
     /**
+     * @type {string}
      * default value
      */
     value?: string;
     /**
+     * @type {string}
      * Name of text input
      */
     name?: string;
@@ -44,29 +49,29 @@ interface ITextInputData {
 interface ITextInputEvents {
     /**
      * @description handler for input value change
-     * @param e {ChangeEvent}
+     * @param {ChangeEvent} e
      * @type {HTMLInputElement}
-     * @returns void
+     * @returns {void}
      */
      onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
      /**
       * @description handler for key press event
-      * @param oldValue {string}
-      * @param e {React.MouseEvent<HTMLInputElement>}
-      * @returns void
+      * @param {string} oldValue
+      * @param {React.MouseEvent<HTMLInputElement>} e
+      * @returns {void}
       */
      onKeyPress?: (oldValue: string, e:React.KeyboardEvent<HTMLInputElement>) => void;
      /**
       * @description handler for input blur event
-      * @param currentValue {string}
-      * @returns void
+      * @param {string} currentValue
+      * @returns {void}
       */
      onBlur?: (currentValue: string) => void;
      /**
       * @description handler for focus event
-      * @param currentValue {string}
-      * @param e {React.FocusEvent}
-      * @returns 
+      * @param {string} currentValue
+      * @param {React.FocusEvent} e
+      * @returns {void}
       */
      onFocus?:(currentValue: string, e: React.FocusEvent<HTMLInputElement>) => void;
 }

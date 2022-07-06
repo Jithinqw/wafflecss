@@ -68,6 +68,7 @@ interface IButtonOptions {
     variants?: 'default' | 'danger' | 'outline' | 'primary';
     /**
      * additional styles
+     * @type {IStyleOptions}
      */
     style?: IStyleOptions;
 }

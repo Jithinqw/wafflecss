@@ -85,6 +85,7 @@ const Heading = (props: IHeadingProps) => {
         <StyledHeading
             id={props.data?.id}
             {...props}
+            onClick={props.events?.onClick}
         >
             {props.data?.headingText}
         </StyledHeading>

@@ -1,7 +1,7 @@
 import React from "react";
 import { IImageProps } from "./Image.props";
 import Utilities from '../../../utils/common'
-import DateUtilities from "../../../utils/dateUtil";
+
 const Image = (props: IImageProps) => {
     const [imgSrc, setImageSrc] = React.useState(props.data.imageSrc);
 
@@ -19,7 +19,6 @@ const Image = (props: IImageProps) => {
         }
     }
 
-    console.log(DateUtilities.isLeap(2010));
     return (
         <img 
             src={imgSrc}

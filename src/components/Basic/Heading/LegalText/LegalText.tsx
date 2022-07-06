@@ -6,6 +6,11 @@ import {
 } from "../../../../models/constants";
 import ILegalTextProps from "./LegalText.props";
 
+/**
+ * @function makeLegalStyle
+ * @param {'sm' | 'md' | 'lg'} style 
+ * @returns {string}
+ */
 const makeLegalStyle = (style?: 'sm' | 'md' | 'lg') => {
     switch(style) {
         case 'sm':
@@ -30,9 +35,11 @@ const StyledLegalText = styled.span<ILegalTextProps>`
 
 
 const LegalText = (props: ILegalTextProps) => {
-
     return (
-        <StyledLegalText {...props}>
+        <StyledLegalText 
+            {...props}
+            onClick={props.events?.onClick}
+        >
             {props.data.displayText}
         </StyledLegalText>
     )

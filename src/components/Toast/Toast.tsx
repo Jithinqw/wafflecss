@@ -22,8 +22,8 @@ const StyledToastWrapper = styled.div`
 
 const StyledAlert = styled.div`
     color: #42526E;
-    background-color: var(--ds-surface-overlay, #FFFFFF);
-    box-shadow: var(--ds-shadow-overlay, 0 0 1px rgba(9, 30, 66, 0.31), 0 20px 32px -8px rgba(9, 30, 66, 0.25));
+    background-color: #FFFFFF;
+    box-shadow: (1, 0 0 1px rgba(9, 30, 66, 0.31), 0 20px 32px -8px rgba(9, 30, 66, 0.25));
     width: 100%;
     z-index: 600;
     border-radius: 3px;
@@ -38,7 +38,7 @@ const StyledToastBody = styled.div`
 `;
 
 const StyledToastHead = styled.div`
-    color: var(--ds-icon-subtle, #42526E);
+    color: #42526E;
     display: flex;
     -webkit-box-align: start;
     align-items: start;
@@ -82,6 +82,7 @@ const StyledToastBodyText = styled.div`
     overflow: auto;
     overflow-wrap: break-word;
 `;
+
 const Toast = (props: IToastProps) => {
     return (
         <StyledToastDivContiner>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
+import { ImageData } from '../../../../models/defaultStyle';
 import { IStackedImageProps } from './StackedImage.props';
 
 const StyledGrid = styled.div`
@@ -66,7 +67,7 @@ const StackedImage = (props: IStackedImageProps) => {
                         <StyledDFlex>
                             <StyledFlexAvatarStack>
                                 {
-                                    props.data?.imageData && props.data.imageData && props.data.imageData.map((e, i:number) => {
+                                    props.data?.imageData && props.data.imageData.map((e: ImageData, i:number) => {
                                         return (
                                             <StyledflexAvatarTackItem key={i}>
                                                 <StyledImage 

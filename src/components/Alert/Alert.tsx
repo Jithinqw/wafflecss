@@ -5,8 +5,9 @@ import { colorPalette, commonConstant } from "../../models/constants";
 
 /**
  * @function resolveAlertColor
- * @param color 
- * @returns 
+ * @description resolve alert color
+ * @param {'error' | 'success' | 'warning' | 'info' | 'dark'} color 
+ * @returns {string}
  */
 const resolveAlertColor = (
         color: 'error' | 'success' | 'warning' | 'info' | 'dark'

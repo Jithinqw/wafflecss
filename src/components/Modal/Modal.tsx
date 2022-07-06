@@ -75,21 +75,23 @@ const StyledFooter = styled.div`
 
 const Modal = (props: IModalProps) => {
     return (
-        <StyledDivContainer>
-            <StyledDialog>
-                <StyledChildDiv>
-                    <StyledDialogHeader>
-                        {props.data.modalHeadingNode}
-                    </StyledDialogHeader>
-                    <StyledDialogBody>
-                        {props.data.modalBodyNode}
-                    </StyledDialogBody>
-                    <StyledFooter>
-                        {props.data.modalFooterNode}
-                    </StyledFooter>
-                </StyledChildDiv>
-            </StyledDialog>
-        </StyledDivContainer>
+            props && props.options.isVisible ? (
+                <StyledDivContainer>
+                    <StyledDialog>
+                        <StyledChildDiv>
+                            <StyledDialogHeader>
+                                {props.data?.modalHeadingNode}
+                            </StyledDialogHeader>
+                            <StyledDialogBody>
+                                {props.data?.modalBodyNode}
+                            </StyledDialogBody>
+                            <StyledFooter>
+                                {props.data?.modalFooterNode}
+                            </StyledFooter>
+                        </StyledChildDiv>
+                    </StyledDialog>
+                </StyledDivContainer>
+            ) : null 
     )
 }
 
