@@ -8,7 +8,8 @@
     "build": "rollup -c",
     "unittest": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "storybook-deploy": "build-storybook -o public/storybook"
   },
   "repository": {
     "type": "git",
