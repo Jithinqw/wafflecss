@@ -16,7 +16,6 @@ export { default as StackedImage } from './components/Basic/Image/StackedImage/S
 export { default as Avatar } from './components/Basic/Image/Avatar/Avatar';
 export { default as Counter } from './components/Basic/Label/Counter/Counter';
 export { default as Badge } from './components/Badge/Badge';
-export { default as Animation } from './components/Animation/Animation';
 export { default as Progress } from './components/Progress/Progress';
 export { default as Center } from './components/Layout/Center/Center';
 export { default as SnackBar } from './components/SnackBar/SnackBar';
