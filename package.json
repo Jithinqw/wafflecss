@@ -9,7 +9,8 @@
     "unittest": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "storybook-deploy": "build-storybook -o public/storybook"
+    "build-storybook-docs": "build-storybook --docs",
+    "storybook-docs": "start-storybook --docs --no-manager-cache"
   },
   "repository": {
     "type": "git",
