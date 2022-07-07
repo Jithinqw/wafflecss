@@ -9,7 +9,8 @@ export default {
     args: {
         maxStarNum: 5,
         size: 'sm',
-        defaultStarSelection: 3
+        defaultStarSelection: 3,
+        onClick: Function.prototype
     },
 } as ComponentMeta<typeof StarRating>
 

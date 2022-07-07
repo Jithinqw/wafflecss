@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colorPalette } from "../../models/constants";
 import { IStarRatingProps } from "./StarRating.props";
@@ -39,6 +39,12 @@ const StarRating = (props: IStarRatingProps) => {
     const [hover, setHover] = useState(0);
     const starSelectedColor: string = props.highlightColor ? props.highlightColor : 'yellow';
     const starNotSelectedColor: string = props.defaultColor ? props.defaultColor : colorPalette.defaultGreyColor;
+
+    useEffect(() =>{
+        if(props.defaultStarSelection) {
+            setRating(props.defaultStarSelection);
+        }
+    },[]);
 
     /**
      * @function starClickEvent
