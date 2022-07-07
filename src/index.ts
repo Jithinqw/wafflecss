@@ -1,13 +1,17 @@
 /**
  * Expose APIs for package.
  */
-import { AnimationType } from './models/Animation';
+import { AnimationType } from './models/animation';
 import { HeadingType } from './models/Heading';
+import { ListData } from './models/basicModal';
+import { 
+    IStyleOptions, ICheckboxData,
+    ImageData, ISelectOption,
+} from './models/defaultStyle';
 
 export { default as Button } from './components/Basic/Button/Button';
 export { default as Heading } from './components/Basic/Heading/Heading';
 export { default as LegalText } from './components/Basic/Heading/LegalText/LegalText';
-export { default as TimerClock } from './components/Clock/Clock';
 export { default as StackedImage } from './components/Basic/Image/StackedImage/StackedImage';
 export { default as Avatar } from './components/Basic/Image/Avatar/Avatar';
 export { default as Counter } from './components/Basic/Label/Counter/Counter';
@@ -21,10 +25,20 @@ export { default as Link } from './components/Basic/Link/Link';
 export { default as Skeleton } from  './components/Skeleton/Skeleton';
 export { default as TextInput } from './components/Basic/Input/TextInput/TextInput';
 export { default as TextArea } from './components/Basic/Input/TextArea/TextArea';
+export { default as Switch } from './components/Basic/Input/Switch/Switch';
 export { default as Hidden } from './components/Layout/Hide/Hidden';
+export { default as Container } from './components/Layout/Container/Container';
+export { default as Status } from './components/Status/Status';
+export { default as Label } from './components/Basic/Label/Label';
+export { default as PriceLabel } from './components/Basic/Label/PriceLabel/PriceLabel';
+export { default as Modal} from './components/Modal/Modal';
+export { default as Quote } from './components/Quote/Quote';
+export { default as Toast } from './components/Toast/Toast';
 
 export {
-    AnimationType,
-    HeadingType,
+    AnimationType, ISelectOption,
+    HeadingType, ListData,
+    IStyleOptions, ImageData,
+    ICheckboxData
 };
 

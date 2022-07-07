@@ -1,37 +1,48 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
+import { 
+    colorPalette, commonConstant,
+    legalTextConstant 
+} from "../../../../models/constants";
 import ILegalTextProps from "./LegalText.props";
 
+/**
+ * @function makeLegalStyle
+ * @param {'sm' | 'md' | 'lg'} style 
+ * @returns {string}
+ */
 const makeLegalStyle = (style?: 'sm' | 'md' | 'lg') => {
     switch(style) {
         case 'sm':
-            return '12px';
+            return legalTextConstant.textStyleScale.sm;
         case 'md':
-            return '14px';
+            return legalTextConstant.textStyleScale.md;
         case 'lg':
-            return '18px';
+            return legalTextConstant.textStyleScale.lg;
         default:
-            return '12px';
+            return legalTextConstant.textStyleScale.sm;
     }
 }
 
 const StyledLegalText = styled.span<ILegalTextProps>`
     font-size: ${props => props.options?.legalTextSize ? makeLegalStyle(props.options?.legalTextSize) : '12px'};
-    line-height: 1.33337;
-    font-weight: 400;
-    letter-spacing: -.01em;
-    color: ${props => props.options?.color ? props.options?.color : 'black'};
-    font-family: "inherit";
+    line-height: ${legalTextConstant.lineHeight};
+    font-weight: ${props => props.options?.style?.fontWeight ? props.options?.style?.fontWeight : legalTextConstant.fontWeight};
+    letter-spacing: ${legalTextConstant.letterSpacing}; 
+    font-family: ${props => props.options?.style?.fontFamily ? props.options?.style?.fontFamily : commonConstant.fontFamily};
+    color: ${props => props.options?.style?.color ? props.options?.style?.color : colorPalette.defaultBlackColor};
 `;
 
 
 const LegalText = (props: ILegalTextProps) => {
-
     return (
-        <StyledLegalText {...props}>
+        <StyledLegalText 
+            {...props}
+            onClick={props.events?.onClick}
+        >
             {props.data.displayText}
         </StyledLegalText>
     )
 }
 
-export default LegalText;
+export default memo(LegalText);

@@ -1,27 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+import { backDropConstants } from "../../models/constants";
 import { IBackdropProps } from "./Backdrop.props";
 
-const StyledBackdrop = styled.div`
+const StyledBackdrop = styled.div<IBackdropProps>`
     opacity: 1;
-    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: ${backDropConstants.defaultTransition};
     position: fixed;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    inset: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    inset: ${backDropConstants.insetDefault};
+    background-color: ${props => props.options?.bgColor ? props.options?.bgColor : backDropConstants.bgColor};
     -webkit-tap-highlight-color: transparent;
-    color: rgb(255, 255, 255);
-    z-index: 1201;
+    color: ${props => props.options?.color ? props.options?.color : backDropConstants.colorDefault};
+    z-index: ${backDropConstants.zIndex};
 `;
 
 const BackDrop = (props: IBackdropProps) => {
     return (
         props.data?.isVisible ?
-            <StyledBackdrop {...props}>
+            <StyledBackdrop 
+                {...props}
+                onClick={props.events?.onClick}
+            >
                 {props.data?.children}
             </StyledBackdrop> 
         : null

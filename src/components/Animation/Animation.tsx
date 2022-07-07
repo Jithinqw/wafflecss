@@ -1,5 +1,5 @@
 import { keyframes } from "styled-components";
-import { AnimationType } from "../../models/Animation";
+import { AnimationType } from '../../models/animation';
 
 const Rotate = keyframes`
     from {

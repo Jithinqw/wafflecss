@@ -1,3 +1,5 @@
+import { IStyleOptions } from "../../../models/defaultStyle";
+
 export interface IButtonProps {
     data: IButtonData;
     events?: IButtonEvents;
@@ -25,11 +27,6 @@ interface IButtonData {
      * Customize border-radius 
      */
     radius?: string;
-    /**
-     * @type {string}
-     * Customize font weight
-     */
-    fontWeight?: string;
     /**
      * @type {string}
      * Customise button width
@@ -69,4 +66,9 @@ interface IButtonOptions {
      * What is the behaviour of button
      */
     variants?: 'default' | 'danger' | 'outline' | 'primary';
+    /**
+     * additional styles
+     * @type {IStyleOptions}
+     */
+    style?: IStyleOptions;
 }

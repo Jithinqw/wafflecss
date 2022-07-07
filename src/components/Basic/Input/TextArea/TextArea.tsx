@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ITextAreaProps } from "./TextArea.props";
 
 const StyledTextArea = styled.textarea<ITextAreaProps>`
-    opacity: ${props => props.data.isDisabled ? '0.3' : '1'};
+    opacity: ${props => props.data?.isDisabled ? '0.3' : '1'};
     padding: 0;
     line-height: inherit;
     color: inherit;
@@ -16,7 +16,7 @@ const StyledTextArea = styled.textarea<ITextAreaProps>`
     appearance: none;
     transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
     transition-duration: 200ms;
-    font-size: '1rem';
+    font-size: 1rem;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
     border-radius: 0.375rem;
@@ -33,12 +33,12 @@ const TextArea = (props: ITextAreaProps) => {
     /**
      * @function onChange
      * @description change handler for input
-     * @param e {changeEvent}
+     * @param {changeEvent} e 
      */
      const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setCurrentText(e.currentTarget.value);
         if(props?.events?.onChange) {
-            props.events.onChange(e)
+            props.events?.onChange(e);
         }
     }
 
@@ -48,13 +48,13 @@ const TextArea = (props: ITextAreaProps) => {
      */
     const onBlur = () => {
         if(props?.events?.onBlur) {
-            props.events.onBlur(currentText);
+            props.events?.onBlur(currentText);
         }
     }
 
     /**
      * @function onKeyPress
-     * @param event {KeyboardEvent<HTMLInputElement>}
+     * @param {KeyboardEvent<HTMLInputElement>} event 
      * @description onKeyPress handler for input
      */
     const onKeyPress = (event: KeyboardEvent<HTMLTextAreaElement>) => {
@@ -65,24 +65,24 @@ const TextArea = (props: ITextAreaProps) => {
 
     /**
      * @function onFocus
-     * @param event {React.FocusEvent<HTMLInputElement>}
+     * @param {React.FocusEvent<HTMLInputElement>} event 
      * @description onFocus handler for input
      */
     const onFocus = (event: React.FocusEvent<HTMLTextAreaElement>) => {
         if(props?.events?.onFocus) {
-            props.events.onFocus(currentText, event)
+            props.events?.onFocus(currentText, event)
         }
     }
     return (
         <StyledTextArea 
             {...props}
-            placeholder={props.data.placeholderText ? props.data.placeholderText : ''}
+            placeholder={props.data?.placeholderText ? props.data?.placeholderText : ''}
             value={props.data.value}
-            name={props.data.name}
-            id={props.data.id}
-            cols={props.data.cols}
-            rows={props.data.rows}
-            disabled={props.data.isDisabled ? props.data.isDisabled : false}
+            name={props.data?.name}
+            id={props.data?.id}
+            cols={props.data?.cols}
+            rows={props.data?.rows}
+            disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             onChange={onChange}
             onKeyPress={onKeyPress}
             onBlur={onBlur}

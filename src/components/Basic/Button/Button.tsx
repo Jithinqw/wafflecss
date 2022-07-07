@@ -1,5 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
+import { 
+    buttonConstant, 
+    colorPalette, commonConstant 
+} from "../../../models/constants";
 import { IButtonProps } from "./Button.props";
 
 /**
@@ -10,15 +14,15 @@ import { IButtonProps } from "./Button.props";
 const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
-            return 'rgb(36, 41, 47)';
+            return colorPalette.defaultButtonColor;
         case 'danger':
-            return 'rgb(207, 34, 46)';
+            return colorPalette.defaultDangerButtonColor;
         case 'outline':
-            return 'rgb(9, 105, 218)';
+            return colorPalette.defaultOutlineButtonColor;
         case 'primary':
-            return '#2da44e';
+            return colorPalette.defaultPrimaryButtonColor;
         default:
-            return 'rgb(36, 41, 47)';
+            return colorPalette.defaultButtonColor;
     }
 }
 
@@ -30,15 +34,15 @@ const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary
 const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
-            return '#f6f8fa';
+            return colorPalette.defaultButtonBg;
         case 'danger':
-            return 'rgb(207, 34, 46)';
+            return colorPalette.dangerButtonBg;
         case 'outline':
-            return 'rgb(9, 105, 218)';
+            return colorPalette.outlineButtonBg;
         case 'primary':
-            return '#2da44e'
+            return colorPalette.primaryButtonBg;
         default:
-            return '#f6f8fa';
+            return colorPalette.defaultButtonBg;
     }
 }
 
@@ -50,15 +54,15 @@ const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline' |
 const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
-            return 'rgb(36, 41, 47)';
+            return colorPalette.defaultHoverColor;
         case 'danger':
-            return '#f6f8fa';
+            return colorPalette.dangerHoverColor;
         case 'outline':
-            return '#f6f8fa';
+            return colorPalette.outlineHoverColor;
         case 'primary':
-            return '#f6f8fa'
+            return colorPalette.primaryHoverColor;
         default:
-            return 'rgb(36, 41, 47)';
+            return colorPalette.defaultHoverColor;
     }
 }
 
@@ -73,9 +77,9 @@ const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'p
         case 'default':
         case 'danger':
         case 'outline':
-            return ' 1px solid rgba(27, 31, 36, 0.15)';
+            return colorPalette.defaultBorderColor;
         default:
-            return ' 1px solid rgba(27, 31, 36, 0.15)';
+            return colorPalette.defaultBorderColor;
     }
 }
 
@@ -87,15 +91,15 @@ const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'p
 const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(buttonType) {
         case 'sm':
-            return '5px 16px';
+            return buttonConstant.buttonWidth.sm;
         case 'md':
-            return '8px 20px';
+            return buttonConstant.buttonWidth.md;
         case 'xs':
-            return '12px 24px';
+            return buttonConstant.buttonWidth.xs;
         case 'lg':
-            return '18px 32px';
+            return buttonConstant.buttonWidth.lg;
         default:
-            return '5px 16px';
+            return buttonConstant.buttonWidth.sm;
     }
 }
 
@@ -107,15 +111,15 @@ const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
 const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(buttonType) {
         case 'sm':
-            return '8px';
+            return buttonConstant.fontSize.sm;
         case 'md':
-            return '12px';
+            return buttonConstant.fontSize.md;
         case 'xs':
-            return '18px';
+            return buttonConstant.fontSize.xs;
         case 'lg':
-            return '24px';
+            return buttonConstant.fontSize.lg;
         default:
-            return '12px';
+            return buttonConstant.fontSize.sm;
     }
 }
 
@@ -127,40 +131,47 @@ const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
 const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
-            return 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset';
+            return buttonConstant.buttonShadow.default;
         case 'danger':
         case 'outline':
-            return 'rgb(27 31 36 / 4%) 0px 1px 0px';        
+            return buttonConstant.buttonShadow.danger;        
         default:
-            return 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset';
+            return buttonConstant.buttonShadow.default;
     }
 }
 
 const StyledDefault = styled.button<IButtonProps>`
-    border-radius: ${props => props.data.radius ? props.data.radius : '6px'};
-    border: ${props => props.options?.variants ? getButtonBorderColor(props.options?.variants) : getButtonBorderColor('default')};
-    font-family: inherit;
-    font-weight: ${props => props.data.fontWeight ? props.data.fontWeight : '300'};
+    border-radius: ${props => props.data.radius ? props.data.radius : buttonConstant.borderRadius};
+    border: ${
+        props => props.options?.variants ? getButtonBorderColor(props.options?.variants) : getButtonBorderColor('default')
+    };
+    font-family: ${props => props.options?.style?.fontFamily ?props.options?.style?.fontFamily : commonConstant.fontFamily};
+    font-weight: ${props => props.options?.style?.fontWeight ? props.options?.style?.fontWeight : buttonConstant.fontWeight};
     white-space: nowrap;
     vertical-align: middle;
-    cursor: ${props => props.data.isDisabled ? 'not-allowed' : 'pointer'};
+    cursor: ${
+        props => props.data.isDisabled ? commonConstant.cursorNotAllowed : commonConstant.cursorPointer
+    };
     appearance: none;
     user-select: none;
     text-decoration: none;
     text-align: center;
     display: grid;
+    :where(button, input):where(:not(:active)):focus-visible {
+        outline-offset: 5px;
+    }
     grid-template-areas: "leadingIcon text trailingIcon";
-    padding: ${props => props.options?.size ? getButtonWidth(props.options.size) : '5px 16px'};
+    padding: ${props => props.options?.size ? getButtonWidth(props.options.size) : buttonConstant.padding};
     width: ${props => props.data?.width ? props.data?.width : ''};
     font-size: ${props => props.options?.size ? getFontSize(props.options?.size) : getFontSize('md')};
     color: ${props => props.options?.variants ? getButtonColor(props.options?.variants) : getButtonColor('default')};
     box-shadow: ${props => props.options?.variants ? getButtonShadow(props.options?.variants) : getButtonShadow('default')};
-    transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
-    transition-property: color,background-color,box-shadow,border-color;
-    opacity: ${props => props.data.isDisabled ? '0.3' : '1'};
+    transition: ${buttonConstant.transition};
+    transition-property: ${buttonConstant.transitionProperty};
+    opacity: ${props => props.data.isDisabled ? buttonConstant.opacityPartial : buttonConstant.opacityFull};
     &:hover {
-        color: ${props => props.options?.variants ? getHoverColor(props.options?.variants) : 'none'};
-        background-color: ${props => props.options?.variants ? getButtonBackgroudColor(props.options?.variants) : 'none'};
+        color: ${props => props.options?.variants ? getHoverColor(props.options?.variants) : buttonConstant.hoverColorState};
+        background-color: ${props => props.options?.variants ? getButtonBackgroudColor(props.options?.variants) : buttonConstant.hoverBackgroundColor};
     }
 `;
 
@@ -187,4 +198,4 @@ const Button = (props: IButtonProps) => {
     )
 }
 
-export default Button;
+export default memo(Button);

@@ -8,7 +8,8 @@
     "build": "rollup -c",
     "unittest": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "storybook-deploy": "build-storybook -o public/storybook"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/Jithinqw/wafflecss#readme",
   "dependencies": {
     "react": "^18.1.0",
+    "storybook-addon-performance": "^0.16.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
@@ -32,6 +34,7 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@storybook/addon-actions": "^6.5.5",
+    "@storybook/addon-docs": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.5",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.5",

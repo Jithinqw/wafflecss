@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+import { ImageData } from '../../../../models/defaultStyle';
 import { IStackedImageProps } from './StackedImage.props';
 
 const StyledGrid = styled.div`
@@ -41,6 +42,22 @@ const StyledflexAvatarTackItem = styled.li`
     text-align: -webkit-match-parent;
 `;
 
+const WiggleAnimation = keyframes`
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+`;
+
+const StyledImage = styled.img<IStackedImageProps>`
+    &:hover {
+        animation: ${props => props.options?.wiggleAnimation ? css`${WiggleAnimation} 0.82s cubic-bezier(.36,.07,.19,.97) both` : ''};
+    };
+    border-radius: 50%;
+    cursor: pointer;
+`;
+
 const StackedImage = (props: IStackedImageProps) => {
     return (
         <>
@@ -50,14 +67,15 @@ const StackedImage = (props: IStackedImageProps) => {
                         <StyledDFlex>
                             <StyledFlexAvatarStack>
                                 {
-                                    props.data?.imageData && props.data.imageData && props.data.imageData.map((e, i:number) => {
+                                    props.data?.imageData && props.data.imageData.map((e: ImageData, i:number) => {
                                         return (
                                             <StyledflexAvatarTackItem key={i}>
-                                                <img 
-                                                    src={e.imageSource}
-                                                    height={e.height}
-                                                    width={e.width}
-                                                    alt={e.alt} key={i}
+                                                <StyledImage 
+                                                    src={e?.imageSource}
+                                                    height={e?.height}
+                                                    width={e?.width}
+                                                    alt={e?.alt} 
+                                                    key={i}
                                                     onClick={e?.onClick}
                                                 />
                                             </StyledflexAvatarTackItem>

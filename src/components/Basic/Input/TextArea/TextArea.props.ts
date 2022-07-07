@@ -74,10 +74,6 @@ interface ITextAreaData {
 
 interface ITextAreaOptions {
     /**
-     * additonal css to the passed
-     */
-    textAreaStyle?: CSSProperties;
-    /**
      * control is readyonly value
      */
     isReadonly?: boolean;
