@@ -11,6 +11,17 @@ const StyledRoundedAvatarImage = styled.img<IAvatarProps>`
     vertical-align: middle;
 `;
 
+const StyledTextAvatar = styled.div<IAvatarProps>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    float: left;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 9999px;
+`;
+
 const StyledRectAvatarImage = styled.img<IAvatarProps>`
     border-radius: 0.25rem;
     width: ${props => props.data?.width ? props.data?.width : '2.5rem'};
@@ -63,6 +74,12 @@ const Avatar = (props: IAvatarProps) => {
                         onLoad={props.events?.onLoad}
                     />
                 );
+            case 'text':
+                return (
+                    <StyledTextAvatar {...props}>
+                        <p>{props.data.avatarText}</p>
+                    </StyledTextAvatar>
+                )
             case 'bordered':
                 return (
                     <StyledBorderedAvatarImage {...props}

@@ -30,6 +30,11 @@ interface IAvatarData {
      * a border color for avatar
      */
     borderColor?: string;
+    /**
+     * @type {string}
+     * avatar text data
+     */
+    avatarText?: string;
 }
 
 interface IAvatarEvents {
@@ -49,5 +54,5 @@ interface IAvatarOptions {
      * Render an avatar variant
      * @default {'rounded'}
      */
-    avatarType: 'rounded' | 'rect' | 'bordered'
+    avatarType: 'rounded' | 'rect' | 'bordered' | 'text';
 }

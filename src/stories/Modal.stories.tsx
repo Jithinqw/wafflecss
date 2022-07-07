@@ -58,6 +58,9 @@ const ModalTemplate: ComponentStory<typeof Modal> = (args) => {
                     ></Button>
                 </div>
             )
+        },
+        options: {
+            isVisible: true
         }
     }
     return (
