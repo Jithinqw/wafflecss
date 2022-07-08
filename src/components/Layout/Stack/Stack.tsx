@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { IStackProps } from "./Stack.props";
 
@@ -9,12 +9,12 @@ const StyledStack = styled.div`
     flex-direction: row;
 `;
 
-const Stack = (props: IStackProps) => {
+const Stack = forwardRef((props: IStackProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledStack>
+        <StyledStack ref={ref}>
             {props.children}
         </StyledStack>
     )
-}
+});
 
 export default Stack;

@@ -8,11 +8,11 @@ export default {
     args: {
         data: {
             optionData: [
-                {displayText: 'Apple', value: 'Apple1'},
-                {displayText: 'Google', value: 'Google2'},
-                {displayText: 'Amazon', value: 'Amazon3'},
-                {displayText: 'Meta', value: 'Meta4'},
-                {displayText: 'Airbnb', value: 'Airbnb5'}
+                {displayText: 'Apple', value: 'www.apple.com'},
+                {displayText: 'Google', value: 'www.google.com'},
+                {displayText: 'Amazon', value: 'www.amazon.in'},
+                {displayText: 'Meta', value: 'www.fb.com'},
+                {displayText: 'Airbnb', value: 'www.airbnb.io'}
             ]
         }
     },

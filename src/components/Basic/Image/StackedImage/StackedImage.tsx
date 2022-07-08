@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import { ImageData } from '../../../../models/defaultStyle';
 import { IStackedImageProps } from './StackedImage.props';
@@ -58,10 +58,10 @@ const StyledImage = styled.img<IStackedImageProps>`
     cursor: pointer;
 `;
 
-const StackedImage = (props: IStackedImageProps) => {
+const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLDivElement>) => {
     return (
         <>
-            <StyledGrid>
+            <StyledGrid ref={ref}>
                 <StyleGridRow>
                     <StyledGridCell>
                         <StyledDFlex>
@@ -89,6 +89,6 @@ const StackedImage = (props: IStackedImageProps) => {
             </StyledGrid>
         </>
     )
-}
+});
 
 export default StackedImage;

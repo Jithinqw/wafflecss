@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { ISnackBarProps } from "./SnackBar.props";
 
@@ -26,15 +26,16 @@ const StyledSnackBar = styled.div`
     animation: ${animationSnack};
 `;
 
-const SnackBar = (props: ISnackBarProps) => {
+const SnackBar = forwardRef((props: ISnackBarProps, ref: React.Ref<HTMLDivElement>) => {
     return (
         props.data.isVisible ? (
             <StyledSnackBar 
-                {...props} 
+                {...props}
+                ref={ref}
                 onClick={props.events?.onClick} 
             />
         ) : null
     )
-}
+});
 
 export default SnackBar;

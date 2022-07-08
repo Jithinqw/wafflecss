@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React from "react";
+import React, { forwardRef } from "react";
 import { IAlertProps } from "./Alert.props";
 import { colorPalette, commonConstant } from "../../models/constants";
 
@@ -43,15 +43,17 @@ const StyledAlert = styled.div<IAlertProps>`
     background: ${props => props.options?.variants ? resolveAlertColor(props.options?.variants) : resolveAlertColor('info')};
 `;
 
-const Alert = (props: IAlertProps) => {
+const Alert = forwardRef((props: IAlertProps, ref:React.Ref<HTMLDivElement>) => {
     return (
         <StyledAlert 
-            {...props} 
+            {...props}
+            data-testid={props.options?.testId}
             onClick={props.events?.onBodyClick}
+            ref={ref}
         >
             {props.data.displayText}
         </StyledAlert>
     )
-}
+});
 
 export default Alert;

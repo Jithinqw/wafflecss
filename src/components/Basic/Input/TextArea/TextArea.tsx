@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent } from "react";
+import React, { ChangeEvent, forwardRef, KeyboardEvent } from "react";
 import styled from "styled-components";
 import { ITextAreaProps } from "./TextArea.props";
 
@@ -27,7 +27,7 @@ const StyledTextArea = styled.textarea<ITextAreaProps>`
     background: inherit;
 `;
 
-const TextArea = (props: ITextAreaProps) => {
+const TextArea = forwardRef((props: ITextAreaProps, ref: React.Ref<HTMLTextAreaElement>) => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
     /**
@@ -80,6 +80,7 @@ const TextArea = (props: ITextAreaProps) => {
             value={props.data.value}
             name={props.data?.name}
             id={props.data?.id}
+            ref={ref}
             cols={props.data?.cols}
             rows={props.data?.rows}
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
@@ -89,6 +90,6 @@ const TextArea = (props: ITextAreaProps) => {
             onFocus={onFocus}
         />
     )
-}
+});
 
 export default TextArea;

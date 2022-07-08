@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { IPinInputProps } from "./PinInput.props";
 
@@ -22,17 +22,18 @@ const StyledPinInput = styled.input`
     background: inherit;    
 `;
 
-const PinInput = (props: IPinInputProps) => {
+const PinInput = forwardRef((props: IPinInputProps, ref: React.Ref<HTMLInputElement>) => {
     return (
         <StyledPinInput 
             value={props.data.value}
             id={props.data?.id}
             placeholder={props.data.placeholder ? props.data.placeholder : '○'}
+            ref={ref}
             onChange={props.events?.onChange}
             autoComplete="off"
             disabled={props.data.isDisabled}
         />
     )
-}
+});
 
 export default PinInput

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { forwardRef, memo } from "react";
 import styled from "styled-components";
 import { 
     colorPalette, commonConstant,
@@ -34,15 +34,16 @@ const StyledLegalText = styled.span<ILegalTextProps>`
 `;
 
 
-const LegalText = (props: ILegalTextProps) => {
+const LegalText = forwardRef((props: ILegalTextProps, ref: React.Ref<HTMLSpanElement>) => {
     return (
         <StyledLegalText 
             {...props}
             onClick={props.events?.onClick}
+            ref={ref}
         >
             {props.data.displayText}
         </StyledLegalText>
     )
-}
+});
 
 export default memo(LegalText);

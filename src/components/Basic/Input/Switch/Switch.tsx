@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { ISwitchProps } from "./Switch.props";
 
@@ -39,16 +39,17 @@ const Input = styled.input`
     }
 `;
 
-const Switch = (props: ISwitchProps) => {
+const Switch = forwardRef((props: ISwitchProps, ref: React.Ref<HTMLInputElement>) => {
     return (
         <Label>
             <Input 
                 type={'checkbox'} 
                 onClick={props.events?.onClick}
+                ref={ref}
             />
             <StyledSwitch />
         </Label>
     )
-}
+});
 
 export default Switch;

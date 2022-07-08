@@ -6,21 +6,20 @@ import Heading from "../components/Basic/Heading/Heading";
 export default {
     title: 'Center',
     component: Center,
-    argTypes: {},
-} as ComponentMeta<typeof Center>
-
-const CenterDefault: ComponentStory<typeof Center> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             children: <Heading data={{headingText: 'Demo'}}/>,
             width: '300px',
             height: '300px',
             backgroundColor: 'rgb(153, 102, 255)'
         }
-    }
+    },
+} as ComponentMeta<typeof Center>
+
+const CenterDefault: ComponentStory<typeof Center> = (args) => {
     return (
         <Center 
-            {...propArgs} 
+            {...args} 
         />
     )
 };

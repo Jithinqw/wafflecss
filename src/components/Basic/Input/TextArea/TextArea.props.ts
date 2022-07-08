@@ -1,4 +1,4 @@
-import { ChangeEvent, CSSProperties } from "react";
+import { ChangeEvent } from "react";
 
 export interface ITextAreaProps {
     data: ITextAreaData,

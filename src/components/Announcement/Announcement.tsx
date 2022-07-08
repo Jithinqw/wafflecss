@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import LegalText from "../Basic/Heading/LegalText/LegalText";
 import { IAnnouncementProps } from "./Announcement.props";
@@ -61,9 +61,9 @@ const StyledDismissContainer = styled.div`
     color: #FFFFFF;
 `;
 
-const Announcement = (props: IAnnouncementProps) => {
+const Announcement = forwardRef((props: IAnnouncementProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledAnnouncement>
+        <StyledAnnouncement ref={ref}>
             <StyledWrapper>
                 <StyledSpanAlert>
                     <StyledTextNodeWrapper>
@@ -87,6 +87,6 @@ const Announcement = (props: IAnnouncementProps) => {
             </StyledWrapper>
         </StyledAnnouncement>
     )
-}
+});
 
 export default Announcement;

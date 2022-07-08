@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent } from "react";
+import React, { ChangeEvent, forwardRef, KeyboardEvent } from "react";
 import styled from "styled-components";
 import { ITextInputProps } from "./TextInput.props";
 
@@ -68,13 +68,13 @@ const StyledTextInput = styled.input<ITextInputProps>`
     background: inherit;
 `;
 
-const TextInput = (props: ITextInputProps) => {
+const TextInput = forwardRef((props: ITextInputProps, ref: React.Ref<HTMLInputElement>) => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
     /**
      * @function onChange
      * @description change handler for input
-     * @param e {changeEvent}
+     * @param {changeEvent} e
      */
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setCurrentText(e.currentTarget.value);
@@ -95,7 +95,7 @@ const TextInput = (props: ITextInputProps) => {
 
     /**
      * @function onKeyPress
-     * @param event {KeyboardEvent<HTMLInputElement>}
+     * @param {KeyboardEvent<HTMLInputElement>} event
      * @description onKeyPress handler for input
      */
     const onKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -106,7 +106,7 @@ const TextInput = (props: ITextInputProps) => {
 
     /**
      * @function onFocus
-     * @param event {React.FocusEvent<HTMLInputElement>}
+     * @param {React.FocusEvent<HTMLInputElement>} event
      * @description onFocus handler for input
      */
     const onFocus = (event: React.FocusEvent<HTMLInputElement>) => {
@@ -124,6 +124,7 @@ const TextInput = (props: ITextInputProps) => {
             name={props.data?.name}
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             value={props.data.value}
+            ref={ref}
             type={props.options?.type ? props.options?.type : 'text'}
             onChange={onChange}
             onKeyPress={onKeyPress}
@@ -131,6 +132,6 @@ const TextInput = (props: ITextInputProps) => {
             onFocus={onFocus}
         /> 
     )
-}
+})
 
 export default TextInput;

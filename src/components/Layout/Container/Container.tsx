@@ -1,4 +1,4 @@
-import React from "react"
+import React, { forwardRef } from "react"
 import styled from "styled-components"
 import { colorPalette, containerConstants } from "../../../models/constants"
 import { IContainerProps } from "./Container.props"
@@ -24,13 +24,13 @@ const StyledContainer = styled.div<IContainerProps>`
     padding-inline: ${containerConstants.paddingInline};
 `;
 
-const Container = (props: IContainerProps) => {
+const Container = forwardRef((props: IContainerProps, ref: React.Ref<HTMLDivElement>) => {
 
     return (
-        <StyledContainer {...props}>
+        <StyledContainer ref={ref} {...props}>
             {props.data.children}
         </StyledContainer>
     )
-}
+});
 
 export default Container;

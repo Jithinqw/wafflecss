@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import IBadgeProps from "./Badge.props"; 
 import styled from "styled-components";
 import { commonConstant } from "../../models/constants";
@@ -37,14 +37,16 @@ const StyledBadge = styled.span<IBadgeProps>`
     box-shadow: rgb(56 161 105) 0px 0px 0px 1px inset;
 `;
 
-const Badge = (props: IBadgeProps) => {
+const Badge = forwardRef((props: IBadgeProps, ref: React.Ref<HTMLSpanElement>) => {
     return (
-        <StyledBadge {...props}
+        <StyledBadge 
+            {...props}
             onClick={props.events?.onClick}
+            ref={ref}
         >
             {props.data.displayText}
         </StyledBadge>
     )
-}
+});
 
 export default Badge;

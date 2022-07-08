@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { IBreadCrumbProps } from "./BreadCrumb.props";
 import Stack from "../Layout/Stack/Stack";
 import Link from "../Basic/Link/Link";
@@ -20,10 +20,10 @@ const StyledListItem = styled.li`
     }
 `;
 
-const BreadCrumb = (props: IBreadCrumbProps) => {
+const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOListElement>) => {
     return (
         <Stack>
-            <StyledOrderedList>
+            <StyledOrderedList ref={ref}>
                 {props.data && props.data.map((e, i) => {
                     return (
                         <StyledListItem>
@@ -41,6 +41,6 @@ const BreadCrumb = (props: IBreadCrumbProps) => {
             </StyledOrderedList>
         </Stack>
     )
-}
+});
 
 export default BreadCrumb;

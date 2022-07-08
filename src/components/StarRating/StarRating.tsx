@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { colorPalette } from "../../models/constants";
 import { IStarRatingProps } from "./StarRating.props";
 
 /**
  * @function resolveStarSize
- * @param {string} starSize 
+ * @param {'sm' | 'md' | 'lg'} starSize 
  * @returns {string}
  */
 const resolveStarSize = (starSize: 'sm' | 'md' | 'lg') => {
@@ -34,7 +34,7 @@ const StyledStar = styled.span<IStarRatingProps>`
     };
 `;
 
-const StarRating = (props: IStarRatingProps) => {
+const StarRating = forwardRef((props: IStarRatingProps, ref: React.Ref<HTMLButtonElement>) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
     const starSelectedColor: string = props.highlightColor ? props.highlightColor : 'yellow';
@@ -67,6 +67,7 @@ const StarRating = (props: IStarRatingProps) => {
                     <StyledStarRating
                         type="button"
                         key={i}
+                        ref={ref}
                         onMouseEnter={() => setHover(i)}
                         onMouseLeave={() => setHover(rating)}
                         style={{color: i<= (hover || rating) ? starSelectedColor : starNotSelectedColor }}
@@ -82,6 +83,6 @@ const StarRating = (props: IStarRatingProps) => {
             })}
         </div>
     )
-}
+});
 
 export default StarRating;

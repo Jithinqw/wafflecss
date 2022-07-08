@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { forwardRef, memo } from "react";
 import styled from "styled-components";
 import { 
     colorPalette, commonConstant
@@ -39,15 +39,16 @@ const StyledLink = styled.span<ILinkProps>`
     }
 `;
 
-const Link = (props: ILinkProps) => {
+const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => {
     return (
         <StyledLink 
             {...props} 
             onClick={props.events?.onClick}
+            ref={ref}
         >
             {props.data.displayText}
         </StyledLink>
     )
-}
+});
 
 export default memo(Link);

@@ -28,12 +28,6 @@ const StyledDiv = styled.div`
     justify-content: center;
 `;
 
-const StyledColon = styled.div`
-    color: #333;
-    display: flex;
-    animation: ${BlinkAnimation} 1s linear infinite
-`;
-
 const TimerClock = (props: IClockProps) => {
 
     /**
@@ -111,17 +105,6 @@ const TimerClock = (props: IClockProps) => {
     }
 
     /**
-     * @function findIfanyDaysRemaining
-     * @description If no days are remaining
-     * trigger no days events if provided any.
-     */
-    const findIfanyDaysRemaining = () => {
-        if(props?.events?.onNoDaysRemaining && timeLeft?.days === '0') {
-            props.events.onNoDaysRemaining();
-        }
-    }
-
-    /**
      * @function findIfanyHoursRemaining
      * @description If no days are remaining
      * trigger no days events if provided any.
@@ -140,25 +123,6 @@ const TimerClock = (props: IClockProps) => {
      const findIfanyMinutesRemaining = () => {
         if(props?.events?.onNoMinutesRemaining && timeLeft?.minutes === '0') {
             props.events.onNoMinutesRemaining();
-        }
-    }
-
-    /**
-     * @function findIfAnyTimeLeft
-     * @description If no time is left 
-     * trigger an event once
-     */
-    const findIfAnyTimeLeft = () => {
-        if(
-            props.events?.onNoTimeRemaining &&
-            timeLeft?.days === '0' &&
-            timeLeft.hours === '0' &&
-            timeLeft.minutes === '0' &&
-            timeLeft.seconds === '0' &&
-            noTimeLeftEventTrigger <= 0
-        ) {
-            setNoTimeLeftEventTrigger(noTimeLeftEventTrigger + 1);
-            props.events.onNoTimeRemaining();
         }
     }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { IHiddenProps } from "./Hidden.props";
 
@@ -23,12 +23,12 @@ const StyledHidden = styled.div<IHiddenProps>`
     ${props => props.options?.type ? resolveHiddenStyle(props.options?.type) : resolveHiddenStyle('hidden')};
 `;
 
-const Hidden = (props: IHiddenProps) => {
+const Hidden = forwardRef((props: IHiddenProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledHidden {...props}>
+        <StyledHidden ref={ref} {...props}>
             {props.data.children}
         </StyledHidden>
     )
-}
+});
 
 export default Hidden;
