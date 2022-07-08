@@ -9,10 +9,10 @@ export default {
     component: BreadCrumb,
     args: {
         data: [
-            {displayText: "dfsdfsdf"},
-            {displayText: "dfsdfsdf"},
-            {displayText: "dfsdfsdf"},
-            {displayText: "dfsdfsdf"}
+            {displayText: "Home"},
+            {displayText: "Profile"},
+            {displayText: "Update Password"},
+            {displayText: "Upload Photo"}
         ],
         options: {
             color: 'danger',

@@ -5,113 +5,88 @@ import Heading from '../components/Basic/Heading/Heading'
 export default {
     title: 'Heading',
     component: Heading,
-    argTypes: {
+    args: {
         data: {
-            headingText: "sdfsdf",
+            headingText: "Supreme allied commander",
         },
-        options: {
-            size: 'sm'
-        }
     },
 } as ComponentMeta<typeof Heading>
 
 const HeadingTemplateSmall: ComponentStory<typeof Heading> = (args) => {
-    const propArgs = {
-        data: {
-            headingText: 'This is a Small Text',
-        },
-        options: {
-            size: 'small'
-        }
-    }
     return (
         <Heading 
-            {...propArgs} 
+            data={{
+                ...args.data
+            }}
+            options={{
+                size: 'small'
+            }}
         />
     )
 };
 export const Small = HeadingTemplateSmall.bind({});
 
 const HeadingTemplateNormal: ComponentStory<typeof Heading> = (args) => {
-    const propArgs = {
-        data: {
-            headingText: 'This is a normal text',
-        },
-        options: {
-            size: 'normal'
-        }
-    }
     return (
         <Heading 
-            {...propArgs} 
+            data={{
+                ...args.data
+            }}
+            options={{
+                size: 'normal'
+            }}
         />
     )
 };
 export const Normal = HeadingTemplateNormal.bind({});
 
 const HeadingTemplateExtraSamll: ComponentStory<typeof Heading> = (args) => {
-    const propArgs = {
-        data: {
-            headingText: 'This is a Extra Small text',
-        },
-        options: {
-            size: 'extrasmall'
-        }
-    }
     return (
         <Heading 
-            {...propArgs} 
+            data={{
+                ...args.data
+            }}
+            options={{
+                size: 'extrasmall'
+            }}
         />
     )
 };
 export const ExtraSmall = HeadingTemplateExtraSamll.bind({});
 
 const HeadingTemplateBold: ComponentStory<typeof Heading> = (args) => {
-    const propArgs = {
-        data: {
-            headingText: 'This is a Bold text',
-        },
-        options: {
-            size: 'bold'
-        }
-    }
     return (
         <Heading 
-            {...propArgs} 
+            data={{
+                ...args.data
+            }}
+            options={{
+                size: 'normal',
+            }}
         />
     )
 };
 export const Bold = HeadingTemplateBold.bind({});
 
 const HeadingTemplateExtraBold: ComponentStory<typeof Heading> = (args) => {
-    const propArgs = {
-        data: {
-            headingText: 'This is a Extra Bold text',
-        },
-        options: {
-            size: 'extrabold'
-        }
-    }
     return (
         <Heading 
-            {...propArgs} 
+            {...args}
+            options= {{
+                size: 'large',
+            }}
         />
     )
 };
 export const ExtraBold = HeadingTemplateExtraBold.bind({});
 
 const HeadingTemplateNormalStyle: ComponentStory<typeof Heading> = (args) => {
-    const propArgs = {
-        data: {
-            headingText: 'This is a Extra Bold text',
-        },
-        options: {
-            weight: 'normal'
-        }
-    }
     return (
         <Heading 
-            {...propArgs} 
+            {...args}
+            options= {{
+                weight: 'normal'
+            }}
         />
     )
 };

@@ -9,11 +9,7 @@ import LegalText from "../components/Basic/Heading/LegalText/LegalText";
 export default {
     title: 'Container',
     component: Container,
-    argTypes: {},
-} as ComponentMeta<typeof Container>
-
-const ContainerTemplate: ComponentStory<typeof Container> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             children: (
                 <LegalText 
@@ -26,10 +22,13 @@ const ContainerTemplate: ComponentStory<typeof Container> = (args) => {
                 />
             )
         }
-    }
+    },
+} as ComponentMeta<typeof Container>
+
+const ContainerTemplate: ComponentStory<typeof Container> = (args) => {
     return (
         <Container 
-            {...propArgs} 
+            {...args} 
         />
     )
 };

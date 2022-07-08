@@ -11,59 +11,51 @@ Variable APRs range from 11.74% to ${apr} based on creditworthiness.`;
 export default {
     title: 'LegalText',
     component: LegalText,
-    argTypes: {},
-} as ComponentMeta<typeof LegalText>
-
-const LegalTextTemplate: ComponentStory<typeof LegalText> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             displayText: defaultLegalText,
         },
         options:{
             legalTextSize: 'sm'
         }
-    }
+    },
+} as ComponentMeta<typeof LegalText>
+
+const LegalTextTemplate: ComponentStory<typeof LegalText> = (args) => {
+    
     return (
         <LegalText 
-            {...propArgs} 
+            {...args}
         />
     )
 };
-
-export const Small = LegalTextTemplate.bind({});
 
 const LegalTextMdTemplate: ComponentStory<typeof LegalText> = (args) => {
-    const propArgs = {
-        data: {
-            displayText: defaultLegalText,
-        },
-        options:{
-            legalTextSize: 'md'
-        }
-    }
     return (
         <LegalText 
-            {...propArgs} 
+            data={{
+                ...args.data
+            }}
+            options={{
+                legalTextSize: 'md'
+            }}
         />
     )
 };
 
-export const MiddleSizeLegalText = LegalTextMdTemplate.bind({});
-
 const LegalTextLgTemplate: ComponentStory<typeof LegalText> = (args) => {
-    const propArgs = {
-        data: {
-            displayText: defaultLegalText,
-        },
-        options:{
-            legalTextSize: 'lg'
-        }
-    }
     return (
         <LegalText 
-            {...propArgs} 
+            data={{
+                ...args.data
+            }}
+            options={{
+                legalTextSize: 'lg'
+            }}
         />
     )
 };
 
 export const LargeSizeLegalText = LegalTextLgTemplate.bind({});
+export const MiddleSizeLegalText = LegalTextMdTemplate.bind({});
+export const Small = LegalTextTemplate.bind({});

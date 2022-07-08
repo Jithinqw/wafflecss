@@ -40,14 +40,14 @@ interface IButtonEvents {
      * What should happen if user click 
      * on button
      */
-    onClick(): void;
+    onClick?:() => void;
     /**
      * @function
      * What should happen if user
      * focus on button, eg: trigger
      * an screen reader functions etc.
      */
-    onFocus(): void;
+    onFocus?:() => void;
 }
 
 interface IButtonOptions {
@@ -62,10 +62,10 @@ interface IButtonOptions {
      */
     buttonType?: 'button' | 'submit' | 'reset';
     /**
-     * @type {'default' | 'danger' | 'outline' | 'primary'}
+     * @type {'default' | 'danger' | 'success' | 'primary'}
      * What is the behaviour of button
      */
-    variants?: 'default' | 'danger' | 'outline' | 'primary';
+    variants?: 'default' | 'danger' | 'success' | 'primary';
     /**
      * additional styles
      * @type {IStyleOptions}

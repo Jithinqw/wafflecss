@@ -11,13 +11,13 @@ import { IButtonProps } from "./Button.props";
  * @param buttonStyle 
  * @returns 
  */
-const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
+const getButtonColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return colorPalette.defaultButtonColor;
         case 'danger':
             return colorPalette.defaultDangerButtonColor;
-        case 'outline':
+        case 'success':
             return colorPalette.defaultOutlineButtonColor;
         case 'primary':
             return colorPalette.defaultPrimaryButtonColor;
@@ -31,13 +31,13 @@ const getButtonColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary
  * @param buttonStyle 
  * @returns 
  */
-const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
+const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return colorPalette.defaultButtonBg;
         case 'danger':
             return colorPalette.dangerButtonBg;
-        case 'outline':
+        case 'success':
             return colorPalette.outlineButtonBg;
         case 'primary':
             return colorPalette.primaryButtonBg;
@@ -51,13 +51,13 @@ const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'outline' |
  * @param buttonStyle 
  * @returns 
  */
-const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
+const getHoverColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return colorPalette.defaultHoverColor;
         case 'danger':
             return colorPalette.dangerHoverColor;
-        case 'outline':
+        case 'success':
             return colorPalette.outlineHoverColor;
         case 'primary':
             return colorPalette.primaryHoverColor;
@@ -72,11 +72,11 @@ const getHoverColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary'
  * @param buttonStyle 
  * @returns 
  */
-const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
+const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
         case 'danger':
-        case 'outline':
+        case 'success':
             return colorPalette.defaultBorderColor;
         default:
             return colorPalette.defaultBorderColor;
@@ -128,12 +128,12 @@ const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
  * @param buttonStyle 
  * @returns 
  */
-const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'outline' | 'primary') => {
+const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
     switch(buttonStyle) {
         case 'default':
             return buttonConstant.buttonShadow.default;
         case 'danger':
-        case 'outline':
+        case 'success':
             return buttonConstant.buttonShadow.danger;        
         default:
             return buttonConstant.buttonShadow.default;
