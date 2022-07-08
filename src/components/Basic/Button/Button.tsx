@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { forwardRef, memo } from "react";
 import styled from "styled-components";
 import { 
     buttonConstant, 
@@ -180,7 +180,8 @@ const StyledButtonSpan = styled.span<IButtonProps>`
     grid-area: text / text / text / text;
 `;
 
-const Button = (props: IButtonProps) => {
+const Button = forwardRef((props: IButtonProps, ref:React.Ref<HTMLButtonElement>) => {
+    console.log(ref);
     return (
         <StyledDefault 
             {...props} 
@@ -190,12 +191,13 @@ const Button = (props: IButtonProps) => {
             onFocus={props.events?.onFocus}
             id={props.data.id}
             role={'button'}
+            ref={ref}
         >
             <StyledButtonSpan {...props}>
                 {props.data.displayText}
             </StyledButtonSpan>
         </StyledDefault>
     )
-}
+})
 
 export default memo(Button);

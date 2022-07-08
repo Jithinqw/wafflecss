@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { IToastProps } from "./Toast.props";
 
@@ -83,9 +83,9 @@ const StyledToastBodyText = styled.div`
     overflow-wrap: break-word;
 `;
 
-const Toast = (props: IToastProps) => {
+const Toast = forwardRef((props: IToastProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledToastDivContiner>
+        <StyledToastDivContiner ref={ref}>
             <StyledToastWrapper>
                 <StyledAlert>
                     <StyledToastBody>
@@ -105,7 +105,7 @@ const Toast = (props: IToastProps) => {
             </StyledToastWrapper>
         </StyledToastDivContiner>
     )
-}
+});
 
 
 export default Toast;

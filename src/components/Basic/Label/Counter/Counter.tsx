@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { commonConstant } from "../../../../models/constants";
 import { ICounterProps } from "./Counter.props";
@@ -33,7 +33,7 @@ const CounterDark = styled.span`
     border-radius: 2em;
 `;
 
-const Counter = (props: ICounterProps) => {
+const Counter = forwardRef((props: ICounterProps, ref: React.Ref<HTMLSpanElement>) => {
 
     /**
      * @function resolveCounterTheme
@@ -46,6 +46,7 @@ const Counter = (props: ICounterProps) => {
                 return  (
                     <CounterPrimary 
                         {...props}
+                        ref={ref}
                         onClick={props.events?.onClick}
                     >
                         {props.data.displayText}
@@ -55,6 +56,7 @@ const Counter = (props: ICounterProps) => {
                 return (
                     <CounterDark 
                         {...props}
+                        ref={ref}
                         onClick={props.events?.onClick}
                     >
                         {props.data.displayText}
@@ -64,6 +66,7 @@ const Counter = (props: ICounterProps) => {
                 return  (
                     <CounterPrimary 
                         {...props}
+                        ref={ref}
                         onClick={props.events?.onClick}
                     >
                         {props.data.displayText}
@@ -75,6 +78,6 @@ const Counter = (props: ICounterProps) => {
     return (
         resolveCounterTheme()
     )
-}
+});
 
 export default Counter;

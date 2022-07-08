@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { colorPalette, 
     commonConstant, 
@@ -98,21 +98,21 @@ const StyledSkeletonircle = styled.span<ISkeletonProps>`
  * @param {ISkeletonProps} props 
  * @returns {StyledComponent}
  */
-const resolveSkeletonType = (props: ISkeletonProps) => {
+const resolveSkeletonType = (props: ISkeletonProps, ref: React.Ref<HTMLSpanElement>) => {
     switch(props.options?.type) {
         case 'col':
-            return <StyledSkeletonCol {...props}/>
+            return <StyledSkeletonCol {...props} ref={ref}/>
         case 'circle':
-            return <StyledSkeletonircle {...props}/>
+            return <StyledSkeletonircle {...props} ref={ref}/>
         default:
-            return <StyledSkeletonCol {...props}/>
+            return <StyledSkeletonCol {...props} ref={ref}/>
     }
 }
 
-const Skeleton = (props: ISkeletonProps) => {
+const Skeleton = forwardRef((props: ISkeletonProps, ref: React.Ref<HTMLSpanElement>) => {
     return (
-        resolveSkeletonType(props)
+        resolveSkeletonType(props, ref)
     )
-}
+});
 
 export default Skeleton;

@@ -22,9 +22,6 @@ export default {
         options: {
             variants: 'info',
             testId: 'Hey'
-        },
-        events: {
-            onBodyClick: Function.prototype
         }
     },
 } as ComponentMeta<typeof Alert>

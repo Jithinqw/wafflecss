@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { colorPalette, commonConstant } from "../../../models/constants";
 import { ICenterProps } from "./Center.props";
@@ -15,12 +15,16 @@ const StyledCenter = styled.div<ICenterProps>`
     color: ${props => props.data?.color ? props.data?.color : colorPalette.defaultWhite};
 `;
 
-const Center = (props: ICenterProps) => {
+const Center = forwardRef((props: ICenterProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledCenter {...props} onClick={props.events?.onClick}>
+        <StyledCenter 
+            {...props} 
+            onClick={props.events?.onClick}
+            ref={ref}
+        >
             {props.data.children}
         </StyledCenter>
     );
-}
+});
 
 export default Center;

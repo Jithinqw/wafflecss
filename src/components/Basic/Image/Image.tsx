@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { IImageProps } from "./Image.props";
 import Utilities from '../../../utils/common'
 
-const Image = (props: IImageProps) => {
+const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) => {
     const [imgSrc, setImageSrc] = React.useState(props.data.imageSrc);
 
     /**
@@ -25,11 +25,12 @@ const Image = (props: IImageProps) => {
             width={props.data?.width}
             height={props.data?.height}
             alt={props.data?.alt}
+            ref={ref}
             onError={resolveImageError}
             onClick={props.events?.onClick}
             onLoad={props.events?.onLoad}
         />
     )
-}
+});
 
 export default Image;

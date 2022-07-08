@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import styled from "styled-components";
 import { colorPalette } from "../../../../models/constants";
 import { ICheckboxProps } from "./Checkbox.props";
@@ -44,7 +44,7 @@ const StyledCheckboxInput = styled.input<ICheckboxProps>`
     };
 `;
 
-const CheckBox = (props: ICheckboxProps) => {
+const CheckBox = forwardRef((props: ICheckboxProps, ref: React.Ref<HTMLInputElement>) => {
     const [isChecked, setIsChecked] = useState(false);
 
     /**
@@ -60,10 +60,11 @@ const CheckBox = (props: ICheckboxProps) => {
         <StyledCheckboxInput 
             type={'checkbox'}
             checked={isChecked}
+            ref={ref}
             {...props}
             onChange={onCheckbokStateChange}
         ></StyledCheckboxInput>
     )
-}
+});
 
 export default CheckBox;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components"
 import { colorPalette, commonConstant } from "../../../models/constants";
 import { ILabelProps } from "./Label.props";
@@ -27,14 +27,15 @@ const StyledLabel = styled.label<ILabelProps>`
     font-size:${props => props.options?.fontSize ? resolveLabelSize(props.options?.size) : resolveLabelSize('md')};
 `;
 
-const Label = (props: ILabelProps) => {
+const Label = forwardRef((props: ILabelProps, ref: React.Ref<HTMLLabelElement>) => {
     return (
         <StyledLabel 
             {...props}
+            ref={ref}
         >
             {props.data.displayText}
         </StyledLabel>
     )
-}
+});
 
 export default Label;

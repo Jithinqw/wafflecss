@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { colorPalette, commonConstant } from "../../../../models/constants";
 import { IPriceLabelProps } from "./PriceLabel.props";
@@ -32,21 +32,21 @@ const StyledStrikeLabel = styled.span<IPriceLabelProps>`
  * @function resolvePriceLabel
  * @param isStrikethrough 
  */
-const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps) => {
+const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps, ref: React.Ref<HTMLSpanElement>) => {
     if(!isStrikethrough) {
         return(
-            <StyledPriceLabel {...props}>
+            <StyledPriceLabel {...props} ref={ref}>
                 {props.data.currencySymbol + (
                     props.data.price).toFixed(props.data.precision).toString().toLocaleLowerCase() + ' '
                 }
-                <StyledRecurringLabel {...props}>
+                <StyledRecurringLabel {...props} ref={ref}>
                     {props.data.recurringLabel}
                 </StyledRecurringLabel>
             </StyledPriceLabel>
         )
     } else {
         return (
-            <StyledStrikeLabel {...props}>
+            <StyledStrikeLabel {...props} ref={ref}>
                 {props.data.currencySymbol + (
                     props.data.price).toFixed(props.data.precision).toString().toLocaleLowerCase() + ' '
                     + props.data.recurringLabel
@@ -56,12 +56,12 @@ const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps) =>
     }
 }
 
-const PriceLabel = (props: IPriceLabelProps) => {
+const PriceLabel = forwardRef((props: IPriceLabelProps, ref: React.Ref<HTMLSpanElement>) => {
     const isStrikethrough = props.options?.isStrikethrough ? props.options?.isStrikethrough : false;
 
     return (
-        resolvePriceLabel(isStrikethrough, props)
+        resolvePriceLabel(isStrikethrough, props, ref)
     )
-}
+});
 
 export default PriceLabel;

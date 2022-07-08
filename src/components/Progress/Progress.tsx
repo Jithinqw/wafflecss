@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { keyframes, css } from "styled-components";
 import { colorPalette, commonConstant } from "../../models/constants";
 import { IProgressProps } from "./Progress.props";
@@ -42,17 +42,18 @@ const ProgressBar = styled.div<IProgressProps>`
     animation: ${props=> props.data.animateStripe ?  css`${AnimateStripes} 1s linear infinite` : ''};
 `;
 
-const Progress = (props: IProgressProps) => {
+const Progress = forwardRef((props: IProgressProps, ref: React.Ref<HTMLDivElement>) => {
     return (
         <ProgressWrapper 
             onClick={props.events?.onClick} 
             {...props}
+            ref={ref}
         >
             <ProgressBar {...props}>
                 {props.data?.children}
             </ProgressBar>
         </ProgressWrapper>
     )
-}
+});
 
 export default Progress;

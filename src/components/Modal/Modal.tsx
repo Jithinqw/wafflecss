@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { colorPalette, commonConstant, modalConstants } from "../../models/constants";
 import { IModalProps } from "./Modal.props";
@@ -73,10 +73,10 @@ const StyledFooter = styled.div`
     box-shadow: none;
 `;
 
-const Modal = (props: IModalProps) => {
+const Modal = forwardRef((props: IModalProps, ref: React.Ref<HTMLDivElement>) => {
     return (
             props && props.options.isVisible ? (
-                <StyledDivContainer>
+                <StyledDivContainer ref={ref}>
                     <StyledDialog>
                         <StyledChildDiv>
                             <StyledDialogHeader>
@@ -93,6 +93,6 @@ const Modal = (props: IModalProps) => {
                 </StyledDivContainer>
             ) : null 
     )
-}
+});
 
 export default Modal;

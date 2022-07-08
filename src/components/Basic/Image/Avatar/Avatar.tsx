@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { IAvatarProps } from './Avatar.props';
 
@@ -43,7 +43,7 @@ const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
     vertical-align: middle;
 `;
 
-const Avatar = (props: IAvatarProps) => {
+const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>) => {
 
     /**
      * @function resolveAvatar
@@ -56,6 +56,7 @@ const Avatar = (props: IAvatarProps) => {
                 return (
                     <StyledRoundedAvatarImage {...props}
                         src={props.data.imageSrc}
+                        ref={ref}
                         height={props.data.height}
                         width={props.data.width}
                         alt={props.data.alt}
@@ -68,6 +69,7 @@ const Avatar = (props: IAvatarProps) => {
                     <StyledRectAvatarImage {...props}
                         src={props.data.imageSrc}
                         height={props.data.height}
+                        ref={ref}
                         width={props.data.width}
                         alt={props.data.alt}
                         onClick={props.events?.onClick}
@@ -87,6 +89,7 @@ const Avatar = (props: IAvatarProps) => {
                         height={props.data.height}
                         width={props.data.width}
                         alt={props.data.alt}
+                        ref={ref}
                         onClick={props.events?.onClick}
                         onLoad={props.events?.onLoad}
                     />
@@ -98,6 +101,7 @@ const Avatar = (props: IAvatarProps) => {
                         height={props.data.height}
                         width={props.data.width}
                         alt={props.data.alt}
+                        ref={ref}
                         onClick={props.events?.onClick}
                         onLoad={props.events?.onLoad}
                     />
@@ -108,6 +112,6 @@ const Avatar = (props: IAvatarProps) => {
     return (
         resolveAvatar()
     )
-}
+});
 
 export default Avatar;

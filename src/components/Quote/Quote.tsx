@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { IQuoteProps } from "./Quote.props";
 
@@ -20,12 +20,12 @@ const StyledQoute = styled.blockquote<IQuoteProps>`
     margin-bottom: 1.5rem;
 `;
 
-const Quote = (props: IQuoteProps) => {
+const Quote = forwardRef((props: IQuoteProps, ref: React.Ref<HTMLQuoteElement>) => {
     return (
-        <StyledQoute {...props}>
+        <StyledQoute {...props} ref={ref}>
             {props.displayNode}
         </StyledQoute>
     )
-}
+});
 
 export default Quote;

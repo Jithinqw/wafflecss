@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, forwardRef, useState } from "react";
 import { IDropdownProps } from "./Dropdown.props";
 import styled from "styled-components";
 
@@ -31,7 +31,7 @@ const StyledOption = styled.select<IDropdownProps>`
 `;
 
 
-const Dropdown = (props: IDropdownProps) => {
+const Dropdown = forwardRef((props: IDropdownProps, ref: React.Ref<HTMLSelectElement>) => {
     const [selectedValue, setSelectedValue] = useState('');
 
     /**
@@ -52,6 +52,7 @@ const Dropdown = (props: IDropdownProps) => {
             value={selectedValue} 
             {...props}
             disabled={props.data?.disabled ? props.data?.disabled : false}
+            ref={ref}
         >
             {
                 props.data.optionData && props.data.optionData.map((e, i) => {
@@ -64,6 +65,6 @@ const Dropdown = (props: IDropdownProps) => {
             }
         </StyledOption>
     )
-}
+});
 
 export default Dropdown;

@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {forwardRef, memo} from 'react';
 import styled from 'styled-components';
 import { 
     colorPalette, commonConstant,
@@ -80,16 +80,17 @@ const StyledHeading = styled.p<IHeadingProps>`
     animation: ${props => props.options?.animationType ? Animation(props.options.animationType) : commonConstant.defaultNone}
 `;
 
-const Heading = (props: IHeadingProps) => {
+const Heading = forwardRef((props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {
     return (
         <StyledHeading
             id={props.data?.id}
             {...props}
             onClick={props.events?.onClick}
+            ref={ref}
         >
             {props.data?.headingText}
         </StyledHeading>
     )
-}
+});
 
 export default memo(Heading);
