@@ -5,7 +5,7 @@ import { IStarRatingProps } from "./StarRating.props";
 
 /**
  * @function resolveStarSize
- * @param {string} starSize 
+ * @param {'sm' | 'md' | 'lg'} starSize 
  * @returns {string}
  */
 const resolveStarSize = (starSize: 'sm' | 'md' | 'lg') => {

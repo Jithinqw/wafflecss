@@ -25,4 +25,8 @@ interface IAlertOptions {
      * type of alert variant to display
      */
     variants?: 'error' | 'success' | 'warning' | 'info' | 'dark';
+    /**
+     * optional TestId for testing
+     */
+    testId?: string;
 }

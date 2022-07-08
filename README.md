@@ -9,11 +9,16 @@
 <h1 align="center">WaffleCSS</h1>
 <p align="center">A React component library for ease of use.</p>
 
+<div align="center">
+
+![Code Quality](https://img.shields.io/lgtm/grade/javascript/github/Jithinqw/wafflecss)
 ![version](https://img.shields.io/npm/v/wafflecss)
 ![Project license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![File Size](https://img.shields.io/bundlephobia/minzip/wafflecss)
 ![Downloads](https://img.shields.io/npm/dm/wafflecss)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+</div>
 
 ## Install
 This repository is distributed with [npm]. After [installing npm](https://www.npmjs.com/), you can install `wafflecss` with this command:

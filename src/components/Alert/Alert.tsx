@@ -46,7 +46,8 @@ const StyledAlert = styled.div<IAlertProps>`
 const Alert = (props: IAlertProps) => {
     return (
         <StyledAlert 
-            {...props} 
+            {...props}
+            data-testid={props.options?.testId}
             onClick={props.events?.onBodyClick}
         >
             {props.data.displayText}
