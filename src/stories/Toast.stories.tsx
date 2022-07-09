@@ -7,11 +7,7 @@ import LegalText from '../components/Basic/Heading/LegalText/LegalText';
 export default {
     title: 'Toast',
     component: Toast,
-    argTypes: {},
-} as ComponentMeta<typeof Toast>
-
-const Template: ComponentStory<typeof Toast> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             showToast: true,
             displayText: 'Available for qualifying applicants in the United States.',
@@ -36,9 +32,12 @@ const Template: ComponentStory<typeof Toast> = (args) => {
                 />
             )
         }
-    }
+    },
+} as ComponentMeta<typeof Toast>
+
+const Template: ComponentStory<typeof Toast> = (args) => {
     return (
-        <Toast {...propArgs}/>
+        <Toast {...args}/>
     )
 };
 export const Toastprimary = Template.bind({});
