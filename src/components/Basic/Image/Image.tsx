@@ -19,6 +19,18 @@ const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) 
         }
     }
 
+    const OnClickEvent = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
+    const onLoadEvent = () => {
+        if(props.events?.onLoad) {
+            return props.events.onLoad()
+        }
+    }
+
     return (
         <img 
             src={imgSrc}
@@ -27,8 +39,8 @@ const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) 
             alt={props.data?.alt}
             ref={ref}
             onError={resolveImageError}
-            onClick={props.events?.onClick}
-            onLoad={props.events?.onLoad}
+            onClick={OnClickEvent}
+            onLoad={onLoadEvent}
         />
     )
 });

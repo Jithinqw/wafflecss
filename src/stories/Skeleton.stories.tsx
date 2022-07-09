@@ -5,38 +5,29 @@ import Skeleton from '../components/Skeleton/Skeleton';
 export default {
     title: 'Skeleton',
     component: Skeleton,
-    argTypes: {},
-} as ComponentMeta<typeof Skeleton>
-
-const CircleTemplate: ComponentStory<typeof Skeleton> = (args) => {
-    const propArgs = {
+    args: {
         options: {
             color: 'teal',
             type: 'circle',
             height: 'lg'
         }
-    }
+    },
+} as ComponentMeta<typeof Skeleton>
+
+const CircleTemplate: ComponentStory<typeof Skeleton> = (args) => {
     return (
         <Skeleton 
-            {...propArgs} 
+            {...args} 
         />
     )
 };
-export const CircleSkeleton = CircleTemplate.bind({});
 
 const ColTemplate: ComponentStory<typeof Skeleton> = (args) => {
-    const propArgs = {
-        options: {
-            color: 'red',
-            type: 'col',
-            height: 'lg',
-            width: 'lg'
-        }
-    }
     return (
         <Skeleton 
-            {...propArgs} 
+            {...args} 
         />
     )
 };
 export const ColumnSkeleton = ColTemplate.bind({});
+export const CircleSkeleton = CircleTemplate.bind({});

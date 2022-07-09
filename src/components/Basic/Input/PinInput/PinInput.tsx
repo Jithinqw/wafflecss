@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { ChangeEvent, forwardRef } from "react";
 import styled from "styled-components";
 import { IPinInputProps } from "./PinInput.props";
 
@@ -23,13 +23,27 @@ const StyledPinInput = styled.input`
 `;
 
 const PinInput = forwardRef((props: IPinInputProps, ref: React.Ref<HTMLInputElement>) => {
+
+    const onChangeEvent = (e: ChangeEvent<HTMLInputElement>) => {
+        if(props.events?.onChange) {
+            return props.events.onChange(e)
+        }
+    }
+
+    const onFocusEvent = () => {
+        if(props.events?.onFocus) {
+            return props.events.onFocus();
+        }
+    }
+
     return (
         <StyledPinInput 
             value={props.data.value}
             id={props.data?.id}
             placeholder={props.data.placeholder ? props.data.placeholder : '○'}
             ref={ref}
-            onChange={props.events?.onChange}
+            onChange={onChangeEvent}
+            onFocus={onFocusEvent}
             autoComplete="off"
             disabled={props.data.isDisabled}
         />

@@ -10,15 +10,12 @@ export default {
         maxStarNum: 5,
         size: 'sm',
         defaultStarSelection: 3,
-        onClick: Function.prototype
     },
 } as ComponentMeta<typeof StarRating>
 
 const StarRateTemplate: ComponentStory<typeof StarRating> = (args) => {
     return <StarRating {...args} />
 };
-export const StarRatingTemplate = StarRateTemplate.bind({});
-
 
 const StarRatingEventTemplate: ComponentStory<typeof StarRating> = (args) => {
     return <StarRating {...args} onClick={
@@ -26,4 +23,5 @@ const StarRatingEventTemplate: ComponentStory<typeof StarRating> = (args) => {
     }/>
 }
 
+export const StarRatingTemplate = StarRateTemplate.bind({});
 export const StarRatingEventTest = StarRatingEventTemplate.bind({});

@@ -175,25 +175,37 @@ const StyledDefault = styled.button<IButtonProps>`
     }
 `;
 
-const StyledButtonSpan = styled.span<IButtonProps>`
+const StyledButtonSpan = styled.span`
     font-family: inherit;
     grid-area: text / text / text / text;
 `;
 
 const Button = forwardRef((props: IButtonProps, ref:React.Ref<HTMLButtonElement>) => {
-    console.log(ref);
+
+    const onClickEvent = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
+    const onFocusEvent = () => {
+        if(props.events?.onFocus) {
+            return props.events.onFocus();
+        }
+    }
+
     return (
         <StyledDefault 
             {...props} 
             disabled={props.data.isDisabled ? props.data.isDisabled : false}
             type={props.options?.buttonType ? props.options?.buttonType : 'button'}
-            onClick={props.events?.onClick}
-            onFocus={props.events?.onFocus}
+            onClick={onClickEvent}
+            onFocus={onFocusEvent}
             id={props.data.id}
             role={'button'}
             ref={ref}
         >
-            <StyledButtonSpan {...props}>
+            <StyledButtonSpan>
                 {props.data.displayText}
             </StyledButtonSpan>
         </StyledDefault>

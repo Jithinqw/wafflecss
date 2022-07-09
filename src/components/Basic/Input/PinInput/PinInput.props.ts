@@ -53,27 +53,14 @@ interface IPinInputEvents {
      * @type {HTMLInputElement}
      * @returns void
      */
-     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-     /**
-      * @description handler for key press event
-      * @param oldValue {string}
-      * @param e {React.MouseEvent<HTMLInputElement>}
-      * @returns void
-      */
-     onKeyPress?: (oldValue: string, e:React.KeyboardEvent<HTMLInputElement>) => void;
-     /**
-      * @description handler for input blur event
-      * @param currentValue {string}
-      * @returns void
-      */
-     onBlur?: (currentValue: string) => void;
-     /**
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+    /**
       * @description handler for focus event
       * @param currentValue {string}
       * @param e {React.FocusEvent}
       * @returns 
-      */
-     onFocus?:(currentValue: string, e: React.FocusEvent<HTMLInputElement>) => void;
+    */
+    onFocus?:() => void;
 }
 
 interface IPinInputOptions {

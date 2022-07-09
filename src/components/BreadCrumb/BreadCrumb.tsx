@@ -21,6 +21,13 @@ const StyledListItem = styled.li`
 `;
 
 const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOListElement>) => {
+
+    const triggerOnClick = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
     return (
         <Stack>
             <StyledOrderedList ref={ref}>
@@ -32,7 +39,7 @@ const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOList
                                     displayText: e.displayText
                                 }}
                                 events={{
-                                    onClick: props.events?.onClick
+                                    onClick: () => triggerOnClick()
                                 }}
                             />
                         </StyledListItem>
