@@ -13,9 +13,6 @@ export default {
         },
         options:{
             variant: 'sm'
-        },
-        events: {
-            onCheckboxChange: Function.prototype
         }
     },
 } as ComponentMeta<typeof Checkbox>

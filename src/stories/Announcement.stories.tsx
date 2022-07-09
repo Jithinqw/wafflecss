@@ -23,9 +23,6 @@ export default {
                     }}
                 />
             ),
-        },
-        events: {
-            onDismiss: Function.prototype
         }
     },
 } as ComponentMeta<typeof Announcement>

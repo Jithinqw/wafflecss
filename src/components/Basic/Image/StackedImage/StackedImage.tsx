@@ -59,6 +59,7 @@ const StyledImage = styled.img<IStackedImageProps>`
 `;
 
 const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLDivElement>) => {
+
     return (
         <>
             <StyledGrid ref={ref}>

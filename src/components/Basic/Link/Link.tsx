@@ -40,10 +40,17 @@ const StyledLink = styled.span<ILinkProps>`
 `;
 
 const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => {
+
+    const onClickEvent = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
     return (
         <StyledLink 
             {...props} 
-            onClick={props.events?.onClick}
+            onClick={onClickEvent}
             ref={ref}
         >
             {props.data.displayText}

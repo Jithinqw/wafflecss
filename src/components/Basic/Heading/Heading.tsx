@@ -81,11 +81,18 @@ const StyledHeading = styled.p<IHeadingProps>`
 `;
 
 const Heading = forwardRef((props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {
+
+    const OnClickEvent = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
     return (
         <StyledHeading
             id={props.data?.id}
             {...props}
-            onClick={props.events?.onClick}
+            onClick={OnClickEvent}
             ref={ref}
         >
             {props.data?.headingText}

@@ -44,6 +44,18 @@ const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
 `;
 
 const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>) => {
+    
+    const OnClickEvent = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
+    const onLoadEvent = () => {
+        if(props.events?.onLoad) {
+            return props.events.onLoad();
+        }
+    }
 
     /**
      * @function resolveAvatar
@@ -60,8 +72,8 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         height={props.data.height}
                         width={props.data.width}
                         alt={props.data.alt}
-                        onClick={props.events?.onClick}
-                        onLoad={props.events?.onLoad}
+                        onClick={OnClickEvent}
+                        onLoad={onLoadEvent}
                     />
                 );
             case 'rect':
@@ -72,8 +84,8 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         ref={ref}
                         width={props.data.width}
                         alt={props.data.alt}
-                        onClick={props.events?.onClick}
-                        onLoad={props.events?.onLoad}
+                        onClick={OnClickEvent}
+                        onLoad={onLoadEvent}
                     />
                 );
             case 'text':
@@ -90,8 +102,8 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         width={props.data.width}
                         alt={props.data.alt}
                         ref={ref}
-                        onClick={props.events?.onClick}
-                        onLoad={props.events?.onLoad}
+                        onClick={OnClickEvent}
+                        onLoad={onLoadEvent}
                     />
                 )
             default: 
@@ -102,8 +114,8 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         width={props.data.width}
                         alt={props.data.alt}
                         ref={ref}
-                        onClick={props.events?.onClick}
-                        onLoad={props.events?.onLoad}
+                        onClick={OnClickEvent}
+                        onLoad={onLoadEvent}
                     />
                 );
         }

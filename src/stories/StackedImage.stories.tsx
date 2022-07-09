@@ -5,11 +5,7 @@ import StackedImage from '../components/Basic/Image/StackedImage/StackedImage'
 export default {
     title: 'StackedImage',
     component: StackedImage,
-    argTypes: {},
-} as ComponentMeta<typeof StackedImage>
-
-const ImageDefaultTemplate: ComponentStory<typeof StackedImage> = (args) => {
-    const propArgs = {
+    args: {
         data: {
             imageData: [
                 {
@@ -37,10 +33,13 @@ const ImageDefaultTemplate: ComponentStory<typeof StackedImage> = (args) => {
         options: {
             wiggleAnimation: true
         }
-    }
+    },
+} as ComponentMeta<typeof StackedImage>
+
+const ImageDefaultTemplate: ComponentStory<typeof StackedImage> = (args) => {
     return (
         <StackedImage 
-            {...propArgs}
+            {...args}
         />
     )
 }

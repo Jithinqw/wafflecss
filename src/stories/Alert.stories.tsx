@@ -48,15 +48,3 @@ const AlertTestTemplate: ComponentStory<typeof Alert> = (args) => {
 export const AlertIntraction = AlertTestTemplate.bind({});
 export const AlertReactNode = AlertTemplate.bind({});
 export const AlertEventTest = AlertTestTemplate.bind({});
-
-AlertIntraction.play = async ({ args, canvasElement }) => {
-    AlertTestTemplate.args = {
-
-    }
-    const canvas = within(canvasElement);
-    const selectedEle = await canvas.findByText('Hey from Alert');
-    const selectedDivEle = await canvas.getByTestId('Hey');
-    // Check if text node is rendered
-    console.log(args);
-    await expect(selectedEle.textContent).toBe('Hey from Alert');
-}

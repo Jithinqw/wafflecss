@@ -40,11 +40,18 @@ const Input = styled.input`
 `;
 
 const Switch = forwardRef((props: ISwitchProps, ref: React.Ref<HTMLInputElement>) => {
+
+    const onClickEvent = () => {
+        if(props.events?.onClick) {
+            return props.events.onClick();
+        }
+    }
+
     return (
         <Label>
             <Input 
                 type={'checkbox'} 
-                onClick={props.events?.onClick}
+                onClick={onClickEvent}
                 ref={ref}
             />
             <StyledSwitch />

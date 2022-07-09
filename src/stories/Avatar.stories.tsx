@@ -12,9 +12,6 @@ export default {
         },
         options: {
             avatarType: 'rounded'
-        },
-        events: {
-            onClick: Function.prototype
         }
     },
 } as ComponentMeta<typeof Avatar>;
