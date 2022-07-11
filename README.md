@@ -86,6 +86,10 @@ If your pull request is a candidate for release, please add `[Release candidate]
 
 WaffleCSS is maintained under the [Semantic Versioning guidelines](https://semver.org/).
 
+## Bundle Analysis
+
+Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.39).
+
 ## License
 
 [MIT](./LICENSE) &copy; [Jithin Zacharia](https://jithinqw.github.io/)
