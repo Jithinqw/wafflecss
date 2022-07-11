@@ -1,30 +1,52 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
+import { colorPalette, commonConstant } from "../../models/constants";
 import { IQuoteProps } from "./Quote.props";
 
 const StyledQoute = styled.blockquote<IQuoteProps>`
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-inline-start: 0.75rem;
-    padding-inline-end: 1rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-left: 4px;
-    border-left-color: ${props => props.highlightColor ? props.highlightColor : 'red'};
-    background: ${props => props.bgColor ? props.bgColor : 'rgb(254, 235, 200)'};
-    margin-top: 1.5rem;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
+    font-family: ${commonConstant.fontFamily};
+    border-left: 0px solid ${colorPalette.defaultPrimaryButtonColor};
+    padding-left: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+`;
+
+const StyledFigure = styled.figure`
+    border: 1px solid ${colorPalette.defaultGreyColor};
+    border-left-width: .20rem;
+    border-radius: .25rem;
+    border-left-color: ${colorPalette.defaultPrimaryButtonColor};
+    background-color: ${colorPalette.defaultWhite};
+    border-radius: 12px;
+`;
+
+const StyledText = styled.p`
+    font-family: ${commonConstant.fontFamily};
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 `;
 
 const Quote = forwardRef((props: IQuoteProps, ref: React.Ref<HTMLQuoteElement>) => {
+
+    const onClickEventTrigger = () => {
+        if(props.onClick) {
+            return props.onClick();
+        }
+    }
+
     return (
-        <StyledQoute {...props} ref={ref}>
-            {props.displayNode}
-        </StyledQoute>
+        <StyledFigure ref={ref} onClick={onClickEventTrigger}>
+            <StyledQoute {...props}>
+                { props.displayNode &&
+                    <StyledText>
+                        {props.displayNode}
+                    </StyledText>
+                }
+            </StyledQoute>
+        </StyledFigure>
     )
 });
 

@@ -1,6 +1,7 @@
 import React, { ChangeEvent, forwardRef, useState } from "react";
 import { IDropdownProps } from "./Dropdown.props";
 import styled from "styled-components";
+import { ISelectOption } from "../../../../models/defaultStyle";
 
 const StyledOption = styled.select<IDropdownProps>`
     display: block;
@@ -42,7 +43,7 @@ const Dropdown = forwardRef((props: IDropdownProps, ref: React.Ref<HTMLSelectEle
      const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
         setSelectedValue(e.currentTarget.value);
         if(props?.events?.onChange) {
-            props.events.onChange(e);
+            props.events.onChange(e.currentTarget.value);
         }
     }
 
@@ -55,9 +56,9 @@ const Dropdown = forwardRef((props: IDropdownProps, ref: React.Ref<HTMLSelectEle
             ref={ref}
         >
             {
-                props.data.optionData && props.data.optionData.map((e, i) => {
+                props.data.optionData && props.data.optionData.map((e: ISelectOption, i: number) => {
                     return (
-                        <option value={e.value}>
+                        <option value={e.value} key={i}>
                             {e.displayText}
                         </option>
                     )

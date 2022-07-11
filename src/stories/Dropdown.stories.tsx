@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Dropdown from '../components/Basic/Input/Dropdown/Dropdown';
+import { action } from '@storybook/addon-actions';
 
 export default {
     title: 'Dropdown',
@@ -25,4 +26,14 @@ const DropdownTemplate: ComponentStory<typeof Dropdown> = (args) => {
         />
     )
 };
+
+const DropdownClickTest: ComponentStory<typeof Dropdown> = (args) => {
+    return (
+        <Dropdown {...args} events={{
+            onChange: action('User click')
+        }}/>
+    )
+}
+
 export const Default = DropdownTemplate.bind({});
+export const ClickTest = DropdownClickTest.bind({});

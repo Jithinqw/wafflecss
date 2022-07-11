@@ -47,6 +47,6 @@ interface IDropdownEvents {
      * @param {React.ChangeEvent<HTMLSelectElement>} event
      * @returns {void}
      */
-    onChange?:(event: React.ChangeEvent<HTMLSelectElement>) => void;
+    onChange?:(event: string) => void;
 }
 

@@ -6,7 +6,7 @@ export const commonConstant = {
     alignItemCenter: 'center',
     defaultNone: '',
     //Font 
-    fontFamily:'Söhne, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
+    fontFamily: 'Söhne, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontWeight: '400',
     // Cursor
     cursorPointer: 'pointer',

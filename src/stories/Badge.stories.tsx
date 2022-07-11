@@ -15,9 +15,6 @@ export default {
         },
         options: {
             color: 'danger',
-        },
-        events: {
-            onClick: Function.prototype
         }
     },
 } as ComponentMeta<typeof Badge>
