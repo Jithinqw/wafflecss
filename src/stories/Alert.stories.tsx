@@ -3,8 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Alert from '../components/Alert/Alert';
 import LegalText from "../components/Basic/Heading/LegalText/LegalText";
 import { action } from "@storybook/addon-actions";
-import { userEvent, waitFor, within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 
 export default {
     title: 'Alert',
