@@ -1,5 +1,5 @@
 import React, { forwardRef, memo } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { 
     buttonConstant, 
     colorPalette, commonConstant 
@@ -140,6 +140,17 @@ const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'success' | 'primar
     }
 }
 
+/**
+ * @function rippleButton
+ * @description Add ripple animation
+ */
+const rippleButton = keyframes`
+    to{
+        transform: scale(4);
+        opacity: 0;
+    }
+`;
+
 const StyledDefault = styled.button<IButtonProps>`
     border-radius: ${props => props.data.radius ? props.data.radius : buttonConstant.borderRadius};
     border: ${
@@ -183,7 +194,7 @@ const StyledButtonSpan = styled.span`
 const Button = forwardRef((props: IButtonProps, ref:React.Ref<HTMLButtonElement>) => {
 
     const onClickEvent = () => {
-        if(props.events?.onClick) {
+        if(props.events?.onClick && !props.data.isDisabled) {
             return props.events.onClick();
         }
     }
