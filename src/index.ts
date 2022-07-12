@@ -1,7 +1,6 @@
 /**
  * Expose APIs for package.
  */
-import { AnimationType } from './models/animation';
 import { HeadingType } from './models/Heading';
 import { ListData } from './models/basicModal';
 import { 
@@ -35,7 +34,7 @@ export { default as Quote } from './components/Quote/Quote';
 export { default as Toast } from './components/Toast/Toast';
 
 export {
-    AnimationType, ISelectOption,
+    ISelectOption,
     HeadingType, ListData,
     IStyleOptions, ImageData,
     ICheckboxData
