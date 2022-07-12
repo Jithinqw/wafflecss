@@ -4,7 +4,6 @@ import {
     colorPalette, commonConstant,
     headingConstant 
 } from '../../../models/constants';
-import Animation from '../../Animation/Animation';
 import { IHeadingProps } from './Heading.props';
 
 /**
@@ -77,7 +76,6 @@ const StyledHeading = styled.p<IHeadingProps>`
     font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : headingConstant.fontWeight};
     font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : headingConstant.fontSize};
     font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : headingConstant.fontStyle};
-    animation: ${props => props.options?.animationType ? Animation(props.options.animationType) : commonConstant.defaultNone}
 `;
 
 const Heading = forwardRef((props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {

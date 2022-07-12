@@ -1,5 +1,3 @@
-import { AnimationType } from "../../../models/animation";
-
 export interface IHeadingProps {
     data: IHeadingData;
     events?: IHeadingEvents;
@@ -48,10 +46,4 @@ export interface IHeadingOptions {
      * Color for heading
      */
     headingColor?: string;
-    /**
-     * @type {AnimationType}
-     * @todo Animate heading
-     * Animate your heading
-     */
-    animationType?: AnimationType;
 }
