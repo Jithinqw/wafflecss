@@ -37,9 +37,9 @@ export interface ImageData {
      * Image source
      */
     imageSource: string;
-    height: number;
-    width: number;
-    alt: string;
+    height?: number;
+    width?: number;
+    alt?: string;
     onClick?:() => void;
 }
 
