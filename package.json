@@ -78,7 +78,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run unittest"
+      "pre-commit": "npm run unittest"
     }
   }
 }
