@@ -1,7 +1,7 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Avatar from '../components/Basic/Image/Avatar/Avatar';
-import { action } from "@storybook/addon-actions";
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import Avatar from '../components/Basic/Image/Avatar/Avatar'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'Avatar',
@@ -11,29 +11,25 @@ export default {
             imageSrc: 'https://bit.ly/dan-abramov',
         },
         options: {
-            avatarType: 'rounded'
-        }
+            avatarType: 'rounded',
+        },
     },
-} as ComponentMeta<typeof Avatar>;
+} as ComponentMeta<typeof Avatar>
 
 const AvatarTemplate: ComponentStory<typeof Avatar> = (args) => {
-    return (
-        <Avatar 
-            {...args}
-        />
-    )
+    return <Avatar {...args} />
 }
 
 const AvatarActionTemplete: ComponentStory<typeof Avatar> = (args) => {
     return (
-        <Avatar 
+        <Avatar
             {...args}
             events={{
-                onClick: action('User click on Image')
+                onClick: action('User click on Image'),
             }}
         />
     )
 }
 
-export const AvatarDefault = AvatarTemplate.bind({});
-export const AvatarActionTest = AvatarActionTemplete.bind({});
+export const AvatarDefault = AvatarTemplate.bind({})
+export const AvatarActionTest = AvatarActionTemplete.bind({})

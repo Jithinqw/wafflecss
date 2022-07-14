@@ -1,7 +1,7 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import StarRating from '../components/StarRating/StarRating';
-import { action } from "@storybook/addon-actions";
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import StarRating from '../components/StarRating/StarRating'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'StarRating',
@@ -15,13 +15,13 @@ export default {
 
 const StarRateTemplate: ComponentStory<typeof StarRating> = (args) => {
     return <StarRating {...args} />
-};
-
-const StarRatingEventTemplate: ComponentStory<typeof StarRating> = (args) => {
-    return <StarRating {...args} onClick={
-        action('User clicked on star rating')
-    }/>
 }
 
-export const StarRatingTemplate = StarRateTemplate.bind({});
-export const StarRatingEventTest = StarRatingEventTemplate.bind({});
+const StarRatingEventTemplate: ComponentStory<typeof StarRating> = (args) => {
+    return (
+        <StarRating {...args} onClick={action('User clicked on star rating')} />
+    )
+}
+
+export const StarRatingTemplate = StarRateTemplate.bind({})
+export const StarRatingEventTest = StarRatingEventTemplate.bind({})

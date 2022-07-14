@@ -1,6 +1,6 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import TextInput from '../components/Basic/Input/TextInput/TextInput';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import TextInput from '../components/Basic/Input/TextInput/TextInput'
 
 export default {
     title: 'TextInput',
@@ -9,16 +9,16 @@ export default {
     args: {
         data: {
             placeholder: 'TextInput Placeholder',
-            value: ''
+            value: '',
         },
         options: {
-            size: 'lg'
-        }
+            size: 'lg',
+        },
     },
 } as ComponentMeta<typeof TextInput>
 
 const TextInputTemplate: ComponentStory<typeof TextInput> = (args) => {
     return <TextInput {...args} />
-};
+}
 
-export const DefaultTextInput = TextInputTemplate.bind({});
+export const DefaultTextInput = TextInputTemplate.bind({})

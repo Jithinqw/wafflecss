@@ -1,7 +1,7 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Checkbox from '../components/Basic/Input/CheckBox/Checkbox';
-import { action } from '@storybook/addon-actions';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import Checkbox from '../components/Basic/Input/CheckBox/Checkbox'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'Checkbox',
@@ -9,33 +9,29 @@ export default {
     args: {
         data: {
             displayText: 'Demo',
-            value: 'demo'
+            value: 'demo',
         },
-        options:{
-            variant: 'sm'
-        }
+        options: {
+            variant: 'sm',
+        },
     },
 } as ComponentMeta<typeof Checkbox>
 
 const CheckboxTemplate: ComponentStory<typeof Checkbox> = (args) => {
-    return (
-        <Checkbox 
-            {...args} 
-        />
-    )
-};
+    return <Checkbox {...args} />
+}
 
-export const CheckboxDefault = CheckboxTemplate.bind({});
+export const CheckboxDefault = CheckboxTemplate.bind({})
 
-const CheckBoxClickTest:ComponentStory<typeof Checkbox> = (args) => {
+const CheckBoxClickTest: ComponentStory<typeof Checkbox> = (args) => {
     return (
-        <Checkbox 
+        <Checkbox
             {...args}
             events={{
-                onCheckboxChange: action('Checkbox action triggered')
+                onCheckboxChange: action('Checkbox action triggered'),
             }}
         />
     )
 }
 
-export const CheckboxTest = CheckBoxClickTest.bind({});
+export const CheckboxTest = CheckBoxClickTest.bind({})

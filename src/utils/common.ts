@@ -10,12 +10,9 @@ export default class Utilities {
      * @param {string} value
      * @return {boolean}
      **/
-    static isEmpty = (value: string):boolean => {
+    static isEmpty = (value: string): boolean => {
         // eslint-disable-line
-        return (value === null || 
-            typeof value === 'undefined' || 
-            value === ''
-        );
+        return value === null || typeof value === 'undefined' || value === ''
     }
 
     /**
@@ -24,12 +21,14 @@ export default class Utilities {
      * @description Checks if object is empty
      * @param {T} obj
      * @returns {boolean}
-     **/ 
-    static isEmptyObject<T>(obj: T):boolean {
-        return (obj === null
-        || typeof obj === 'undefined'
-        || typeof obj !== 'object'
-        || (Object.keys(obj).length === 0));
+     **/
+    static isEmptyObject<T>(obj: T): boolean {
+        return (
+            obj === null ||
+            typeof obj === 'undefined' ||
+            typeof obj !== 'object' ||
+            Object.keys(obj).length === 0
+        )
     }
 
     /**
@@ -38,9 +37,9 @@ export default class Utilities {
      * @description Combine style array
      * @param {T} styleArray
      * @returns {string}
-     */ 
-    static combineStyleArray(styleArray:Array<string>):string {
-        return styleArray.join(' ');
+     */
+    static combineStyleArray(styleArray: Array<string>): string {
+        return styleArray.join(' ')
     }
 
     /**
@@ -51,6 +50,6 @@ export default class Utilities {
      * @returns {string}
      */
     static generateRandomString = (): string => {
-        return Math.random().toString(36).substr(2, 5);
+        return Math.random().toString(36).substr(2, 5)
     }
 }

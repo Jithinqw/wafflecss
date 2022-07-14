@@ -1,6 +1,6 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Progress from '../components/Progress/Progress';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import Progress from '../components/Progress/Progress'
 
 export default {
     title: 'Progress',
@@ -8,7 +8,7 @@ export default {
     argTypes: {
         data: {
             displayText: 'Hey Button',
-        }
+        },
     },
 } as ComponentMeta<typeof Progress>
 
@@ -19,9 +19,9 @@ const ProgressTemplate: ComponentStory<typeof Progress> = (args) => {
             width: '10%',
             height: '15px',
             enableStripe: true,
-            animateStripe: true
-        }
+            animateStripe: true,
+        },
     }
-    return <Progress {...propArgs}/>
+    return <Progress {...propArgs} />
 }
-export const DefaultProgressBar = ProgressTemplate.bind({});
+export const DefaultProgressBar = ProgressTemplate.bind({})

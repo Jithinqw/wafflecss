@@ -1,5 +1,5 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 import StackedImage from '../components/Basic/Image/StackedImage/StackedImage'
 
 export default {
@@ -11,38 +11,33 @@ export default {
                 {
                     imageSource: 'https://bit.ly/dan-abramov',
                     height: '60',
-                    width: '60'
+                    width: '60',
                 },
                 {
                     imageSource: 'https://bit.ly/dan-abramov',
                     height: '60',
-                    width: '60'
+                    width: '60',
                 },
                 {
                     imageSource: 'https://bit.ly/dan-abramov',
                     height: '60',
-                    width: '60'
+                    width: '60',
                 },
                 {
                     imageSource: 'https://bit.ly/dan-abramov',
                     height: '60',
-                    width: '60'
-                }
+                    width: '60',
+                },
             ],
         },
         options: {
-            wiggleAnimation: true
-        }
+            wiggleAnimation: true,
+        },
     },
 } as ComponentMeta<typeof StackedImage>
 
 const ImageDefaultTemplate: ComponentStory<typeof StackedImage> = (args) => {
-    return (
-        <StackedImage 
-            {...args}
-        />
-    )
+    return <StackedImage {...args} />
 }
 
-export const ImageDefault = ImageDefaultTemplate.bind({});
-
+export const ImageDefault = ImageDefaultTemplate.bind({})
