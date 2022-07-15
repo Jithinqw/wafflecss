@@ -11,7 +11,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-storybook-docs": "build-storybook --docs",
-    "storybook-docs": "start-storybook --docs --no-manager-cache"
+    "storybook-docs": "start-storybook --docs --no-manager-cache",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",

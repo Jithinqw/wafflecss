@@ -3,6 +3,7 @@
  */
 import { HeadingType } from './models/Heading';
 import { ListData } from './models/basicModal';
+import Utilities from './utils/common';
 import { 
     IStyleOptions, ICheckboxData,
     ImageData, ISelectOption,
@@ -34,9 +35,9 @@ export { default as Quote } from './components/Quote/Quote';
 export { default as Toast } from './components/Toast/Toast';
 
 export {
-    ISelectOption,
+    ISelectOption, Utilities,
     HeadingType, ListData,
     IStyleOptions, ImageData,
-    ICheckboxData
+    ICheckboxData,
 };
 
