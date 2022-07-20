@@ -2,7 +2,7 @@ import React from "react";
 import Backdrop from "../Backdrop";
 import renderer from 'react-test-renderer';
 
-describe('Announcement unit tests', () => {
+describe('<Announcement /> unit tests', () => {
     it('changes the class when hovered', () => {
         const component = renderer.create(
           <Backdrop

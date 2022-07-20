@@ -29,7 +29,7 @@ interface IStackedImageOptions {
 interface IStackedImageData {
     /**
      * Image properties
-     * @type {ImageData}
+     * @type {Array<ImageData>}
      */
     imageData: Array<ImageData>
 }

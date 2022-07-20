@@ -1,6 +1,7 @@
 export interface IBreadCrumbProps {
     data: IBreadCrumbData[];
     events?: IBreadCrumbEvents;
+    options?: IBreadCrumbOptions;
 }
 
 interface IBreadCrumbData {
@@ -18,4 +19,20 @@ interface IBreadCrumbEvents {
      * bread crumb.
      */
     onClick?:() => void;
+}
+
+interface IBreadCrumbOptions {
+    /**
+     * Seperator for breadcrumb
+     * defaults to '/'
+     * @type {string}
+     * @default /
+    */
+    seperator?: string;
+    /**
+     * Seperator color
+     * @type {string}
+     * @default #161616
+     */
+    color: string;
 }

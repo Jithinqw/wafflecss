@@ -13,13 +13,14 @@ export default {
             { displayText: 'Upload Photo' },
         ],
         options: {
-            color: 'danger',
-        },
+            color: 'red',
+            seperator: '*'
+        }
     },
 } as ComponentMeta<typeof BreadCrumb>
 
-const BadgeTemplate: ComponentStory<typeof BreadCrumb> = (args) => {
+const BreadCrumbTemplate: ComponentStory<typeof BreadCrumb> = (args) => {
     return <BreadCrumb {...args} />
 }
 
-export const DefaultBadge = BadgeTemplate.bind({})
+export const DefaultBreadCrumb = BreadCrumbTemplate.bind({})

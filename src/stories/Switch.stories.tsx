@@ -11,4 +11,5 @@ export default {
 const Template: ComponentStory<typeof Switch> = (args) => {
     return <Switch />
 }
-export const SwitchPrimary = Template.bind({})
+export const SwitchPrimary = Template.bind({});
+

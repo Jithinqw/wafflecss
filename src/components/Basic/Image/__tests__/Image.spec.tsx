@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "../Image";
 import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
-describe('Image unit tests', () => {
-    it('changes the class when hovered', () => {
+describe('<Image /> unit tests', () => {
+    it('Should render image if called', () => {
         const component = renderer.create(
           <Image
             data={{

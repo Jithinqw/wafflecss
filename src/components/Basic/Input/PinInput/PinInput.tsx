@@ -1,8 +1,8 @@
 import React, { 
-    ChangeEvent, forwardRef 
+    ChangeEvent, forwardRef, useEffect 
 } from "react";
 import styled from "styled-components";
-import { colorPalette } from "../../../../models/constants";
+import { colorPalette, commonConstant } from "../../../../models/constants";
 import { IPinInputProps } from "./PinInput.props";
 
 /**
@@ -69,11 +69,22 @@ const StyledPinInput = styled.input<IPinInputProps>`
         border-color: rgb(49,130,206);
         box-shadow: rgb(49, 130, 206) 0px 0px 0px 1px;
     }
+    ::placeholder {
+        font-family: ${commonConstant.fontFamily};
+        font-size: 12px;
+    }
 `;
 
 const PinInput = forwardRef((props: IPinInputProps, ref: React.Ref<HTMLInputElement>) => {
+    const [currentText, setCurrentText] = React.useState<string>('');
+
+    useEffect(() => {
+        const value = props.data.value ? props.data.value : ''
+        setCurrentText(value);
+    },[]);
 
     const onChangeEvent = (e: ChangeEvent<HTMLInputElement>) => {
+        setCurrentText(e.currentTarget.value);
         if(props.events?.onChange && props.data.isDisabled) {
             return props.events.onChange(e);
         }
@@ -88,7 +99,7 @@ const PinInput = forwardRef((props: IPinInputProps, ref: React.Ref<HTMLInputElem
     return (
         <StyledPinInput 
             {...props}
-            value={props.data.value}
+            value={currentText}
             id={props.data?.id}
             placeholder={props.data.placeholder ? props.data.placeholder : '○'}
             ref={ref}

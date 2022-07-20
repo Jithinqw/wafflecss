@@ -53,4 +53,8 @@ interface ImageOptions {
      * Border radius of image
      */
     borderRadius?: 'full' | 'none' | 'edged';
+    /**
+     * @type {string}
+     */
+    id?: string;
 }

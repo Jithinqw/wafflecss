@@ -78,7 +78,8 @@ const StyledHeading = styled.p<IHeadingProps>`
     font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : headingConstant.fontStyle};
 `;
 
-const Heading = forwardRef((props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {
+const Heading = forwardRef(
+    (props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {
 
     const OnClickEvent = () => {
         if(props.events?.onClick) {
@@ -93,7 +94,7 @@ const Heading = forwardRef((props: IHeadingProps, ref: React.Ref<HTMLParagraphEl
             onClick={OnClickEvent}
             ref={ref}
         >
-            {props.data?.headingText}
+            {props.data.headingText}
         </StyledHeading>
     )
 });

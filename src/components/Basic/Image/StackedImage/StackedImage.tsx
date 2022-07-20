@@ -59,7 +59,7 @@ const StyledImage = styled.img<IStackedImageProps>`
 `;
 
 const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLDivElement>) => {
-
+    
     return (
         <>
             <StyledGrid ref={ref}>
@@ -80,7 +80,7 @@ const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLD
                                                     onClick={e?.onClick}
                                                 />
                                             </StyledflexAvatarTackItem>
-                                        )
+                                        );
                                     })
                                 }
                             </StyledFlexAvatarStack>

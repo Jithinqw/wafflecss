@@ -16,6 +16,7 @@ interface IAlertEvents {
 interface IAlertData {
     /**
      * Text to display
+     * @type {string | React.ReactNode}
      */
     displayText: string | React.ReactNode;
 }
@@ -26,7 +27,8 @@ interface IAlertOptions {
      */
     variants?: 'error' | 'success' | 'warning' | 'info' | 'dark';
     /**
-     * optional TestId for testing
+     * optional testId for testing
+     * @type {string}
      */
     testId?: string;
 }

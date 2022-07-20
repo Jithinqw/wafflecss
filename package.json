@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rollup -c",
     "format": "prettier --write src/**/*.ts{,x}",
-    "unittest": "jest",
+    "unittest": "jest -u",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-storybook-docs": "build-storybook --docs",
@@ -26,7 +26,6 @@
   "homepage": "https://github.com/Jithinqw/wafflecss#readme",
   "dependencies": {
     "react": "^18.1.0",
-    "storybook-addon-performance": "^0.16.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
@@ -50,6 +49,8 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
     "@types/enzyme": "^3.10.12",
+    "@types/enzyme-adapter-react-15": "^1.0.6",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.5.2",
     "@types/react": "^18.0.9",
     "@types/react-test-renderer": "^18.0.0",
@@ -58,11 +59,13 @@
     "babel-loader": "^8.2.5",
     "cheerio": "^1.0.0-rc.3",
     "enzyme": "^3.11.0",
+    "enzyme-adapter-react-15": "^1.4.3",
     "enzyme-adapter-react-16": "^1.15.6",
     "est": "^0.2.1-alpha",
     "husky": "^8.0.1",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.0",
+    "jest-styled-components": "^7.0.8",
     "prettier": "^2.7.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -72,6 +75,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "sb": "^6.5.5",
+    "storybook-addon-performance": "^0.16.1",
     "styled-components": "^5.3.5",
     "ts-jest": "^28.0.5",
     "typescript": "^4.6.4"
