@@ -28,11 +28,12 @@ interface IBadgeOptions {
     /**
      * @type {'subtle' | 'solid' | 'outline'}
      * badge variant
+     * @todo
      */
-    variant: 'subtle' | 'solid' | 'outline';
+    variant?: 'subtle' | 'solid' | 'outline';
     /**
      * @type {'warn' | 'success' | 'danger'}
      * color for badge
      */
-    color: 'warn' | 'success' | 'danger';
+    color?: 'warn' | 'success' | 'danger';
 }

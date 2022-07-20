@@ -3,9 +3,10 @@
  */
 import { HeadingType } from './models/Heading';
 import { ListData } from './models/basicModal';
+import Utilities from './utils/common';
 import { 
     IStyleOptions, ICheckboxData,
-    ImageData, ISelectOption,
+    ImageData, ISelectOption
 } from './models/defaultStyle';
 
 export { default as Button } from './components/Basic/Button/Button';
@@ -32,11 +33,13 @@ export { default as PriceLabel } from './components/Basic/Label/PriceLabel/Price
 export { default as Modal} from './components/Modal/Modal';
 export { default as Quote } from './components/Quote/Quote';
 export { default as Toast } from './components/Toast/Toast';
+export { default as Toggle } from './components/Toggle/Toggle';
+export { default as ColorSelector } from './components/Selector/ColorSelector/ColorSelector';
 
 export {
-    ISelectOption,
+    ISelectOption, Utilities,
     HeadingType, ListData,
     IStyleOptions, ImageData,
-    ICheckboxData
+    ICheckboxData,
 };
 

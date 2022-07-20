@@ -1,6 +1,6 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import PinInput from '../components/Basic/Input/PinInput/PinInput';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import PinInput from '../components/Basic/Input/PinInput/PinInput'
 
 export default {
     title: 'PinInput',
@@ -9,16 +9,16 @@ export default {
     args: {
         data: {
             placeholder: 'TextInput Placeholder',
-            value: '2'
+            value: '2',
         },
         options: {
-            size: 'lg'
-        }
+            size: 'lg',
+        },
     },
 } as ComponentMeta<typeof PinInput>
 
 const TextPinTemplate: ComponentStory<typeof PinInput> = (args) => {
     return <PinInput {...args} />
-};
+}
 
-export const DefaultPinInput = TextPinTemplate.bind({});
+export const DefaultPinInput = TextPinTemplate.bind({})

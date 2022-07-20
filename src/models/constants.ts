@@ -5,8 +5,9 @@ export const commonConstant = {
     flexRowDirection: 'row',
     alignItemCenter: 'center',
     defaultNone: '',
-    //Font 
-    fontFamily: 'Söhne, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
+    //Font
+    fontFamily:
+        'Söhne, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
     fontWeight: '400',
     // Cursor
     cursorPointer: 'pointer',
@@ -30,10 +31,10 @@ export const legalTextConstant = {
     letterSpacing: '-.01em',
     fontWeight: '400',
     textStyleScale: {
-        'sm': '12px',
-        'md': '14px',
-        'lg': '18px',
-    }
+        sm: '12px',
+        md: '14px',
+        lg: '18px',
+    },
 }
 
 export const colorPalette = {
@@ -68,12 +69,10 @@ export const colorPalette = {
     defaultColor: 'rgb(246, 248, 250)',
     // Modal color
     bgColor: 'rgb(255, 255, 255)',
-    colorDefault: 'rgb(9, 30, 66)'
+    colorDefault: 'rgb(9, 30, 66)',
 }
 
-export const ImageConstant = {
-
-}
+export const ImageConstant = {}
 
 export const headingConstant = {
     fontWeight: '300',
@@ -81,19 +80,19 @@ export const headingConstant = {
     fontStyle: 'normal',
     defaultLetterSpacing: '-.003em',
     headingWeightScale: {
-        'extrasmall': 90,
-        'small': 100,
-        'normal': 300,
-        'bold': 500,
-        'extrabold': 700,
+        extrasmall: 90,
+        small: 100,
+        normal: 300,
+        bold: 500,
+        extrabold: 700,
     },
     headingSizeScale: {
-        'extrasmall': '8px',
-        'small': '12px',
-        'normal': '16px',
-        'large': '18px',
-        'extralarge': '24px',
-    }
+        extrasmall: '8px',
+        small: '12px',
+        normal: '16px',
+        large: '18px',
+        extralarge: '24px',
+    },
 }
 
 export const buttonConstant = {
@@ -107,21 +106,22 @@ export const buttonConstant = {
     transition: '80ms cubic-bezier(0.33, 1, 0.68, 1)',
     transitionProperty: 'color,background-color,box-shadow,border-color',
     buttonWidth: {
-        'sm': '5px 16px',
-        'md': '8px 20px',
-        'xs': '12px 24px',
-        'lg': '18px 32px'
+        sm: '5px 16px',
+        md: '8px 20px',
+        xs: '12px 24px',
+        lg: '18px 32px',
     },
     fontSize: {
-        'sm': '8px',
-        'md': '12px',
-        'xs': '18px',
-        'lg': '24px'
+        sm: '8px',
+        md: '12px',
+        xs: '18px',
+        lg: '24px',
     },
     buttonShadow: {
-        'default': 'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset',
-        'danger': 'rgb(27 31 36 / 4%) 0px 1px 0px',
-    }
+        default:
+            'rgb(27 31 36 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset',
+        danger: 'rgb(27 31 36 / 4%) 0px 1px 0px',
+    },
 }
 
 export const containerConstants = {
@@ -130,7 +130,7 @@ export const containerConstants = {
     lgMaxWidth: '80ch',
     // Margins
     paddingInline: '1rem',
-    marginInline: '1rem'
+    marginInline: '1rem',
 }
 
 export const backDropConstants = {
@@ -160,7 +160,7 @@ export const deviceSizes = {
     laptopL: `(min-width: ${size.laptopL})`,
     desktop: `(min-width: ${size.desktop})`,
     desktopL: `(min-width: ${size.desktop})`,
-};
+}
 
 export const skeletonConstants = {
     // Width
@@ -181,12 +181,13 @@ export const skeletonConstants = {
         displayDefault: 'inline-block',
         opacity: '0.5',
         borderRadius: '50%',
-    }
+    },
 }
 
 export const modalConstants = {
     ZIndex: '510',
     width: '400px',
-    boxShadow: 'rgb(9 30 66 / 8%) 0px 0px 0px 1px, rgb(9 30 66 / 8%) 0px 2px 1px, rgb(9 30 66 / 31%) 0px 0px 20px -6px',
-    transition: 'transform 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s'
+    boxShadow:
+        'rgb(9 30 66 / 8%) 0px 0px 0px 1px, rgb(9 30 66 / 8%) 0px 2px 1px, rgb(9 30 66 / 31%) 0px 0px 20px -6px',
+    transition: 'transform 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s',
 }

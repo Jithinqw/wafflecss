@@ -1,5 +1,6 @@
-import React, { ChangeEvent, forwardRef, KeyboardEvent } from "react";
+import React, { ChangeEvent, forwardRef, KeyboardEvent, useEffect } from "react";
 import styled from "styled-components";
+import { commonConstant } from "../../../../models/constants";
 import { ITextInputProps } from "./TextInput.props";
 
 /**
@@ -47,7 +48,7 @@ const StyledTextInput = styled.input<ITextInputProps>`
     padding: 0;
     line-height: inherit;
     color: inherit;
-    width: 100%;
+    width: inherit;
     font-family: inherit;
     min-width: 0px;
     outline: transparent solid 2px;
@@ -66,11 +67,25 @@ const StyledTextInput = styled.input<ITextInputProps>`
     border-image: initial;
     border-color: ${props => props?.data?.errorBorderColor ? props?.data?.errorBorderColor : 'inherit'};
     background: inherit;
+    &:focus-visible {
+        z-index:1;
+        border-color: rgb(49,130,206);
+        box-shadow: rgb(49, 130, 206) 0px 0px 0px 1px;
+    }
+    ::placeholder {
+        font-family: ${commonConstant.fontFamily};
+        font-size: 12px;
+    }
 `;
 
 const TextInput = forwardRef((props: ITextInputProps, ref: React.Ref<HTMLInputElement>) => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
+    useEffect(() => {
+        const value = props.data.value ? props.data.value : ''
+        setCurrentText(value)
+    },[]);
+    
     /**
      * @function onChange
      * @description change handler for input
@@ -123,7 +138,7 @@ const TextInput = forwardRef((props: ITextInputProps, ref: React.Ref<HTMLInputEl
             id={props.data.id}
             name={props.data?.name}
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
-            value={props.data.value}
+            value={currentText}
             ref={ref}
             type={props.options?.type ? props.options?.type : 'text'}
             onChange={onChange}

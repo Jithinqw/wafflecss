@@ -38,6 +38,7 @@ const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) 
             height={props.data?.height}
             alt={props.data?.alt}
             ref={ref}
+            id={props.options?.id}
             onError={resolveImageError}
             onClick={OnClickEvent}
             onLoad={onLoadEvent}

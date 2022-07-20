@@ -1,8 +1,6 @@
-import React from "react";
-import { 
-    ComponentStory, ComponentMeta 
-} from '@storybook/react';
-import PriceLabel from '../components/Basic/Label/PriceLabel/PriceLabel';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import PriceLabel from '../components/Basic/Label/PriceLabel/PriceLabel'
 
 export default {
     title: 'PriceLabel',
@@ -12,20 +10,16 @@ export default {
             currencySymbol: '₹',
             price: 234.3434,
             precision: 1,
-            recurringLabel: '/yr.'
+            recurringLabel: '/yr.',
         },
         options: {
-            isStrikethrough: false
-        }
+            isStrikethrough: false,
+        },
     },
 } as ComponentMeta<typeof PriceLabel>
 
 const PriceLabelTemplate: ComponentStory<typeof PriceLabel> = (args) => {
-    return (
-        <PriceLabel 
-            {...args}
-        />
-    )
+    return <PriceLabel {...args} />
 }
 
-export const DefaultPriceLabel = PriceLabelTemplate.bind({});
+export const DefaultPriceLabel = PriceLabelTemplate.bind({})

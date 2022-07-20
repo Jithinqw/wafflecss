@@ -32,4 +32,9 @@ interface ILabelOptions {
      * font family of label
      */
     fontFamily?: string;
+     /**
+     * @type {string}
+     * id of label
+     */
+    id?: string;
 }

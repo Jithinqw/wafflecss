@@ -69,15 +69,7 @@ interface IPinInputOptions {
      */
     accessibility?: string;
     /**
-     * max length
-     */
-    maxLength?: number;
-    /**
      * size for input
      */
     size?: 'xs' | 'sm' | 'md' | 'lg';
-    /**
-     * type of Input
-     */
-    type?: 'email' | 'text' | 'number' | 'password';
 }

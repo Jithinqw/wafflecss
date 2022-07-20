@@ -30,6 +30,15 @@ const StyledUnorderedList = styled.ul`
     margin-inline-start: 1em;
     margin: 0;
     padding: 0;
+    
+    ::marker {
+        unicode-bidi: isolate;
+        font-variant-numeric: tabular-nums;
+        text-transform: none;
+        text-indent: 0px !important;
+        text-align: start !important;
+        text-align-last: start !important;
+    }
 `;
 
 /**

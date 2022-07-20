@@ -12,11 +12,13 @@ const StyledOrderedList = styled.ol`
     white-space:nowrap;
 `;
 
-const StyledListItem = styled.li`
+const StyledListItem = styled.li<IBreadCrumbProps>`
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
     &:after {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI4cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDggMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik0xLjI5LDAuOThMNy41LDlsLTYuMjEsOC4wMWwtMC42OC0wLjU0TDYuNDIsOWwtNS44LTcuNDlMMS4yOSwwLjk4eiIgZmlsbD0iIzQ0NCIgLz48L3N2Zz4=);
+        color: #161616;
+        content: '/';
+        margin-left: 0.5rem;
     }
 `;
 
@@ -33,14 +35,15 @@ const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOList
             <StyledOrderedList ref={ref}>
                 {props.data && props.data.map((e, i) => {
                     return (
-                        <StyledListItem>
+                        <StyledListItem {...props} key={i}>
                             <Link 
                                 data={{
                                     displayText: e.displayText
                                 }}
                                 events={{
-                                    onClick: () => triggerOnClick()
+                                    onClick: triggerOnClick
                                 }}
+                                key={i}
                             />
                         </StyledListItem>
                     )

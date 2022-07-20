@@ -31,4 +31,8 @@ interface ICheckboxOptions {
      * color of background color
      */
     bgColor?: string;
+    /**
+     * @type {string}
+     */
+    checkboxLabel?: string;
 }

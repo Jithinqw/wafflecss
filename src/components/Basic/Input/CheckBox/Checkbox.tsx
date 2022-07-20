@@ -21,6 +21,15 @@ const resolveCheckboxSize = (size: 'sm' | 'md' | 'lg') => {
     }
 }
 
+const StyledLabel = styled.span`
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    text-transform: initial;
+    letter-spacing: initial;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+`;
+
 const StyledCheckboxInput = styled.input<ICheckboxProps>`
     width: ${props => props.options?.variant ? resolveCheckboxSize(props.options.variant) : resolveCheckboxSize('sm')};
     height: ${props => props.options?.variant ? resolveCheckboxSize(props.options.variant) : resolveCheckboxSize('sm')};
@@ -63,7 +72,15 @@ const CheckBox = forwardRef((props: ICheckboxProps, ref: React.Ref<HTMLInputElem
             ref={ref}
             {...props}
             onChange={onCheckbokStateChange}
-        ></StyledCheckboxInput>
+        >
+            {
+                props.options && props.options.checkboxLabel &&
+                <StyledLabel>
+                    {props.options?.checkboxLabel}
+                </StyledLabel>
+            }
+        
+        </StyledCheckboxInput>
     )
 });
 

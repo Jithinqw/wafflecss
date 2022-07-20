@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, memo } from "react";
 import styled from "styled-components"
 import { colorPalette, commonConstant } from "../../../models/constants";
 import { ILabelProps } from "./Label.props";
@@ -32,10 +32,11 @@ const Label = forwardRef((props: ILabelProps, ref: React.Ref<HTMLLabelElement>) 
         <StyledLabel 
             {...props}
             ref={ref}
+            id={props.options?.id}
         >
             {props.data.displayText}
         </StyledLabel>
     )
 });
 
-export default Label;
+export default memo(Label);
