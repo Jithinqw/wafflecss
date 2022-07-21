@@ -5,7 +5,7 @@ import { render, screen } from "@testing-library/react";
 import 'jest-styled-components';
 
 describe('<TextInput/> unit tests', () => {
-    it('Basic unit tests', () => {
+    it('Should render TextInput when calling default values', () => {
         const component = renderer.create(
           <TextInput
             data={{
