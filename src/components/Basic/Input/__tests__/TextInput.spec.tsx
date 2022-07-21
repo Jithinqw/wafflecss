@@ -1,7 +1,7 @@
 import React from "react";
 import TextInput from "../TextInput/TextInput";
 import renderer from 'react-test-renderer';
-import { render, screen, queryByDisplayValue } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import 'jest-styled-components';
 
 describe('<TextInput/> unit tests', () => {

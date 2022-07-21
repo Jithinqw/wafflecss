@@ -3,6 +3,7 @@ import React, {
 } from "react";
 import styled from "styled-components";
 import { colorPalette, commonConstant } from "../../../../models/constants";
+import Utilities from "../../../../utils/common";
 import { IPinInputProps } from "./PinInput.props";
 
 /**
@@ -45,6 +46,21 @@ const resolvePinTextRadius = (pinStyle: 'xs' | 'sm' | 'md' | 'lg') => {
     }
 }
 
+/**
+ * @function resolveError
+ * @param {boolean} isError 
+ * @param {string} errorColor 
+ * @returns {string}
+ */
+ const resolveError = (isError?: boolean, errorColor?: string) => {
+    if(isError && errorColor && !Utilities.isEmpty(errorColor)) {
+        return errorColor;
+    } else if(isError) {
+        return 'red';
+    }
+    return 'inherit';
+}
+
 const StyledPinInput = styled.input<IPinInputProps>`
     width: ${props => props.options?.size ? resolvePinSize(props.options.size) : resolvePinSize('md')};
     min-width: 0px;
@@ -62,7 +78,9 @@ const StyledPinInput = styled.input<IPinInputProps>`
     border-width: 1px;
     border-style: solid;
     border-image: initial;
-    border-color: ${props => props.data.isError ? colorPalette.errorColor : 'inherit'};
+    border-color: ${
+        props => props.data && resolveError(props.data?.isError, props.data?.errorBorderColor)
+    };
     background: inherit;
     &:focus-visible {
         z-index:1;

@@ -4,7 +4,23 @@ import React, {
 } from "react";
 import styled from "styled-components";
 import { commonConstant } from "../../../../models/constants";
+import Utilities from "../../../../utils/common";
 import { ITextAreaProps } from "./TextArea.props";
+
+/**
+ * @function resolveError
+ * @param {boolean} isError 
+ * @param {string} errorColor 
+ * @returns {string}
+ */
+ const resolveError = (isError?: boolean, errorColor?: string) => {
+    if(isError && errorColor && !Utilities.isEmpty(errorColor)) {
+        return errorColor;
+    } else if(isError) {
+        return 'red';
+    }
+    return 'inherit';
+}
 
 const StyledTextArea = styled.textarea<ITextAreaProps>`
     opacity: ${props => props.data?.isDisabled ? '0.3' : '1'};
@@ -27,7 +43,9 @@ const StyledTextArea = styled.textarea<ITextAreaProps>`
     border-width: 1px;
     border-style: solid;
     border-image: initial;
-    border-color: ${props => props?.data?.errorBorderColor ? props?.data?.errorBorderColor : 'inherit'};
+    border-color: ${
+        props => props.data && resolveError(props.data?.isError, props.data?.errorBorderColor)
+    };
     background: inherit;
     &:focus-visible {
         z-index:1;
