@@ -2,8 +2,8 @@ import React from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import renderer from 'react-test-renderer';
 
-describe('Announcement unit tests', () => {
-    it('changes the class when hovered', () => {
+describe('<Dropdown /> unit tests', () => {
+    it('Should render DropDown if calling by default values', () => {
         const component = renderer.create(
           <Dropdown
             data={{

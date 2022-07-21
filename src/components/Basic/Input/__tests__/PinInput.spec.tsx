@@ -118,4 +118,4 @@ describe('<PinInput /> styling unit tests', () => {
     expect(container.firstChild).toHaveStyleRule('border-color', 'pink');
     expect(container.firstChild).toHaveStyleRule('border-width','1px');
   });
-})
+});
