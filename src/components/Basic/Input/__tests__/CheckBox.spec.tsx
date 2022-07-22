@@ -2,8 +2,8 @@ import React from "react";
 import CheckBox from "../CheckBox/Checkbox";
 import renderer from 'react-test-renderer';
 
-describe('Announcement unit tests', () => {
-    it('changes the class when hovered', () => {
+describe('<CheckBox> unit tests', () => {
+    it('Should render Checkbox when calling default values', () => {
         const component = renderer.create(
           <CheckBox
             data={{
