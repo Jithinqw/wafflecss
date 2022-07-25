@@ -10,7 +10,7 @@ const StyledRibbon = styled.div<IPromotionalRibbonProps>`
     max-width: 66.6666667%;
     margin-left: 33.3333333%;
     flex: 1 0 auto;
-    cursor: pointer;
+    cursor: ${props => props.events?.onClick ? 'pointer' : 'not-allowed'};
 `;
 
 const PromotionRibbon = (props: IPromotionalRibbonProps) => {
