@@ -2,6 +2,10 @@
 
 A React component used to alert users of a particular screen area that needs user action
 
+# Example
+
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/alert--alert-intraction).
+
 # Usage
 
 ```javascript
@@ -34,5 +38,5 @@ A React component used to alert users of a particular screen area that needs use
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|
-| variants |  true | error/success/warning/info/dark |
+| variants |  true | `error / success / warning / info / dark` |
 | testId |    true   |   string |

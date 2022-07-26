@@ -2,6 +2,11 @@
 
 React component for showing badges for users.
 
+
+# Example
+
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/badge--default-badge).
+
 # Usage
 
 ```javascript
@@ -31,5 +36,5 @@ React component for showing badges for users.
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| variant |  true | subtle / solid / outline |
-| color |  true | warn / success / danger |
+| variant |  true | `subtle / solid / outline` |
+| color |  true | `warn / success / danger` |

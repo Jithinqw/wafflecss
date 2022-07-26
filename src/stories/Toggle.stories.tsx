@@ -9,9 +9,9 @@ export default {
         data: {
             parentLabel: 'Show your Rights',
             children: {
-                __html: '<div>You have the right to remain silent</div>'
-            }
-        }
+                __html: '<div>You have the right to remain silent</div>',
+            },
+        },
     },
 } as ComponentMeta<typeof Toggle>
 

@@ -2,6 +2,10 @@
 
 React component for showing a BackDrop inside an entire screen. Users can pass React node as children for showing inside backdrop.
 
+# Example
+
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/backdrop--default-backdrop).
+
 # Usage
 
 ```javascript

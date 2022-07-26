@@ -2,6 +2,10 @@
 
 A React component for displaying button.
 
+# Example
+
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/button--default-button).
+
 # Usage
 
 ```javascript
@@ -35,7 +39,7 @@ A React component for displaying button.
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| size |  true | xs / sm / md / lg |
-| buttonType |  true | button / submit / reset |
-| variants |  true | default / danger / success / primary |
+| size |  true | `xs / sm / md / lg` |
+| buttonType |  true | `button / submit / reset` |
+| variants |  true | `default / danger / success / primary` |
 | style |  true | void |

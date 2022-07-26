@@ -2,6 +2,10 @@
 
 A React component used to alert users of a particular annoncement.
 
+# Example
+
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/announcement--annocement-default).
+
 # Usage
 
 ```javascript
