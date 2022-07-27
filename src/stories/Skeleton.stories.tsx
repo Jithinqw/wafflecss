@@ -19,7 +19,14 @@ const CircleTemplate: ComponentStory<typeof Skeleton> = (args) => {
 }
 
 const ColTemplate: ComponentStory<typeof Skeleton> = (args) => {
-    return <Skeleton {...args} />
+    return (
+        <Skeleton {...args} 
+            options={{
+                color: 'teal',
+                type: 'col',
+            }}
+        />
+    )
 }
 export const ColumnSkeleton = ColTemplate.bind({})
 export const CircleSkeleton = CircleTemplate.bind({})
