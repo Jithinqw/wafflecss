@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import IBadgeProps from "./Badge.props"; 
 import styled from "styled-components";
-import { commonConstant } from "../../models/constants";
+import { commonConstant } from "../../utils/constants";
 
 /**
  * @function generateBadgeStyle

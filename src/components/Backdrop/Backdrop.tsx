@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import { backDropConstants } from "../../models/constants";
+import { backDropConstants } from "../../utils/constants";
 import { IBackdropProps } from "./Backdrop.props";
 
 const StyledBackdrop = styled.div<IBackdropProps>`

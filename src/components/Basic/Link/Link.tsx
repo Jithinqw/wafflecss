@@ -2,7 +2,7 @@ import React, { forwardRef, memo } from "react";
 import styled from "styled-components";
 import { 
     colorPalette, commonConstant
-} from "../../../models/constants";
+} from "../../../utils/constants";
 import { ILinkProps } from "./Link.props";
 
 /**

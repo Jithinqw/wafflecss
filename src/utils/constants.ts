@@ -1,3 +1,18 @@
+export const errorLevel = {
+    ERROR_LEVEL: 0,
+    INFO_LEVEL: 1,
+    WARN_LEVEL: 2,
+    DEBUG_LEVEL: 3
+}
+
+export const errorColor = {
+    bgRed: '\x1b[41m',
+    bgBlue: '\x1b[44m',
+    bgYellow: '\x1b[43m',
+    bgWhite: '\x1b[47m',
+    bgBlack: '\x1b[30m'
+}
+
 export const commonConstant = {
     // display
     flexDisplay: 'flex',
@@ -190,4 +205,24 @@ export const modalConstants = {
     boxShadow:
         'rgb(9 30 66 / 8%) 0px 0px 0px 1px, rgb(9 30 66 / 8%) 0px 2px 1px, rgb(9 30 66 / 31%) 0px 0px 20px -6px',
     transition: 'transform 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s',
+}
+
+export const alertConstants = {
+    defaultWidth: '100%',
+    paddingInlineStart: '1rem',
+    paddingInlineEnd: '1rem',
+    paddingTop: '0.75rem',
+    paddingBottom: '0.75rem',
+    borderRadius: '10px',
+}
+
+export const announcementConstants = {
+    defaultBackgroundColor: 'rgb(66, 82, 110)',
+    defaultColor: 'rgb(255, 255, 255)',
+    maxWidth: '88px',
+    maxHeight: '32px !important',
+    defaultPadding: '2px !important',
+    fontWeight: 500,
+    fillColor: 'rgb(66, 82, 110)',
+    marginRight: '4px',
 }

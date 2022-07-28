@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import { colorPalette, commonConstant, modalConstants } from "../../models/constants";
+import { colorPalette, commonConstant, modalConstants } from "../../utils/constants";
 import { IModalProps } from "./Modal.props";
 
 const StyledDivContainer = styled.div`

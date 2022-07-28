@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react"
 import styled from "styled-components"
-import { colorPalette, containerConstants } from "../../../models/constants"
+import { colorPalette, containerConstants } from "../../../utils/constants"
 import { IContainerProps } from "./Container.props"
 
 const resolveContainerWidth = (containerWidth: 'sm' | 'md' | 'lg') => {

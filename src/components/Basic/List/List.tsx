@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import styled from "styled-components";
 import { ListData } from "../../../models/basicModal";
-import { commonConstant } from "../../../models/constants";
+import { commonConstant } from "../../../utils/constants";
 import { IListProps } from "./List.props";
 
 interface ListSpace {

@@ -16,8 +16,6 @@ const StyleGridRow = styled.div`
 `;
 
 const StyledGridCell = styled.div`
-    padding-top: 24px;
-    padding-bottom: 24px;
 `;
 
 const StyledDFlex = styled.a`
@@ -37,7 +35,7 @@ const StyledFlexAvatarStack = styled.ul`
 
 const StyledflexAvatarTackItem = styled.li`
     min-width: 0;
-    max-width: 24px;
+    max-width: 30px;
     display: list-item;
     text-align: -webkit-match-parent;
 `;
@@ -56,6 +54,7 @@ const StyledImage = styled.img<IStackedImageProps>`
     };
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: rgb(255 255 255) 0px 0px 0px 2px;
 `;
 
 const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLDivElement>) => {

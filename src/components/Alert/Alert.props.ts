@@ -8,6 +8,7 @@ export interface IAlertProps {
 
 interface IAlertEvents {
     /**
+     * @type {Function}
      * trigger event if click on alert
      */
     onBodyClick?:() => void;

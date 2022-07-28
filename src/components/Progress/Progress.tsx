@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled, { keyframes, css } from "styled-components";
-import { colorPalette, commonConstant } from "../../models/constants";
+import { colorPalette, commonConstant } from "../../utils/constants";
 import { IProgressProps } from "./Progress.props";
 
 const ProgressWrapper = styled.div<IProgressProps>`

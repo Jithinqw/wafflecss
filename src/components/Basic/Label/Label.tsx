@@ -1,6 +1,6 @@
 import React, { forwardRef, memo } from "react";
 import styled from "styled-components"
-import { colorPalette, commonConstant } from "../../../models/constants";
+import { colorPalette, commonConstant } from "../../../utils/constants";
 import { ILabelProps } from "./Label.props";
 
 /**

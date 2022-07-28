@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import { colorPalette, commonConstant } from "../../../models/constants";
+import { colorPalette, commonConstant } from "../../../utils/constants";
 import { ICenterProps } from "./Center.props";
 
 const StyledCenter = styled.div<ICenterProps>`

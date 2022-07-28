@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from "react";
 import styled from "styled-components";
-import { colorPalette } from "../../../../models/constants";
+import { colorPalette } from "../../../../utils/constants";
 import { ICheckboxProps } from "./Checkbox.props";
 
 /**

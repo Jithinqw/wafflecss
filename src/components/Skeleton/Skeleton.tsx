@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { colorPalette, 
     commonConstant, 
     skeletonConstants
-} from "../../models/constants";
+} from "../../utils/constants";
 import { ISkeletonProps } from "./Skeleton.props";
 
 /**

@@ -231,6 +231,6 @@ describe('Unit test for <Heading /> Color', () => {
       />,
     )
     expect(container.textContent).toBe('This is a new Heading color');
-    expect(container.firstChild).toHaveStyleRule('color', 'pink !important');
+    expect(container.firstChild).toHaveStyleRule('color', 'pink');
   });
 })
