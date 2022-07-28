@@ -55,6 +55,6 @@ export interface ISelectOption {
  * Interface for Checkbox
  */
 export interface ICheckboxData {
-    displayText: string;
-    value: string;
+    displayText: string
+    value: string
 }

@@ -14,8 +14,8 @@ export default {
         ],
         options: {
             color: 'red',
-            seperator: '*'
-        }
+            seperator: '*',
+        },
     },
 } as ComponentMeta<typeof BreadCrumb>
 

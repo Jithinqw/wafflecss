@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import styled from "styled-components";
-import { colorPalette } from "../../models/constants";
+import { colorPalette } from "../../utils/constants";
 import { IStarRatingProps } from "./StarRating.props";
 
 /**

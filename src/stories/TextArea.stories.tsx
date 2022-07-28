@@ -11,7 +11,7 @@ export default {
             placeholder: 'TextInput Placeholder',
             value: '',
             rows: 50,
-            cols: 50
+            cols: 50,
         },
         options: {
             size: 'lg',

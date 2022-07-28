@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { 
     colorPalette, commonConstant,
     legalTextConstant 
-} from "../../../../models/constants";
+} from "../../../../utils/constants";
 import ILegalTextProps from "./LegalText.props";
 
 /**

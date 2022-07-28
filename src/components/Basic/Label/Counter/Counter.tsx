@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import { commonConstant } from "../../../../models/constants";
+import { commonConstant } from "../../../../utils/constants";
 import { ICounterProps } from "./Counter.props";
 
 const CounterPrimary = styled.span`

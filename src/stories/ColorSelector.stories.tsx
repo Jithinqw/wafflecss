@@ -1,7 +1,7 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ColorSelector from '../components/Selector/ColorSelector/ColorSelector';
-import { action } from '@storybook/addon-actions';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import ColorSelector from '../components/Selector/ColorSelector/ColorSelector'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'ColorSelector',
@@ -9,12 +9,12 @@ export default {
     args: {
         data: {
             selected: true,
-            color: 'red'
+            color: 'red',
         },
-        options:{
+        options: {
             colorSize: 'sm',
-            borderColor: 'pink'
-        }
+            borderColor: 'pink',
+        },
     },
 } as ComponentMeta<typeof ColorSelector>
 
@@ -22,54 +22,67 @@ const ColorSelectorTemplate: ComponentStory<typeof ColorSelector> = (args) => {
     return <ColorSelector {...args} />
 }
 
-const ColorSelectorMdTemplate: ComponentStory<typeof ColorSelector> = (args) => {
+const ColorSelectorMdTemplate: ComponentStory<typeof ColorSelector> = (
+    args
+) => {
     return (
-        <ColorSelector {...args} 
+        <ColorSelector
+            {...args}
             options={{
-                colorSize: 'md'
+                colorSize: 'md',
             }}
         />
     )
 }
 
-const ColorSelectorlgTemplate: ComponentStory<typeof ColorSelector> = (args) => {
+const ColorSelectorlgTemplate: ComponentStory<typeof ColorSelector> = (
+    args
+) => {
     return (
-        <ColorSelector {...args}
+        <ColorSelector
+            {...args}
             options={{
                 colorSize: 'lg',
-                borderColor: 'pink'
+                borderColor: 'pink',
             }}
         />
     )
 }
 
-const ColorSelectorClickTestTemplate: ComponentStory<typeof ColorSelector> = (args) => {
+const ColorSelectorClickTestTemplate: ComponentStory<typeof ColorSelector> = (
+    args
+) => {
     return (
-        <ColorSelector {...args} 
+        <ColorSelector
+            {...args}
             options={{
-                colorSize: 'md'
+                colorSize: 'md',
             }}
             events={{
-                onClick: action('User clicked on Color selector')
+                onClick: action('User clicked on Color selector'),
             }}
         />
     )
 }
 
-const ColorSelectorChangeTestTemplate: ComponentStory<typeof ColorSelector> = (args) => {
+const ColorSelectorChangeTestTemplate: ComponentStory<typeof ColorSelector> = (
+    args
+) => {
     return (
-        <ColorSelector {...args} 
+        <ColorSelector
+            {...args}
             options={{
-                colorSize: 'md'
+                colorSize: 'md',
             }}
             events={{
-                onChange: action('User clicked on Color selector')
+                onChange: action('User clicked on Color selector'),
             }}
         />
     )
 }
-export const ColorSelectorDefault = ColorSelectorTemplate.bind({});
-export const ColorSelectorMd = ColorSelectorMdTemplate.bind({});
-export const ColorSelectorlgTemplateWithCustomBorder = ColorSelectorlgTemplate.bind({});
-export const ColorSelectorClickTest = ColorSelectorClickTestTemplate.bind({});
-export const ColorSelectorChangeTest = ColorSelectorChangeTestTemplate.bind({});
+export const ColorSelectorDefault = ColorSelectorTemplate.bind({})
+export const ColorSelectorMd = ColorSelectorMdTemplate.bind({})
+export const ColorSelectorlgTemplateWithCustomBorder =
+    ColorSelectorlgTemplate.bind({})
+export const ColorSelectorClickTest = ColorSelectorClickTestTemplate.bind({})
+export const ColorSelectorChangeTest = ColorSelectorChangeTestTemplate.bind({})

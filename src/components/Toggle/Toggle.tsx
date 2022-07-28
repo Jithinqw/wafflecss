@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { commonConstant } from "../../models/constants";
+import { commonConstant } from "../../utils/constants";
 import { IToggleProps } from "./Toggle.props";
 
 const StyledDetails = styled.details``;

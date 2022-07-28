@@ -1,7 +1,7 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Checkbox from '../components/Basic/Input/CheckBox/Checkbox'
-import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'Checkbox',
@@ -23,9 +23,12 @@ const CheckboxTemplate: ComponentStory<typeof Checkbox> = (args) => {
 
 const CheckboxTemplateWithLabel: ComponentStory<typeof Checkbox> = (args) => {
     return (
-        <Checkbox {...args} options={{
-            checkboxLabel: 'Demo'
-        }}/>
+        <Checkbox
+            {...args}
+            options={{
+                checkboxLabel: 'Demo',
+            }}
+        />
     )
 }
 
@@ -40,6 +43,6 @@ const CheckBoxClickTest: ComponentStory<typeof Checkbox> = (args) => {
     )
 }
 
-export const CheckboxDefault = CheckboxTemplate.bind({});
+export const CheckboxDefault = CheckboxTemplate.bind({})
 export const CheckboxWithLabel = CheckboxTemplateWithLabel.bind({})
-export const CheckboxTest = CheckBoxClickTest.bind({});
+export const CheckboxTest = CheckBoxClickTest.bind({})

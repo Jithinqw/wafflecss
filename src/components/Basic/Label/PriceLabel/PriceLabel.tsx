@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import { colorPalette, commonConstant } from "../../../../models/constants";
+import { colorPalette, commonConstant } from "../../../../utils/constants";
 import { IPriceLabelProps } from "./PriceLabel.props";
 
 const StyledRecurringLabel = styled.strong<IPriceLabelProps>`

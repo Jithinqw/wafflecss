@@ -2,7 +2,7 @@ import React, {
     ChangeEvent, forwardRef, useEffect 
 } from "react";
 import styled from "styled-components";
-import { colorPalette, commonConstant } from "../../../../models/constants";
+import { colorPalette, commonConstant } from "../../../../utils/constants";
 import Utilities from "../../../../utils/common";
 import { IPinInputProps } from "./PinInput.props";
 

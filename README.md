@@ -22,7 +22,7 @@
 
 ## Install
 
-This repository is distributed with [npm]. After [installing npm](https://www.npmjs.com/), 
+This repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), 
 you can install `wafflecss` with this command:
 
 ```sh
@@ -57,9 +57,12 @@ Storybook can be build as an UI. Use
 npm run build-storybook
 ```
 
+Current version of storybook is deployed to Vercel can be found [here](https://wafflecss-jithinqw.vercel.app/)
+
 ### Unit Testing
 
 Unit testing is done using Jest. After installing [Jest](https://jestjs.io/), you can run Jest test suits using.
+
 ```sh
 run run unittest
 ```
@@ -88,7 +91,7 @@ WaffleCSS is maintained under the [Semantic Versioning guidelines](https://semve
 
 ## Bundle Analysis
 
-Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.39).
+Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.40).
 
 ## License
 

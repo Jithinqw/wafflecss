@@ -19,4 +19,4 @@ export default {
 const CenterDefault: ComponentStory<typeof Center> = (args) => {
     return <Center {...args} />
 }
-export const CenterAlign = CenterDefault.bind({});
+export const CenterAlign = CenterDefault.bind({})

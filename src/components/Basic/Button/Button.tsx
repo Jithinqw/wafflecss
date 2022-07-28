@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { 
     buttonConstant, 
     colorPalette, commonConstant 
-} from "../../../models/constants";
+} from "../../../utils/constants";
 import { IButtonProps } from "./Button.props";
 
 /**

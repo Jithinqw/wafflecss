@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { 
     colorPalette, commonConstant,
     headingConstant 
-} from '../../../models/constants';
+} from '../../../utils/constants';
+import Utilities from '../../../utils/common';
 import { IHeadingProps } from './Heading.props';
 
 /**
@@ -68,8 +69,14 @@ const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' 
     }
 }
 
+const resolveColor = (color?: string) => {
+    if(color && !Utilities.isEmpty(color)) {
+        return color
+    }
+    return colorPalette.defaultBlackColor;
+}
 const StyledHeading = styled.p<IHeadingProps>`
-    color: ${props => props.options?.headingColor ? props.options?.headingColor + ' !important' : colorPalette.defaultBlackColor};
+    color: ${props =>  props.options?.headingColor ? resolveColor(props.options?.headingColor) : colorPalette.defaultBlackColor};
     text-transform: ${commonConstant.textTransform};
     letter-spacing: ${headingConstant.defaultLetterSpacing};
     font-family: ${commonConstant.fontFamily};
