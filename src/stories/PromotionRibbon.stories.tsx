@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import PromotionRibbon from '../components/PromotionRibbon/PromotionRibbon'
+import PromotionRibbon from '../components/Promotions/PromotionRibbon/PromotionRibbon'
 import { action } from '@storybook/addon-actions'
 import Heading from '../components/Basic/Heading/Heading'
 

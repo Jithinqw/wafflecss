@@ -13,7 +13,7 @@ import { IHeadingProps } from './Heading.props';
  * @param {string} style 
  * @returns {string}
  */
-const makeFontStyle = (style: 'italics' | 'normal' | 'oblique' | undefined) => {
+const makeFontStyle = (style: 'italics' | 'normal' | 'oblique' | undefined): string => {
     switch (style) {
         case 'italics':
             return 'italic';
@@ -30,7 +30,7 @@ const makeFontStyle = (style: 'italics' | 'normal' | 'oblique' | undefined) => {
  * @param {string} fontSize
  * @returns {string}
  */
-const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge' | undefined) => {
+const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge' | undefined):string => {
     switch(fontSize) {
         case 'normal':
             return headingConstant.headingSizeScale.normal;
@@ -52,7 +52,7 @@ const makeHeadingSize = (fontSize: 'normal' | 'small' | 'extrasmall' | 'large' |
  * @param {string} fontSize 
  * @returns {string}
  */
-const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold' | undefined) => {
+const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold' | undefined): number => {
     switch(fontSize) {
         case 'extrasmall':
             return headingConstant.headingWeightScale.extrasmall;
@@ -69,12 +69,18 @@ const makeHeadingWeight = (fontSize: 'normal' | 'small' | 'extrasmall' | 'bold' 
     }
 }
 
-const resolveColor = (color?: string) => {
+/**
+ * @function resolveColor
+ * @param {string} color 
+ * @returns {string}
+ */
+const resolveColor = (color?: string): string => {
     if(color && !Utilities.isEmpty(color)) {
-        return color
+        return color;
     }
     return colorPalette.defaultBlackColor;
 }
+
 const StyledHeading = styled.p<IHeadingProps>`
     color: ${props =>  props.options?.headingColor ? resolveColor(props.options?.headingColor) : colorPalette.defaultBlackColor};
     text-transform: ${commonConstant.textTransform};
@@ -83,12 +89,13 @@ const StyledHeading = styled.p<IHeadingProps>`
     font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : headingConstant.fontWeight};
     font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : headingConstant.fontSize};
     font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : headingConstant.fontStyle};
+    display: inline-block;
 `;
 
 const Heading = forwardRef(
     (props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {
 
-    const OnClickEvent = () => {
+    const onClickEvent = () => {
         if(props.events?.onClick) {
             return props.events.onClick();
         }
@@ -98,7 +105,7 @@ const Heading = forwardRef(
         <StyledHeading
             id={props.data?.id}
             {...props}
-            onClick={OnClickEvent}
+            onClick={onClickEvent}
             ref={ref}
         >
             {props.data.headingText}
