@@ -5,12 +5,11 @@ import TextArea from '../components/Basic/Input/TextArea/TextArea'
 export default {
     title: 'TextArea',
     component: TextArea,
-    argTypes: {},
     args: {
         data: {
             placeholder: 'TextInput Placeholder',
             value: '',
-            rows: 50,
+            rows: 5,
             cols: 50,
         },
         options: {

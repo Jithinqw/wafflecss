@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import LegalText from "../Basic/Heading/LegalText/LegalText";
+import LegalText from "../../Basic/Heading/LegalText/LegalText";
 import { IAnnouncementProps } from "./Announcement.props";
 
 const StyledAnnouncement = styled.div`

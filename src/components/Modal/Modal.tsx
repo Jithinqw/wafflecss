@@ -73,7 +73,8 @@ const StyledFooter = styled.div`
     box-shadow: none;
 `;
 
-const Modal = forwardRef((props: IModalProps, ref: React.Ref<HTMLDivElement>) => {
+const Modal = forwardRef(
+    (props: IModalProps, ref: React.Ref<HTMLDivElement>) => {
     return (
             props && props.options.isVisible ? (
                 <StyledDivContainer ref={ref}>

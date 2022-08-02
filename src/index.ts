@@ -35,7 +35,9 @@ export { default as Quote } from './components/Quote/Quote';
 export { default as Toast } from './components/Toast/Toast';
 export { default as Toggle } from './components/Toggle/Toggle';
 export { default as ColorSelector } from './components/Selector/ColorSelector/ColorSelector';
-export { default as PromotionRibbon } from './components/PromotionRibbon/PromotionRibbon';
+export { default as PromotionRibbon } from './components/Promotions/PromotionRibbon/PromotionRibbon';
+export { default as Announcement } from './components/Promotions/Announcement/Announcement';
+export { default as TopBanner } from './components/Promotions/TopBanner/TopBanner';
 
 export {
     ISelectOption, Utilities,
