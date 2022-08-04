@@ -10,6 +10,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 
 ```javascript
     import { Heading } from 'wafflecss';
+    
     <Heading
         data={{
             headingText: 'Supreme allied commander'
