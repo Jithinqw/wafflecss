@@ -42,6 +42,7 @@ const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) 
             onError={resolveImageError}
             onClick={OnClickEvent}
             onLoad={onLoadEvent}
+            className={props.options?.className}
         />
     )
 });

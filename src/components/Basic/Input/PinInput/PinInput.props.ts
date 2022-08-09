@@ -72,4 +72,8 @@ interface IPinInputOptions {
      * size for input
      */
     size?: 'xs' | 'sm' | 'md' | 'lg';
+    /**
+     * @type {string}
+     */
+     className?: string;
 }

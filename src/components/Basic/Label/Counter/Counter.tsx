@@ -68,6 +68,7 @@ const Counter = forwardRef((props: ICounterProps, ref: React.Ref<HTMLSpanElement
                         {...props}
                         ref={ref}
                         onClick={props.events?.onClick}
+                        className={props.options?.className}
                     >
                         {props.data.displayText}
                     </CounterPrimary>

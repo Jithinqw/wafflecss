@@ -47,6 +47,7 @@ const LegalText = forwardRef((props: ILegalTextProps, ref: React.Ref<HTMLSpanEle
             {...props}
             onClick={OnClickEvent}
             ref={ref}
+            className={props.options?.className}
         >
             {props.data.displayText}
         </StyledLegalText>

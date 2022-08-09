@@ -25,4 +25,8 @@ interface IListOptions {
      * @type {string}
      */
     spacing?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

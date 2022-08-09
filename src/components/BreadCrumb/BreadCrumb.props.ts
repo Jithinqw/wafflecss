@@ -35,4 +35,8 @@ interface IBreadCrumbOptions {
      * @default #161616
      */
     color: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

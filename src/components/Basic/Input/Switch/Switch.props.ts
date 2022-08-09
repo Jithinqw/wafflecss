@@ -16,6 +16,10 @@ interface ISwitchOptions {
      * which type of switch to render
      */
     variant: 'ios' | 'android';
+    /**
+     * @type {string}
+     */
+     className?: string;
 }
 
 interface ISwitchEvents {

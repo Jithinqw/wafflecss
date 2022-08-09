@@ -72,6 +72,7 @@ const CheckBox = forwardRef((props: ICheckboxProps, ref: React.Ref<HTMLInputElem
             ref={ref}
             {...props}
             onChange={onCheckbokStateChange}
+            className={props.options?.className}
         >
             {
                 props.options && props.options.checkboxLabel &&

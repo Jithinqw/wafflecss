@@ -23,7 +23,11 @@ interface IStackedImageOptions {
      * Add a wiggle animation
      * to stacked image
      */
-    wiggleAnimation?: boolean
+    wiggleAnimation?: boolean;
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }
 
 interface IStackedImageData {

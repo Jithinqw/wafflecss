@@ -55,4 +55,8 @@ interface IAvatarOptions {
      * @default {'rounded'}
      */
     avatarType: 'rounded' | 'rect' | 'bordered' | 'text';
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }

@@ -46,4 +46,8 @@ export interface IHeadingOptions {
      * Color for heading
      */
     headingColor?: string;
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }

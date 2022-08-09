@@ -119,6 +119,7 @@ const TextArea = forwardRef((props: ITextAreaProps, ref: React.Ref<HTMLTextAreaE
             id={props.data?.id}
             ref={ref}
             cols={props.data?.cols}
+            className={props.options?.className}
             rows={props.data?.rows}
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             onChange={onChange}

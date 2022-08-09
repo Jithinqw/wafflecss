@@ -57,4 +57,8 @@ interface ImageOptions {
      * @type {string}
      */
     id?: string;
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }

@@ -55,7 +55,10 @@ const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[], sp
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
-                                <StyledListItem key={i} spacing={spacing}>
+                                <StyledListItem 
+                                    key={i} 
+                                    spacing={spacing}
+                                >
                                     {e.listItem}
                                 </StyledListItem>
                             )
