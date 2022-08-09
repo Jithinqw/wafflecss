@@ -54,6 +54,7 @@ const Dropdown = forwardRef((props: IDropdownProps, ref: React.Ref<HTMLSelectEle
             {...props}
             disabled={props.data?.disabled ? props.data?.disabled : false}
             ref={ref}
+            className={props.options?.className}
         >
             {
                 props.data.optionData && props.data.optionData.map((e: ISelectOption, i: number) => {

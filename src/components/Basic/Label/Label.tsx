@@ -33,6 +33,7 @@ const Label = forwardRef((props: ILabelProps, ref: React.Ref<HTMLLabelElement>) 
             {...props}
             ref={ref}
             id={props.options?.id}
+            className={props.options?.className}
         >
             {props.data.displayText}
         </StyledLabel>

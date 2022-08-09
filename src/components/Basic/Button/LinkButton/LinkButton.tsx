@@ -64,6 +64,7 @@ const StyledLinkButton = styled.a<ILinkButtonProps>`
     font-size: ${props => props.options?.size ? resolveButtonFontSize(props.options.size) : resolveButtonFontSize('md')};
     line-height: 1.1764805882;
     font-weight: 400;
+    width: inherit;
     letter-spacing: -0.022em;
     font-family: ${commonConstant.fontFamily};
     min-width: ${props => props.options?.size ? resolveButtonSize(props.options.size) : resolveButtonSize('md')};
@@ -95,6 +96,7 @@ const LinkButton = (props: ILinkButtonProps) => {
             onFocus={onFocusButton}
             {...props}
             id={props.options?.id}
+            className={props.options?.className}
         >
             {props.data.displayText}
         </StyledLinkButton>

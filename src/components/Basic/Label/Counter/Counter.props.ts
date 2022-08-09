@@ -26,4 +26,8 @@ interface ICounterOptions {
      * type of counter to render
      */
     counterType?: 'primary' | 'dark';
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

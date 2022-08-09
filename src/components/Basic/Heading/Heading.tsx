@@ -107,6 +107,7 @@ const Heading = forwardRef(
             {...props}
             onClick={onClickEvent}
             ref={ref}
+            className={props.options?.className}
         >
             {props.data.headingText}
         </StyledHeading>

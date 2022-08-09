@@ -34,4 +34,8 @@ interface ILinkButtonOptions {
      * id for button
      */
     id?: string;
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }

@@ -37,4 +37,8 @@ interface ILabelOptions {
      * id of label
      */
     id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

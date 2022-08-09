@@ -93,4 +93,8 @@ interface ITextInputOptions {
      * type of Input
      */
     type?: 'email' | 'text' | 'number' | 'password';
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

@@ -71,4 +71,8 @@ interface IButtonOptions {
      * @type {IStyleOptions}
      */
     style?: IStyleOptions;
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }

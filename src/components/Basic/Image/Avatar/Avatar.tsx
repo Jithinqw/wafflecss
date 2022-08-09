@@ -75,6 +75,7 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         alt={props.data.alt}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
+                        className={props.options.className}
                     />
                 );
             case 'rect':
@@ -87,11 +88,12 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         alt={props.data.alt}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
+                        className={props.options.className}
                     />
                 );
             case 'text':
                 return (
-                    <StyledTextAvatar {...props}>
+                    <StyledTextAvatar {...props} className={props.options.className}>
                         <p>{props.data.avatarText}</p>
                     </StyledTextAvatar>
                 )
@@ -105,6 +107,7 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                         ref={ref}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
+                        className={props.options.className}
                     />
                 )
             default: 

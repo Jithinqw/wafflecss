@@ -52,6 +52,7 @@ const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => 
             {...props} 
             onClick={onClickEvent}
             ref={ref}
+            className={props.options?.className}
         >
             {props.data.displayText}
         </StyledLink>

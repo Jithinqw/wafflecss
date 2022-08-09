@@ -39,6 +39,10 @@ interface IDropdownOptions {
      * optional background color
      */
     bgColor?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }
 
 interface IDropdownEvents {

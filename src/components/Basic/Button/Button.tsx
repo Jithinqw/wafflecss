@@ -166,6 +166,7 @@ const StyledDefault = styled.button<IButtonProps>`
     appearance: none;
     user-select: none;
     text-decoration: none;
+    width: inherit;
     text-align: center;
     display: grid;
     :where(button, input):where(:not(:active)):focus-visible {
@@ -215,6 +216,7 @@ const Button = forwardRef((props: IButtonProps, ref:React.Ref<HTMLButtonElement>
             id={props.data.id}
             role={'button'}
             ref={ref}
+            className={props.options?.className}
         >
             <StyledButtonSpan>
                 {props.data.displayText}

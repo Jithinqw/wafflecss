@@ -35,4 +35,8 @@ interface ICheckboxOptions {
      * @type {string}
      */
     checkboxLabel?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

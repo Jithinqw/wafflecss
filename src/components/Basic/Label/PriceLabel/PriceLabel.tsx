@@ -35,18 +35,30 @@ const StyledStrikeLabel = styled.span<IPriceLabelProps>`
 const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps, ref: React.Ref<HTMLSpanElement>) => {
     if(!isStrikethrough) {
         return(
-            <StyledPriceLabel {...props} ref={ref}>
+            <StyledPriceLabel 
+                {...props} 
+                ref={ref}
+                className={props.options?.className}
+            >
                 {props.data.currencySymbol + (
                     props.data.price).toFixed(props.data.precision).toString().toLocaleLowerCase() + ' '
                 }
-                <StyledRecurringLabel {...props} ref={ref}>
+                <StyledRecurringLabel 
+                    {...props} 
+                    ref={ref} 
+                    className={props.options?.className}
+                >
                     {props.data.recurringLabel}
                 </StyledRecurringLabel>
             </StyledPriceLabel>
         )
     } else {
         return (
-            <StyledStrikeLabel {...props} ref={ref}>
+            <StyledStrikeLabel 
+                {...props} 
+                ref={ref} 
+                className={props.options?.className}
+            >
                 {props.data.currencySymbol + (
                     props.data.price).toFixed(props.data.precision).toString().toLocaleLowerCase() + ' '
                     + props.data.recurringLabel

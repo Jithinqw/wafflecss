@@ -61,7 +61,7 @@ const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLD
     
     return (
         <>
-            <StyledGrid ref={ref}>
+            <StyledGrid ref={ref} className={props.options?.className}>
                 <StyleGridRow>
                     <StyledGridCell>
                         <StyledDFlex>

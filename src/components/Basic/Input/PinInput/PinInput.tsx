@@ -127,6 +127,7 @@ const PinInput = forwardRef((props: IPinInputProps, ref: React.Ref<HTMLInputElem
             type={'tel'}
             maxLength={1}
             inputMode={'numeric'}
+            className={props.options?.className}
             disabled={props.data?.isDisabled ? props.data.isDisabled : false}
         />
     )

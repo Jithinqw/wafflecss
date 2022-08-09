@@ -32,4 +32,8 @@ interface IAlertOptions {
      * @type {string}
      */
     testId?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

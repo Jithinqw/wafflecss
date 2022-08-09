@@ -158,12 +158,13 @@ const TextInput = forwardRef((props: ITextInputProps, ref: React.Ref<HTMLInputEl
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             value={currentText}
             ref={ref}
+            className={props.options?.className}
             type={props.options?.type ? props.options?.type : 'text'}
             onChange={onChange}
             onKeyPress={onKeyPress}
             onBlur={onBlur}
             onFocus={onFocus}
-        /> 
+        />
     )
 })
 

@@ -54,6 +54,7 @@ const Alert = forwardRef((props: IAlertProps, ref:React.Ref<HTMLDivElement>) => 
             data-testid={props.options?.testId}
             onClick={props.events?.onBodyClick}
             ref={ref}
+            className={props.options?.className}
         >
             {props.data.displayText}
         </StyledAlert>

@@ -32,7 +32,10 @@ const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOList
 
     return (
         <Stack>
-            <StyledOrderedList ref={ref}>
+            <StyledOrderedList 
+                ref={ref} 
+                className={props.options?.className}
+            >
                 {props.data && props.data.map((e, i) => {
                     return (
                         <StyledListItem {...props} key={i}>

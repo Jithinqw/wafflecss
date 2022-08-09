@@ -53,6 +53,7 @@ const Switch = forwardRef((props: ISwitchProps, ref: React.Ref<HTMLInputElement>
                 type={'checkbox'} 
                 onClick={onClickEvent}
                 ref={ref}
+                className={props.options?.className}
             />
             <StyledSwitch />
         </Label>

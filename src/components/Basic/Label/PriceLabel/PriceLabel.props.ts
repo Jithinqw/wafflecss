@@ -51,4 +51,8 @@ interface IPriceLabelOption {
      * font size of price label
      */
     fontSize?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

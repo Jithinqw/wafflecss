@@ -25,6 +25,10 @@ interface ILegalTextOptions {
      * Additional style for heading
      */
     style?: IStyleOptions;
+    /**
+     * additional styles passed
+     */
+    className?: string;
 }
 
 interface ILegalTextEvents {

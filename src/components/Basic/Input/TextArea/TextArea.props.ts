@@ -89,4 +89,8 @@ interface ITextAreaOptions {
      * control required props
      */
     isRequired?: boolean;
+    /**
+     * @type {string}
+     */
+     className?: string;
 }

@@ -39,4 +39,8 @@ interface ILinkOptions {
      * size of link
      */
     size?: 'sm' | 'md' | 'lg';
+    /**
+     * @type {string}
+     */
+    className?: string;
 }
