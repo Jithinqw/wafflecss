@@ -8,7 +8,7 @@ import {
 
 const StyledProgressWrapper = styled.span<IStackedProgressProps>`
     display: flex;
-    height: ${props => props.options?.height ? props.options.height : '17px'};
+    height: ${props => props.options?.height ? props.options.height : '8px'};
     overflow: hidden;
     background-color: rgba(110,118,129,0.4);
     border-radius: ${props => props.options?.borderRadius ? props.options.borderRadius : '6px'};
