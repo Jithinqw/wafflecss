@@ -3,11 +3,11 @@
 React component for showing badges for users.
 
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/badge--default-badge).
 
-# Usage
+## Usage
 
 ```javascript
     import { Badge } from 'wafflecss';
@@ -18,23 +18,24 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
     />,
 ```
 
-# Props
+## Props
 
-## Data
+### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | displayText |  false | string |
 | background |  true | string |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | onClick |  true | void |
 
-## Options
+### Options
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | variant |  true | `subtle / solid / outline` |
 | color |  true | `warn / success / danger` |
+| className |  true | string |

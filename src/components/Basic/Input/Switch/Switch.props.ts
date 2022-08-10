@@ -11,15 +11,9 @@ interface ISwitchOptions {
      */
     size?: 'sm' | 'md' | 'lg';
     /**
-     * @todo
-     * @type {'ios' | 'android'}
-     * which type of switch to render
-     */
-    variant: 'ios' | 'android';
-    /**
      * @type {string}
      */
-     className?: string;
+    className?: string;
 }
 
 interface ISwitchEvents {
@@ -27,5 +21,5 @@ interface ISwitchEvents {
      * Trigger an event on toggling
      * switch component
      */
-    onClick?:() => void;
+    onChange?:() => void;
 }

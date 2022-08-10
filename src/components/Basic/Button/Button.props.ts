@@ -1,3 +1,4 @@
+import React from "react";
 import { IStyleOptions } from "../../../models/defaultStyle";
 
 export interface IButtonProps {
@@ -11,7 +12,7 @@ interface IButtonData {
      * @type {string}
      * Button display text
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
     /**
      * @type {string}
      * Id for your button
@@ -72,6 +73,7 @@ interface IButtonOptions {
      */
     style?: IStyleOptions;
     /**
+     * @type {string}
      * additional styles passed
      */
     className?: string;

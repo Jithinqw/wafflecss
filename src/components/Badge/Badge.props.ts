@@ -36,4 +36,8 @@ interface IBadgeOptions {
      * color for badge
      */
     color?: 'warn' | 'success' | 'danger';
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

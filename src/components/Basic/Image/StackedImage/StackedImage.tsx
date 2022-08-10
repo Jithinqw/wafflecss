@@ -61,13 +61,16 @@ const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLD
     
     return (
         <>
-            <StyledGrid ref={ref} className={props.options?.className}>
+            <StyledGrid 
+                ref={ref} 
+                className={props.options?.className}
+            >
                 <StyleGridRow>
                     <StyledGridCell>
                         <StyledDFlex>
                             <StyledFlexAvatarStack>
                                 {
-                                    props.data?.imageData && props.data.imageData.map((e: ImageData, i:number) => {
+                                    props.data?.imageData && props.data.imageData.length > 0 && props.data.imageData.map((e: ImageData, i:number) => {
                                         return (
                                             <StyledflexAvatarTackItem key={i}>
                                                 <StyledImage 

@@ -2,11 +2,11 @@
 
 A React component for displaying button.
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/button--default-button).
 
-# Usage
+## Usage
 
 ```javascript
     import { Button } from 'wafflecss';
@@ -17,9 +17,9 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
     />
 ```
 
-# Props
+## Props
 
-## Data
+### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | displayText |  false | string |
@@ -28,14 +28,14 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | radius |  true | string |
 | width |  true | string |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | onClick |  true | void |
 | onFocus |  true | void |
 
-## Options
+### Options
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
@@ -43,3 +43,4 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | buttonType |  true | `button / submit / reset` |
 | variants |  true | `default / danger / success / primary` |
 | style |  true | void |
+| className |  true | string |

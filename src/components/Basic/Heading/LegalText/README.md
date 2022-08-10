@@ -2,11 +2,11 @@
 
 Legal Text is a react component for displaying legal text. 
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/legaltext--large-size-legal-text).
 
-# Usage
+## Usage
 
 ```javascript
     import { LegalText } from 'wafflecss';
@@ -21,22 +21,23 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
     />
 ```
 
-# Props
+## Props
 
-## Data
+### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | displayText |  false | string |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | onClick |  true | void |
 
-## Options
+### Options
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|
 | legalTextSize |  true | `sm | md | lg` |
 | style |    true   |   IStyleOptions |
+| className |    true   |   string |

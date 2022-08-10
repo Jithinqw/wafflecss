@@ -53,27 +53,27 @@ interface ITextInputEvents {
      * @type {HTMLInputElement}
      * @returns {void}
      */
-     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
      /**
       * @description handler for key press event
       * @param {string} oldValue
       * @param {React.MouseEvent<HTMLInputElement>} e
       * @returns {void}
       */
-     onKeyPress?: (oldValue: string, e:React.KeyboardEvent<HTMLInputElement>) => void;
+    onKeyPress?: (oldValue: string, e:React.KeyboardEvent<HTMLInputElement>) => void;
      /**
       * @description handler for input blur event
       * @param {string} currentValue
       * @returns {void}
       */
-     onBlur?: (currentValue: string) => void;
+    onBlur?: (currentValue: string) => void;
      /**
       * @description handler for focus event
       * @param {string} currentValue
       * @param {React.FocusEvent} e
       * @returns {void}
       */
-     onFocus?:(currentValue: string, e: React.FocusEvent<HTMLInputElement>) => void;
+    onFocus?:(currentValue: string, e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 interface ITextInputOptions {

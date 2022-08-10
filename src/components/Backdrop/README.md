@@ -1,12 +1,12 @@
 # BackDrop
 
-React component for showing a BackDrop inside an entire screen. Users can pass React node as children for showing inside backdrop.
+React component for showing a BackDrop for an entire screen. Users can pass React node as children for showing inside the backdrop.
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/backdrop--default-backdrop).
 
-# Usage
+## Usage
 
 ```javascript
     import { Backdrop } from 'wafflecss';
@@ -20,21 +20,21 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
     />
 ```
 
-# Props
+## Props
 
-## Data
+### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | isVisible |  false | boolean |
 | children |  true | React.ReactNode |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | onClick |  true | void |
 
-## Options
+### Options
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|

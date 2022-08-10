@@ -38,3 +38,4 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 |----------|:-------------:|------:|
 | size |  true | `sm / md / lg` |
 | id |  true | string |
+| className |  true | string |

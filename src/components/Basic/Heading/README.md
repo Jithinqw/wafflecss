@@ -2,11 +2,11 @@
 
 React component for displaying heading.
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/heading--small).
 
-# Usage
+## Usage
 
 ```javascript
     import { Heading } from 'wafflecss';
@@ -21,20 +21,20 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
   />
 ```
 
-# Props
+## Props
 
-## Data
+### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | displayText |  false | string |
 
-## Events
+### Events
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | onClick |  true | Function |
 | onFocus |  true | Function |
 
-## Options
+### Options
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | size |  true | `sm / md / lg` |
