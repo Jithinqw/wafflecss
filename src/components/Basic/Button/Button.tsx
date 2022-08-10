@@ -140,17 +140,6 @@ const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'success' | 'primar
     }
 }
 
-/**
- * @function rippleButton
- * @description Add ripple animation
- */
-const rippleButton = keyframes`
-    to{
-        transform: scale(4);
-        opacity: 0;
-    }
-`;
-
 const StyledDefault = styled.button<IButtonProps>`
     border-radius: ${props => props.data.radius ? props.data.radius : buttonConstant.borderRadius};
     border: ${

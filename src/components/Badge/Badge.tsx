@@ -43,6 +43,7 @@ const Badge = forwardRef((props: IBadgeProps, ref: React.Ref<HTMLSpanElement>) =
             {...props}
             onClick={props.events?.onClick}
             ref={ref}
+            className={props.options?.className}
         >
             {props.data.displayText}
         </StyledBadge>

@@ -14,7 +14,6 @@ const StyledBackdrop = styled.div<IBackdropProps>`
     justify-content: center;
     inset: ${backDropConstants.insetDefault};
     background-color: ${props => props.options?.bgColor ? props.options?.bgColor : backDropConstants.bgColor};
-    transition
     -webkit-tap-highlight-color: transparent;
     color: ${props => props.options?.color ? props.options?.color : backDropConstants.colorDefault};
     z-index: ${backDropConstants.zIndex};

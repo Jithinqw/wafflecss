@@ -85,6 +85,8 @@ export const colorPalette = {
     // Modal color
     bgColor: 'rgb(255, 255, 255)',
     colorDefault: 'rgb(9, 30, 66)',
+    // Link button colors
+    linkBgColor: '#0071e3',
 }
 
 export const ImageConstant = {}

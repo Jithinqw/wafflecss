@@ -26,6 +26,7 @@ interface ILegalTextOptions {
      */
     style?: IStyleOptions;
     /**
+     * @type {string}
      * additional styles passed
      */
     className?: string;

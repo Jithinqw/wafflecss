@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { commonConstant } from "../../../../utils/constants";
+import { colorPalette, commonConstant } from "../../../../utils/constants";
 import { ILinkButtonProps } from "./LinkButton.props";
 
 /**
@@ -70,8 +70,8 @@ const StyledLinkButton = styled.a<ILinkButtonProps>`
     min-width: ${props => props.options?.size ? resolveButtonSize(props.options.size) : resolveButtonSize('md')};
     padding: ${props => props.options?.size ? resolveButtonPadding(props.options.size) : resolveButtonPadding('md')};
     border-radius: 980px;
-    background: #0071e3;
-    color: #fff;
+    background: ${colorPalette.linkBgColor};
+    color: ${colorPalette.defaultWhite};
     --sk-button-margin-horizontal: 14px;
     --sk-button-margin-vertical: 14px;
 `;

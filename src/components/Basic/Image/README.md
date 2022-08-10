@@ -2,11 +2,11 @@
 
 Image is for rendering an image on React Tree.
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/image--image-default).
 
-# Usage
+## Usage
 
 ```javascript
     import { Image } from 'wafflecss';
@@ -26,3 +26,27 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
     }}
  />
 ```
+
+## Props
+
+### Data
+| Prop Name   |Is Optional    |  Type |
+|----------|:-------------:|------:|
+| imageSrc |  false | string |
+| fallbackImageSrc |  false | string |
+| alt |  false | string |
+| height |  false | string |
+| width |  false | string |
+
+### Events
+| Prop Name   |Is Optional    |  Type |
+|----------|:-------------:|------:|
+| onLoad |  true | Function |
+| onClick |  true | Function |
+
+### Options
+| Prop Name   |Is Optional    |  Type |
+|----------|:-------------:|------:|
+| borderRadius |  true | `full / none / edged` |
+| id |  true | string |
+| className |  true | string |

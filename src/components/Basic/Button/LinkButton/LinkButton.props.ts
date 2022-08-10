@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ILinkButtonProps {
     data: ILinkButtonData;
     events?: ILinkButtonEvents;
@@ -9,7 +11,7 @@ interface ILinkButtonData {
      * @type {string}
      * Display text for button
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
 }
 
 interface ILinkButtonEvents {

@@ -1,12 +1,12 @@
 # Alert
 
-A React component used to alert users of a particular screen area that needs user action
+A React component used to alert users of a particular screen area that needs user action.
 
-# Example
+## Example
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/alert--alert-intraction).
 
-# Usage
+## Usage
 
 ```javascript
     import { Alert } from 'wafflecss';
@@ -21,20 +21,20 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
     />
 ```
 
-# Props
+## Props
 
-## Data
+### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | displayText |  false | string |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | onBodyClick |  true | void |
 
-## Options
+### Options
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|

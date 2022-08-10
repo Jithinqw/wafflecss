@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IHeadingProps {
     data: IHeadingData;
     events?: IHeadingEvents;
@@ -9,7 +11,7 @@ interface IHeadingData {
      * Text to display on heading
      * @type {string}
      */
-    headingText: string;
+    headingText: string | React.ReactNode;
     /**
      * Id for Heading
      * @type {string}
@@ -47,6 +49,7 @@ export interface IHeadingOptions {
      */
     headingColor?: string;
     /**
+     * @type {string}
      * additional styles passed
      */
     className?: string;

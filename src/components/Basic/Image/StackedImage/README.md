@@ -38,3 +38,23 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
         }}
     />
 ```
+
+## Props
+
+### Data
+| Prop Name   |Is Optional    |  Type |
+|----------|:-------------:|------:|
+| imageData |  false | Array<ImageData> |
+
+
+### Events
+| Prop Name   |Is Optional    |  Type |
+|----------|:-------------:|------:|
+| onLoad |  true | Function |
+| onClick |  true | Function |
+
+### Options
+| Prop Name   |Is Optional    |  Type |
+|----------|:-------------:|------:|
+| wiggleAnimation |  true | boolean |
+| className |  true | string |
