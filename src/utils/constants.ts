@@ -1,3 +1,7 @@
+/**
+ * Colors, border, 
+ * display constants.
+ */
 export const errorLevel = {
     ERROR_LEVEL: 0,
     INFO_LEVEL: 1,
@@ -10,7 +14,7 @@ export const errorColor = {
     bgBlue: '\x1b[44m',
     bgYellow: '\x1b[43m',
     bgWhite: '\x1b[47m',
-    bgBlack: '\x1b[30m'
+    bgBlack: '\x1b[30m',
 }
 
 export const commonConstant = {
@@ -86,7 +90,9 @@ export const colorPalette = {
     bgColor: 'rgb(255, 255, 255)',
     colorDefault: 'rgb(9, 30, 66)',
     // Link button colors
-    linkBgColor: '#0071e3',
+    linkBgColor: 'rgb(0, 113, 227)',
+    // Switch color
+    switchColor: 'rgb(179, 179, 179)',
 }
 
 export const ImageConstant = {}
