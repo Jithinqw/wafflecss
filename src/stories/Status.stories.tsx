@@ -16,4 +16,4 @@ export default {
 const StatusTemplate: ComponentStory<typeof Status> = (args) => {
     return <Status {...args} />
 }
-export const StatusBlue = StatusTemplate.bind({})
+export const StatusDefault = StatusTemplate.bind({})
