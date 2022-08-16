@@ -93,6 +93,8 @@ export const colorPalette = {
     linkBgColor: 'rgb(0, 113, 227)',
     // Switch color
     switchColor: 'rgb(179, 179, 179)',
+    //loader color
+    loaderColor: 'rgb(34, 139, 230)',
 }
 
 export const ImageConstant = {}
@@ -233,4 +235,9 @@ export const announcementConstants = {
     fontWeight: 500,
     fillColor: 'rgb(66, 82, 110)',
     marginRight: '4px',
+}
+
+export const loaderConstants = {
+    width: '36px',
+    height: '36px'
 }
