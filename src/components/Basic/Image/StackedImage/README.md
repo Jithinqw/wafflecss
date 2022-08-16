@@ -24,16 +24,6 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
                     imageSource: 'https://bit.ly/dan-abramov',
                     width: '60'
                 },
-                {
-                    height: '60',
-                    imageSource: 'https://bit.ly/dan-abramov',
-                    width: '60'
-                },
-                {
-                    height: '60',
-                    imageSource: 'https://bit.ly/dan-abramov',
-                    width: '60'
-                }
             ]
         }}
     />
@@ -42,19 +32,22 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ## Props
 
 ### Data
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| imageData |  false | Array<ImageData> |
+| imageData |  false | `Array<ImageData>` |
 
 
 ### Events
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| onLoad |  true | Function |
-| onClick |  true | Function |
+| onLoad |  true | `Function` |
+| onClick |  true | `Function` |
 
 ### Options
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| wiggleAnimation |  true | boolean |
-| className |  true | string |
+| wiggleAnimation |  true | `boolean` |
+| className |  true | `string` |

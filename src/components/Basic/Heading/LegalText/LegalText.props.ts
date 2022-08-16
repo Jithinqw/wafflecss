@@ -1,3 +1,4 @@
+import React from "react";
 import { IStyleOptions } from "../../../../models/defaultStyle";
 
 export default interface ILegalTextProps {
@@ -11,7 +12,7 @@ interface ILegalTextData {
      * @type {string}
      * Text to display
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
 }
 
 interface ILegalTextOptions {

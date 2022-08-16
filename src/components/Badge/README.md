@@ -23,14 +23,14 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayText |  false | string |
-| background |  true | string |
+| displayText |  false | `string | React.ReactNode` |
+| background |  true | `string` |
 
 ### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onClick |  true | void |
+| onClick |  true | `Function` |
 
 ### Options
 
@@ -38,4 +38,4 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 |----------|:-------------:|------:|
 | variant |  true | `subtle / solid / outline` |
 | color |  true | `warn / success / danger` |
-| className |  true | string |
+| className |  true | `string` |

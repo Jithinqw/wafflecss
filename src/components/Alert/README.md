@@ -26,17 +26,17 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayText |  false | string |
+| displayText |  false |  `string / React.ReactNode` |
 
 ### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onBodyClick |  true | void |
+| onBodyClick |  true | `Function` |
 
 ### Options
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|
 | variants |  true | `error / success / warning / info / dark` |
-| testId |    true   |   string |
+| testId |    true   |   `string` |

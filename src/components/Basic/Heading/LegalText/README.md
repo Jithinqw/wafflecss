@@ -26,18 +26,18 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayText |  false | string |
+| displayText |  false | `string | React.ReactNode` |
 
 ### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onClick |  true | void |
+| onClick |  true | `Function` |
 
 ### Options
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|
 | legalTextSize |  true | `sm | md | lg` |
-| style |    true   |   IStyleOptions |
-| className |    true   |   string |
+| style |    true   |   `IStyleOptions` |
+| className |    true   |   `string` |

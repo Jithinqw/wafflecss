@@ -22,18 +22,18 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayText |  false | string |
-| id |  true | string |
-| isDisabled |  true | string |
-| radius |  true | string |
-| width |  true | string |
+| displayText |  false | `string / React.ReactNode` |
+| id |  true | `string` |
+| isDisabled |  true | `string` |
+| radius |  true | `string` |
+| width |  true | `string` |
 
 ### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onClick |  true | void |
-| onFocus |  true | void |
+| onClick |  true | `Function` |
+| onFocus |  true | `Function` |
 
 ### Options
 
@@ -42,5 +42,5 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | size |  true | `xs / sm / md / lg` |
 | buttonType |  true | `button / submit / reset` |
 | variants |  true | `default / danger / success / primary` |
-| style |  true | void |
-| className |  true | string |
+| style |  true | `IStyleOptions` |
+| className |  true | `string` |
