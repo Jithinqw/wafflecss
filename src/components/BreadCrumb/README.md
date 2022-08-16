@@ -50,3 +50,4 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | color |    true   |   string |
 | className |    true   |   string |
 | seperatorSize |    true   |   string |
+| linkSize  |    true   |   string |
