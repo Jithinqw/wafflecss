@@ -95,6 +95,8 @@ export const colorPalette = {
     switchColor: 'rgb(179, 179, 179)',
     //loader color
     loaderColor: 'rgb(34, 139, 230)',
+    // dropdown shadow
+    shadowDropdown: 'rgb(206, 212, 218)',
 }
 
 export const ImageConstant = {}

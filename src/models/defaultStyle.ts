@@ -1,3 +1,5 @@
+import React from "react"
+
 /**
  * Default styles applied
  */
@@ -47,14 +49,14 @@ export interface ImageData {
  * DropDown attributes
  */
 export interface ISelectOption {
-    displayText: string
-    value: string
+    displayText: string | React.ReactNode;
+    value: string;
 }
 
 /**
  * Interface for Checkbox
  */
 export interface ICheckboxData {
-    displayText: string
-    value: string
+    displayText: string | React.ReactNode;
+    value: string;
 }

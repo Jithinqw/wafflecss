@@ -20,6 +20,11 @@ interface ILinkData {
      * display text for link
      */
     displayText: string;
+    /**
+     * id of link
+     * @type {string}
+     */
+    id?: string;
 }
 
 interface ILinkOptions {

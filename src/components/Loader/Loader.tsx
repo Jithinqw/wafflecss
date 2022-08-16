@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { colorPalette, loaderConstants } from "../../utils/constants";
 
 export interface ILoaderProps {
     color?: string;
@@ -7,26 +8,28 @@ export interface ILoaderProps {
 }
 
 const Loader = (props: ILoaderProps) => {
-
     return (
         <svg 
-            width={props.width ? props.width : '36px'}
-            height={props.height ? props.height : '36px'}
+            width={props.width ? props.width : loaderConstants.width}
+            height={props.height ? props.height : loaderConstants.height}
             viewBox="0 0 38 38" 
             xmlns="http://www.w3.org/2000/svg" 
-            stroke={props.color ? props.color : "#228be6"} 
+            stroke={props.color ? props.color : colorPalette.loaderColor} 
             role="presentation">
             <g 
                 fill="none" 
-                fillRule="evenodd">
+                fillRule="evenodd"
+            >
                 <g 
                     transform="translate(2.5 2.5)" 
-                    strokeWidth="5">
+                    strokeWidth="5"
+                >
                     <circle 
                         strokeOpacity=".5" 
                         cx="16" 
                         cy="16" 
-                        r="16"></circle>
+                        r="16"
+                    ></circle>
                         <path 
                         d="M32 16c0-9.94-8.06-16-16-16">
                             <animateTransform 
