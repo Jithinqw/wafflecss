@@ -2,11 +2,11 @@
 
 Breadcrumbs help users visualize their current location in relation to the rest of the website or application by showing the hierarchy of pages.
 
-# Example
+## Usage
 
 A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/breadcrumb--default-bread-crumb).
 
-# Usage
+## Example
 
 ```javascript
     import { BreadCrumb } from 'wafflecss';
@@ -22,27 +22,30 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
             crumbData
         }}
         options= {{
-            color: 'red',
+            color: 'teal',
             seperator: '*',
             seperatorSize: '30px',
+            linkSize: 'sm',
+            className: 'breadCrumbWrapper'
         }}
     />
 ```
 
-# Props
+## Props
 
-## Data
+### Data
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | displayText |  false | string |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
 | onClick |  true | void |
 
-## Options
+### Options
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|
@@ -50,4 +53,4 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | color |    true   |   string |
 | className |    true   |   string |
 | seperatorSize |    true   |   string |
-| linkSize  |    true   |   string |
+| linkSize  |    true   |   `sm / md / lg` |

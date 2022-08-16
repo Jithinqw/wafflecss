@@ -48,6 +48,7 @@ const Counter = forwardRef((props: ICounterProps, ref: React.Ref<HTMLSpanElement
                         {...props}
                         ref={ref}
                         onClick={props.events?.onClick}
+                        id={props.options?.id}
                     >
                         {props.data.displayText}
                     </CounterPrimary>
@@ -57,6 +58,7 @@ const Counter = forwardRef((props: ICounterProps, ref: React.Ref<HTMLSpanElement
                     <CounterDark 
                         {...props}
                         ref={ref}
+                        id={props.options?.id}
                         onClick={props.events?.onClick}
                     >
                         {props.data.displayText}
@@ -69,6 +71,7 @@ const Counter = forwardRef((props: ICounterProps, ref: React.Ref<HTMLSpanElement
                         ref={ref}
                         onClick={props.events?.onClick}
                         className={props.options?.className}
+                        id={props.options?.id}
                     >
                         {props.data.displayText}
                     </CounterPrimary>

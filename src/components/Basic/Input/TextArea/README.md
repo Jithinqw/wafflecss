@@ -16,6 +16,7 @@ import { Switch } from 'wafflecss';
 ## Props
 
 ### Data
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | placeholder |  false | string |
@@ -29,6 +30,7 @@ import { Switch } from 'wafflecss';
 | cols |  false | number |
 
 ### Events
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | onChange |  true | Function |
@@ -37,6 +39,7 @@ import { Switch } from 'wafflecss';
 | onFocus |  true | Function |
 
 ### Options
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | isReadonly |  true | boolean |

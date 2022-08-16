@@ -55,4 +55,8 @@ interface IPriceLabelOption {
      * @type {string}
      */
     className?: string;
+    /**
+     * @type {string}
+     */
+    id?: string;
 }

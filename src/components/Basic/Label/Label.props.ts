@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ILabelProps {
     data: ILabelData;
     options?: ILabelOptions;
@@ -8,7 +10,7 @@ interface ILabelData {
      * @type {string}
      * display text for label
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
 }
 
 interface ILabelOptions {

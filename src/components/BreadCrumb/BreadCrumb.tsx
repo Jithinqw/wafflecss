@@ -39,7 +39,7 @@ const BreadCrumb = forwardRef((
                 ref={ref} 
                 className={props.options?.className}
             >
-                {props.data && props.data.map((e, i) => {
+                {props.data && props.data.length > 0 && props.data.map((e, i) => {
                     return (
                         <StyledListItem {...props} key={i}>
                             <Link 

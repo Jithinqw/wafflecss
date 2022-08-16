@@ -1,25 +1,25 @@
-# TextInput
+# PinInput
 
-Input component is a component that is used to get user input in a text field.
+React component for displaying numerical pin.
 
 ## Example
 
-A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/textinput--default-text-input).
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/pininput--default-pin-input).
 
 ## Usage
 
 ```javascript
-  import { TextInput } from 'wafflecss';
-
-  <TextInput
-    data={{
-      placeholder: 'TextInput Placeholder',
-      value: ''
-    }}
-    options={{
-      size: 'lg'
-    }}
-  />
+    import { TextInput } from 'wafflecss';
+    
+    <PinInput
+        data={{
+            placeholder: '*',
+            value: '2'
+        }}
+        options={{
+            size: 'lg'
+        }}
+    />
 ```
 
 ## Props
@@ -41,8 +41,6 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | onChange |  true | `Function` |
-| onKeyPress |  true | `Function` |
-| onBlur |  true | `Function` |
 | onFocus |  true | `Function` |
 
 ### Options
@@ -51,6 +49,3 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 |----------|:-------------:|------:|
 | size |  true | `xs / sm / md / lg` |
 | className |  true | `string` |
-| maxLength |  true | `number` |
-| accessibility |  true | `string` |
-| type |  true | `email / text / number / password` |
