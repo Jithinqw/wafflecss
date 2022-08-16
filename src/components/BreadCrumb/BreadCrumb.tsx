@@ -18,7 +18,7 @@ const StyledListItem = styled.li<IBreadCrumbProps>`
     &:after {
         color: ${props => props.options?.color ? props.options.color :'#161616'};
         content: '${props => props.options?.seperator ? props.options.seperator : '/'}';
-        font-size: ${props => props.options?.seperatorSize ? props.options.seperatorSize : '14px'};
+        font-size: ${props => props.options?.seperatorSize ? props.options.seperatorSize : '24px'};
         margin-left: 0.5rem;
     }
 `;

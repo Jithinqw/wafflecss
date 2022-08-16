@@ -24,6 +24,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
         options= {{
             color: 'red',
             seperator: '*',
+            seperatorSize: '30px',
         }}
     />
 ```
@@ -47,3 +48,5 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 |----------|:-------------:|------:|
 | seperator |  true | boolean |
 | color |    true   |   string |
+| className |    true   |   string |
+| seperatorSize |    true   |   string |
