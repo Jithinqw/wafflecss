@@ -37,7 +37,10 @@ const StyledBadge = styled.span<IBadgeProps>`
     box-shadow: rgb(56 161 105) 0px 0px 0px 1px inset;
 `;
 
-const Badge = forwardRef((props: IBadgeProps, ref: React.Ref<HTMLSpanElement>) => {
+const Badge = forwardRef((
+        props: IBadgeProps, 
+        ref: React.Ref<HTMLSpanElement>
+    ) => {
     return (
         <StyledBadge 
             {...props}

@@ -153,7 +153,7 @@ const TextInput = forwardRef((props: ITextInputProps, ref: React.Ref<HTMLInputEl
         <StyledTextInput 
             {...props}
             placeholder={props.data?.placeholder}
-            id={props.data.id}
+            id={props.data?.id}
             name={props.data?.name}
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             value={currentText}
@@ -163,6 +163,7 @@ const TextInput = forwardRef((props: ITextInputProps, ref: React.Ref<HTMLInputEl
             onChange={onChange}
             onKeyPress={onKeyPress}
             onBlur={onBlur}
+            aria-required="true"
             onFocus={onFocus}
         />
     )

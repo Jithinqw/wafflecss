@@ -30,6 +30,10 @@ interface IBreadCrumbOptions {
     */
     seperator?: string;
     /**
+     * Size of the seperator
+     */
+    seperatorSize?: string;
+    /**
      * Seperator color
      * @type {string}
      * @default #161616
