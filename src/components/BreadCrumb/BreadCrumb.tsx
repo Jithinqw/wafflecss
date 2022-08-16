@@ -49,6 +49,9 @@ const BreadCrumb = forwardRef((
                                 events={{
                                     onClick: triggerOnClick
                                 }}
+                                options={{
+                                    size: props.options?.linkSize ? props.options.linkSize : 'md'
+                                }}
                                 key={i}
                             />
                         </StyledListItem>

@@ -43,4 +43,8 @@ interface IBreadCrumbOptions {
      * @type {string}
      */
     className?: string;
+    /**
+     * @type {string}
+     */
+    linkSize?: 'sm' | 'md' | 'lg';
 }
