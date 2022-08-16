@@ -1,3 +1,4 @@
+import React from "react";
 import { IStyleOptions } from "../../../models/defaultStyle";
 
 export interface ILinkProps {
@@ -19,7 +20,12 @@ interface ILinkData {
      * @type {string}
      * display text for link
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
+    /**
+     * id of link
+     * @type {string}
+     */
+    id?: string;
 }
 
 interface ILinkOptions {

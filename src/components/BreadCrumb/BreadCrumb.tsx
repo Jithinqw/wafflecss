@@ -16,13 +16,16 @@ const StyledListItem = styled.li<IBreadCrumbProps>`
     display: inline-block;
     margin: 0 5px;
     &:after {
-        color: #161616;
-        content: '/';
+        color: ${props => props.options?.color ? props.options.color :'#161616'};
+        content: '${props => props.options?.seperator ? props.options.seperator : '/'}';
+        font-size: ${props => props.options?.seperatorSize ? props.options.seperatorSize : '24px'};
         margin-left: 0.5rem;
     }
 `;
 
-const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOListElement>) => {
+const BreadCrumb = forwardRef((
+    props: IBreadCrumbProps, 
+    ref: React.Ref<HTMLOListElement>) => {
 
     const triggerOnClick = () => {
         if(props.events?.onClick) {
@@ -36,7 +39,7 @@ const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOList
                 ref={ref} 
                 className={props.options?.className}
             >
-                {props.data && props.data.map((e, i) => {
+                {props.data && props.data.length > 0 && props.data.map((e, i) => {
                     return (
                         <StyledListItem {...props} key={i}>
                             <Link 
@@ -45,6 +48,9 @@ const BreadCrumb = forwardRef((props: IBreadCrumbProps, ref: React.Ref<HTMLOList
                                 }}
                                 events={{
                                     onClick: triggerOnClick
+                                }}
+                                options={{
+                                    size: props.options?.linkSize ? props.options.linkSize : 'md'
                                 }}
                                 key={i}
                             />

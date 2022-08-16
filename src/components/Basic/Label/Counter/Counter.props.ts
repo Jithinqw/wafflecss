@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ICounterProps {
     data: ICounterData;
     events?: ICounterEvents;
@@ -9,7 +11,7 @@ interface ICounterData {
      * @type {string}
      * display text to render
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
 }
 
 interface ICounterEvents {
@@ -30,4 +32,8 @@ interface ICounterOptions {
      * @type {string}
      */
     className?: string;
+    /**
+     * @type {string}
+     */
+    id?: string;
 }

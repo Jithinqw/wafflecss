@@ -1,16 +1,25 @@
-# TextArea
+# PinInput
 
-React component for rendering text area.
+React component for displaying numerical pin.
 
 ## Example
 
-A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/switch--switch-primary).
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/pininput--default-pin-input).
 
 ## Usage
 
 ```javascript
-import { Switch } from 'wafflecss';
-    <Switch />
+    import { TextInput } from 'wafflecss';
+    
+    <PinInput
+        data={{
+            placeholder: '*',
+            value: '2'
+        }}
+        options={{
+            size: 'lg'
+        }}
+    />
 ```
 
 ## Props
@@ -26,24 +35,17 @@ import { Switch } from 'wafflecss';
 | name |  false | `string` |
 | isError |  false | `boolean` |
 | errorBorderColor |  false | `string` |
-| rows |  false | `number` |
-| cols |  false | `number` |
 
 ### Events
 
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | onChange |  true | `Function` |
-| onKeyPress |  true | `Function` |
-| onBlur |  true | `Function` |
 | onFocus |  true | `Function` |
 
 ### Options
 
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| isReadonly |  true | `boolean` |
+| size |  true | `xs / sm / md / lg` |
 | className |  true | `string` |
-| maxLength |  true | `number` |
-| accessibility |  true | `string` |
-| isRequired |  true | `boolean` |

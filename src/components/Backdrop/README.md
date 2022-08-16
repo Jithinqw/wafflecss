@@ -25,18 +25,18 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| isVisible |  false | boolean |
-| children |  true | React.ReactNode |
+| isVisible |  false | `boolean` |
+| children |  true | `React.ReactNode` |
 
 ### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onClick |  true | void |
+| onClick |  true | `Function` |
 
 ### Options
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| bgColor |  true | string |
-| color |  true | string |
+| bgColor |  true | `string` |
+| color |  true | `string` |

@@ -24,7 +24,7 @@ const resolveLabelSize = (fontSize: 'sm' | 'md' | 'lg' | undefined) => {
 const StyledLabel = styled.label<ILabelProps>`
     font-family: ${props => props.options?.fontFamily ? props.options.fontFamily : commonConstant.fontFamily};
     color: ${props => props.options?.color ? props.options.color : colorPalette.defaultBlackColor};
-    font-size:${props => props.options?.fontSize ? resolveLabelSize(props.options?.size) : resolveLabelSize('md')};
+    font-size: ${props => props.options?.fontSize ? resolveLabelSize(props.options?.size) : resolveLabelSize('md')};
 `;
 
 const Label = forwardRef((props: ILabelProps, ref: React.Ref<HTMLLabelElement>) => {

@@ -24,11 +24,15 @@ interface IBreadCrumbEvents {
 interface IBreadCrumbOptions {
     /**
      * Seperator for breadcrumb
-     * defaults to '/'
      * @type {string}
      * @default /
     */
     seperator?: string;
+    /**
+     * Size of the seperator
+     * @type {string}
+     */
+    seperatorSize?: string;
     /**
      * Seperator color
      * @type {string}
@@ -36,7 +40,13 @@ interface IBreadCrumbOptions {
      */
     color: string;
     /**
+     * additional CSS class
      * @type {string}
      */
     className?: string;
+    /**
+     * @type {string}
+     * size of the link
+     */
+    linkSize?: 'sm' | 'md' | 'lg';
 }

@@ -39,6 +39,7 @@ const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps, re
                 {...props} 
                 ref={ref}
                 className={props.options?.className}
+                id={props.options?.id}
             >
                 {props.data.currencySymbol + (
                     props.data.price).toFixed(props.data.precision).toString().toLocaleLowerCase() + ' '
@@ -58,6 +59,7 @@ const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps, re
                 {...props} 
                 ref={ref} 
                 className={props.options?.className}
+                id={props.options?.id}
             >
                 {props.data.currencySymbol + (
                     props.data.price).toFixed(props.data.precision).toString().toLocaleLowerCase() + ' '

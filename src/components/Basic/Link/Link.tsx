@@ -37,6 +37,9 @@ const StyledLink = styled.span<ILinkProps>`
     &:hover {
         text-decoration: ${props => props.options?.hoverUnderline ? commonConstant.underLineTextDecoration : commonConstant.defaultTextDecoration};
     }
+    &:focus {
+        border-color: black;
+    }
 `;
 
 const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => {
@@ -53,6 +56,8 @@ const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => 
             onClick={onClickEvent}
             ref={ref}
             className={props.options?.className}
+            role={'link'}
+            id={props.data?.id}
         >
             {props.data.displayText}
         </StyledLink>

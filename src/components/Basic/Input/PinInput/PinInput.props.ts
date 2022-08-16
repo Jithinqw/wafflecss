@@ -75,5 +75,5 @@ interface IPinInputOptions {
     /**
      * @type {string}
      */
-     className?: string;
+    className?: string;
 }

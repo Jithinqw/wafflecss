@@ -9,7 +9,7 @@ interface IBadgeData {
      * @type {string}
      * text to display
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
     /**
      * @type {string}
      * background color 
