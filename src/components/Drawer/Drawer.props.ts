@@ -50,5 +50,5 @@ interface IDrawerOptions {
      * @type {'left' | 'right'}
      * control position of drawer
      */
-    position?: 'left' | 'right'
+    position?: 'left' | 'right';
 }
