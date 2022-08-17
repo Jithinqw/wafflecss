@@ -21,6 +21,24 @@ const resolveStarSize = (starSize: 'sm' | 'md' | 'lg') => {
     }
 }
 
+/**
+ * @function resolveHoverSize
+ * @param {'sm' | 'md' | 'lg'} starSize 
+ * @returns {string}
+ */
+const resolveHoverSize = (starSize: 'sm' | 'md' | 'lg') => {
+    switch(starSize) {
+        case 'sm':
+            return '14px';
+        case 'md':
+            return '22px';
+        case 'lg':
+            return '32px';
+        default:
+            return '14px';
+    }
+}
+
 const StyledStarRating = styled.button`
     background-color: transparent;
     border: none;
@@ -32,11 +50,19 @@ const StyledStar = styled.span<IStarRatingProps>`
     font-size: ${
         props => props.size ? resolveStarSize(props.size) : resolveStarSize('sm')
     };
+    &:hover {
+        font-size: ${
+            props => props.size ? resolveHoverSize(props.size) : resolveHoverSize('sm')
+        };
+    }
 `;
 
-const StarRating = forwardRef((props: IStarRatingProps, ref: React.Ref<HTMLButtonElement>) => {
+const StarRating = forwardRef((
+    props: IStarRatingProps, 
+    ref: React.Ref<HTMLButtonElement>) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
+
     const starSelectedColor: string = props.highlightColor ? props.highlightColor : 'yellow';
     const starNotSelectedColor: string = props.defaultColor ? props.defaultColor : colorPalette.defaultGreyColor;
 
