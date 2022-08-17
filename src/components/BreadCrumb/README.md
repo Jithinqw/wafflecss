@@ -37,7 +37,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayText |  false | `string` |
+| displayText |  false | `string | React.ReactNode` |
 
 ### Events
 
