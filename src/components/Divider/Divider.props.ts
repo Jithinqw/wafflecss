@@ -11,10 +11,17 @@ interface IDividerData {
     /**
      * @type {'dashed' | 'dotted' | 'solid' | 'rounded'}
      * style of divider
-     * eg: <Divider 
+     * eg: `<Divider 
      *          data={{dividerOption: 'dashed'}}
-     *      />
+     *      />`
      */
     dividerOptions?: 'dashed' | 'dotted' | 'solid' | 'rounded';
-
+    /**
+     * @type {string}
+     */
+    className?: string;
+    /**
+     * @type {string}
+     */
+    id?: string;
 }
