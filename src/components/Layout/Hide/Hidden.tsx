@@ -25,7 +25,10 @@ const StyledHidden = styled.div<IHiddenProps>`
 
 const Hidden = forwardRef((props: IHiddenProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledHidden ref={ref} {...props}>
+        <StyledHidden 
+            ref={ref} 
+            {...props}
+        >
             {props.data.children}
         </StyledHidden>
     )

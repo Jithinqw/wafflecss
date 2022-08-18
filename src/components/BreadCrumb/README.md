@@ -37,20 +37,20 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayText |  false | string |
+| displayText |  false | `string | React.ReactNode` |
 
 ### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onClick |  true | void |
+| onClick |  true | `Function` |
 
 ### Options
 
 | Prop Name   |      Is Optional      |  Type |
 |----------|:-------------:|------:|
-| seperator |  true | boolean |
-| color |    true   |   string |
-| className |    true   |   string |
-| seperatorSize |    true   |   string |
+| seperator |  true | `boolean` |
+| color |    true   |   `string` |
+| className |    true   |   `string` |
+| seperatorSize |    true   |   `string` |
 | linkSize  |    true   |   `sm / md / lg` |

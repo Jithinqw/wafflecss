@@ -21,6 +21,7 @@ const Center = forwardRef((props: ICenterProps, ref: React.Ref<HTMLDivElement>) 
             {...props} 
             onClick={props.events?.onClick}
             ref={ref}
+            id={props.data?.id}
         >
             {props.data.children}
         </StyledCenter>

@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from "react";
 import styled from "styled-components";
-import { colorPalette } from "../../../../utils/constants";
+import { colorPalette, commonConstant } from "../../../../utils/constants";
 import { ICheckboxProps } from "./Checkbox.props";
 
 /**
@@ -21,13 +21,53 @@ const resolveCheckboxSize = (size: 'sm' | 'md' | 'lg') => {
     }
 }
 
-const StyledLabel = styled.span`
-    font-size: 0.875rem;
+/**
+ * @function resolveCheckboxLabelSize
+ * @param {sm / md / lg} size 
+ * @returns {string}
+ */
+const resolveCheckboxLabelSize = (size: 'sm' | 'md' | 'lg') => {
+    switch(size) {
+        case 'sm':
+            return '0.875rem';
+        case 'md':
+            return '1rem';
+        case 'lg':
+            return '3rem';
+        default:
+            return '0.875rem';
+    }
+}
+
+/**
+ * @function resolveCheckboxLineHeight
+ * @param {sm / md / lg} size 
+ * @returns {string}
+ */
+const resolveCheckboxLineHeight = (size: 'sm' | 'md' | 'lg') => {
+    switch(size) {
+        case 'sm':
+            return '1.25rem';
+        case 'md':
+            return '2.10rem';
+        case 'lg':
+            return '2.5rem';
+        default:
+            return '1.25rem';
+    }
+}
+const StyledLabel = styled.span<ICheckboxProps>`
+    font-size: ${
+        props => props.options?.variant ? resolveCheckboxLabelSize(props.options.variant) : resolveCheckboxLabelSize('sm')
+    };
     font-weight: 400;
-    line-height: 1.25rem;
+    line-height: ${
+        props => props.options?.variant ? resolveCheckboxLineHeight(props.options.variant) : resolveCheckboxLineHeight('sm')
+    };;
     text-transform: initial;
     letter-spacing: initial;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: ${commonConstant.fontFamily};
+    -webkit-tap-highlight-color: ${colorPalette.defaultBlackColor};
 `;
 
 const StyledCheckboxInput = styled.input<ICheckboxProps>`
@@ -53,7 +93,9 @@ const StyledCheckboxInput = styled.input<ICheckboxProps>`
     };
 `;
 
-const CheckBox = forwardRef((props: ICheckboxProps, ref: React.Ref<HTMLInputElement>) => {
+const CheckBox = forwardRef((
+        props: ICheckboxProps, ref: React.Ref<HTMLInputElement>
+    ) => {
     const [isChecked, setIsChecked] = useState(false);
 
     /**
@@ -66,22 +108,20 @@ const CheckBox = forwardRef((props: ICheckboxProps, ref: React.Ref<HTMLInputElem
     }
 
     return(
-        <StyledCheckboxInput 
-            type={'checkbox'}
-            checked={isChecked}
-            ref={ref}
-            {...props}
-            onChange={onCheckbokStateChange}
-            className={props.options?.className}
-        >
-            {
-                props.options && props.options.checkboxLabel &&
-                <StyledLabel>
-                    {props.options?.checkboxLabel}
-                </StyledLabel>
-            }
-        
-        </StyledCheckboxInput>
+        <span>
+            <StyledCheckboxInput 
+                type={'checkbox'}
+                checked={isChecked}
+                ref={ref}
+                {...props}
+                onChange={onCheckbokStateChange}
+                className={props.options?.className}
+                id={props.options?.id}
+            />
+            <StyledLabel {...props}>
+                {props.data.displayText}
+            </StyledLabel>
+        </span>
     )
 });
 

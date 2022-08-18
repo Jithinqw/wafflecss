@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IBreadCrumbProps {
     data: IBreadCrumbData[];
     events?: IBreadCrumbEvents;
@@ -9,7 +11,7 @@ interface IBreadCrumbData {
      * Text for displaying in the crumb
      * @type {string}
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
 }
 
 interface IBreadCrumbEvents {

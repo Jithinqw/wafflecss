@@ -9,7 +9,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ## Usage
 
 ```javascript
-import { Switch } from 'wafflecss';
+    import { Switch } from 'wafflecss';
     <Switch />
 ```
 

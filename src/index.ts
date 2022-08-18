@@ -41,6 +41,7 @@ export { default as TopBanner } from './components/Promotions/TopBanner/TopBanne
 export { default as Drawer } from './components/Drawer/Drawer';
 export { default as Loader } from './components/Loader/Loader';
 export { default as StackedProgress } from './components/Progress/StackedProgress/StackedProgress';
+export { default as Divider } from './components/Divider/Divider';
 
 export {
     ISelectOption, Utilities,

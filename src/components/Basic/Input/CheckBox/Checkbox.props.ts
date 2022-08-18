@@ -34,9 +34,9 @@ interface ICheckboxOptions {
     /**
      * @type {string}
      */
-    checkboxLabel?: string;
+    className?: string;
     /**
      * @type {string}
      */
-    className?: string;
+    id?: string;
 }

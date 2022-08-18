@@ -11,6 +11,7 @@ interface ICenterData {
     width?: string;
     color?: string;
     backgroundColor?: string;
+    id?: string;
 }
 
 interface ICenterEvents {
