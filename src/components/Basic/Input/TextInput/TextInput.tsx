@@ -32,15 +32,15 @@ const resolveFontSize = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
 const resolveHeight = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(fontSize) {
         case 'xs':
-            return '2.5rem';
+            return '1.5rem';
         case 'sm':
-            return '3rem';
+            return '2rem';
         case 'md':
-            return '3.5rem';
+            return '2.5rem';
         case 'lg':
-            return '4rem';
-        default:
             return '3rem';
+        default:
+            return '2.5rem';
     }
 }
 
