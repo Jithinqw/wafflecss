@@ -25,9 +25,6 @@ const CheckboxTemplateWithLabel: ComponentStory<typeof Checkbox> = (args) => {
     return (
         <Checkbox
             {...args}
-            options={{
-                checkboxLabel: 'Demo',
-            }}
         />
     )
 }
@@ -43,6 +40,6 @@ const CheckBoxClickTest: ComponentStory<typeof Checkbox> = (args) => {
     )
 }
 
-export const CheckboxDefault = CheckboxTemplate.bind({})
-export const CheckboxWithLabel = CheckboxTemplateWithLabel.bind({})
-export const CheckboxTest = CheckBoxClickTest.bind({})
+export const CheckboxDefault = CheckboxTemplate.bind({});
+export const CheckboxWithLabel = CheckboxTemplateWithLabel.bind({});
+export const CheckboxTest = CheckBoxClickTest.bind({});

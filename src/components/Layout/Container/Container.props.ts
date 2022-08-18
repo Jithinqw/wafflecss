@@ -7,7 +7,7 @@ export interface IContainerProps {
 }
 
 interface IContainerData {
-    children?: React.ReactNode;
+    children?: string | React.ReactNode;
 }
 
 interface IContainerOptions {

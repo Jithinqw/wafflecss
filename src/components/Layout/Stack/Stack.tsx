@@ -11,7 +11,11 @@ const StyledStack = styled.div`
 
 const Stack = forwardRef((props: IStackProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledStack ref={ref}>
+        <StyledStack 
+            ref={ref}
+            id={props?.id}
+            className={props?.className}
+        >
             {props.children}
         </StyledStack>
     )

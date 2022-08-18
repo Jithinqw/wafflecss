@@ -1,8 +1,16 @@
 import React, { forwardRef } from "react"
 import styled from "styled-components"
-import { colorPalette, containerConstants } from "../../../utils/constants"
+import { 
+    colorPalette, 
+    containerConstants 
+} from "../../../utils/constants"
 import { IContainerProps } from "./Container.props"
 
+/**
+ * @function resolveContainerWidth
+ * @param {'sm' | 'md' | 'lg'} containerWidth 
+ * @returns {string}
+ */
 const resolveContainerWidth = (containerWidth: 'sm' | 'md' | 'lg') => {
     switch(containerWidth) {
         case 'sm':
@@ -24,7 +32,10 @@ const StyledContainer = styled.div<IContainerProps>`
     padding-inline: ${containerConstants.paddingInline};
 `;
 
-const Container = forwardRef((props: IContainerProps, ref: React.Ref<HTMLDivElement>) => {
+const Container = forwardRef((
+        props: IContainerProps, 
+        ref: React.Ref<HTMLDivElement>
+    ) => {
 
     return (
         <StyledContainer ref={ref} {...props}>
