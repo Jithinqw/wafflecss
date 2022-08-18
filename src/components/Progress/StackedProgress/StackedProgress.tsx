@@ -26,7 +26,8 @@ const StackedProgress = (props: IStackedProgressProps) => {
             {
                 props.data && props.data.length > 0 && props.data.map((e: IProgressData, i: number) => {
                     return (
-                        <StyledProgressItem 
+                        <StyledProgressItem
+                            aria-label={e.bgColor}
                             key={i}
                             tabIndex={0}
                             style={{
