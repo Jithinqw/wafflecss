@@ -96,3 +96,7 @@ Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/pack
 ## License
 
 [MIT](./LICENSE) &copy; [Jithin Zacharia](https://jithinqw.github.io/)
+
+## Packages
+
+[Here are the list of packages](./Packages.md)
