@@ -26,6 +26,10 @@ interface ILinkData {
      * @type {string}
      */
     id?: string;
+    /**
+     * @type {boolean}
+     */
+    isDisabled?: boolean;
 }
 
 interface ILinkOptions {

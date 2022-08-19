@@ -26,16 +26,26 @@ const resolveLinkFontWeight = (linkWeight: 'sm' | 'md' | 'lg') => {
 const StyledLink = styled.span<ILinkProps>`
     margin: 0px;
     box-sizing: inherit;
-    font-family: ${props => props.options?.styleOptions?.fontFamily ? props.options?.styleOptions?.fontFamily : commonConstant.fontFamily};
+    font-family: ${
+        props => props.options?.styleOptions?.fontFamily ? props.options?.styleOptions?.fontFamily : commonConstant.fontFamily
+    };
     font-weight: ${commonConstant.fontWeight};
-    font-size: ${props => props.options?.size ? resolveLinkFontWeight(props.options?.size) : resolveLinkFontWeight('md')};
+    font-size: ${
+        props => props.options?.size ? resolveLinkFontWeight(props.options?.size) : resolveLinkFontWeight('md')
+    };
     line-height: 1.5;
     cursor: ${commonConstant.cursorPointer};
-    color: ${props => props.options?.styleOptions?.color ? props.options?.styleOptions?.color?.toString() : colorPalette.defaultDefaultLinkColor};
+    color: ${
+        props => props.options?.styleOptions?.color ? props.options?.styleOptions?.color?.toString() : colorPalette.defaultDefaultLinkColor
+    };
     letter-spacing: 0.00938em;
-    text-decoration: ${props => props.options?.underline ? commonConstant.underLineTextDecoration : commonConstant.defaultTextDecoration};
+    text-decoration: ${
+        props => props.options?.underline ? commonConstant.underLineTextDecoration : commonConstant.defaultTextDecoration
+    };
     &:hover {
-        text-decoration: ${props => props.options?.hoverUnderline ? commonConstant.underLineTextDecoration : commonConstant.defaultTextDecoration};
+        text-decoration: ${
+            props => props.options?.hoverUnderline ? commonConstant.underLineTextDecoration : commonConstant.defaultTextDecoration
+        };
     }
     &:focus {
         border-color: black;
@@ -45,7 +55,10 @@ const StyledLink = styled.span<ILinkProps>`
 const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => {
 
     const onClickEvent = () => {
-        if(props.events?.onClick) {
+        if(
+            props.events?.onClick && 
+            props.data && props.data.isDisabled
+        ) {
             return props.events.onClick();
         }
     }

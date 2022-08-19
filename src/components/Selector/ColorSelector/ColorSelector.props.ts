@@ -8,7 +8,7 @@ export interface IColorPickerProps {
 
 interface IColorPickerEvents {
     onClick?:() => void;
-    onChange?:() => void;
+    onChange?:(isChecked: boolean) => void;
 }
 
 interface IColorPickerData {
