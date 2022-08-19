@@ -8,7 +8,7 @@ import { ILinkButtonProps } from "./LinkButton.props";
  * @param {'sm' | 'md' | 'lg'} buttonSize 
  * @returns {string}
  */
-const resolveButtonSize = (buttonSize: 'sm' | 'md' | 'lg') => {
+const resolveButtonSize = (buttonSize: 'sm' | 'md' | 'lg'):string => {
     switch(buttonSize) {
         case 'sm':
             return '24px';
@@ -26,7 +26,7 @@ const resolveButtonSize = (buttonSize: 'sm' | 'md' | 'lg') => {
  * @param {'sm' | 'md' | 'lg'} buttonSize 
  * @returns {string}
  */
-const resolveButtonPadding = (buttonSize:'sm' | 'md' | 'lg') => {
+const resolveButtonPadding = (buttonSize:'sm' | 'md' | 'lg'):string => {
     switch(buttonSize) {
         case 'sm':
             return '4px 8px';
@@ -44,7 +44,7 @@ const resolveButtonPadding = (buttonSize:'sm' | 'md' | 'lg') => {
  * @param {'sm' | 'md' | 'lg'} buttonSize 
  * @returns {string}
  */
-const resolveButtonFontSize = (buttonSize:'sm' | 'md' | 'lg') => {
+const resolveButtonFontSize = (buttonSize:'sm' | 'md' | 'lg'):string => {
     switch(buttonSize) {
         case 'sm':
             return '12px';
@@ -76,15 +76,25 @@ const StyledLinkButton = styled.a<ILinkButtonProps>`
     --sk-button-margin-vertical: 14px;
 `;
 
-const LinkButton = (props: ILinkButtonProps) => {
+const LinkButton = (
+        props: ILinkButtonProps, 
+    ) => {
 
-    const onClickButton = () => {
+    /**
+     * @function onClickButton
+     * @returns {void}
+     */
+    const onClickButton = ():void => {
         if(props.events?.onClick) {
             return props.events.onClick();
         }
     }
 
-    const onFocusButton = () => {
+    /**
+     * @function onFocusButton
+     * @returns {void}
+     */
+    const onFocusButton = ():void => {
         if(props.events?.onFocus) {
             return props.events.onFocus();
         }

@@ -11,10 +11,12 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ```javascript
     import { StarRating } from 'wafflecss';
 
+    const clickEventForStarRating = () => {}
+    
     <StarRating
         defaultStarSelection={3}
         maxStarNum={5}
-        onClick={}
+        onClick={clickEventForStarRating}
         size="sm"
     />
 ```

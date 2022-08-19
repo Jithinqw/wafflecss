@@ -43,22 +43,38 @@ const StyledTextArea = styled.textarea<ITextAreaProps>`
     border-width: 1px;
     border-style: solid;
     border-image: initial;
+    transition: border-color 100ms ease;
     border-color: ${
         props => props.data && resolveError(props.data?.isError, props.data?.errorBorderColor)
     };
     background: inherit;
+
     &:focus-visible {
         z-index:1;
         border-color: rgb(49,130,206);
         box-shadow: rgb(49, 130, 206) 0px 0px 0px 1px;
     }
+
     ::placeholder {
+        font-family: ${commonConstant.fontFamily};
+        font-size: 12px;
+    }
+
+    :-ms-input-placeholder {
+        font-family: ${commonConstant.fontFamily};
+        font-size: 12px;
+    }
+
+    ::-ms-input-placeholder { 
         font-family: ${commonConstant.fontFamily};
         font-size: 12px;
     }
 `;
 
-const TextArea = forwardRef((props: ITextAreaProps, ref: React.Ref<HTMLTextAreaElement>) => {
+const TextArea = forwardRef((
+        props: ITextAreaProps,
+        ref: React.Ref<HTMLTextAreaElement>
+    ) => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
     useEffect(() => {

@@ -8,7 +8,7 @@ import { commonConstant } from "../../utils/constants";
  * @param {'warn' | 'success' | 'danger'} badgeColor 
  * @returns {string}
  */
-const generateBadgeStyle = (badgeColor: 'warn' | 'success' | 'danger') => {
+const generateBadgeStyle = (badgeColor: 'warn' | 'success' | 'danger'):string => {
     switch(badgeColor) {
         case 'warn':
             return '#edf2f7';

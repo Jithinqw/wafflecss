@@ -19,4 +19,12 @@ interface ISkeletonOptions {
      * @type {'col' | 'circle'}
      */
     type?: 'col' | 'circle';
+    /**
+     * @type {string}
+     */
+    id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }

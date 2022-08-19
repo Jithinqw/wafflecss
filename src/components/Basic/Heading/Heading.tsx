@@ -82,20 +82,34 @@ const resolveColor = (color?: string): string => {
 }
 
 const StyledHeading = styled.p<IHeadingProps>`
-    color: ${props =>  props.options?.headingColor ? resolveColor(props.options?.headingColor) : colorPalette.defaultBlackColor};
+    color: ${
+        props =>  props.options?.headingColor ? resolveColor(props.options?.headingColor) : colorPalette.defaultBlackColor
+    };
     text-transform: ${commonConstant.textTransform};
     letter-spacing: ${headingConstant.defaultLetterSpacing};
     font-family: ${commonConstant.fontFamily};
-    font-weight: ${props => props.options?.weight ? makeHeadingWeight(props.options.weight) : headingConstant.fontWeight};
-    font-size: ${props => props.options?.size ? makeHeadingSize(props.options.size) : headingConstant.fontSize};
-    font-style: ${props => props.options?.style ? makeFontStyle(props.options?.style) : headingConstant.fontStyle};
+    font-weight: ${
+        props => props.options?.weight ? makeHeadingWeight(props.options.weight) : headingConstant.fontWeight
+    };
+    font-size: ${
+        props => props.options?.size ? makeHeadingSize(props.options.size) : headingConstant.fontSize
+    };
+    font-style: ${
+        props => props.options?.style ? makeFontStyle(props.options?.style) : headingConstant.fontStyle
+    };
     display: inline-block;
 `;
 
-const Heading = forwardRef(
-    (props: IHeadingProps, ref: React.Ref<HTMLParagraphElement>) => {
-
-    const onClickEvent = () => {
+const Heading = forwardRef((
+        props: IHeadingProps,
+        ref: React.Ref<HTMLParagraphElement>
+    ) => {
+    
+    /**
+     * @function onClickEvent
+     * @returns {void}
+     */
+    const onClickEvent = (): void => {
         if(props.events?.onClick) {
             return props.events.onClick();
         }

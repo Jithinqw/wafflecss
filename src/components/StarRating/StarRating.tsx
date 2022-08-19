@@ -97,6 +97,8 @@ const StarRating = forwardRef((
                         onMouseEnter={() => setHover(i)}
                         onMouseLeave={() => setHover(rating)}
                         style={{color: i<= (hover || rating) ? starSelectedColor : starNotSelectedColor }}
+                        id={props?.id}
+                        className={props?.className}
                     >
                         <StyledStar 
                             {...props} 

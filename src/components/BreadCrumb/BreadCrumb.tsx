@@ -24,10 +24,15 @@ const StyledListItem = styled.li<IBreadCrumbProps>`
 `;
 
 const BreadCrumb = forwardRef((
-    props: IBreadCrumbProps, 
-    ref: React.Ref<HTMLOListElement>) => {
-
-    const triggerOnClick = () => {
+        props: IBreadCrumbProps, 
+        ref: React.Ref<HTMLOListElement>
+    ) => {
+    
+    /**
+     * @function triggerOnClick
+     * @returns {void}
+     */
+    const triggerOnClick = (): void => {
         if(props.events?.onClick) {
             return props.events.onClick();
         }

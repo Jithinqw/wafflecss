@@ -33,6 +33,8 @@ const resolveStatusType = (
                 <StyledStatusRounded
                     onClick={props.events?.onClick}
                     {...props}
+                    id={props.options?.id}
+                    className={props.options?.className}
                 />
             )
         case 'rect':
@@ -41,6 +43,8 @@ const resolveStatusType = (
                     <StyledStatusRect 
                         onClick={props.events?.onClick}
                         {...props}
+                        id={props.options?.id}
+                        className={props.options?.className}
                     />
                 </svg>
             )
@@ -49,6 +53,8 @@ const resolveStatusType = (
                 <StyledStatusRounded
                     onClick={props.events?.onClick}
                     {...props}
+                    id={props.options?.id}
+                    className={props.options?.className}
                 />
             )
     }
