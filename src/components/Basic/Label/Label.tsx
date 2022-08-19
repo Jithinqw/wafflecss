@@ -8,7 +8,7 @@ import { ILabelProps } from "./Label.props";
  * @param {'sm' | 'md' | 'lg' | undefined} fontSize 
  * @returns {string}
  */
-const resolveLabelSize = (fontSize: 'sm' | 'md' | 'lg' | undefined) => {
+const resolveLabelSize = (fontSize: 'sm' | 'md' | 'lg' | undefined):string => {
     switch(fontSize) {
         case 'sm':
             return '8px';
@@ -27,7 +27,10 @@ const StyledLabel = styled.label<ILabelProps>`
     font-size: ${props => props.options?.fontSize ? resolveLabelSize(props.options?.size) : resolveLabelSize('md')};
 `;
 
-const Label = forwardRef((props: ILabelProps, ref: React.Ref<HTMLLabelElement>) => {
+const Label = forwardRef((
+        props: ILabelProps,
+        ref: React.Ref<HTMLLabelElement>
+    ) => {
     return (
         <StyledLabel 
             {...props}

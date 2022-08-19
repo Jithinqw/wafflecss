@@ -93,24 +93,36 @@ const StyledPinInput = styled.input<IPinInputProps>`
     }
 `;
 
-const PinInput = forwardRef((props: IPinInputProps, ref: React.Ref<HTMLInputElement>) => {
+const PinInput = forwardRef((
+        props: IPinInputProps,
+        ref: React.Ref<HTMLInputElement>
+    ) => {
+    
     const [currentText, setCurrentText] = React.useState<string>('');
 
     useEffect(() => {
-        const value = props.data.value ? props.data.value : ''
-        setCurrentText(value);
+        setCurrentText(props.data.value);
     },[]);
 
-    const onChangeEvent = (e: ChangeEvent<HTMLInputElement>) => {
-        setCurrentText(e.currentTarget.value);
+    /**
+     * @function onChangeEvent
+     * @param {ChangeEvent<HTMLInputElement>} e 
+     * @returns {void}
+     */
+    const onChangeEvent = (e: ChangeEvent<HTMLInputElement>): void => {
+        setCurrentText(e?.currentTarget?.value);
         if(props.events?.onChange && props.data.isDisabled) {
-            return props.events.onChange(e);
+            return props.events?.onChange(e);
         }
     }
 
-    const onFocusEvent = () => {
-        if(props.events?.onFocus) {
-            return props.events.onFocus();
+    /**
+     * @function onFocusEvent
+     * @returns {void}
+     */
+    const onFocusEvent = (): void => {
+        if(props?.events?.onFocus) {
+            return props?.events?.onFocus();
         }
     }
 

@@ -10,7 +10,7 @@ import { ILinkProps } from "./Link.props";
  * @param {'sm' | 'md' | 'lg'} linkWeight 
  * @returns {string}
  */
-const resolveLinkFontWeight = (linkWeight: 'sm' | 'md' | 'lg') => {
+const resolveLinkFontWeight = (linkWeight: 'sm' | 'md' | 'lg'):string => {
     switch(linkWeight) {
         case 'sm':
             return '0.75rem';
@@ -54,7 +54,11 @@ const StyledLink = styled.span<ILinkProps>`
 
 const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => {
 
-    const onClickEvent = () => {
+    /**
+     * @function onClickEvent
+     * @returns {void}
+     */
+    const onClickEvent = ():void => {
         if(
             props.events?.onClick && 
             props.data && props.data.isDisabled

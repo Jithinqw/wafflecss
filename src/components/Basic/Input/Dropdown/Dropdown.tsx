@@ -25,6 +25,7 @@ const StyledOption = styled.select<IDropdownProps>`
     -moz-appearance: none;
     appearance: none;
     cursor: ${props => props.data?.disabled ? 'not-allowed' : 'pointer'};
+
     &:after {
         display: block;
         clear: both;
@@ -40,8 +41,9 @@ const Dropdown = forwardRef((props: IDropdownProps, ref: React.Ref<HTMLSelectEle
      * @function onChange
      * @description change handler for input
      * @param {changeEvent} e 
+     * @returns {void}
      */
-     const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
+     const onChange = (e: ChangeEvent<HTMLSelectElement>): void => {
         setSelectedValue(e.currentTarget.value);
         if(props?.events?.onChange) {
             props.events.onChange(e.currentTarget.value);

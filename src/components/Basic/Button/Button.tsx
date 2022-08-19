@@ -8,10 +8,10 @@ import { IButtonProps } from "./Button.props";
 
 /**
  * @function getButtonColor
- * @param buttonStyle 
- * @returns 
+ * @param {'default' | 'danger' | 'success' | 'primary'} buttonStyle 
+ * @returns {string}
  */
-const getButtonColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
+const getButtonColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary'):string => {
     switch(buttonStyle) {
         case 'default':
             return colorPalette.defaultButtonColor;
@@ -28,10 +28,10 @@ const getButtonColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary
 
 /**
  * @function getButtonBackgoudColor
- * @param buttonStyle 
- * @returns 
+ * @param {'default' | 'danger' | 'success' | 'primary'} buttonStyle 
+ * @returns {string}
  */
-const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
+const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary'):string => {
     switch(buttonStyle) {
         case 'default':
             return colorPalette.defaultButtonBg;
@@ -48,10 +48,10 @@ const getButtonBackgroudColor = (buttonStyle: 'default' | 'danger' | 'success' |
 
 /**
  * @function getHoverColor
- * @param buttonStyle 
- * @returns 
+ * @param {'default' | 'danger' | 'success' | 'primary'} buttonStyle 
+ * @returns {string}
  */
-const getHoverColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
+const getHoverColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary'): string => {
     switch(buttonStyle) {
         case 'default':
             return colorPalette.defaultHoverColor;
@@ -69,10 +69,10 @@ const getHoverColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary'
 
 /**
  * @function getButtonBorderColor
- * @param buttonStyle 
- * @returns 
+ * @param {'default' | 'danger' | 'success' | 'primary'} buttonStyle 
+ * @returns {string}
  */
-const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
+const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'success' | 'primary'):string => {
     switch(buttonStyle) {
         case 'default':
         case 'danger':
@@ -85,10 +85,10 @@ const getButtonBorderColor = (buttonStyle: 'default' | 'danger' | 'success' | 'p
 
 /**
  * @function getButtonWidth
- * @param buttonType 
- * @returns 
+ * @param {'xs' | 'sm' | 'md' | 'lg'} buttonType 
+ * @returns {string}
  */
-const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
+const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg'):string => {
     switch(buttonType) {
         case 'sm':
             return buttonConstant.buttonWidth.sm;
@@ -105,10 +105,10 @@ const getButtonWidth = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
 
 /**
  * @function getFontSize
- * @param buttonType 
- * @returns 
+ * @param {'xs' | 'sm' | 'md' | 'lg'} buttonType 
+ * @returns {string}
  */
-const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
+const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg'):string => {
     switch(buttonType) {
         case 'sm':
             return buttonConstant.fontSize.sm;
@@ -125,10 +125,10 @@ const getFontSize = (buttonType: 'xs' | 'sm' | 'md' | 'lg') => {
 
 /**
  * @function getButtonShadow
- * @param buttonStyle 
- * @returns 
+ * @param {'default' | 'danger' | 'success' | 'primary'} buttonStyle 
+ * @returns {string} 
  */
-const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'success' | 'primary') => {
+const getButtonShadow = (buttonStyle: 'default' | 'danger' | 'success' | 'primary'):string => {
     switch(buttonStyle) {
         case 'default':
             return buttonConstant.buttonShadow.default;
@@ -181,15 +181,26 @@ const StyledButtonSpan = styled.span`
     grid-area: text / text / text / text;
 `;
 
-const Button = forwardRef((props: IButtonProps, ref:React.Ref<HTMLButtonElement>) => {
+const Button = forwardRef((
+        props: IButtonProps,
+        ref:React.Ref<HTMLButtonElement>
+    ) => {
 
-    const onClickEvent = () => {
+    /**
+     * @function onClickEvent
+     * @returns {void}
+     */
+    const onClickEvent = ():void => {
         if(props.events?.onClick && !props.data.isDisabled) {
             return props.events.onClick();
         }
     }
 
-    const onFocusEvent = () => {
+    /**
+     * @function onFocusEvent
+     * @returns {void}
+     */
+    const onFocusEvent = ():void => {
         if(props.events?.onFocus) {
             return props.events.onFocus();
         }

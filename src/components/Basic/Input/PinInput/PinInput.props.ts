@@ -26,7 +26,7 @@ interface IPinInputData {
      * @type {string}
      * default value
      */
-    value?: string;
+    value: string;
     /**
      * @type {string}
      * Name of text input

@@ -19,15 +19,23 @@ const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) 
         }
     }
 
-    const OnClickEvent = () => {
+    /**
+     * @function OnClickEvent
+     * @returns {void}
+     */
+    const OnClickEvent = (): void => {
         if(props.events?.onClick) {
-            return props.events.onClick();
+            props.events.onClick();
         }
     }
 
-    const onLoadEvent = () => {
+    /**
+     * @function onLoadEvent
+     * @returns {void}
+     */
+    const onLoadEvent = (): void => {
         if(props.events?.onLoad) {
-            return props.events.onLoad()
+            props.events.onLoad();
         }
     }
 

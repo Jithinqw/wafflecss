@@ -78,8 +78,10 @@ const resolveSwitchSize = (switchSize: 'sm' | 'md' | 'lg') => {
     }
 }
 
-const Switch = forwardRef(
-    (props: ISwitchProps, ref: React.Ref<HTMLInputElement>) => {
+const Switch = forwardRef((
+        props: ISwitchProps,
+        ref: React.Ref<HTMLInputElement>
+    ) => {
 
     const onClickEvent = () => {
         if(props.events?.onChange) {

@@ -44,15 +44,26 @@ const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
     vertical-align: middle;
 `;
 
-const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>) => {
+const Avatar = forwardRef((
+        props: IAvatarProps,
+        ref: React.Ref<HTMLImageElement>
+    ) => {
     
-    const OnClickEvent = () => {
+    /**
+     * @function OnClickEvent
+     * @returns {void}
+     */
+    const OnClickEvent = (): void => {
         if(props.events?.onClick) {
             return props.events.onClick();
         }
     }
 
-    const onLoadEvent = () => {
+    /**
+     * @function onLoadEvent
+     * @returns {void}
+     */
+    const onLoadEvent = (): void => {
         if(props.events?.onLoad) {
             return props.events.onLoad();
         }
@@ -93,7 +104,10 @@ const Avatar = forwardRef((props: IAvatarProps, ref: React.Ref<HTMLImageElement>
                 );
             case 'text':
                 return (
-                    <StyledTextAvatar {...props} className={props.options.className}>
+                    <StyledTextAvatar 
+                        {...props}
+                        className={props.options.className}
+                    >
                         <p>{props.data.avatarText}</p>
                     </StyledTextAvatar>
                 )
