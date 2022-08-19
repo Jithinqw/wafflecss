@@ -96,7 +96,7 @@ const StyledCheckboxInput = styled.input<ICheckboxProps>`
 const CheckBox = forwardRef((
         props: ICheckboxProps, ref: React.Ref<HTMLInputElement>
     ) => {
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState<boolean>(false);
 
     /**
      * @function onCheckbokStateChange
@@ -104,7 +104,9 @@ const CheckBox = forwardRef((
      */
     const onCheckbokStateChange = (e: React.FormEvent<HTMLInputElement>) => {
         setIsChecked(e?.currentTarget?.checked);
-        props.events?.onCheckboxChange(e?.currentTarget?.checked);
+        if(props.events?.onCheckboxChange) {
+            props.events?.onCheckboxChange(e?.currentTarget?.checked);
+        }
     }
 
     return(

@@ -8,8 +8,8 @@ export default {
     component: ColorSelector,
     args: {
         data: {
-            selected: true,
-            color: 'red',
+            selected: false,
+            color: 'teal',
         },
         options: {
             colorSize: 'sm',
@@ -49,22 +49,6 @@ const ColorSelectorlgTemplate: ComponentStory<typeof ColorSelector> = (
     )
 }
 
-const ColorSelectorClickTestTemplate: ComponentStory<typeof ColorSelector> = (
-    args
-) => {
-    return (
-        <ColorSelector
-            {...args}
-            options={{
-                colorSize: 'md',
-            }}
-            events={{
-                onClick: action('User clicked on Color selector'),
-            }}
-        />
-    )
-}
-
 const ColorSelectorChangeTestTemplate: ComponentStory<typeof ColorSelector> = (
     args
 ) => {
@@ -84,5 +68,4 @@ export const ColorSelectorDefault = ColorSelectorTemplate.bind({})
 export const ColorSelectorMd = ColorSelectorMdTemplate.bind({})
 export const ColorSelectorlgTemplateWithCustomBorder =
     ColorSelectorlgTemplate.bind({})
-export const ColorSelectorClickTest = ColorSelectorClickTestTemplate.bind({})
 export const ColorSelectorChangeTest = ColorSelectorChangeTestTemplate.bind({})
