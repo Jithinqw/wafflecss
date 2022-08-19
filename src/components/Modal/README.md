@@ -33,15 +33,15 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ## Props
 
 ### Data
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | modalHeadingNode |  false |  `string / React.ReactNode` |
 | modalBodyNode |  false |  `string / React.ReactNode` |
 | modalFooterNode |  false |  `string / React.ReactNode` |
 
-## Props
+### Options
 
-### Data
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
 | isVisible |  false |  `boolean` |

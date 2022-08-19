@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import LegalText from "../../Basic/Heading/LegalText/LegalText";
+import { commonConstant } from "../../../utils/constants";
 import { IAnnouncementProps } from "./Announcement.props";
 
 const StyledAnnouncement = styled.div`
@@ -54,6 +54,8 @@ const StyledDismissContainer = styled.div`
     width: 24px;
     cursor: pointer;
     margin-right: 5px;
+    margin-top: 5px;
+    font-family: ${commonConstant.fontFamily};
     float: right;
     position: relative;
     z-index: 1;
@@ -61,7 +63,8 @@ const StyledDismissContainer = styled.div`
     color: #FFFFFF;
 `;
 
-const Announcement = forwardRef((props: IAnnouncementProps, ref: React.Ref<HTMLDivElement>) => {
+const Announcement = forwardRef(
+    (props: IAnnouncementProps, ref: React.Ref<HTMLDivElement>) => {
     return (
         <StyledAnnouncement ref={ref}>
             <StyledWrapper>
@@ -71,18 +74,9 @@ const Announcement = forwardRef((props: IAnnouncementProps, ref: React.Ref<HTMLD
                     </StyledTextNodeWrapper>
                 </StyledSpanAlert>
                 <StyledDismissContainer 
-                    onClick={props.events?.onDismiss}>
-                    <LegalText 
-                        data={{
-                            displayText: 'x'
-                        }}
-                        options={{
-                            legalTextSize: 'md',
-                            style: {
-                                color: 'white'
-                            }
-                        }}
-                    />
+                    onClick={props.events?.onDismiss}
+                >
+                    {props.data.closeCTA ? props.data.closeCTA : 'x'}
                 </StyledDismissContainer>
             </StyledWrapper>
         </StyledAnnouncement>
