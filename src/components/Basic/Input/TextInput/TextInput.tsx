@@ -6,8 +6,8 @@ import { ITextInputProps } from "./TextInput.props";
 
 /**
  * @function resolveFontSize
- * @param fontSize 
- * @returns 
+ * @param {'xs' | 'sm' | 'md' | 'lg'} fontSize 
+ * @returns {string}
  */
 const resolveFontSize = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(fontSize) {
@@ -26,8 +26,8 @@ const resolveFontSize = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
 
 /**
  * @function resolveHeight
- * @param fontSize 
- * @returns 
+ * @param {'xs' | 'sm' | 'md' | 'lg'} fontSize 
+ * @returns {string}
  */
 const resolveHeight = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
     switch(fontSize) {

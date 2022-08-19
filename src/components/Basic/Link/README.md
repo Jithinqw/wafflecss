@@ -26,6 +26,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 |----------|:-------------:|------:|
 | displayText |  false | `string / React.ReactNode` |
 | id |  true | `string` |
+| isDisabled |  true | `boolean` |
 
 ### Events 
 
