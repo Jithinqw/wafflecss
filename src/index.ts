@@ -42,6 +42,7 @@ export { default as Drawer } from './components/Drawer/Drawer';
 export { default as Loader } from './components/Loader/Loader';
 export { default as StackedProgress } from './components/Progress/StackedProgress/StackedProgress';
 export { default as Divider } from './components/Divider/Divider';
+export { default as Image } from './components/Basic/Image/Image';
 
 export {
     ISelectOption, Utilities,
