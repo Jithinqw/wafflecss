@@ -39,7 +39,7 @@
 | StackedProgress |  [Docs](./src/components/Progress/StackedProgress/README.md) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/stackedprogress--progress-default) |
 | Announcement |  [Docs](./src/components/Promotions/Announcement/README.md) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/announcement--annocement-default)
 | PromotionRibbon |  [Docs](./src/components/Promotions/PromotionRibbon/README.md) | `false` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/promotionribbon--star-rating-template) |
-| TopBanner |  [Docs](./src/components/Promotions/TopBanner/TopBanner.tsx) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/topbanner--toggleprimary) |
+| TopBanner |  [Docs](./src/components/Promotions/TopBanner/README.md) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/topbanner--toggleprimary) |
 | Quote |  [Docs](./src/components/Quote/README.md) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/quote--default-quote) |
 | ColorSelector |  [Docs](./src/components/Selector/ColorSelector/README.md) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/colorselector--color-selector-default) |
 | Skeleton |  [Docs](./src/components/Skeleton/README.md) | `true` | [Deployed](https://wafflecss-jithinqw.vercel.app/?path=/docs/skeleton--column-skeleton) |

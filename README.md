@@ -1,9 +1,11 @@
 <div align="center">
+    <a href="https://wafflecss-jithinqw.vercel.app/" target="_blank">
     <img 
         src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg" 
         width="300px" 
         alt="wiki waffle image"
     />
+    </a>
 </div>
 
 <h1 align="center">WaffleCSS</h1>
@@ -28,6 +30,7 @@ you can install `wafflecss` with this command:
 ```sh
 npm install --save wafflecss
 ```
+
 ## Documentation
 
 WaffleCSS documentation is developed under [Docs](wafflecss-docs.vercel.app/), which is
@@ -99,4 +102,4 @@ Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/pack
 
 ## Packages
 
-[Here are the list of packages](./Packages.md)
+[Here are the list of packages in WaffleCSS](./packages.md)
