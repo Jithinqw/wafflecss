@@ -20,6 +20,14 @@ interface IStatusOptions {
      * @type {string}
      */
     variants?: 'rounded' | 'rect';
+    /**
+     * @type {string}
+     */
+    id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }
 
 interface IStatusEvents {

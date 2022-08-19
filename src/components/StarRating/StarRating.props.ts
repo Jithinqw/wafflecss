@@ -31,5 +31,13 @@ export interface IStarRatingProps {
      * star.
      */
     onClick?: (starNumber: number) => void;
+    /**
+     * @type {string}
+     */
+    id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }
 

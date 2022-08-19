@@ -26,7 +26,7 @@ const resolveHeight = (height: 'sm' | 'xs' | 'lg') => {
 
 /**
  * @function resolveWidth
- * @param width 
+ * @param {'sm' | 'xs' | 'lg'} width 
  * @returns {string}
  */
 const resolveWidth = (width: 'sm' | 'xs' | 'lg') => {
@@ -44,7 +44,7 @@ const resolveWidth = (width: 'sm' | 'xs' | 'lg') => {
 
 /**
  * @function resolveCircleRadius
- * @param width 
+ * @param {'sm' | 'xs' | 'lg'} width 
  * @returns {string}
  */
 const resolveCircleRadius = (width: 'sm' | 'xs' | 'lg') => {
@@ -79,7 +79,7 @@ const StyledSkeletonCol = styled.span<ISkeletonProps>`
     animation: ${glowAnimation} 2s ease-in-out infinite;
 `;
 
-const StyledSkeletonircle = styled.span<ISkeletonProps>`
+const StyledSkeletonCircle = styled.span<ISkeletonProps>`
     display: inline-block;
     min-height: 1em;
     vertical-align: middle;
@@ -98,14 +98,38 @@ const StyledSkeletonircle = styled.span<ISkeletonProps>`
  * @param {ISkeletonProps} props 
  * @returns {StyledComponent}
  */
-const resolveSkeletonType = (props: ISkeletonProps, ref: React.Ref<HTMLSpanElement>) => {
+const resolveSkeletonType = (
+        props: ISkeletonProps, 
+        ref: React.Ref<HTMLSpanElement>
+    ) => {
     switch(props.options?.type) {
         case 'col':
-            return <StyledSkeletonCol {...props} ref={ref}/>
+            return (
+                <StyledSkeletonCol 
+                    {...props} 
+                    ref={ref}
+                    id={props.options?.id}
+                    className={props.options?.className}
+                />
+            )
         case 'circle':
-            return <StyledSkeletonircle {...props} ref={ref}/>
+            return (
+                <StyledSkeletonCircle 
+                    {...props} 
+                    ref={ref}
+                    id={props.options?.id}
+                    className={props.options?.className}
+                />
+            )
         default:
-            return <StyledSkeletonCol {...props} ref={ref}/>
+            return (
+                <StyledSkeletonCol 
+                    {...props} 
+                    ref={ref}
+                    id={props.options?.id}
+                    className={props.options?.className}
+                />
+            )
     }
 }
 
