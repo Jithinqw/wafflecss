@@ -32,7 +32,7 @@ const resolveAlertColor = (
 }
 
 const StyledAlert = styled.div<IAlertProps>`
-    width: ${alertConstants.defaultWidth};
+    width: inherit;
     display: ${commonConstant.flexDisplay};
     -webkit-box-align: center;
     align-items: ${commonConstant.alignItemCenter};

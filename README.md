@@ -1,10 +1,10 @@
 <div align="center">
     <a href="https://wafflecss-jithinqw.vercel.app/" target="_blank">
-    <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg" 
-        width="300px" 
-        alt="wiki waffle image"
-    />
+        <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg" 
+            width="300px" 
+            alt="wiki waffle image"
+        />
     </a>
 </div>
 
@@ -102,4 +102,4 @@ Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/pack
 
 ## Packages
 
-[Here are the list of packages in WaffleCSS](./packages.md)
+[Here are the list of packages in WaffleCSS](./packages.md).
