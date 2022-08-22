@@ -1,28 +1,33 @@
-import { IHeadingOptions } from "../Basic/Heading/Heading.props";
-
 export interface IClockProps {
+    /**
+     * @type {string}
+     * Time in the future, timer 
+     * will timer from future till
+     * today.
+     */
     endtime: string;
+    /**
+     * @type {lower / upper}
+     * Control the label of timer
+     */
     labelType?: 'lower' | 'upper';
-    labelOptions?: IHeadingOptions;
-    clockOptions?: IHeadingOptions;
-    events?: IClockEvents;
+    /**
+     * @type {TimerColor}
+     * Control timer color palette.
+     */
+    colorSquash?: TimerColor;
+    /**
+     * @type {string}
+     */
+    className?: string;
+    /**
+     * @type {string}
+     */
+    id?: string;
 }
 
-interface IClockEvents {
-    /**
-     * Triggered when time ends
-     */
-    onNoTimeRemaining?: () => void;
-    /**
-     * Triggered on 0 days
-     */
-    onNoDaysRemaining?: () => void;
-    /**
-     * Triggered on 0 hours
-     */
-    onNoHourRemaining?: () => void;
-    /**
-     * Triggered on 0 minutes
-     */
-    onNoMinutesRemaining?: () => void;
+interface TimerColor {
+    timerContainerColor?: string;
+    timeWrapperColor?: string;
+    timerColor?: string;
 }

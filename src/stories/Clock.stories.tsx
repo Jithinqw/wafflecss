@@ -1,30 +1,25 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import TimerClock from '../components/Clock/Clock'
+import React from 'react';
+import { 
+    ComponentStory, ComponentMeta 
+} from '@storybook/react';
+import TimerClock from '../components/Clock/Clock';
 
 export default {
     title: 'Timer Clock',
     component: TimerClock,
+    args: {},
 } as ComponentMeta<typeof TimerClock>
 
 const TimerClockTemplate: ComponentStory<typeof TimerClock> = (args) => {
-    const date = new Date()
-    date.setDate(date.getDate() + 7)
+    const date = new Date();
+    date.setDate(date.getDate() + 7);
+    
     return (
         <TimerClock
+            {...args}
             endtime={date.toString()}
-            labelOptions={{
-                headingColor: 'pink',
-                style: 'italics',
-                size: 'small',
-            }}
-            clockOptions={{
-                headingColor: 'pink',
-                style: 'italics',
-                size: 'extralarge',
-            }}
         />
     )
 }
 
-export const TimerComponentDefault = TimerClockTemplate.bind({})
+export const TimerComponentDefault = TimerClockTemplate.bind({});

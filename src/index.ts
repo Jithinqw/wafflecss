@@ -43,6 +43,7 @@ export { default as Loader } from './components/Loader/Loader';
 export { default as StackedProgress } from './components/Progress/StackedProgress/StackedProgress';
 export { default as Divider } from './components/Divider/Divider';
 export { default as Image } from './components/Basic/Image/Image';
+export { default as TimerClock } from './components/Clock/Clock';
 
 export {
     ISelectOption, Utilities,
