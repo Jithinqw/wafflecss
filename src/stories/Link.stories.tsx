@@ -12,12 +12,12 @@ export default {
     },
 } as ComponentMeta<typeof Link>
 
-const Template: ComponentStory<typeof Link> = (args) => {
+const Template: ComponentStory<typeof Link> = args => {
     return <Link {...args} />
 }
 export const Primary = Template.bind({})
 
-const TemplateUnderline: ComponentStory<typeof Link> = (args) => {
+const TemplateUnderline: ComponentStory<typeof Link> = args => {
     return (
         <Link
             data={{
@@ -33,7 +33,7 @@ const TemplateUnderline: ComponentStory<typeof Link> = (args) => {
     )
 }
 
-const ColorLinkTemplate: ComponentStory<typeof Link> = (args) => {
+const ColorLinkTemplate: ComponentStory<typeof Link> = args => {
     return (
         <Link
             data={{
@@ -49,7 +49,7 @@ const ColorLinkTemplate: ComponentStory<typeof Link> = (args) => {
     )
 }
 
-const HoverLinkUnderlineTemplate: ComponentStory<typeof Link> = (args) => {
+const HoverLinkUnderlineTemplate: ComponentStory<typeof Link> = args => {
     return (
         <Link
             data={{
@@ -66,7 +66,7 @@ const HoverLinkUnderlineTemplate: ComponentStory<typeof Link> = (args) => {
     )
 }
 
-const HoverLinkUnderlineTemplateSM: ComponentStory<typeof Link> = (args) => {
+const HoverLinkUnderlineTemplateSM: ComponentStory<typeof Link> = args => {
     return (
         <Link
             data={{
@@ -84,7 +84,7 @@ const HoverLinkUnderlineTemplateSM: ComponentStory<typeof Link> = (args) => {
     )
 }
 
-const HoverLinkUnderlineTemplateMD: ComponentStory<typeof Link> = (args) => {
+const HoverLinkUnderlineTemplateMD: ComponentStory<typeof Link> = args => {
     return (
         <Link
             data={{
@@ -102,7 +102,7 @@ const HoverLinkUnderlineTemplateMD: ComponentStory<typeof Link> = (args) => {
     )
 }
 
-const HoverLinkUnderlineTemplateLG: ComponentStory<typeof Link> = (args) => {
+const HoverLinkUnderlineTemplateLG: ComponentStory<typeof Link> = args => {
     return (
         <Link
             data={{

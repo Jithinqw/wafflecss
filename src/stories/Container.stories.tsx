@@ -23,7 +23,7 @@ export default {
     },
 } as ComponentMeta<typeof Container>
 
-const ContainerTemplate: ComponentStory<typeof Container> = (args) => {
+const ContainerTemplate: ComponentStory<typeof Container> = args => {
     return <Container {...args} />
 }
 export const ContainerDefault = ContainerTemplate.bind({})

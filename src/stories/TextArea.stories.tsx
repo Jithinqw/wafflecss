@@ -18,7 +18,7 @@ export default {
     },
 } as ComponentMeta<typeof TextArea>
 
-const TextAreaInputTemplate: ComponentStory<typeof TextArea> = (args) => {
+const TextAreaInputTemplate: ComponentStory<typeof TextArea> = args => {
     return <TextArea {...args} />
 }
 

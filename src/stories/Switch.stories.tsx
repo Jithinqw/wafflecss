@@ -8,7 +8,7 @@ export default {
     argTypes: {},
 } as ComponentMeta<typeof Switch>
 
-const Template: ComponentStory<typeof Switch> = (args) => {
+const Template: ComponentStory<typeof Switch> = args => {
     return <Switch />
 }
 export const SwitchPrimary = Template.bind({})

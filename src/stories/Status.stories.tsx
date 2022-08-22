@@ -13,7 +13,7 @@ export default {
     },
 } as ComponentMeta<typeof Status>
 
-const StatusTemplate: ComponentStory<typeof Status> = (args) => {
+const StatusTemplate: ComponentStory<typeof Status> = args => {
     return <Status {...args} />
 }
 export const StatusDefault = StatusTemplate.bind({})

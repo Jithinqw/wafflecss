@@ -19,11 +19,11 @@ export default {
     },
 } as ComponentMeta<typeof LegalText>
 
-const LegalTextTemplate: ComponentStory<typeof LegalText> = (args) => {
+const LegalTextTemplate: ComponentStory<typeof LegalText> = args => {
     return <LegalText {...args} />
 }
 
-const LegalTextMdTemplate: ComponentStory<typeof LegalText> = (args) => {
+const LegalTextMdTemplate: ComponentStory<typeof LegalText> = args => {
     return (
         <LegalText
             data={{
@@ -36,7 +36,7 @@ const LegalTextMdTemplate: ComponentStory<typeof LegalText> = (args) => {
     )
 }
 
-const LegalTextLgTemplate: ComponentStory<typeof LegalText> = (args) => {
+const LegalTextLgTemplate: ComponentStory<typeof LegalText> = args => {
     return (
         <LegalText
             data={{

@@ -10,7 +10,7 @@ export default {
     argTypes: {},
 } as ComponentMeta<typeof Modal>
 
-const ModalTemplate: ComponentStory<typeof Modal> = (args) => {
+const ModalTemplate: ComponentStory<typeof Modal> = args => {
     const propArgs = {
         data: {
             modalHeadingNode: (

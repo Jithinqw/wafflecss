@@ -17,11 +17,11 @@ export default {
     },
 } as ComponentMeta<typeof Badge>
 
-const BadgeTemplate: ComponentStory<typeof Badge> = (args) => {
+const BadgeTemplate: ComponentStory<typeof Badge> = args => {
     return <Badge {...args} />
 }
 
-const BadgeTestTemplate: ComponentStory<typeof Badge> = (args) => {
+const BadgeTestTemplate: ComponentStory<typeof Badge> = args => {
     return (
         <Badge
             {...args}

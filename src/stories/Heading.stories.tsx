@@ -12,7 +12,7 @@ export default {
     },
 } as ComponentMeta<typeof Heading>
 
-const HeadingTemplateSmall: ComponentStory<typeof Heading> = (args) => {
+const HeadingTemplateSmall: ComponentStory<typeof Heading> = args => {
     return (
         <Heading
             data={{
@@ -26,7 +26,7 @@ const HeadingTemplateSmall: ComponentStory<typeof Heading> = (args) => {
 }
 export const Small = HeadingTemplateSmall.bind({})
 
-const HeadingTemplateNormal: ComponentStory<typeof Heading> = (args) => {
+const HeadingTemplateNormal: ComponentStory<typeof Heading> = args => {
     return (
         <Heading
             data={{
@@ -40,7 +40,7 @@ const HeadingTemplateNormal: ComponentStory<typeof Heading> = (args) => {
 }
 export const Normal = HeadingTemplateNormal.bind({})
 
-const HeadingTemplateExtraSamll: ComponentStory<typeof Heading> = (args) => {
+const HeadingTemplateExtraSamll: ComponentStory<typeof Heading> = args => {
     return (
         <Heading
             data={{
@@ -54,7 +54,7 @@ const HeadingTemplateExtraSamll: ComponentStory<typeof Heading> = (args) => {
 }
 export const ExtraSmall = HeadingTemplateExtraSamll.bind({})
 
-const HeadingTemplateBold: ComponentStory<typeof Heading> = (args) => {
+const HeadingTemplateBold: ComponentStory<typeof Heading> = args => {
     return (
         <Heading
             data={{
@@ -68,7 +68,7 @@ const HeadingTemplateBold: ComponentStory<typeof Heading> = (args) => {
 }
 export const Bold = HeadingTemplateBold.bind({})
 
-const HeadingTemplateExtraBold: ComponentStory<typeof Heading> = (args) => {
+const HeadingTemplateExtraBold: ComponentStory<typeof Heading> = args => {
     return (
         <Heading
             {...args}
@@ -80,7 +80,7 @@ const HeadingTemplateExtraBold: ComponentStory<typeof Heading> = (args) => {
 }
 export const ExtraBold = HeadingTemplateExtraBold.bind({})
 
-const HeadingTemplateNormalStyle: ComponentStory<typeof Heading> = (args) => {
+const HeadingTemplateNormalStyle: ComponentStory<typeof Heading> = args => {
     return (
         <Heading
             {...args}

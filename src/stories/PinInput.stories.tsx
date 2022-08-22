@@ -17,7 +17,7 @@ export default {
     },
 } as ComponentMeta<typeof PinInput>
 
-const TextPinTemplate: ComponentStory<typeof PinInput> = (args) => {
+const TextPinTemplate: ComponentStory<typeof PinInput> = args => {
     return <PinInput {...args} />
 }
 

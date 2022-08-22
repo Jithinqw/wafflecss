@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import StackedProgress from '../components/Progress/StackedProgress/StackedProgress';
+import StackedProgress from '../components/Progress/StackedProgress/StackedProgress'
 
 export default {
     title: 'StackedProgress',
@@ -9,7 +9,7 @@ export default {
         data: [
             {
                 width: 16.8,
-                bgColor: 'pink'
+                bgColor: 'pink',
             },
             {
                 width: 26.7,
@@ -30,12 +30,14 @@ export default {
             {
                 width: 15.7,
                 bgColor: 'orange',
-            }
-        ]
+            },
+        ],
     },
 } as ComponentMeta<typeof StackedProgress>
 
-const ProgressDefaultTemplate: ComponentStory<typeof StackedProgress> = (args) => {
+const ProgressDefaultTemplate: ComponentStory<
+    typeof StackedProgress
+> = args => {
     return <StackedProgress {...args} />
 }
 

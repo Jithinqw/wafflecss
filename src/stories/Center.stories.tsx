@@ -16,7 +16,7 @@ export default {
     },
 } as ComponentMeta<typeof Center>
 
-const CenterDefault: ComponentStory<typeof Center> = (args) => {
+const CenterDefault: ComponentStory<typeof Center> = args => {
     return <Center {...args} />
 }
 export const CenterAlign = CenterDefault.bind({})

@@ -1,10 +1,10 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Toggle from '../components/Toggle/Toggle'
+import Table from '../components/Table/Table'
 
 export default {
-    title: 'Toggle',
-    component: Toggle,
+    title: 'Table',
+    component: Table,
     args: {
         data: {
             parentLabel: 'Show your Rights',
@@ -13,10 +13,10 @@ export default {
             },
         },
     },
-} as ComponentMeta<typeof Toggle>
+} as ComponentMeta<typeof Table>
 
-const Template: ComponentStory<typeof Toggle> = args => {
-    return <Toggle {...args} />
+const Template: ComponentStory<typeof Table> = args => {
+    return <Table {...args} />
 }
 
 export const Toggleprimary = Template.bind({})

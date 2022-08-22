@@ -18,7 +18,7 @@ export default {
     },
 } as ComponentMeta<typeof PriceLabel>
 
-const PriceLabelTemplate: ComponentStory<typeof PriceLabel> = (args) => {
+const PriceLabelTemplate: ComponentStory<typeof PriceLabel> = args => {
     return <PriceLabel {...args} />
 }
 

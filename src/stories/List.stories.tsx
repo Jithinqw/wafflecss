@@ -29,7 +29,7 @@ export default {
     },
 } as ComponentMeta<typeof List>
 
-const ListTemplate: ComponentStory<typeof List> = (args) => {
+const ListTemplate: ComponentStory<typeof List> = args => {
     return (
         <List
             {...args}
@@ -41,7 +41,7 @@ const ListTemplate: ComponentStory<typeof List> = (args) => {
     )
 }
 
-const OrderedListTemplate: ComponentStory<typeof List> = (args) => {
+const OrderedListTemplate: ComponentStory<typeof List> = args => {
     return (
         <List
             {...args}

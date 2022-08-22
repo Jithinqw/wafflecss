@@ -25,7 +25,7 @@ export default {
     },
 } as ComponentMeta<typeof Stack>
 
-const StackTemplate: ComponentStory<typeof Stack> = (args) => {
+const StackTemplate: ComponentStory<typeof Stack> = args => {
     return <Stack {...args} />
 }
 export const DefaultStack = StackTemplate.bind({})
