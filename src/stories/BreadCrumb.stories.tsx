@@ -20,19 +20,20 @@ export default {
     },
 } as ComponentMeta<typeof BreadCrumb>
 
-const BreadCrumbTemplate: ComponentStory<typeof BreadCrumb> = (args) => {
+const BreadCrumbTemplate: ComponentStory<typeof BreadCrumb> = args => {
     return <BreadCrumb {...args} />
 }
 
-const BreadCrumbTestClick: ComponentStory<typeof BreadCrumb> = (args) => {
+const BreadCrumbTestClick: ComponentStory<typeof BreadCrumb> = args => {
     return (
-        <BreadCrumb {...args}
-        events={{
-            onClick: action('User clicked on BreadCrumb')
-        }}
-    />)
+        <BreadCrumb
+            {...args}
+            events={{
+                onClick: action('User clicked on BreadCrumb'),
+            }}
+        />
+    )
 }
 
-export const DefaultBreadCrumb = BreadCrumbTemplate.bind({});
-export const BreadCrumbClickTest = BreadCrumbTestClick.bind({});
-
+export const DefaultBreadCrumb = BreadCrumbTemplate.bind({})
+export const BreadCrumbClickTest = BreadCrumbTestClick.bind({})

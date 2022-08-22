@@ -14,13 +14,14 @@ export default {
     },
 } as ComponentMeta<typeof Skeleton>
 
-const CircleTemplate: ComponentStory<typeof Skeleton> = (args) => {
+const CircleTemplate: ComponentStory<typeof Skeleton> = args => {
     return <Skeleton {...args} />
 }
 
-const ColTemplate: ComponentStory<typeof Skeleton> = (args) => {
+const ColTemplate: ComponentStory<typeof Skeleton> = args => {
     return (
-        <Skeleton {...args} 
+        <Skeleton
+            {...args}
             options={{
                 color: 'teal',
                 type: 'col',

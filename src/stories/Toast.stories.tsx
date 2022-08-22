@@ -37,7 +37,7 @@ export default {
     },
 } as ComponentMeta<typeof Toast>
 
-const Template: ComponentStory<typeof Toast> = (args) => {
+const Template: ComponentStory<typeof Toast> = args => {
     return <Toast {...args} />
 }
 export const Toastprimary = Template.bind({})

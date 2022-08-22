@@ -16,11 +16,11 @@ export default {
     },
 } as ComponentMeta<typeof Avatar>
 
-const AvatarTemplate: ComponentStory<typeof Avatar> = (args) => {
+const AvatarTemplate: ComponentStory<typeof Avatar> = args => {
     return <Avatar {...args} />
 }
 
-const AvatarActionTemplete: ComponentStory<typeof Avatar> = (args) => {
+const AvatarActionTemplete: ComponentStory<typeof Avatar> = args => {
     return (
         <Avatar
             {...args}

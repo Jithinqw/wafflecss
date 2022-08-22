@@ -19,11 +19,11 @@ export default {
     },
 } as ComponentMeta<typeof Dropdown>
 
-const DropdownTemplate: ComponentStory<typeof Dropdown> = (args) => {
+const DropdownTemplate: ComponentStory<typeof Dropdown> = args => {
     return <Dropdown {...args} />
 }
 
-const DropdownClickTest: ComponentStory<typeof Dropdown> = (args) => {
+const DropdownClickTest: ComponentStory<typeof Dropdown> = args => {
     return (
         <Dropdown
             {...args}

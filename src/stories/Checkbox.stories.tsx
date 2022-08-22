@@ -17,19 +17,15 @@ export default {
     },
 } as ComponentMeta<typeof Checkbox>
 
-const CheckboxTemplate: ComponentStory<typeof Checkbox> = (args) => {
+const CheckboxTemplate: ComponentStory<typeof Checkbox> = args => {
     return <Checkbox {...args} />
 }
 
-const CheckboxTemplateWithLabel: ComponentStory<typeof Checkbox> = (args) => {
-    return (
-        <Checkbox
-            {...args}
-        />
-    )
+const CheckboxTemplateWithLabel: ComponentStory<typeof Checkbox> = args => {
+    return <Checkbox {...args} />
 }
 
-const CheckBoxClickTest: ComponentStory<typeof Checkbox> = (args) => {
+const CheckBoxClickTest: ComponentStory<typeof Checkbox> = args => {
     return (
         <Checkbox
             {...args}
@@ -40,6 +36,6 @@ const CheckBoxClickTest: ComponentStory<typeof Checkbox> = (args) => {
     )
 }
 
-export const CheckboxDefault = CheckboxTemplate.bind({});
-export const CheckboxWithLabel = CheckboxTemplateWithLabel.bind({});
-export const CheckboxTest = CheckBoxClickTest.bind({});
+export const CheckboxDefault = CheckboxTemplate.bind({})
+export const CheckboxWithLabel = CheckboxTemplateWithLabel.bind({})
+export const CheckboxTest = CheckBoxClickTest.bind({})

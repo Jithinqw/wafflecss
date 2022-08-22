@@ -9,12 +9,12 @@ export default {
     args: {
         data: {
             isVisible: true,
-            children: <h2>dsfsdfsdf</h2>
+            children: <h2>dsfsdfsdf</h2>,
         },
     },
 } as ComponentMeta<typeof Drawer>
 
-const DrawerTemplate: ComponentStory<typeof Drawer> = (args) => {
+const DrawerTemplate: ComponentStory<typeof Drawer> = args => {
     return <Drawer {...args} />
 }
 

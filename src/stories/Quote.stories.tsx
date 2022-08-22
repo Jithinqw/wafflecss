@@ -23,11 +23,11 @@ export default {
     },
 } as ComponentMeta<typeof Quote>
 
-const QuoteTemplate: ComponentStory<typeof Quote> = (args) => {
+const QuoteTemplate: ComponentStory<typeof Quote> = args => {
     return <Quote {...args} />
 }
 
-const QuoteTestTemplate: ComponentStory<typeof Quote> = (args) => {
+const QuoteTestTemplate: ComponentStory<typeof Quote> = args => {
     return <Quote {...args} onClick={action('User Click')} />
 }
 

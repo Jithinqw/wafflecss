@@ -27,17 +27,17 @@ export default {
     },
 } as ComponentMeta<typeof Announcement>
 
-const AnnouncementTemplate: ComponentStory<typeof Announcement> = (args) => {
+const AnnouncementTemplate: ComponentStory<typeof Announcement> = args => {
     return <Announcement {...args} />
 }
 
-const AnnouncementAction: ComponentStory<typeof Announcement> = (args) => {
+const AnnouncementAction: ComponentStory<typeof Announcement> = args => {
     return (
         <Announcement
             {...args}
             events={{
                 onDismiss: action(
-                    'User pressed dismiss button on Annoncement component'
+                    'User pressed dismiss button on Annoncement component',
                 ),
             }}
         />

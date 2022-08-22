@@ -10,7 +10,7 @@ export default {
     },
 } as ComponentMeta<typeof Loader>
 
-const LoaderTemplate: ComponentStory<typeof Loader> = (args) => {
+const LoaderTemplate: ComponentStory<typeof Loader> = args => {
     return <Loader {...args} />
 }
 

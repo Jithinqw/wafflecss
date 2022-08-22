@@ -13,11 +13,11 @@ export default {
     },
 } as ComponentMeta<typeof StarRating>
 
-const StarRateTemplate: ComponentStory<typeof StarRating> = (args) => {
+const StarRateTemplate: ComponentStory<typeof StarRating> = args => {
     return <StarRating {...args} />
 }
 
-const StarRatingEventTemplate: ComponentStory<typeof StarRating> = (args) => {
+const StarRatingEventTemplate: ComponentStory<typeof StarRating> = args => {
     return (
         <StarRating {...args} onClick={action('User clicked on star rating')} />
     )

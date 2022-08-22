@@ -12,11 +12,11 @@ export default {
     },
 } as ComponentMeta<typeof Image>
 
-const ImageDefaultTemplate: ComponentStory<typeof Image> = (args) => {
+const ImageDefaultTemplate: ComponentStory<typeof Image> = args => {
     return <Image {...args} />
 }
 
-const ImageTemplate: ComponentStory<typeof Image> = (args) => {
+const ImageTemplate: ComponentStory<typeof Image> = args => {
     return (
         <Image
             data={{

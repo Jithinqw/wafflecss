@@ -17,7 +17,7 @@ export default {
     },
 } as ComponentMeta<typeof TextInput>
 
-const TextInputTemplate: ComponentStory<typeof TextInput> = (args) => {
+const TextInputTemplate: ComponentStory<typeof TextInput> = args => {
     return <TextInput {...args} />
 }
 

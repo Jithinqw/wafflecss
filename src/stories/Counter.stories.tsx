@@ -12,12 +12,12 @@ export default {
     },
 } as ComponentMeta<typeof Counter>
 
-const CounterTemplate: ComponentStory<typeof Counter> = (args) => {
+const CounterTemplate: ComponentStory<typeof Counter> = args => {
     return <Counter {...args} />
 }
 export const CounterDefault = CounterTemplate.bind({})
 
-const CounterTemplateDark: ComponentStory<typeof Counter> = (args) => {
+const CounterTemplateDark: ComponentStory<typeof Counter> = args => {
     return (
         <Counter
             {...args}

@@ -12,7 +12,7 @@ export default {
     },
 } as ComponentMeta<typeof Progress>
 
-const ProgressTemplate: ComponentStory<typeof Progress> = (args) => {
+const ProgressTemplate: ComponentStory<typeof Progress> = args => {
     const propArgs = {
         data: {
             color: 'red',

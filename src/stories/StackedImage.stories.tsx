@@ -36,7 +36,7 @@ export default {
     },
 } as ComponentMeta<typeof StackedImage>
 
-const ImageDefaultTemplate: ComponentStory<typeof StackedImage> = (args) => {
+const ImageDefaultTemplate: ComponentStory<typeof StackedImage> = args => {
     return <StackedImage {...args} />
 }
 

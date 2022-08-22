@@ -18,13 +18,11 @@ export default {
     },
 } as ComponentMeta<typeof ColorSelector>
 
-const ColorSelectorTemplate: ComponentStory<typeof ColorSelector> = (args) => {
+const ColorSelectorTemplate: ComponentStory<typeof ColorSelector> = args => {
     return <ColorSelector {...args} />
 }
 
-const ColorSelectorMdTemplate: ComponentStory<typeof ColorSelector> = (
-    args
-) => {
+const ColorSelectorMdTemplate: ComponentStory<typeof ColorSelector> = args => {
     return (
         <ColorSelector
             {...args}
@@ -35,9 +33,7 @@ const ColorSelectorMdTemplate: ComponentStory<typeof ColorSelector> = (
     )
 }
 
-const ColorSelectorlgTemplate: ComponentStory<typeof ColorSelector> = (
-    args
-) => {
+const ColorSelectorlgTemplate: ComponentStory<typeof ColorSelector> = args => {
     return (
         <ColorSelector
             {...args}
@@ -49,9 +45,9 @@ const ColorSelectorlgTemplate: ComponentStory<typeof ColorSelector> = (
     )
 }
 
-const ColorSelectorChangeTestTemplate: ComponentStory<typeof ColorSelector> = (
-    args
-) => {
+const ColorSelectorChangeTestTemplate: ComponentStory<
+    typeof ColorSelector
+> = args => {
     return (
         <ColorSelector
             {...args}

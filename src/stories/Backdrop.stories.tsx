@@ -32,11 +32,11 @@ export default {
     },
 } as ComponentMeta<typeof BackDrop>
 
-const Template: ComponentStory<typeof BackDrop> = (args) => {
+const Template: ComponentStory<typeof BackDrop> = args => {
     return <BackDrop {...args} />
 }
 
-const BackDropTest: ComponentStory<typeof BackDrop> = (args) => {
+const BackDropTest: ComponentStory<typeof BackDrop> = args => {
     return (
         <BackDrop
             {...args}

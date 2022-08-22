@@ -13,11 +13,11 @@ export default {
     },
 } as ComponentMeta<typeof LinkButton>
 
-const Template: ComponentStory<typeof LinkButton> = (args) => {
+const Template: ComponentStory<typeof LinkButton> = args => {
     return <LinkButton {...args} />
 }
 
-const SmTemplate: ComponentStory<typeof LinkButton> = (args) => {
+const SmTemplate: ComponentStory<typeof LinkButton> = args => {
     return (
         <LinkButton
             {...args}
@@ -28,7 +28,7 @@ const SmTemplate: ComponentStory<typeof LinkButton> = (args) => {
     )
 }
 
-const LgTemplate: ComponentStory<typeof LinkButton> = (args) => {
+const LgTemplate: ComponentStory<typeof LinkButton> = args => {
     return (
         <LinkButton
             {...args}
@@ -39,7 +39,7 @@ const LgTemplate: ComponentStory<typeof LinkButton> = (args) => {
     )
 }
 
-const LinkButtonTestAction: ComponentStory<typeof LinkButton> = (args) => {
+const LinkButtonTestAction: ComponentStory<typeof LinkButton> = args => {
     return (
         <LinkButton
             {...args}
@@ -50,7 +50,7 @@ const LinkButtonTestAction: ComponentStory<typeof LinkButton> = (args) => {
     )
 }
 
-const LinkButtonFocusAction: ComponentStory<typeof LinkButton> = (args) => {
+const LinkButtonFocusAction: ComponentStory<typeof LinkButton> = args => {
     return (
         <LinkButton
             {...args}

@@ -23,9 +23,9 @@ export default {
     },
 } as ComponentMeta<typeof PromotionRibbon>
 
-const PromotionRibbonTemplate: ComponentStory<typeof PromotionRibbon> = (
-    args
-) => {
+const PromotionRibbonTemplate: ComponentStory<
+    typeof PromotionRibbon
+> = args => {
     return <PromotionRibbon {...args} />
 }
 

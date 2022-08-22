@@ -24,11 +24,11 @@ export default {
     },
 } as ComponentMeta<typeof Alert>
 
-const AlertTemplate: ComponentStory<typeof Alert> = (args) => {
+const AlertTemplate: ComponentStory<typeof Alert> = args => {
     return <Alert {...args} />
 }
 
-const AlertTestTemplate: ComponentStory<typeof Alert> = (args) => {
+const AlertTestTemplate: ComponentStory<typeof Alert> = args => {
     return (
         <Alert
             {...args}

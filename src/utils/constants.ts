@@ -1,12 +1,12 @@
 /**
- * Colors, border, 
+ * Colors, border,
  * display constants.
  */
 export const errorLevel = {
     ERROR_LEVEL: 0,
     INFO_LEVEL: 1,
     WARN_LEVEL: 2,
-    DEBUG_LEVEL: 3
+    DEBUG_LEVEL: 3,
 }
 
 export const errorColor = {
@@ -241,5 +241,5 @@ export const announcementConstants = {
 
 export const loaderConstants = {
     width: '36px',
-    height: '36px'
+    height: '36px',
 }

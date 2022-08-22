@@ -1,43 +1,53 @@
 import React, { useEffect, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
-import Heading from '../Basic/Heading/Heading';
+import styled from 'styled-components';
+import { colorPalette, commonConstant } from '../../utils/constants';
 import { IClockProps } from './Clock.props';
 
-const StyledDivClock = styled.div`
-    color: #333;
-    display: flex;
+const StyledContainer = styled.div<IClockProps>`
+    font-family: ${commonConstant.fontFamily};
+    color: ${
+        props => props.colorSquash?.timerContainerColor ? props.colorSquash?.timerContainerColor : colorPalette.defaultWhite
+    };
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
 `;
 
-const BlinkAnimation = keyframes`
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: .5;
-    }
-    100%{
-        opacity: 1;
-    }
+const StyledWrapper = styled.div<IClockProps>`
+    padding: 10px;
+    border-radius: 3px;
+    background: ${
+        props => props.colorSquash?.timeWrapperColor ? props.colorSquash?.timeWrapperColor : '#00BF96'
+    };
+    display: inline-block;
+    margin: 4px;
 `;
 
-const StyledDiv = styled.div`
-    align-items: center;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+const StyledUnit = styled.span<IClockProps>`
+    padding: 15px;
+    border-radius: 3px;
+    background: ${
+        props => props.colorSquash?.timerColor ? props.colorSquash?.timerColor : '#00816A'
+    };
+    display: inline-block;
+`;
+
+const StyledText = styled.div<IClockProps>`
+    padding-top: 5px;
+    font-size: 16px;
 `;
 
 const TimerClock = (props: IClockProps) => {
 
     /**
      * @function pad
-     * @description Append `0` if value 
-     * length less than 2.
+     * @description Append `0` if 
+     * value length less than `2`.
      * @param {number} value
      * @returns {string}
      */
-    const pad = (value: number) => {
+    const pad = (value: number): string => {
         let str = value.toString();
         while (str.length < 2) {
             str = `0${str}`;
@@ -80,8 +90,7 @@ const TimerClock = (props: IClockProps) => {
     }
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
-    const timerLabel: ReadonlyArray<string> = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
-    const [noTimeLeftEventTrigger, setNoTimeLeftEventTrigger] = useState(0);
+    const timerLabel: ReadonlyArray<string> = ['DAY', 'HRS.', 'MINS.', 'SECS.'];
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -97,114 +106,64 @@ const TimerClock = (props: IClockProps) => {
      * @param {string} label 
      * @returns {string}
      */
-    const resolveTimerLabel = (label: string) => {
+    const resolveTimerLabel = (label: string):string => {
         if(props?.labelType === 'lower') {
             return label?.toString()?.toLowerCase();
         }
         return label?.toString()?.toUpperCase();
     }
 
-    /**
-     * @function findIfanyHoursRemaining
-     * @description If no days are remaining
-     * trigger no days events if provided any.
-     */
-     const findIfanyHoursRemaining = () => {
-        if(props?.events?.onNoHourRemaining && timeLeft?.hours === '0') {
-            props.events.onNoHourRemaining();
-        }
-    }
-
-    /**
-     * @function findIfanyMinutesRemaining
-     * @description If no days are remaining
-     * trigger no days events if provided any.
-     */
-     const findIfanyMinutesRemaining = () => {
-        if(props?.events?.onNoMinutesRemaining && timeLeft?.minutes === '0') {
-            props.events.onNoMinutesRemaining();
-        }
-    }
-
     return (
         <>
-            { timeLeft ? 
-                <StyledDivClock 
-                >
-                    <StyledDiv>
-                        <Heading 
-                            data={{
-                                headingText: timeLeft?.days
-                            }}
-                            options={{
-                                ...props.clockOptions
-                            }}
-                        />
-                        <Heading 
-                            data={{
-                                headingText: resolveTimerLabel(timerLabel[0])
-                            }}
-                            options={{
-                                ...props.labelOptions
-                            }}
-                        />
-                    </StyledDiv>
-                    <StyledDiv>
-                        <Heading 
-                            data={{
-                                headingText: timeLeft?.hours
-                            }}
-                            options={{
-                                ...props.clockOptions
-                            }}
-                        />
-                        <Heading 
-                            data={{
-                                headingText: resolveTimerLabel(timerLabel[1])
-                            }}
-                            options={{
-                                ...props.labelOptions
-                            }}
-                        />
-                    </StyledDiv>
-                    <StyledDiv>
-                        <Heading 
-                            data={{
-                                headingText: timeLeft?.minutes
-                            }}
-                            options={{
-                                ...props.clockOptions
-                            }}
-                        />
-                        <Heading 
-                            data={{
-                                headingText: resolveTimerLabel(timerLabel[2])
-                            }}
-                            options={{
-                                ...props.labelOptions
-                            }}
-                        />
-                    </StyledDiv>
-                    <StyledDiv>
-                        <Heading 
-                            data={{
-                                headingText: timeLeft?.seconds
-                            }}
-                            options={{
-                                ...props.clockOptions
-                            }}
-                        />
-                        <Heading 
-                            data={{
-                                headingText: resolveTimerLabel(timerLabel[3])
-                            }}
-                            options={{
-                                ...props.labelOptions
-                            }}
-                        />
-                    </StyledDiv>
-                </StyledDivClock>
-                : null
+            {
+                timeLeft ? (
+                    <StyledContainer 
+                        id={props?.id} 
+                        className={props?.className}
+                        {...props}
+                    >
+                        {/* Days */}
+                        <StyledWrapper {...props}>
+                            <StyledUnit {...props}>{timeLeft?.days}</StyledUnit> 
+                            <StyledText {...props}>
+                                {
+                                    resolveTimerLabel(timerLabel[0])
+                                }
+                            </StyledText>
+                        </StyledWrapper>
+
+                        {/* Hours */}
+                        <StyledWrapper {...props}>
+                            <StyledUnit {...props}>{timeLeft?.hours}</StyledUnit> 
+                            <StyledText {...props}>
+                                {
+                                    resolveTimerLabel(timerLabel[1])
+                                }
+                            </StyledText>
+                        </StyledWrapper>
+
+                        {/* Minutes */}
+                        <StyledWrapper {...props}>
+                            <StyledUnit {...props}>{timeLeft?.minutes}</StyledUnit> 
+                            <StyledText {...props}>
+                                {
+                                    resolveTimerLabel(timerLabel[2])
+                                }
+                            </StyledText>
+                        </StyledWrapper>
+
+                        {/* Seconds */}
+                        <StyledWrapper {...props}>
+                            <StyledUnit {...props}>{timeLeft?.seconds}</StyledUnit> 
+                            <StyledText {...props}>
+                                {
+                                    resolveTimerLabel(timerLabel[3])
+                                }
+                            </StyledText>
+                        </StyledWrapper>
+
+                    </StyledContainer>
+                ) : null
             }
         </>
     )
