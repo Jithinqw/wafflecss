@@ -11,11 +11,11 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 ```javascript
     import { TimerClock } from 'wafflecss';
 
-    const date = new Date()
-    date.setDate(date.getDate() + 7);
+    const someFutureDate = new Date();
+    someFutureDate.setDate(someFutureDate.getDate() + 7);
 
     <TimerClock
-        endtime={date.toString()}
+        endtime={someFutureDate.toString()}
     />
 
 ```
