@@ -90,7 +90,10 @@ const StyledOption = styled.select<IDropdownProps>`
 `;
 
 
-const Dropdown = forwardRef((props: IDropdownProps, ref: React.Ref<HTMLSelectElement>) => {
+const Dropdown = forwardRef((
+        props: IDropdownProps, 
+        ref: React.Ref<HTMLSelectElement>
+    ) => {
     const [selectedValue, setSelectedValue] = useState('');
 
     /**
