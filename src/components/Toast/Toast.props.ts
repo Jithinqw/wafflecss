@@ -13,19 +13,27 @@ interface IToastData {
     /**
      * @type {React.ReactNode}
      */
-    toastHeadNode?: React.ReactNode;
+    toastHeadNode?: React.ReactNode | string;
     /**
      * @type {React.ReactNode}
      */
-    toastHeadTextNode?: React.ReactNode;
+    toastHeadTextNode?: React.ReactNode | string;
     /**
      * @type {string}
      */
-    displayText: string;
+    displayText: string | React.ReactNode;
     /**
      * @type {number}
      */
     delay?: number;
+    /**
+     * @type {string}
+     */
+    id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }
 
 interface IToastEvents {

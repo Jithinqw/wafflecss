@@ -85,7 +85,11 @@ const StyledToastBodyText = styled.div`
 
 const Toast = forwardRef((props: IToastProps, ref: React.Ref<HTMLDivElement>) => {
     return (
-        <StyledToastDivContiner ref={ref}>
+        <StyledToastDivContiner 
+            ref={ref} 
+            id={props.data?.id} 
+            className={props.data.className}
+        >
             <StyledToastWrapper>
                 <StyledAlert>
                     <StyledToastBody>
