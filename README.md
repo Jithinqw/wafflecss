@@ -24,8 +24,7 @@
 
 ## Install
 
-This repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), 
-you can install `wafflecss` with this command:
+This repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), you can install `wafflecss` with this command:
 
 ```sh
 npm install --save wafflecss
@@ -41,7 +40,7 @@ Run
 npm run build-storybook
 ```
 
-in your terminal and view on `http://localhost:6006/`
+in your terminal and view on `http://localhost:6006/` in your browser.
 
 ## Testing
 
@@ -60,7 +59,7 @@ Storybook can be build as an UI. Use
 npm run build-storybook
 ```
 
-Current version of storybook is deployed to Vercel can be found [here](https://wafflecss-jithinqw.vercel.app/)
+Current version of storybook is deployed to Vercel can be found [here](https://wafflecss-jithinqw.vercel.app/.
 
 ### Unit Testing
 
@@ -94,11 +93,11 @@ WaffleCSS is maintained under the [Semantic Versioning guidelines](https://semve
 
 ## Bundle Analysis
 
-Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.40).
+Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.46).
 
 ## License
 
-[MIT](./LICENSE) &copy; [Jithin Zacharia](https://jithinqw.github.io/)
+[MIT](./LICENSE) &copy; [Jithin Zacharia](https://jithinqw.github.io/).
 
 ## Packages
 
