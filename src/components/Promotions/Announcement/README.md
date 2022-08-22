@@ -20,15 +20,22 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 
 # Props
 
-## Data
+### Data
+
 | Prop Name   |Is Optional    |  Type |
 |----------|:-------------:|------:|
-| displayNode |  false | string |
+| displayNode |  false | `string | React.ReactNode` |
 
-## Events
+### Events
 
 | Prop Name   |      Is Optional       |  Type |
 |----------|:-------------:|------:|
-| onDismiss |  true | void |
+| onDismiss |  true | `Function` |
 
+### Options
+
+| Prop Name   |      Is Optional       |  Type |
+|----------|:-------------:|------:|
+| className |  true | `string` |
+| id |  true | `string` |
 
