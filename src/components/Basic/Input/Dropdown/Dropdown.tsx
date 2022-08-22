@@ -36,7 +36,7 @@ const resolveDropdownFontSize = (variants: 'sm' | 'md' | 'lg'):string => {
         case 'lg':
             return '1.5rem';
         default:
-            return '0.75rem';
+            return '1rem';
     }
 }
 
