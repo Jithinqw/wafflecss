@@ -32,6 +32,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 |----------|:-------------:|------:|
 | onClick |  true | `Function` |
 | onFocus |  true | `Function` |
+| onKeyDown | true | `Function` |
 
 ## Options
 | Prop Name   |Is Optional    |  Type |

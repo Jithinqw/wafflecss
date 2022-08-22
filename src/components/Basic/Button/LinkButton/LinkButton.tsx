@@ -100,13 +100,28 @@ const LinkButton = (
         }
     }
 
+    /**
+     * @function onEnterKeyPressed
+     * @param {React.KeyboardEvent<HTMLAnchorElement>} e
+     * @returns {void}
+     */
+    const onEnterKeyPressed = (
+            e: React.KeyboardEvent<HTMLAnchorElement>
+        ):void => {
+        if(props.events?.onKeyDown && e.key.toLowerCase() === 'enter') {
+            return props.events.onKeyDown();
+        }
+    }
+
     return (
         <StyledLinkButton 
             onClick={onClickButton}
             onFocus={onFocusButton}
             {...props}
+            role={'button'}
             id={props.options?.id}
             className={props.options?.className}
+            onKeyDown={onEnterKeyPressed}
         >
             {props.data.displayText}
         </StyledLinkButton>

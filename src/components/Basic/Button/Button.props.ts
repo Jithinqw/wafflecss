@@ -49,6 +49,12 @@ interface IButtonEvents {
      * an screen reader functions etc.
      */
     onFocus?:() => void;
+    /**
+     * @function
+     * What should happen if user
+     * presses on Keyboard key
+     */
+    onKeyDown?: () => void;
 }
 
 interface IButtonOptions {
