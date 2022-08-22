@@ -63,7 +63,7 @@ const StyledLabel = styled.span<ICheckboxProps>`
     font-weight: 400;
     line-height: ${
         props => props.options?.variant ? resolveCheckboxLineHeight(props.options.variant) : resolveCheckboxLineHeight('sm')
-    };;
+    };
     text-transform: initial;
     letter-spacing: initial;
     font-family: ${commonConstant.fontFamily};
@@ -80,12 +80,10 @@ const StyledCheckboxInput = styled.input<ICheckboxProps>`
     background-position: center;
     background-size: contain;
     border:  1px solid rgba(0,0,0,.25);
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-    -webkit-print-color-adjust: exact;
     color-adjust: exact;
     print-color-adjust: exact;
+
     &:checked {
         background-color: ${props => props.options?.bgColor ? props.options.bgColor : '#0d6efd'};
         border-color: ${props => props.options?.borderColor ? props.options.borderColor : '#0d6efd'};

@@ -63,10 +63,16 @@ const StyledDismissContainer = styled.div`
     color: #FFFFFF;
 `;
 
-const Announcement = forwardRef(
-    (props: IAnnouncementProps, ref: React.Ref<HTMLDivElement>) => {
+const Announcement = forwardRef((
+        props: IAnnouncementProps, 
+        ref: React.Ref<HTMLDivElement>
+    ) => {
     return (
-        <StyledAnnouncement ref={ref}>
+        <StyledAnnouncement 
+            ref={ref}
+            className={props.options?.className}
+            id={props.options?.id}
+        >
             <StyledWrapper>
                 <StyledSpanAlert>
                     <StyledTextNodeWrapper>

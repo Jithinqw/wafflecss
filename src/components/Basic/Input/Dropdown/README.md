@@ -44,6 +44,7 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 | color |  false | `string` |
 | bgColor |  false | `string` |
 | className |  false | `string` |
+| id |  false | `string` |
 
 ### Events
 

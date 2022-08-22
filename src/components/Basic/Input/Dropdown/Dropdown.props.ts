@@ -43,6 +43,10 @@ interface IDropdownOptions {
      * @type {string}
      */
     className?: string;
+    /**
+     * @type {string}
+     */
+    id?: string;
 }
 
 interface IDropdownEvents {

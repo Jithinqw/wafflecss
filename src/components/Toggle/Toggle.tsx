@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { commonConstant } from "../../utils/constants";
 import { IToggleProps } from "./Toggle.props";
@@ -7,9 +7,12 @@ const StyledDetails = styled.details``;
 const StyledSummary = styled.summary<IToggleProps>`
     margin-bottom: 0.5rem;
     cursor: pointer;
-    font-family: ${props => props.options?.parentStyle?.fontFamily ? props.options?.parentStyle?.fontFamily : commonConstant.fontFamily};
-    font-size: ${props => props.options?.parentStyle?.fontSize ? props.options?.parentStyle?.fontSize : '12px'};
-
+    font-family: ${
+        props => props.options?.parentStyle?.fontFamily ? props.options?.parentStyle?.fontFamily : commonConstant.fontFamily
+    };
+    font-size: ${
+        props => props.options?.parentStyle?.fontSize ? props.options?.parentStyle?.fontSize : '12px'
+    };
     &:first-of-type {
         display: list-item;
         counter-increment: list-item 0;
