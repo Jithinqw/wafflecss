@@ -134,6 +134,7 @@ const TextArea = forwardRef((
             name={props.data?.name}
             id={props.data?.id}
             ref={ref}
+            role={'textbox'}
             cols={props.data?.cols}
             className={props.options?.className}
             rows={props.data?.rows}

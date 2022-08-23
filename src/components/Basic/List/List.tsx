@@ -47,17 +47,22 @@ const StyledUnorderedList = styled.ul`
  * @param {Array<ListData>} listData 
  * @returns {React.ReactNode}
  */
-const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[], spacing?: string) => {
+const resolveList = (
+        listType: 'ordered' | 'unordered', 
+        listData: ListData[], 
+        spacing?: string
+    ) => {
     switch(listType) {
         case 'ordered':
             return (
-                <StyledOrderedList>
+                <StyledOrderedList role={'list'}>
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
                                 <StyledListItem 
                                     key={i} 
                                     spacing={spacing}
+                                    role={'listitem'}
                                 >
                                     {e.listItem}
                                 </StyledListItem>
@@ -68,11 +73,15 @@ const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[], sp
             )
         case 'unordered':
             return (
-                <StyledUnorderedList>
+                <StyledUnorderedList role={'list'}>
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
-                                <StyledListItem key={i} spacing={spacing}>
+                                <StyledListItem 
+                                    key={i} 
+                                    spacing={spacing} 
+                                    role={'listitem'}
+                                >
                                     {e.listItem}
                                 </StyledListItem>
                             )
@@ -82,11 +91,15 @@ const resolveList = (listType: 'ordered' | 'unordered', listData: ListData[], sp
             )
         default:
             return (
-                <StyledUnorderedList>
+                <StyledUnorderedList role={'list'}>
                     {
                         listData.length > 0 && listData.map((e: ListData, i: number) => {
                             return (
-                                <StyledListItem key={i} spacing={spacing}>
+                                <StyledListItem 
+                                    key={i} 
+                                    spacing={spacing} 
+                                    role={'listitem'}
+                                >
                                     {e.listItem}
                                 </StyledListItem>
                             )

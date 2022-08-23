@@ -33,6 +33,7 @@ const resolveStatusType = (
                 <StyledStatusRounded
                     onClick={props.events?.onClick}
                     {...props}
+                    role={'status'}
                     id={props.options?.id}
                     className={props.options?.className}
                 />
@@ -43,6 +44,7 @@ const resolveStatusType = (
                     <StyledStatusRect 
                         onClick={props.events?.onClick}
                         {...props}
+                        role={'status'}
                         id={props.options?.id}
                         className={props.options?.className}
                     />
@@ -53,6 +55,7 @@ const resolveStatusType = (
                 <StyledStatusRounded
                     onClick={props.events?.onClick}
                     {...props}
+                    role={'status'}
                     id={props.options?.id}
                     className={props.options?.className}
                 />

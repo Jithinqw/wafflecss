@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { colorPalette, commonConstant } from "../../../../utils/constants";
 import { ILinkButtonProps } from "./LinkButton.props";
@@ -76,8 +76,9 @@ const StyledLinkButton = styled.a<ILinkButtonProps>`
     --sk-button-margin-vertical: 14px;
 `;
 
-const LinkButton = (
-        props: ILinkButtonProps, 
+const LinkButton = forwardRef((
+        props: ILinkButtonProps,
+        ref: React.Ref<HTMLAnchorElement>
     ) => {
 
     /**
@@ -109,6 +110,7 @@ const LinkButton = (
             e: React.KeyboardEvent<HTMLAnchorElement>
         ):void => {
         if(props.events?.onKeyDown && e.key.toLowerCase() === 'enter') {
+            e.preventDefault();
             return props.events.onKeyDown();
         }
     }
@@ -119,6 +121,7 @@ const LinkButton = (
             onFocus={onFocusButton}
             {...props}
             role={'button'}
+            ref={ref}
             id={props.options?.id}
             className={props.options?.className}
             onKeyDown={onEnterKeyPressed}
@@ -126,6 +129,6 @@ const LinkButton = (
             {props.data.displayText}
         </StyledLinkButton>
     )
-}
+})
 
 export default LinkButton;

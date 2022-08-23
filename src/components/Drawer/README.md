@@ -4,7 +4,7 @@ A React component for displaying a drawer sidebar.
 
 ## Usage
 
-A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/divider--dot-template).
+A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?path=/docs/drawer--default).
 
 ## Example
 
@@ -26,9 +26,9 @@ A deployed version can be found [here](https://wafflecss-jithinqw.vercel.app/?pa
 
 ### Events
 
-| Prop Name   |Is Optional    |  Type |
-|----------|:-------------:|------:|
-| onDismiss |  false | `Function` |
+| Prop Name   |Is Optional    |  Type | Todo |
+|----------|:-------------:|------:| ------:|
+| onDismiss |  false | `Function` | `true` |
 
 ### Options
 

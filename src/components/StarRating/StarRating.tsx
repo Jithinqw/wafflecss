@@ -93,6 +93,7 @@ const StarRating = forwardRef((
                     <StyledStarRating
                         type="button"
                         key={i}
+                        role={'button'}
                         ref={ref}
                         onMouseEnter={() => setHover(i)}
                         onMouseLeave={() => setHover(rating)}

@@ -38,7 +38,12 @@ const Quote = forwardRef((props: IQuoteProps, ref: React.Ref<HTMLQuoteElement>) 
     }
 
     return (
-        <StyledFigure ref={ref} onClick={onClickEventTrigger}>
+        <StyledFigure 
+            ref={ref} 
+            onClick={onClickEventTrigger}
+            id={props?.id}
+            className={props?.className}
+        >
             <StyledQoute {...props}>
                 { props.displayNode &&
                     <StyledText>

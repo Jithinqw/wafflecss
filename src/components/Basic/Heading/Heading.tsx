@@ -121,6 +121,7 @@ const Heading = forwardRef((
             {...props}
             onClick={onClickEvent}
             ref={ref}
+            role={'heading'}
             className={props.options?.className}
         >
             {props.data.headingText}

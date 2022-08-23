@@ -27,17 +27,17 @@
 This repository is distributed with [npm](https://www.npmjs.com/). After [installing npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), you can install `wafflecss` with this command:
 
 ```sh
-npm install --save wafflecss
+    npm install --save wafflecss
 ```
 
 ## Documentation
 
 WaffleCSS documentation is developed under [Docs](wafflecss-docs.vercel.app/), which is
 not currently stable. You can run storybook to access documentation and APIs.
-Run 
+Run,
 
 ```sh
-npm run build-storybook
+    npm run build-storybook
 ```
 
 in your terminal and view on `http://localhost:6006/` in your browser.
@@ -50,13 +50,13 @@ UI testing is done using storybook. After installing [storybook](https://storybo
 storybook using.
 
 ```sh
-npm run storybook
+    npm run storybook
 ```
 
 Storybook can be build as an UI. Use
 
 ```sh
-npm run build-storybook
+    npm run build-storybook
 ```
 
 Current version of storybook is deployed to Vercel can be found [here](https://wafflecss-jithinqw.vercel.app/.
@@ -71,8 +71,8 @@ run run unittest
 
 ## Style Accessibility Guide
 
-WaffleCSS follows [A11y](https://a11y-style-guide.com/style-guide/section-general.html) for 
-accessibility features.
+WaffleCSS follows [A11y](https://a11y-style-guide.com/style-guide/section-general.html) 
+for accessibility features.
 
 ## Contributing
 

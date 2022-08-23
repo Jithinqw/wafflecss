@@ -34,7 +34,10 @@ const StyledLegalText = styled.span<ILegalTextProps>`
 `;
 
 
-const LegalText = forwardRef((props: ILegalTextProps, ref: React.Ref<HTMLSpanElement>) => {
+const LegalText = forwardRef((
+        props: ILegalTextProps, 
+        ref: React.Ref<HTMLSpanElement>
+    ) => {
 
     /**
      * @function OnClickEvent
@@ -52,6 +55,7 @@ const LegalText = forwardRef((props: ILegalTextProps, ref: React.Ref<HTMLSpanEle
             onClick={OnClickEvent}
             ref={ref}
             className={props.options?.className}
+            role={'article'}
         >
             {props.data.displayText}
         </StyledLegalText>

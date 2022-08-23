@@ -108,6 +108,7 @@ const resolveSkeletonType = (
                 <StyledSkeletonCol 
                     {...props} 
                     ref={ref}
+                    role={'progressbar'}
                     id={props.options?.id}
                     className={props.options?.className}
                 />
@@ -115,7 +116,8 @@ const resolveSkeletonType = (
         case 'circle':
             return (
                 <StyledSkeletonCircle 
-                    {...props} 
+                    {...props}
+                    role={'progressbar'}
                     ref={ref}
                     id={props.options?.id}
                     className={props.options?.className}
@@ -126,6 +128,7 @@ const resolveSkeletonType = (
                 <StyledSkeletonCol 
                     {...props} 
                     ref={ref}
+                    role={'progressbar'}
                     id={props.options?.id}
                     className={props.options?.className}
                 />

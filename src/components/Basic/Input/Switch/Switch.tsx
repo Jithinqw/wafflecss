@@ -96,6 +96,7 @@ const Switch = forwardRef((
                 onClick={onClickEvent}
                 ref={ref}
                 {...props}
+                role={'switch'}
                 className={props.options?.className}
             />
             <StyledSwitch {...props}/>

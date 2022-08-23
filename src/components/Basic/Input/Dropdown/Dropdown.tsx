@@ -116,13 +116,20 @@ const Dropdown = forwardRef((
             {...props}
             disabled={props.data?.disabled ? props.data?.disabled : false}
             ref={ref}
+            role={'menu'}
             className={props.options?.className}
             id={props.options?.id}
         >
             {
-                props.data.optionData && props.data.optionData.map((e: ISelectOption, i: number) => {
+                props.data.optionData && 
+                props.data.optionData.length > 0 &&
+                props.data.optionData.map((e: ISelectOption, i: number) => {
                     return (
-                        <option value={e.value} key={i}>
+                        <option 
+                            value={e.value} 
+                            key={i} 
+                            role={'menuitem'}
+                        >
                             {e.displayText}
                         </option>
                     )

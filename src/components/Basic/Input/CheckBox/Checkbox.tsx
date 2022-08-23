@@ -115,6 +115,7 @@ const CheckBox = forwardRef((
                 type={'checkbox'}
                 checked={isChecked}
                 ref={ref}
+                role={'checkbox'}
                 {...props}
                 onChange={onCheckbokStateChange}
                 className={props.options?.className}

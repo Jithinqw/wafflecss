@@ -179,6 +179,7 @@ const TextInput = forwardRef((
             onChange={onChange}
             onKeyPress={onKeyPress}
             onBlur={onBlur}
+            role={'textbox'}
             aria-required="true"
             onFocus={onFocus}
         />

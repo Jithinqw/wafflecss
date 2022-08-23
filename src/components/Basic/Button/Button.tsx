@@ -212,7 +212,11 @@ const Button = forwardRef((
      * @returns {void}
      */
     const onEnterKeyPressed = (e: React.KeyboardEvent<HTMLButtonElement>):void => {
-        if(props.events?.onKeyDown && e.key.toLowerCase() === 'enter') {
+        if(
+            props.events?.onKeyDown && 
+            e.key.toLowerCase() === 'enter'
+        ) {
+            e.preventDefault();
             return props.events.onKeyDown();
         }
     }

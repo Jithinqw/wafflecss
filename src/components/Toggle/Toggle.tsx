@@ -32,7 +32,10 @@ const StyledSummary = styled.summary<IToggleProps>`
 const Toggle = (props: IToggleProps) => {
     return (
         <StyledDetails>
-            <StyledSummary {...props}>
+            <StyledSummary 
+                {...props} 
+                role={'switch'}
+            >
                 {props.data.parentLabel}
             </StyledSummary>
             <div dangerouslySetInnerHTML={props.data.children} />

@@ -37,6 +37,7 @@ const Label = forwardRef((
             ref={ref}
             id={props.options?.id}
             className={props.options?.className}
+            role={'none'}
         >
             {props.data.displayText}
         </StyledLabel>
