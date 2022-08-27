@@ -89,6 +89,7 @@ const Toast = forwardRef((props: IToastProps, ref: React.Ref<HTMLDivElement>) =>
             ref={ref} 
             id={props.data?.id} 
             className={props.data.className}
+            role={'alert'}
         >
             <StyledToastWrapper>
                 <StyledAlert>

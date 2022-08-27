@@ -44,6 +44,7 @@ export { default as StackedProgress } from './components/Progress/StackedProgres
 export { default as Divider } from './components/Divider/Divider';
 export { default as Image } from './components/Basic/Image/Image';
 export { default as TimerClock } from './components/Clock/Clock';
+export { default as Stack } from './components/Layout/Stack/Stack';
 
 export {
     ISelectOption, Utilities,

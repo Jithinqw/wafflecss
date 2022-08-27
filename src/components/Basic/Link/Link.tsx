@@ -60,8 +60,8 @@ const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => 
      */
     const onClickEvent = ():void => {
         if(
-            props.events?.onClick && 
-            props.data && props.data.isDisabled
+            props.events?.onClick &&
+            props.data && !props.data.isDisabled
         ) {
             return props.events.onClick();
         }

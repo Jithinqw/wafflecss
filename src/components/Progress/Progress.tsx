@@ -48,6 +48,9 @@ const Progress = forwardRef((props: IProgressProps, ref: React.Ref<HTMLDivElemen
             onClick={props.events?.onClick} 
             {...props}
             ref={ref}
+            id={props.data.id}
+            className={props.data?.className}
+            role={'progressbar'}
         >
             <ProgressBar {...props}>
                 {props.data?.children}

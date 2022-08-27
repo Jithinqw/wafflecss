@@ -7,7 +7,7 @@ import styled from "styled-components";
  * @param {'dashed' | 'dotted' | 'solid' | 'rounded'} dividerStyle
  * @returns {string}
  */
-const resolveDividerStyle = (dividerStyle: 'dashed' | 'dotted' | 'solid' | 'rounded') => {
+const resolveDividerStyle = (dividerStyle: 'dashed' | 'dotted' | 'solid' | 'rounded'):string => {
     switch(dividerStyle) {
         case 'dotted':
             return '2px dotted #bbb';

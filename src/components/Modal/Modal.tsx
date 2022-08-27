@@ -77,7 +77,10 @@ const Modal = forwardRef(
     (props: IModalProps, ref: React.Ref<HTMLDivElement>) => {
     return (
             props && props.options.isVisible ? (
-                <StyledDivContainer ref={ref}>
+                <StyledDivContainer 
+                    ref={ref}
+                    role={'alertdialog'}
+                >
                     <StyledDialog>
                         <StyledChildDiv>
                             <StyledDialogHeader>

@@ -84,6 +84,7 @@ const Avatar = forwardRef((
                         height={props.data.height}
                         width={props.data.width}
                         alt={props.data.alt}
+                        role={'img'}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
                         className={props.options.className}
@@ -97,6 +98,7 @@ const Avatar = forwardRef((
                         ref={ref}
                         width={props.data.width}
                         alt={props.data.alt}
+                        role={'img'}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
                         className={props.options.className}
@@ -106,6 +108,7 @@ const Avatar = forwardRef((
                 return (
                     <StyledTextAvatar 
                         {...props}
+                        role={'img'}
                         className={props.options.className}
                     >
                         <p>{props.data.avatarText}</p>
@@ -121,6 +124,7 @@ const Avatar = forwardRef((
                         ref={ref}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
+                        role={'img'}
                         className={props.options.className}
                     />
                 )
@@ -132,6 +136,7 @@ const Avatar = forwardRef((
                         width={props.data.width}
                         alt={props.data.alt}
                         ref={ref}
+                        role={'img'}
                         onClick={OnClickEvent}
                         onLoad={onLoadEvent}
                     />

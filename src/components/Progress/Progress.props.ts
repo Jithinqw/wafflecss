@@ -30,6 +30,15 @@ interface IProgressData {
      * @type {boolean}
      */
     animateStripe?: boolean;
+    /**
+     * @type {string}
+     * 
+     */
+    id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
 }
 
 interface IProgressEvents {

@@ -165,10 +165,11 @@ const ColorSelector = forwardRef((
      * @param {React.KeyboardEvent<HTMLInputElement>} e 
      */
      const onRadioStateChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        e.preventDefault();
         if(e.key === 'Tab' || e.key === 'Enter') {
             setIsChecked(!isChecked);
             if(props.events?.onChange) {
-                props.events?.onChange(isChecked);
+                props.events?.onChange(isChecked, e.currentTarget.value);
             }
         }
         
@@ -179,9 +180,10 @@ const ColorSelector = forwardRef((
      * @param {React.FormEvent<HTMLInputElement>} e 
      */
       const onLabelStateChange = (e: React.FormEvent<HTMLLabelElement>) => {
+        e.preventDefault();
         setIsChecked(!isChecked);
-        if(props.events?.onChange) {
-            props.events?.onChange(isChecked);
+        if(props.events?.onChange && e.currentTarget.nodeValue) {
+            props.events?.onChange(isChecked, e.currentTarget.nodeValue);
         }
     }
 
@@ -202,6 +204,8 @@ const ColorSelector = forwardRef((
         <StyledLabel
             onMouseDown={onLabelStateChange}
             {...props}
+            className={props.options?.className}
+            id={props.options?.id}
         >
             <StyledInput
                 ref={ref}

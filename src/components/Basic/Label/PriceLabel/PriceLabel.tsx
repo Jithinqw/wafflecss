@@ -34,7 +34,11 @@ const StyledStrikeLabel = styled.span<IPriceLabelProps>`
  * @param {IPriceLabelProps} props 
  * @param {React.Ref<HTMLSpanElement>} ref 
  */
-const resolvePriceLabel = (isStrikethrough: boolean, props: IPriceLabelProps, ref: React.Ref<HTMLSpanElement>) => {
+const resolvePriceLabel = (
+        isStrikethrough: boolean, 
+        props: IPriceLabelProps, 
+        ref: React.Ref<HTMLSpanElement>
+    ) => {
     if(!isStrikethrough) {
         return(
             <StyledPriceLabel 

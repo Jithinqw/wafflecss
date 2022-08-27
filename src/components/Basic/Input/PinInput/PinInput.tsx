@@ -137,6 +137,7 @@ const PinInput = forwardRef((
             onFocus={onFocusEvent}
             autoComplete="off"
             type={'tel'}
+            role={'textbox'}
             maxLength={1}
             inputMode={'numeric'}
             className={props.options?.className}

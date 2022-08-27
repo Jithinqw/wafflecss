@@ -57,7 +57,10 @@ const StyledImage = styled.img<IStackedImageProps>`
     box-shadow: rgb(255 255 255) 0px 0px 0px 2px;
 `;
 
-const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLDivElement>) => {
+const StackedImage = forwardRef((
+        props: IStackedImageProps, 
+        ref: React.Ref<HTMLDivElement>
+    ) => {
     
     return (
         <>
@@ -77,7 +80,8 @@ const StackedImage = forwardRef((props: IStackedImageProps, ref: React.Ref<HTMLD
                                                     src={e?.imageSource}
                                                     height={e?.height}
                                                     width={e?.width}
-                                                    alt={e?.alt} 
+                                                    alt={e?.alt}
+                                                    role={'img'}
                                                     key={i}
                                                     onClick={e?.onClick}
                                                 />

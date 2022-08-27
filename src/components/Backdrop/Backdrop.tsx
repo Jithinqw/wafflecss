@@ -19,13 +19,17 @@ const StyledBackdrop = styled.div<IBackdropProps>`
     z-index: ${backDropConstants.zIndex};
 `;
 
-const BackDrop = forwardRef((props: IBackdropProps, ref:React.Ref<HTMLDivElement>) => {
+const BackDrop = forwardRef((
+        props: IBackdropProps, 
+        ref:React.Ref<HTMLDivElement>
+    ) => {
     return (
         props.data?.isVisible ?
             <StyledBackdrop 
                 {...props}
                 onClick={props.events?.onClick}
                 ref={ref}
+                role={'presentation'}
             >
                 {props.data?.children}
             </StyledBackdrop> 

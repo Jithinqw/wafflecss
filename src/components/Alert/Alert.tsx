@@ -46,7 +46,10 @@ const StyledAlert = styled.div<IAlertProps>`
     background: ${props => props.options?.variants ? resolveAlertColor(props.options?.variants) : resolveAlertColor('info')};
 `;
 
-const Alert = forwardRef((props: IAlertProps, ref:React.Ref<HTMLDivElement>) => {
+const Alert = forwardRef((
+        props: IAlertProps, 
+        ref:React.Ref<HTMLDivElement>
+    ) => {
 
     return (
         <StyledAlert 
@@ -55,6 +58,7 @@ const Alert = forwardRef((props: IAlertProps, ref:React.Ref<HTMLDivElement>) => 
             onClick={props.events?.onBodyClick}
             ref={ref}
             className={props.options?.className}
+            role={'alert'}
         >
             {props.data.displayText}
         </StyledAlert>

@@ -17,12 +17,22 @@ interface ILinkButtonData {
 interface ILinkButtonEvents {
     /**
      * @function onClick
+     * A callback if a button
+     * is clicked
      */
     onClick?:() => void;
     /**
      * @function onFocus
+     * * A callback if a button
+     * is focused
      */
     onFocus?:() => void;
+    /**
+     * @function onKeyDown
+     * A callback if a enter
+     * is clicked
+     */
+    onKeyDown?: () => void;
 }
 
 interface ILinkButtonOptions {

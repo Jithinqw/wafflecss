@@ -52,6 +52,7 @@ const Counter = forwardRef((
                         ref={ref}
                         onClick={props.events?.onClick}
                         id={props.options?.id}
+                        role={'note'}
                     >
                         {props.data.displayText}
                     </CounterPrimary>

@@ -206,6 +206,21 @@ const Button = forwardRef((
         }
     }
 
+    /**
+     * @function onEnterKeyPressed
+     * @param {React.KeyboardEvent<HTMLButtonElement>} e 
+     * @returns {void}
+     */
+    const onEnterKeyPressed = (e: React.KeyboardEvent<HTMLButtonElement>):void => {
+        if(
+            props.events?.onKeyDown && 
+            e.key.toLowerCase() === 'enter'
+        ) {
+            e.preventDefault();
+            return props.events.onKeyDown();
+        }
+    }
+
     return (
         <StyledDefault 
             {...props} 
@@ -213,6 +228,7 @@ const Button = forwardRef((
             type={props.options?.buttonType ? props.options?.buttonType : 'button'}
             onClick={onClickEvent}
             onFocus={onFocusEvent}
+            onKeyDown={onEnterKeyPressed}
             id={props.data.id}
             role={'button'}
             ref={ref}

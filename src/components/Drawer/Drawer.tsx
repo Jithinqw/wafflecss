@@ -27,7 +27,6 @@ const StyledWrapperDiv = styled.div<IDrawerProps>`
     transform-origin: right center;
     opacity: 1;
     transform: translateX(0px);
-    -webkit-tap-highlight-color: transparent;
     display: block;
     color: rgb(0, 0, 0);
     background-color: ${props =>  props.options?.bgColor ? props.options.bgColor : 'rgb(255, 255, 255)'};
@@ -44,15 +43,21 @@ const StyledWrapperDiv = styled.div<IDrawerProps>`
     outline: 0px;
     z-index: 1;
     padding: 24px;
+    overflow: scroll;
 `;
 
-const Drawer = forwardRef(( props: IDrawerProps, ref: React.Ref<HTMLDivElement>) => {
+const Drawer = forwardRef((
+        props: IDrawerProps, 
+        ref: React.Ref<HTMLDivElement>
+    ) => {
 
     return (
         props.data.isVisible ? (
             <StyledWrapperDiv 
                 {...props} 
                 ref={ref}
+                className={props.options?.className}
+                id={props.options?.id}
             >
                 {props.data.children}
             </StyledWrapperDiv>

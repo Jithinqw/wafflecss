@@ -47,6 +47,7 @@ const Badge = forwardRef((
             onClick={props.events?.onClick}
             ref={ref}
             className={props.options?.className}
+            role={'status'}
         >
             {props.data.displayText}
         </StyledBadge>

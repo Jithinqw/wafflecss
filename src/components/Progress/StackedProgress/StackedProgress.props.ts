@@ -11,4 +11,6 @@ export interface IProgressData {
 interface IStackedProgressOptions {
     height?: string;
     borderRadius?: string;
+    id?: string;
+    className?: string;
 }

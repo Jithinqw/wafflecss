@@ -26,7 +26,10 @@ const StyledSnackBar = styled.div`
     animation: ${animationSnack};
 `;
 
-const SnackBar = forwardRef((props: ISnackBarProps, ref: React.Ref<HTMLDivElement>) => {
+const SnackBar = forwardRef((
+        props: ISnackBarProps, 
+        ref: React.Ref<HTMLDivElement>
+    ) => {
     return (
         props.data.isVisible ? (
             <StyledSnackBar 

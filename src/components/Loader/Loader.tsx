@@ -10,6 +10,7 @@ export interface ILoaderProps {
 const Loader = (props: ILoaderProps) => {
     return (
         <svg 
+            aria-roledescription={'progress'}
             width={props.width ? props.width : loaderConstants.width}
             height={props.height ? props.height : loaderConstants.height}
             viewBox="0 0 38 38" 

@@ -47,6 +47,10 @@ interface IBreadCrumbOptions {
      */
     className?: string;
     /**
+     * Additional ID for HTML
+     */
+    id?: string;
+    /**
      * @type {string}
      * size of the link
      */

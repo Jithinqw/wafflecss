@@ -22,9 +22,15 @@ const StyledProgressItem = styled.span`
 
 const StackedProgress = (props: IStackedProgressProps) => {
     return (
-        <StyledProgressWrapper {...props}>
+        <StyledProgressWrapper 
+            {...props}
+            role={'progressbar'}
+            className={props.options?.className}
+            id={props.options?.id}
+        >
             {
-                props.data && props.data.length > 0 && props.data.map((e: IProgressData, i: number) => {
+                props.data && props.data.length > 0 &&
+                props.data.map((e: IProgressData, i: number) => {
                     return (
                         <StyledProgressItem
                             aria-label={e.bgColor}

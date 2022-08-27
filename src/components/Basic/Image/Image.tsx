@@ -2,7 +2,10 @@ import React, { forwardRef } from "react";
 import { IImageProps } from "./Image.props";
 import Utilities from '../../../utils/common'
 
-const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) => {
+const Image = forwardRef((
+        props: IImageProps, 
+        ref: React.Ref<HTMLImageElement>
+    ) => {
     const [imgSrc, setImageSrc] = React.useState(props.data.imageSrc);
 
     /**
@@ -47,6 +50,7 @@ const Image = forwardRef((props: IImageProps, ref: React.Ref<HTMLImageElement>) 
             alt={props.data?.alt}
             ref={ref}
             id={props.options?.id}
+            role={'img'}
             onError={resolveImageError}
             onClick={OnClickEvent}
             onLoad={onLoadEvent}

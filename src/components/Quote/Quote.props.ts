@@ -14,6 +14,14 @@ export interface IQuoteProps {
      */
     highlightColor?: string;
     /**
+     * @type {string}
+     */
+    id?: string;
+    /**
+     * @type {string}
+     */
+    className?: string;
+    /**
      * Trigger event on click
      */
     onClick?:() => void;

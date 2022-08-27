@@ -121,6 +121,7 @@ const TimerClock = (props: IClockProps) => {
                         id={props?.id} 
                         className={props?.className}
                         {...props}
+                        role={'timer'}
                     >
                         {/* Days */}
                         <StyledWrapper {...props}>
