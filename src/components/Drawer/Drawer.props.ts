@@ -51,4 +51,16 @@ interface IDrawerOptions {
      * control position of drawer
      */
     position?: 'left' | 'right';
+    /**
+     * @type {string}
+     * additional CSS className for
+     * drawer elements
+     */
+    className?: string;
+    /**
+     * @type {string}
+     * additional CSS styles ID for
+     * drawer elements
+     */
+    id?: string;
 }

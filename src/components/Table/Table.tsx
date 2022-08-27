@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
     font-family: ${commonConstant.fontFamily};
 `;
 
-const StyledTable = styled.table`
+const StyledTable = styled.table<ITableProps>`
     font-size: .875rem;
     line-height: 1.25rem;
     text-align: left;
@@ -24,7 +24,7 @@ const StyledTable = styled.table`
     font-family: ${commonConstant.fontFamily};
 `;
 
-const StyledTableHead = styled.thead`
+const StyledTableHead = styled.thead<ITableProps>`
     color: rgb(156 163 175/1);
     background-color: rgb(55 65 81/1);
     font-size: .75rem;
@@ -34,18 +34,18 @@ const StyledTableHead = styled.thead`
     font-family: ${commonConstant.fontFamily};
 `;
 
-const StyledTablebody = styled.tbody`
+const StyledTablebody = styled.tbody<ITableProps>`
     background-color: rgb(255 255 255/1);
     border: 0 solid #e5e7eb;
     box-sizing: border-box;
 `;
 
-const StyledTableTr = styled.tr`
+const StyledTableTr = styled.tr<ITableProps>`
     box-sizing: border-box;
     border: 0 solid #e5e7eb;
 `;
 
-const StyledTableHeadItem = styled.th`
+const StyledTableHeadItem = styled.th<ITableProps>`
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 0.75rem;
@@ -53,7 +53,7 @@ const StyledTableHeadItem = styled.th`
     font-family: ${commonConstant.fontFamily};
 `;
 
-const StyledTableData = styled.td`
+const StyledTableData = styled.td<ITableProps>`
     color: rgb(100 116 139/1);
     padding-left: 2rem;
     padding: 1rem;
@@ -76,8 +76,9 @@ const Table = forwardRef((
             <StyledTable 
                 ref={ref}
                 role={'table'}
+                {...props}
             >
-                <StyledTableHead>
+                <StyledTableHead {...props}>
                     <tr>
                         {
                             props.data && props.data.tableHead &&
@@ -88,6 +89,7 @@ const Table = forwardRef((
                                         scope="col"
                                         key={i}
                                         role={'table'}
+                                        {...props}
                                     >
                                         {e.tableTitle}
                                     </StyledTableHeadItem>
@@ -96,7 +98,7 @@ const Table = forwardRef((
                         }
                     </tr>
                 </StyledTableHead>
-                <StyledTablebody>
+                <StyledTablebody {...props}>
                     {
                         props.data.tableRowData && 
                         props.data.tableRowData.length > 0 &&
@@ -105,6 +107,7 @@ const Table = forwardRef((
                                 <StyledTableTr 
                                     key={i} 
                                     role={'table'}
+                                    {...props}
                                 >
                                     {
                                         props.data.tableRowData &&
@@ -113,6 +116,7 @@ const Table = forwardRef((
                                             return (
                                                 <StyledTableData 
                                                     key={index}
+                                                    {...props}
                                                 >
                                                     {item}
                                                 </StyledTableData>

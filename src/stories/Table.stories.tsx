@@ -7,10 +7,28 @@ export default {
     component: Table,
     args: {
         data: {
-            parentLabel: 'Show your Rights',
-            children: {
-                __html: '<div>You have the right to remain silent</div>',
-            },
+            tableHead: [
+                { tableTitle: 'Aircraft' },
+                { tableTitle: 'Country' },
+                { tableTitle: 'Year of Introduction' },
+            ],
+            tableRowData: [
+                {
+                    tableRow: 'McDonnell Douglas F-15E Strike Eagle',
+                    country: 'USA',
+                    year: '1985',
+                },
+                {
+                    aircraft: 'Lockheed Martin F-35 Lightning II',
+                    country: 'USA',
+                    year: '2006',
+                },
+                {
+                    aircraft: 'IAI Eitan',
+                    country: 'Israel',
+                    year: '2004',
+                },
+            ],
         },
     },
 } as ComponentMeta<typeof Table>
@@ -19,4 +37,4 @@ const Template: ComponentStory<typeof Table> = args => {
     return <Table {...args} />
 }
 
-export const Toggleprimary = Template.bind({})
+export const TableDefault = Template.bind({})

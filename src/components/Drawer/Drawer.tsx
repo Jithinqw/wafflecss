@@ -43,15 +43,21 @@ const StyledWrapperDiv = styled.div<IDrawerProps>`
     outline: 0px;
     z-index: 1;
     padding: 24px;
+    overflow: scroll;
 `;
 
-const Drawer = forwardRef(( props: IDrawerProps, ref: React.Ref<HTMLDivElement>) => {
+const Drawer = forwardRef((
+        props: IDrawerProps, 
+        ref: React.Ref<HTMLDivElement>
+    ) => {
 
     return (
         props.data.isVisible ? (
             <StyledWrapperDiv 
                 {...props} 
                 ref={ref}
+                className={props.options?.className}
+                id={props.options?.id}
             >
                 {props.data.children}
             </StyledWrapperDiv>

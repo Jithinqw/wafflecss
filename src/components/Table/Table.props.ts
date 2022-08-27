@@ -35,4 +35,12 @@ interface ITableOptions {
      * additional CSS classnames
      */
     className?: string;
+    /**
+     * @type {string}
+     */
+    color?: string;
+    /**
+     * @type {light | dark}
+     */
+    type?: 'light'| 'dark';
 }
