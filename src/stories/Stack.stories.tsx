@@ -7,8 +7,14 @@ export default {
     title: 'Stack',
     component: Stack,
     args: {
-        children: (
-            <div>
+        align: 'center',
+        justify: 'flex-end'
+    },
+} as ComponentMeta<typeof Stack>
+
+const StackTemplate: ComponentStory<typeof Stack> = args => {
+    return (
+        <Stack {...args}>
                 <LegalText
                     data={{
                         displayText:
@@ -20,12 +26,7 @@ export default {
                         displayText: 'And say Hey Apple.',
                     }}
                 />
-            </div>
-        ),
-    },
-} as ComponentMeta<typeof Stack>
-
-const StackTemplate: ComponentStory<typeof Stack> = args => {
-    return <Stack {...args} />
+        </Stack>
+        )
 }
 export const DefaultStack = StackTemplate.bind({})

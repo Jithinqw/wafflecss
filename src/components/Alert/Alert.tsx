@@ -43,6 +43,8 @@ const StyledAlert = styled.div<IAlertProps>`
     padding-top: ${alertConstants.paddingTop};
     padding-bottom: ${alertConstants.paddingBottom};
     border-radius: ${alertConstants.borderRadius};
+    transform: none;
+    transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     background: ${props => props.options?.variants ? resolveAlertColor(props.options?.variants) : resolveAlertColor('info')};
 `;
 
