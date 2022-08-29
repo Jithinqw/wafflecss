@@ -8,25 +8,25 @@ export default {
     component: Stack,
     args: {
         align: 'center',
-        justify: 'flex-end'
+        justify: 'flex-end',
     },
 } as ComponentMeta<typeof Stack>
 
 const StackTemplate: ComponentStory<typeof Stack> = args => {
     return (
         <Stack {...args}>
-                <LegalText
-                    data={{
-                        displayText:
-                            'Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad at a Qualifying Location.',
-                    }}
-                />
-                <LegalText
-                    data={{
-                        displayText: 'And say Hey Apple.',
-                    }}
-                />
+            <LegalText
+                data={{
+                    displayText:
+                        'Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad at a Qualifying Location.',
+                }}
+            />
+            <LegalText
+                data={{
+                    displayText: 'And say Hey Apple.',
+                }}
+            />
         </Stack>
-        )
+    )
 }
 export const DefaultStack = StackTemplate.bind({})

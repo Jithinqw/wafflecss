@@ -9,7 +9,6 @@ export default {
 } as ComponentMeta<typeof CloseButton>
 
 const CloseButtonTemplate: ComponentStory<typeof CloseButton> = args => {
-
     return <CloseButton {...args} />
 }
 

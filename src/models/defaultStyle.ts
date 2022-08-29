@@ -1,5 +1,9 @@
-import React from 'react';
+import React from 'react'
 
+export interface Size {
+    width: number | undefined;
+    height: number | undefined;
+}
 /**
  * Default styles applied
  */
@@ -45,37 +49,37 @@ export interface ImageData {
      * @type {string}
      * Image source
      */
-    imageSource: string;
+    imageSource: string
     /**
      * @type {number}
      */
-    height?: number;
+    height?: number
     /**
      * @type {number}
      */
-    width?: number;
+    width?: number
     /**
      * @type {string}
      */
-    alt?: string;
+    alt?: string
     /**
      * @type {Function}
      */
-    onClick?: () => void;
+    onClick?: () => void
 }
 
 /**
  * DropDown attributes
  */
 export interface ISelectOption {
-    displayText: string | React.ReactNode;
-    value: string;
+    displayText: string | React.ReactNode
+    value: string
 }
 
 /**
  * Interface for Checkbox
  */
 export interface ICheckboxData {
-    displayText: string | React.ReactNode;
-    value: string;
+    displayText: string | React.ReactNode
+    value: string
 }

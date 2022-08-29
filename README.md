@@ -9,7 +9,10 @@
 </div>
 
 <h1 align="center">WaffleCSS</h1>
-<p align="center">A React component library for ease of use.</p>
+
+<p align="center">
+    A React component library for ease of use.
+</p>
 
 <div align="center">
 
@@ -66,7 +69,7 @@ Current version of storybook is deployed to Vercel can be found [here](https://w
 Unit testing is done using Jest. After installing [Jest](https://jestjs.io/), you can run Jest test suits using.
 
 ```sh
-run run unittest
+    run run unittest
 ```
 
 ## Style Accessibility Guide
@@ -93,12 +96,22 @@ WaffleCSS is maintained under the [Semantic Versioning guidelines](https://semve
 
 ## Bundle Analysis
 
-Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.46).
+Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/package/wafflecss@1.0.47).
 
 ## License
 
 [MIT](./LICENSE) &copy; [Jithin Zacharia](https://jithinqw.github.io/).
 
-## Packages
+## Package Contents
 
-[Here are the list of packages in WaffleCSS](./packages.md).
+### Components
+
+You can find a list of component published [here]('./packages.md').
+
+### Utilities
+
+Here is a list of Utilities [here](./src/utils/UtilitiesList.md).
+
+### Hooks
+
+Here is a list of Hooks [here](./src/hooks/HooksList.md).
