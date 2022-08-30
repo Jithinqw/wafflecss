@@ -92,5 +92,5 @@ interface ITextAreaOptions {
     /**
      * @type {string}
      */
-     className?: string;
+    className?: string;
 }

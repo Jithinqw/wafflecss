@@ -1,8 +1,23 @@
 import React from "react"
+import { IStyleOptions } from "../../models/defaultStyle";
 import { IButtonProps } from "../Basic/Button/Button.props"
 
-const UnstyledButton = (props: IButtonProps) => {
+interface RemoveButtonProps {
+    options: {
+        size: 'xs' | 'sm' | 'md' | 'lg';
+        buttonType?: 'button' | 'submit' | 'reset';
+        variants?: 'default' | 'danger' | 'success' | 'primary';
+        style?: IStyleOptions;
+    }
+}
 
+interface UnstyledButtonProps extends Omit<IButtonProps, keyof RemoveButtonProps> {
+    className?: string;
+}
+
+const UnstyledButton = (props: UnstyledButtonProps) => {
+
+    
     /**
      * @function onClickEvent
      * @returns {void}
@@ -41,13 +56,12 @@ const UnstyledButton = (props: IButtonProps) => {
     return (
         <button
             disabled={props.data.isDisabled ? props.data.isDisabled : false}
-            type={props.options?.buttonType ? props.options?.buttonType : 'button'}
             onClick={onClickEvent}
             onFocus={onFocusEvent}
             onKeyDown={onEnterKeyPressed}
             id={props.data.id}
             role={'button'}
-            className={props.options?.className}
+            className={props?.className}
         >
             {props.data.displayText}
         </button>

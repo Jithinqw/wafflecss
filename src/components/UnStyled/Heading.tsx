@@ -1,7 +1,16 @@
 import React from "react";
 import { IHeadingProps } from "../Basic/Heading/Heading.props";
 
-interface IUnstyledHeading extends IHeadingProps {
+interface RemoveHeadingProps {
+    options: {
+        style?: 'italics' | 'normal' | 'oblique';
+        weight?: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold';
+        size?: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge';
+        headingColor?: string;
+    }
+}
+
+interface IUnstyledHeading extends Omit<IHeadingProps, keyof RemoveHeadingProps> {
     headingLevel: number;
 }
 
@@ -39,7 +48,7 @@ const UnstyledHeading = (props: IUnstyledHeading) => {
                         role={'heading'}
                         id={props.data?.id}
                         onClick={onClickEvent}
-                        className={props.options?.className}
+                        className={props?.options?.className}
                     >
                         {props.data.headingText}
                     </h2>

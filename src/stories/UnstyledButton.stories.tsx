@@ -10,10 +10,6 @@ export default {
         data: {
             displayText: 'Login Here',
         },
-        options: {
-            variants: 'default',
-            size: 'xs',
-        },
     },
 } as ComponentMeta<typeof UnstyledButton>
 
