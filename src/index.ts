@@ -9,7 +9,7 @@ import {
     ImageData, ISelectOption
 } from './models/defaultStyle';
 
-// Components
+// Styled Components
 export { default as Button } from './components/Basic/Button/Button';
 export { default as Heading } from './components/Basic/Heading/Heading';
 export { default as LegalText } from './components/Basic/Heading/LegalText/LegalText';
@@ -47,6 +47,13 @@ export { default as Image } from './components/Basic/Image/Image';
 export { default as TimerClock } from './components/Clock/Clock';
 export { default as Stack } from './components/Layout/Stack/Stack';
 
+// Unstyled components
+export { default as UnstyledButton } from './components/UnStyled/Button';
+export { default as UnstyledHeading } from './components/UnStyled/Heading';
+export { default as UnStyledLink } from './components/UnStyled/Link';
+export { default as UnstyledTextArea } from './components/UnStyled/TextArea';
+export { default as UnstyledTextInput } from './components/UnStyled/TextInput';
+
 // Hooks
 export { default as useColor } from './hooks/useColor';
 export { default as useHash } from './hooks/useHash';
@@ -60,4 +67,3 @@ export {
     IStyleOptions, ImageData,
     ICheckboxData,
 };
-
