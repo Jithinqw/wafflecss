@@ -108,6 +108,8 @@ Please access bundle analysis for WaffleCSS [here](https://bundlephobia.com/pack
 
 You can find a list of component published [here]('./packages.md').
 
+You can also use unstyled components.
+
 ### Utilities
 
 Here is a list of Utilities [here](./src/utils/UtilitiesList.md).
