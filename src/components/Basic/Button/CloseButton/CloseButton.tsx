@@ -10,7 +10,7 @@ const CloseButton = (props: ICloseButtonProps) => {
      */
     const clickEvent = (): void => {
         if(props.onClick) {
-            props.onClick;
+            return props.onClick();
         }
     }
 

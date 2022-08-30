@@ -58,6 +58,7 @@ export { default as UnstyledTextInput } from './components/UnStyled/TextInput';
 export { default as useColor } from './hooks/useColor';
 export { default as useHash } from './hooks/useHash';
 export { default as useDateDiff } from './hooks/useDateDiff';
+export { default as useRandomNumber } from './hooks/useRandomNumber';
 
 // Utilities
 // Interface / Modals
