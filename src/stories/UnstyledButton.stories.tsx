@@ -1,12 +1,12 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UnstyledButton from '../components/UnStyled/Button';
-import { action } from '@storybook/addon-actions';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import UnstyledButton from '../components/UnStyled/Button'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'UnStyled Button',
     component: UnstyledButton,
-    args:{
+    args: {
         data: {
             displayText: 'Login Here',
         },
@@ -14,10 +14,10 @@ export default {
             variants: 'default',
             size: 'xs',
         },
-    }
+    },
 } as ComponentMeta<typeof UnstyledButton>
 
-const UnStyledButtonTemplate: ComponentStory<typeof UnstyledButton> = (args) => {
+const UnStyledButtonTemplate: ComponentStory<typeof UnstyledButton> = args => {
     return (
         <UnstyledButton
             {...args}
@@ -29,4 +29,4 @@ const UnStyledButtonTemplate: ComponentStory<typeof UnstyledButton> = (args) => 
     )
 }
 
-export const DefaultUnstyledButton = UnStyledButtonTemplate.bind({});
+export const DefaultUnstyledButton = UnStyledButtonTemplate.bind({})

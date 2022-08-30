@@ -1,20 +1,22 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UnstyledHeading from '../components/UnStyled/Heading';
-import { action } from '@storybook/addon-actions';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import UnstyledHeading from '../components/UnStyled/Heading'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'UnStyled Heading',
     component: UnstyledHeading,
-    args:{
+    args: {
         data: {
             headingText: 'Supreme allied commander',
         },
-        headingLevel: 0
-    }
+        headingLevel: 0,
+    },
 } as ComponentMeta<typeof UnstyledHeading>
 
-const UnstyledHeadingTemplate: ComponentStory<typeof UnstyledHeading> = (args) => {
+const UnstyledHeadingTemplate: ComponentStory<
+    typeof UnstyledHeading
+> = args => {
     return (
         <UnstyledHeading
             {...args}
@@ -25,4 +27,4 @@ const UnstyledHeadingTemplate: ComponentStory<typeof UnstyledHeading> = (args) =
     )
 }
 
-export const DefaultUnstyledHeading = UnstyledHeadingTemplate.bind({});
+export const DefaultUnstyledHeading = UnstyledHeadingTemplate.bind({})

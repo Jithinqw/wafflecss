@@ -1,19 +1,19 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UnStyledLink from '../components/UnStyled/Link';
-import { action } from '@storybook/addon-actions';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import UnStyledLink from '../components/UnStyled/Link'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'UnStyled Link',
     component: UnStyledLink,
-    args:{
+    args: {
         data: {
             displayText: 'Shop Unlimited Plans',
         },
-    }
+    },
 } as ComponentMeta<typeof UnStyledLink>
 
-const UnStyledLinkTemplate: ComponentStory<typeof UnStyledLink> = (args) => {
+const UnStyledLinkTemplate: ComponentStory<typeof UnStyledLink> = args => {
     return (
         <UnStyledLink
             {...args}
@@ -24,4 +24,4 @@ const UnStyledLinkTemplate: ComponentStory<typeof UnStyledLink> = (args) => {
     )
 }
 
-export const DefaultUnStyledLink = UnStyledLinkTemplate.bind({});
+export const DefaultUnStyledLink = UnStyledLinkTemplate.bind({})
