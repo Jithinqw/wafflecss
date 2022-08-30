@@ -7,25 +7,26 @@ export default {
     title: 'Stack',
     component: Stack,
     args: {
-        children: (
-            <div>
-                <LegalText
-                    data={{
-                        displayText:
-                            'Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad at a Qualifying Location.',
-                    }}
-                />
-                <LegalText
-                    data={{
-                        displayText: 'And say Hey Apple.',
-                    }}
-                />
-            </div>
-        ),
+        align: 'center',
+        justify: 'flex-end',
     },
 } as ComponentMeta<typeof Stack>
 
 const StackTemplate: ComponentStory<typeof Stack> = args => {
-    return <Stack {...args} />
+    return (
+        <Stack {...args}>
+            <LegalText
+                data={{
+                    displayText:
+                        'Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad at a Qualifying Location.',
+                }}
+            />
+            <LegalText
+                data={{
+                    displayText: 'And say Hey Apple.',
+                }}
+            />
+        </Stack>
+    )
 }
 export const DefaultStack = StackTemplate.bind({})
