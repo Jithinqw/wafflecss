@@ -10,8 +10,6 @@ const StyledStack = styled.div<IStackProps>`
     -webkit-box-pack: ${props => props.justify ? props.justify : 'center'};
     justify-content: ${props => props.justify ? props.justify : 'center'};
     gap: ${props => props.gap ? props.gap : '16px'};
-    background-color: rgb(248, 249, 250);
-    height: 300px;
 `;
 
 const Stack = forwardRef((
