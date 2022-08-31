@@ -14,20 +14,21 @@ export default {
 
 const CircleTemplate: ComponentStory<typeof Skeleton> = args => {
     return (
-        <div style={{width: '500px'}}>
-        <Skeleton {...args} 
-            options={{
-                height: 'lg',
-                type: 'circle',
-            }}
-        />
+        <div style={{ width: '500px' }}>
+            <Skeleton
+                {...args}
+                options={{
+                    height: 'lg',
+                    type: 'circle',
+                }}
+            />
         </div>
     )
 }
 
 const ColTemplate: ComponentStory<typeof Skeleton> = args => {
     return (
-        <div style={{width: '500px'}}>
+        <div style={{ width: '500px' }}>
             <Skeleton
                 {...args}
                 options={{
