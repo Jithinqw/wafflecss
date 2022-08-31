@@ -61,7 +61,7 @@ const UnstyledTextArea = (props: ITextAreaProps) => {
             id={props.data?.id}
             role={'textbox'}
             cols={props.data?.cols}
-            className={props.options?.className}
+            className={props?.options?.className}
             rows={props.data?.rows}
             disabled={props.data?.isDisabled ? props.data?.isDisabled : false}
             onChange={onChange}

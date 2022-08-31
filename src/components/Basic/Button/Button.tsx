@@ -1,5 +1,5 @@
 import React, { forwardRef, memo } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { 
     buttonConstant, 
     colorPalette, commonConstant 

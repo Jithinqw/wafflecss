@@ -1,7 +1,16 @@
 import React from "react";
 import { IHeadingProps } from "../Basic/Heading/Heading.props";
 
-interface IUnstyledHeading extends IHeadingProps {
+interface RemoveHeadingProps {
+    options: {
+        style?: 'italics' | 'normal' | 'oblique';
+        weight?: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold';
+        size?: 'normal' | 'small' | 'extrasmall' | 'large' | 'extralarge';
+        headingColor?: string;
+    }
+}
+
+interface IUnstyledHeading extends Omit<IHeadingProps, keyof RemoveHeadingProps> {
     headingLevel: number;
 }
 
@@ -35,58 +44,58 @@ const UnstyledHeading = (props: IUnstyledHeading) => {
                 )
             case 2:
                 return (
-                    <h1
+                    <h2
                         role={'heading'}
                         id={props.data?.id}
                         onClick={onClickEvent}
-                        className={props.options?.className}
+                        className={props?.options?.className}
                     >
                         {props.data.headingText}
-                    </h1>
+                    </h2>
                 )
             case 3:
                 return (
-                    <h1
+                    <h3
                         role={'heading'}
                         id={props.data?.id}
                         onClick={onClickEvent}
                         className={props.options?.className}
                     >
                         {props.data.headingText}
-                    </h1>
+                    </h3>
                 )
             case 4:
                 return (
-                    <h1
+                    <h4
                         role={'heading'}
                         id={props.data?.id}
                         onClick={onClickEvent}
                         className={props.options?.className}
                     >
                         {props.data.headingText}
-                    </h1>
+                    </h4>
                 )
             case 5:
                 return (
-                    <h1
+                    <h5
                         role={'heading'}
                         id={props.data?.id}
                         onClick={onClickEvent}
                         className={props.options?.className}
                     >
                         {props.data.headingText}
-                    </h1>
+                    </h5>
                 )
                 case 6:
                     return (
-                        <h1
+                        <h6
                             role={'heading'}
                             id={props.data?.id}
                             onClick={onClickEvent}
                             className={props.options?.className}
                         >
                             {props.data.headingText}
-                        </h1>
+                        </h6>
                     )
                 default:
                     return (

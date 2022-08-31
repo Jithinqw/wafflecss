@@ -10,7 +10,7 @@ export interface IStackProps {
     /**
      * @type {'center' | 'flexStart' | 'flex-end' | 'space-between' | 'space-around'}
      */
-    justify?: 'center' | 'flexStart' | 'flex-end' | 'space-between' | 'space-around';
+    justify?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around';
     /**
      * @type {string}
      */

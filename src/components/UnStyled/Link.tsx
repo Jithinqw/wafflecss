@@ -1,7 +1,20 @@
 import React from "react";
 import { ILinkProps } from "../Basic/Link/Link.props"
 
-const UnStyledLink = (props: ILinkProps) => {
+interface RemoveLinkProps {
+    options: {
+        underline?: 'italics' | 'normal' | 'oblique';
+        hoverUnderline?: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold';
+        size?: 'sm' | 'md' | 'lg';
+        headingColor?: string;
+    }
+}
+
+interface UnstyledButtonProps extends Omit<ILinkProps, keyof RemoveLinkProps> {
+    className?: string;
+}
+
+const UnStyledLink = (props: UnstyledButtonProps) => {
 
     /**
      * @function onClickEvent
@@ -19,7 +32,7 @@ const UnStyledLink = (props: ILinkProps) => {
     return (
         <a 
             onClick={onClickEvent}
-            className={props.options?.className}
+            className={props?.className}
             role={'link'}
             id={props.data?.id}
         >

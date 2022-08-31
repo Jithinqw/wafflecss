@@ -11,7 +11,7 @@ import { ISkeletonProps } from "./Skeleton.props";
  * @param {'sm' | 'xs' | 'lg'} height 
  * @returns {string}
  */
-const resolveHeight = (height: 'sm' | 'xs' | 'lg') => {
+const resolveHeight = (height: 'sm' | 'xs' | 'lg'): string => {
     switch(height) {
         case 'sm':
             return skeletonConstants.heightSm;
@@ -25,29 +25,11 @@ const resolveHeight = (height: 'sm' | 'xs' | 'lg') => {
 }
 
 /**
- * @function resolveWidth
- * @param {'sm' | 'xs' | 'lg'} width 
- * @returns {string}
- */
-const resolveWidth = (width: 'sm' | 'xs' | 'lg') => {
-    switch(width) {
-        case 'sm':
-            return skeletonConstants.widthColSm;
-        case 'xs':
-            return skeletonConstants.widthColXs;
-        case 'lg':
-            return '100%';
-        default:
-            return skeletonConstants.widthColSm;
-    }
-}
-
-/**
  * @function resolveCircleRadius
  * @param {'sm' | 'xs' | 'lg'} width 
  * @returns {string}
  */
-const resolveCircleRadius = (width: 'sm' | 'xs' | 'lg') => {
+const resolveCircleRadius = (width: 'sm' | 'xs' | 'lg'):string => {
     switch(width) {
         case 'sm':
             return skeletonConstants.widthSm;
@@ -68,12 +50,11 @@ const glowAnimation = keyframes`
 
 const StyledSkeletonCol = styled.span<ISkeletonProps>`
     display: inline-block;
-    min-height: 1em;
+    width: inherit;
     vertical-align: middle;
     background-color: ${props => props.options?.color ? props.options?.color : colorPalette.defaultGreyColor};
     opacity: .5;
     cursor: ${commonConstant.cursorWait};
-    width: ${props => props.options?.height ? resolveWidth(props.options?.height) : resolveWidth('sm')};
     height: ${props => props.options?.height ? resolveHeight(props.options?.height) : resolveHeight('sm')};
     webkit-animation: ${glowAnimation} 2s ease-in-out infinite;
     animation: ${glowAnimation} 2s ease-in-out infinite;

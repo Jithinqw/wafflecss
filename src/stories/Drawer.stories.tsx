@@ -1,7 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Drawer from '../components/Drawer/Drawer'
-import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'Drawer',

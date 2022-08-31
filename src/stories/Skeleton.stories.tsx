@@ -8,25 +8,35 @@ export default {
     args: {
         options: {
             color: 'teal',
-            type: 'circle',
-            height: 'lg',
         },
     },
 } as ComponentMeta<typeof Skeleton>
 
 const CircleTemplate: ComponentStory<typeof Skeleton> = args => {
-    return <Skeleton {...args} />
+    return (
+        <div style={{ width: '500px' }}>
+            <Skeleton
+                {...args}
+                options={{
+                    height: 'lg',
+                    type: 'circle',
+                }}
+            />
+        </div>
+    )
 }
 
 const ColTemplate: ComponentStory<typeof Skeleton> = args => {
     return (
-        <Skeleton
-            {...args}
-            options={{
-                color: 'teal',
-                type: 'col',
-            }}
-        />
+        <div style={{ width: '500px' }}>
+            <Skeleton
+                {...args}
+                options={{
+                    height: 'sm',
+                    type: 'col',
+                }}
+            />
+        </div>
     )
 }
 export const ColumnSkeleton = ColTemplate.bind({})
