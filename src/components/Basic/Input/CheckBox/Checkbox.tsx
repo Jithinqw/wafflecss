@@ -120,6 +120,7 @@ const CheckBox = forwardRef((
                 ref={ref}
                 role={'checkbox'}
                 {...props}
+                value={props.data.value}
                 onChange={onCheckbokStateChange}
                 className={props.options?.className}
                 id={props.options?.id}
