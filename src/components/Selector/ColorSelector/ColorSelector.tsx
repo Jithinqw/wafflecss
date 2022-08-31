@@ -155,6 +155,7 @@ const ColorSelector = forwardRef((
     ) => {
 
     const [isChecked, setIsChecked] = useState<boolean>(false);
+    const [currentColor, setCurrentColor] = useState<string>('');
 
     useEffect(() =>{
         setIsChecked(props.data.selected);
@@ -168,12 +169,16 @@ const ColorSelector = forwardRef((
         e.preventDefault();
         if(e.key === 'Tab' || e.key === 'Enter') {
             setIsChecked(!isChecked);
-            if(props.events?.onChange) {
-                props.events?.onChange(isChecked, e.currentTarget.value);
-            }
+            setCurrentColor(e.currentTarget.value);
         }
         
     }
+
+    useEffect(() => {
+        if(props.events?.onChange) {
+            props.events?.onChange(isChecked, currentColor);
+        }
+    }, [isChecked]);
 
      /**
      * @function onLabelStateChange
@@ -182,9 +187,6 @@ const ColorSelector = forwardRef((
       const onLabelStateChange = (e: React.FormEvent<HTMLLabelElement>) => {
         e.preventDefault();
         setIsChecked(!isChecked);
-        if(props.events?.onChange && e.currentTarget.nodeValue) {
-            props.events?.onChange(isChecked, e.currentTarget.nodeValue);
-        }
     }
 
     /**
