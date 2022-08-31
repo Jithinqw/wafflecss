@@ -196,7 +196,7 @@ export const skeletonConstants = {
     widthLg: '200px',
     // Height
     heightSm: '0.8em',
-    heightXs: '0.6em',
+    heightXs: '1em',
     heightLg: '1.2em',
     // Col Width
     widthColSm: '150px',
