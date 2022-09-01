@@ -91,10 +91,10 @@ const StyledCheckboxInput = styled.input<ICheckboxProps>`
     };
 `;
 
-const CheckBox = forwardRef((
+const CheckBox = forwardRef<HTMLInputElement, ICheckboxProps>((
         props: ICheckboxProps, 
         ref: React.Ref<HTMLInputElement>
-    ) => {
+    ):JSX.Element => {
     const [isChecked, setIsChecked] = useState<boolean>(false);
 
     /**

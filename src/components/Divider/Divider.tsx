@@ -29,7 +29,7 @@ const StyledHr = styled.hr<IDividerProps>`
     color: ${props => props.data?.color ? props.data.color : '#bbb'};
 `;
 
-const Divider = (props: IDividerProps) => {
+const Divider = (props: IDividerProps):JSX.Element => {
     return (
         <StyledHr 
             className={props.data?.className}

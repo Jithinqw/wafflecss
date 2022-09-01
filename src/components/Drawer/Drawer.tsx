@@ -9,7 +9,7 @@ import { IDrawerProps } from "./Drawer.props";
  * @param {'left' | 'right'} option 
  * @returns {string}
  */
-const resolveSideBarPosition = (option: 'left' | 'right') => {
+const resolveSideBarPosition = (option: 'left' | 'right'):string => {
     switch(option) {
         case 'left':
             return 'left:0';
@@ -46,10 +46,10 @@ const StyledWrapperDiv = styled.div<IDrawerProps>`
     overflow: scroll;
 `;
 
-const Drawer = forwardRef((
+const Drawer = forwardRef<HTMLDivElement, IDrawerProps>((
         props: IDrawerProps, 
         ref: React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element | null => {
 
     return (
         props.data.isVisible ? (

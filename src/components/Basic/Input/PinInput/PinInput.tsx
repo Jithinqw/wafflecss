@@ -99,10 +99,10 @@ const StyledPinInput = styled.input<IPinInputProps>`
     }
 `;
 
-const PinInput = forwardRef((
+const PinInput = forwardRef<HTMLInputElement, IPinInputProps>((
         props: IPinInputProps,
         ref: React.Ref<HTMLInputElement>
-    ) => {
+    ):JSX.Element => {
     
     const [currentText, setCurrentText] = React.useState<string>('');
 

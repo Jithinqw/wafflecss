@@ -11,7 +11,7 @@ import { IContainerProps } from "./Container.props"
  * @param {'sm' | 'md' | 'lg'} containerWidth 
  * @returns {string}
  */
-const resolveContainerWidth = (containerWidth: 'sm' | 'md' | 'lg') => {
+const resolveContainerWidth = (containerWidth: 'sm' | 'md' | 'lg'):string => {
     switch(containerWidth) {
         case 'sm':
             return containerConstants.mdMaxWidth;
@@ -32,10 +32,10 @@ const StyledContainer = styled.div<IContainerProps>`
     padding-inline: ${containerConstants.paddingInline};
 `;
 
-const Container = forwardRef((
+const Container = forwardRef<HTMLDivElement, IContainerProps>((
         props: IContainerProps, 
         ref: React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element => {
 
     return (
         <StyledContainer ref={ref} {...props}>

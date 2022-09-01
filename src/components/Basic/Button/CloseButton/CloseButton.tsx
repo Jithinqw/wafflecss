@@ -2,7 +2,7 @@ import React from "react";
 import { colorPalette } from "../../../../utils/constants";
 import { ICloseButtonProps } from "./CloseButton.props";
 
-const CloseButton = (props: ICloseButtonProps) => {
+const CloseButton = (props: ICloseButtonProps):JSX.Element => {
 
     /**
      * @function clickEvent

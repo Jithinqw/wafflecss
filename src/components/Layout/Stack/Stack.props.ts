@@ -1,4 +1,10 @@
+import React from "react";
+
 export interface IStackProps {
+    /**
+     * @type {React.ReactNode}
+     */
+    children?: React.ReactNode;
     /**
      * @type {string}
      */

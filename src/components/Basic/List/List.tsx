@@ -110,7 +110,7 @@ const resolveList = (
     }
 }
 
-const List = (props: IListProps) => {
+const List = (props: IListProps):JSX.Element => {
     return (
         resolveList(
             props.options?.listType ? props.options?.listType : 'unordered',

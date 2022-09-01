@@ -79,7 +79,7 @@ const resolvePriceLabel = (
 const PriceLabel = forwardRef((
         props: IPriceLabelProps,
         ref: React.Ref<HTMLSpanElement>
-    ) => {
+    ):JSX.Element => {
     const isStrikethrough = props.options?.isStrikethrough ? props.options?.isStrikethrough : false;
 
     return (

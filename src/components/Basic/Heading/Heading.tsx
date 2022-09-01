@@ -100,10 +100,10 @@ const StyledHeading = styled.p<IHeadingProps>`
     display: inline-block;
 `;
 
-const Heading = forwardRef((
+const Heading = forwardRef<HTMLParagraphElement, IHeadingProps>((
         props: IHeadingProps,
         ref: React.Ref<HTMLParagraphElement>
-    ) => {
+    ):JSX.Element => {
     
     /**
      * @function onClickEvent

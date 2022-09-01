@@ -22,7 +22,7 @@ const StyledBackdrop = styled.div<IBackdropProps>`
 const BackDrop = forwardRef((
         props: IBackdropProps, 
         ref:React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element | null => {
     return (
         props.data?.isVisible ?
             <StyledBackdrop 

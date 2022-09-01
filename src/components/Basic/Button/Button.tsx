@@ -181,17 +181,19 @@ const StyledButtonSpan = styled.span`
     grid-area: text / text / text / text;
 `;
 
-const Button = forwardRef((
+const Button = forwardRef<HTMLButtonElement, IButtonProps>((
         props: IButtonProps,
         ref:React.Ref<HTMLButtonElement>
-    ) => {
+    ):JSX.Element => {
 
     /**
      * @function onClickEvent
      * @returns {void}
      */
     const onClickEvent = ():void => {
-        if(props.events?.onClick && !props.data.isDisabled) {
+        if(
+            props.events?.onClick && 
+            !props.data.isDisabled) {
             return props.events.onClick();
         }
     }

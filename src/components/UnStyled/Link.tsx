@@ -7,34 +7,25 @@ interface RemoveLinkProps {
         hoverUnderline?: 'normal' | 'small' | 'extrasmall' | 'bold' | 'extrabold';
         size?: 'sm' | 'md' | 'lg';
         headingColor?: string;
+    },
+    events: {
+        onClick?:() => void;
     }
 }
 
 interface UnstyledButtonProps extends Omit<ILinkProps, keyof RemoveLinkProps> {
     className?: string;
+    href?: string;
 }
 
 const UnStyledLink = (props: UnstyledButtonProps) => {
 
-    /**
-     * @function onClickEvent
-     * @returns {void}
-     */
-     const onClickEvent = ():void => {
-        if(
-            props.events?.onClick &&
-            props.data && !props.data.isDisabled
-        ) {
-            return props.events.onClick();
-        }
-    }
-
     return (
         <a 
-            onClick={onClickEvent}
             className={props?.className}
             role={'link'}
             id={props.data?.id}
+            href={props.href ? props.href : '#'}
         >
             {props.data.displayText}
         </a>

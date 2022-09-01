@@ -15,7 +15,7 @@ const StyledCenter = styled.div<ICenterProps>`
     color: ${props => props.data?.color ? props.data?.color : colorPalette.defaultWhite};
 `;
 
-const Center = forwardRef((props: ICenterProps, ref: React.Ref<HTMLDivElement>) => {
+const Center = forwardRef<HTMLDivElement, ICenterProps>((props: ICenterProps, ref: React.Ref<HTMLDivElement>):JSX.Element => {
     return (
         <StyledCenter 
             {...props} 

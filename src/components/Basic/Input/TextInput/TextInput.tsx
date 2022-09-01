@@ -9,7 +9,7 @@ import { ITextInputProps } from "./TextInput.props";
  * @param {'xs' | 'sm' | 'md' | 'lg'} fontSize 
  * @returns {string}
  */
-const resolveFontSize = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
+const resolveFontSize = (fontSize: 'xs' | 'sm' | 'md' | 'lg'):string => {
     switch(fontSize) {
         case 'xs':
             return '0.75rem';
@@ -29,7 +29,7 @@ const resolveFontSize = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
  * @param {'xs' | 'sm' | 'md' | 'lg'} fontSize 
  * @returns {string}
  */
-const resolveHeight = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
+const resolveHeight = (fontSize: 'xs' | 'sm' | 'md' | 'lg'):string => {
     switch(fontSize) {
         case 'xs':
             return '1.5rem';
@@ -50,7 +50,7 @@ const resolveHeight = (fontSize: 'xs' | 'sm' | 'md' | 'lg') => {
  * @param {string} errorColor 
  * @returns {string}
  */
-const resolveError = (isError?: boolean, errorColor?: string) => {
+const resolveError = (isError?: boolean, errorColor?: string):string => {
     if(isError && errorColor && !Utilities.isEmpty(errorColor)) {
         return errorColor;
     } else if(isError) {
@@ -109,10 +109,10 @@ const StyledTextInput = styled.input<ITextInputProps>`
     }
 `;
 
-const TextInput = forwardRef((
+const TextInput = forwardRef<HTMLInputElement, ITextInputProps>((
         props: ITextInputProps,
         ref: React.Ref<HTMLInputElement>
-    ) => {
+    ):JSX.Element => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
     useEffect(() => {

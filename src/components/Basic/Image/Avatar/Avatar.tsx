@@ -47,7 +47,7 @@ const StyledBorderedAvatarImage = styled.img<IAvatarProps>`
 const Avatar = forwardRef((
         props: IAvatarProps,
         ref: React.Ref<HTMLImageElement>
-    ) => {
+    ):JSX.Element => {
     
     /**
      * @function OnClickEvent

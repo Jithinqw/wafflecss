@@ -14,7 +14,7 @@ import {
  */
 const resolveAlertColor = (
         color: 'error' | 'success' | 'warning' | 'info' | 'dark'
-    ) => {
+    ):string => {
     switch(color) {
         case 'error':
             return colorPalette.errorColor;
@@ -48,10 +48,10 @@ const StyledAlert = styled.div<IAlertProps>`
     background: ${props => props.options?.variants ? resolveAlertColor(props.options?.variants) : resolveAlertColor('info')};
 `;
 
-const Alert = forwardRef((
+const Alert = forwardRef<HTMLDivElement, IAlertProps>((
         props: IAlertProps, 
         ref:React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element => {
 
     return (
         <StyledAlert 

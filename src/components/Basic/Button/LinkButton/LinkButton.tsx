@@ -76,10 +76,10 @@ const StyledLinkButton = styled.a<ILinkButtonProps>`
     --sk-button-margin-vertical: 14px;
 `;
 
-const LinkButton = forwardRef((
+const LinkButton = forwardRef<HTMLAnchorElement, ILinkButtonProps>((
         props: ILinkButtonProps,
         ref: React.Ref<HTMLAnchorElement>
-    ) => {
+    ):JSX.Element => {
 
     /**
      * @function onClickButton

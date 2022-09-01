@@ -38,7 +38,7 @@ const StyledText = styled.div<IClockProps>`
     font-size: 16px;
 `;
 
-const TimerClock = (props: IClockProps) => {
+const TimerClock = (props: IClockProps):JSX.Element | null => {
 
     /**
      * @function pad

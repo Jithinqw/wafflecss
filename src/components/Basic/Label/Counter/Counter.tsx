@@ -33,10 +33,10 @@ const CounterDark = styled.span`
     border-radius: 2em;
 `;
 
-const Counter = forwardRef((
+const Counter = forwardRef<HTMLSpanElement, ICounterProps>((
         props: ICounterProps,
         ref: React.Ref<HTMLSpanElement>
-    ) => {
+    ):JSX.Element => {
 
     /**
      * @function resolveCounterTheme

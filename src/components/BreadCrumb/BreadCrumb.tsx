@@ -23,10 +23,10 @@ const StyledListItem = styled.li<IBreadCrumbProps>`
     }
 `;
 
-const BreadCrumb = forwardRef((
+const BreadCrumb = forwardRef<HTMLOListElement, IBreadCrumbProps>((
         props: IBreadCrumbProps, 
         ref: React.Ref<HTMLOListElement>
-    ) => {
+    ):JSX.Element => {
     
     /**
      * @function triggerOnClick
