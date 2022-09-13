@@ -10,30 +10,30 @@ export default {
 } as ComponentMeta<typeof Drawer>
 
 const DrawerTemplate: ComponentStory<typeof Drawer> = args => {
-    const [showDrawer, setDrawerState] = useState<boolean>(false);
+    const [showDrawer, setDrawerState] = useState<boolean>(false)
 
     const openDrawer = () => {
-        setDrawerState(!showDrawer);
+        setDrawerState(!showDrawer)
     }
 
     return (
         <>
-            <Button 
+            <Button
                 data={{
-                    displayText: 'Click here to open up drawer'
+                    displayText: 'Click here to open up drawer',
                 }}
                 events={{
-                    onClick:openDrawer
+                    onClick: openDrawer,
                 }}
             />
-            <Drawer 
+            <Drawer
                 data={{
                     isVisible: showDrawer,
                     children: (
                         <>
                             <div>child Div</div>
                         </>
-                    )
+                    ),
                 }}
             />
         </>
