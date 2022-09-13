@@ -1,17 +1,17 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
-import { backDropConstants } from "../../utils/constants";
+import { backDropConstants, commonConstant } from "../../utils/constants";
 import { IBackdropProps } from "./Backdrop.props";
 
 const StyledBackdrop = styled.div<IBackdropProps>`
-    opacity: 1;
+    opacity: ${commonConstant.defaultOpacity};
     transition: ${backDropConstants.defaultTransition};
-    position: fixed;
-    display: flex;
+    position: ${commonConstant.defaultFixedPosition};
+    display: ${commonConstant.flexDisplay};
     -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
+    align-items: ${commonConstant.alignItemCenter};
+    -webkit-box-pack: ${commonConstant.alignItemCenter};
+    justify-content: ${commonConstant.alignItemCenter};
     inset: ${backDropConstants.insetDefault};
     background-color: ${props => props.options?.bgColor ? props.options?.bgColor : backDropConstants.bgColor};
     -webkit-tap-highlight-color: transparent;

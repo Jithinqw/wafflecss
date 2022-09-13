@@ -13,7 +13,7 @@ const StyledStack = styled.div<IStackProps>`
 `;
 
 const Stack = forwardRef<HTMLDivElement, IStackProps>((
-        props: IStackProps, 
+        props: IStackProps,
         ref: React.Ref<HTMLDivElement>
     ):JSX.Element => {
     return (
