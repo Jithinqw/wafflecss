@@ -2,10 +2,10 @@ import React, { forwardRef } from "react";
 import { IImageProps } from "./Image.props";
 import Utilities from '../../../utils/common'
 
-const Image = forwardRef((
+const Image = forwardRef<HTMLImageElement, IImageProps>((
         props: IImageProps, 
         ref: React.Ref<HTMLImageElement>
-    ) => {
+    ):JSX.Element => {
     const [imgSrc, setImageSrc] = React.useState(props.data.imageSrc);
 
     /**

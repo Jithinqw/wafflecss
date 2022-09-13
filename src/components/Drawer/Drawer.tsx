@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { IDrawerProps } from "./Drawer.props";
 
 /**
@@ -9,7 +9,7 @@ import { IDrawerProps } from "./Drawer.props";
  * @param {'left' | 'right'} option 
  * @returns {string}
  */
-const resolveSideBarPosition = (option: 'left' | 'right') => {
+const resolveSideBarPosition = (option: 'left' | 'right'):string => {
     switch(option) {
         case 'left':
             return 'left:0';
@@ -20,13 +20,18 @@ const resolveSideBarPosition = (option: 'left' | 'right') => {
     }
 }
 
+const slideIn = keyframes`
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+`;
+
+
 const StyledWrapperDiv = styled.div<IDrawerProps>`
-    transition-property: transform, opacity;
-    transition-duration: 250ms;
-    transition-timing-function: ease;
-    transform-origin: right center;
     opacity: 1;
-    transform: translateX(0px);
     display: block;
     color: rgb(0, 0, 0);
     background-color: ${props =>  props.options?.bgColor ? props.options.bgColor : 'rgb(255, 255, 255)'};
@@ -44,12 +49,14 @@ const StyledWrapperDiv = styled.div<IDrawerProps>`
     z-index: 1;
     padding: 24px;
     overflow: scroll;
+    animation: ${slideIn} 10ms;
+    animation-delay: 10ms;
 `;
 
-const Drawer = forwardRef((
+const Drawer = forwardRef<HTMLDivElement, IDrawerProps>((
         props: IDrawerProps, 
         ref: React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element | null => {
 
     return (
         props.data.isVisible ? (

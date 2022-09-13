@@ -62,7 +62,9 @@ const resolvePinTextRadius = (pinStyle: 'xs' | 'sm' | 'md' | 'lg') => {
 }
 
 const StyledPinInput = styled.input<IPinInputProps>`
-    width: ${props => props.options?.size ? resolvePinSize(props.options.size) : resolvePinSize('md')};
+    width: ${
+        props => props.options?.size ? resolvePinSize(props.options.size) : resolvePinSize('md')
+    };
     min-width: 0px;
     outline: transparent solid 2px;
     outline-offset: 2px;
@@ -73,8 +75,12 @@ const StyledPinInput = styled.input<IPinInputProps>`
     transition-duration: 200ms;
     text-align: center;
     font-size: 1rem;
-    height: ${props => props.options?.size ? resolvePinSize(props.options.size) : resolvePinSize('md')};
-    border-radius: ${props => props.options?.size ? resolvePinTextRadius(props.options.size) : resolvePinTextRadius('md')};
+    height: ${
+        props => props.options?.size ? resolvePinSize(props.options.size) : resolvePinSize('md')
+    };
+    border-radius: ${
+        props => props.options?.size ? resolvePinTextRadius(props.options.size) : resolvePinTextRadius('md')
+    };
     border-width: 1px;
     border-style: solid;
     border-image: initial;
@@ -89,14 +95,14 @@ const StyledPinInput = styled.input<IPinInputProps>`
     }
     ::placeholder {
         font-family: ${commonConstant.fontFamily};
-        font-size: 12px;
+        font-size: 8px;
     }
 `;
 
-const PinInput = forwardRef((
+const PinInput = forwardRef<HTMLInputElement, IPinInputProps>((
         props: IPinInputProps,
         ref: React.Ref<HTMLInputElement>
-    ) => {
+    ):JSX.Element => {
     
     const [currentText, setCurrentText] = React.useState<string>('');
 

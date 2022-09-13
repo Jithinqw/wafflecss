@@ -46,7 +46,7 @@ const StyledCardFooter = styled.div`
 
 `;
 
-const Card = (props: ICardProps) => {
+const Card = (props: ICardProps):JSX.Element => {
     return (
         <StyledCardWrapper>
             <StyledCardTitleSection>

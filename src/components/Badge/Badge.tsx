@@ -40,7 +40,7 @@ const StyledBadge = styled.span<IBadgeProps>`
 const Badge = forwardRef((
         props: IBadgeProps, 
         ref: React.Ref<HTMLSpanElement>
-    ) => {
+    ):JSX.Element => {
     return (
         <StyledBadge 
             {...props}

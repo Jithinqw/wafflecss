@@ -11,7 +11,7 @@ import ILegalTextProps from "./LegalText.props";
  * @param {'sm' | 'md' | 'lg'} style 
  * @returns {string}
  */
-const makeLegalStyle = (style?: 'sm' | 'md' | 'lg') => {
+const makeLegalStyle = (style?: 'sm' | 'md' | 'lg'):string => {
     switch(style) {
         case 'sm':
             return legalTextConstant.textStyleScale.sm;
@@ -34,10 +34,10 @@ const StyledLegalText = styled.span<ILegalTextProps>`
 `;
 
 
-const LegalText = forwardRef((
+const LegalText = forwardRef<HTMLSpanElement, ILegalTextProps>((
         props: ILegalTextProps, 
         ref: React.Ref<HTMLSpanElement>
-    ) => {
+    ):JSX.Element => {
 
     /**
      * @function OnClickEvent

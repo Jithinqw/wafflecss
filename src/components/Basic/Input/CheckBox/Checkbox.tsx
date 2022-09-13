@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { colorPalette, commonConstant } from "../../../../utils/constants";
 import { ICheckboxProps } from "./Checkbox.props";
@@ -91,10 +91,10 @@ const StyledCheckboxInput = styled.input<ICheckboxProps>`
     };
 `;
 
-const CheckBox = forwardRef((
+const CheckBox = forwardRef<HTMLInputElement, ICheckboxProps>((
         props: ICheckboxProps, 
         ref: React.Ref<HTMLInputElement>
-    ) => {
+    ):JSX.Element => {
     const [isChecked, setIsChecked] = useState<boolean>(false);
 
     /**
@@ -104,10 +104,13 @@ const CheckBox = forwardRef((
      */
     const onCheckbokStateChange = (e: React.FormEvent<HTMLInputElement>): void => {
         setIsChecked(e?.currentTarget?.checked);
-        if(props.events?.onCheckboxChange) {
-            props.events?.onCheckboxChange(e?.currentTarget?.checked);
-        }
     }
+
+    useEffect(() => {
+        if(props.events?.onCheckboxChange) {
+            props.events?.onCheckboxChange(isChecked);
+        }
+    },[isChecked]);
 
     return(
         <span>
@@ -117,6 +120,7 @@ const CheckBox = forwardRef((
                 ref={ref}
                 role={'checkbox'}
                 {...props}
+                value={props.data.value}
                 onChange={onCheckbokStateChange}
                 className={props.options?.className}
                 id={props.options?.id}

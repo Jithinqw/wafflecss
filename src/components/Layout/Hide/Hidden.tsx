@@ -23,7 +23,7 @@ const StyledHidden = styled.div<IHiddenProps>`
     ${props => props.options?.type ? resolveHiddenStyle(props.options?.type) : resolveHiddenStyle('hidden')};
 `;
 
-const Hidden = forwardRef((props: IHiddenProps, ref: React.Ref<HTMLDivElement>) => {
+const Hidden = forwardRef<HTMLDivElement, IHiddenProps>((props: IHiddenProps, ref: React.Ref<HTMLDivElement>):JSX.Element => {
     return (
         <StyledHidden 
             ref={ref} 

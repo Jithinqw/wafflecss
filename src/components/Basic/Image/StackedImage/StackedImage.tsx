@@ -60,7 +60,7 @@ const StyledImage = styled.img<IStackedImageProps>`
 const StackedImage = forwardRef((
         props: IStackedImageProps, 
         ref: React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element => {
     
     return (
         <>

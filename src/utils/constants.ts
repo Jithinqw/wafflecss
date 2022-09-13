@@ -24,6 +24,8 @@ export const commonConstant = {
     flexRowDirection: 'row',
     alignItemCenter: 'center',
     defaultNone: '',
+    defaultOpacity: 1,
+    defaultFixedPosition: 'fixed',
     //Font
     fontFamily:
         'Söhne, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',

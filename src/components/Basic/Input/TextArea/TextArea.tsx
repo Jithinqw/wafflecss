@@ -71,10 +71,10 @@ const StyledTextArea = styled.textarea<ITextAreaProps>`
     }
 `;
 
-const TextArea = forwardRef((
+const TextArea = forwardRef<HTMLTextAreaElement, ITextAreaProps>((
         props: ITextAreaProps,
         ref: React.Ref<HTMLTextAreaElement>
-    ) => {
+    ):JSX.Element => {
     const [currentText, setCurrentText] = React.useState<string>('');
 
     useEffect(() => {

@@ -12,10 +12,10 @@ const StyledStack = styled.div<IStackProps>`
     gap: ${props => props.gap ? props.gap : '16px'};
 `;
 
-const Stack = forwardRef((
-        props: IStackProps, 
+const Stack = forwardRef<HTMLDivElement, IStackProps>((
+        props: IStackProps,
         ref: React.Ref<HTMLDivElement>
-    ) => {
+    ):JSX.Element => {
     return (
         <StyledStack 
             ref={ref}
@@ -23,6 +23,7 @@ const Stack = forwardRef((
             className={props?.className}
             {...props}
         >
+            {props.children}
         </StyledStack>
     )
 });

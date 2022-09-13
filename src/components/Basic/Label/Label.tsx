@@ -27,10 +27,10 @@ const StyledLabel = styled.label<ILabelProps>`
     font-size: ${props => props.options?.fontSize ? resolveLabelSize(props.options?.size) : resolveLabelSize('md')};
 `;
 
-const Label = forwardRef((
+const Label = forwardRef<HTMLLabelElement, ILabelProps>((
         props: ILabelProps,
         ref: React.Ref<HTMLLabelElement>
-    ) => {
+    ):JSX.Element => {
     return (
         <StyledLabel 
             {...props}

@@ -52,7 +52,9 @@ const StyledLink = styled.span<ILinkProps>`
     }
 `;
 
-const Link = forwardRef((props: ILinkProps, ref: React.Ref<HTMLSpanElement>) => {
+const Link = forwardRef<HTMLLinkElement, ILinkProps>((
+        props: ILinkProps, ref: React.Ref<HTMLSpanElement>
+    ):JSX.Element => {
 
     /**
      * @function onClickEvent
