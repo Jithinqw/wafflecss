@@ -14,7 +14,7 @@ const StyledSwitch = styled.div<ISwitchProps>`
     position: relative;
     min-width: 65px;
     width: inherit;
-    height: 32px;
+    height: ${props => props.options?.size ? resolveSwitchSize(props.options.size) : resolveSwitchSize('md')};
     background: ${colorPalette.switchColor};
     border-radius: 32px;
     padding: 4px;
@@ -22,11 +22,11 @@ const StyledSwitch = styled.div<ISwitchProps>`
     &:before {
         content: "";
         position: absolute;
-        width: 28px;
-        height: 28px;
+        width: ${props => props.options?.size ? resolveSwitchCircle(props.options.size) : resolveSwitchCircle('sm')};
+        height: ${props => props.options?.size ? resolveSwitchCircle(props.options.size) : resolveSwitchCircle('sm')};
         border-radius: 35px;
         top: 50%;
-        left: 4px;
+        left: ${props => props.options?.size ? resolveLeftSwitchPosition(props.options.size) : resolveLeftSwitchPosition('sm')};;
         background: white;
         transform: translate(0, -50%);
     }
@@ -47,16 +47,16 @@ const Input = styled.input<ISwitchProps>`
  * @param {sm | md | lg} switchSize 
  * @returns {string}
  */
-const resolveSwitchSize = (switchSize: 'sm' | 'md' | 'lg') => {
+const resolveSwitchSize = (switchSize: 'sm' | 'md' | 'lg'):string => {
     switch(switchSize) {
         case 'sm':
-            return '';
+            return '12px';
         case 'md':
-            return '';
+            return '20px';
         case 'lg':
-            return '';
+            return '24px';
         default:
-            return '';
+            return '20px';
     }
 }
 
@@ -65,16 +65,34 @@ const resolveSwitchSize = (switchSize: 'sm' | 'md' | 'lg') => {
  * @param {sm | md | lg} switchSize 
  * @returns {string}
  */
- const resolveSwitchCircle = (switchSize: 'sm' | 'md' | 'lg') => {
+ const resolveSwitchCircle = (switchSize: 'sm' | 'md' | 'lg'):string => {
     switch(switchSize) {
         case 'sm':
-            return '';
+            return '12px';
         case 'md':
-            return '';
+            return '18px';
         case 'lg':
-            return '';
+            return '20px';
         default:
-            return '';
+            return '18px';
+    }
+}
+
+/**
+ * @function resolveLeftSwitchPosition
+ * @param {'sm' | 'md' | 'lg'} switchSize 
+ * @returns {string}
+ */
+const resolveLeftSwitchPosition = (switchSize: 'sm' | 'md' | 'lg'):string => {
+    switch(switchSize) {
+        case 'sm':
+            return '12px';
+        case 'md':
+            return '10px';
+        case 'lg':
+            return '14px';
+        default:
+            return '20px';
     }
 }
 
