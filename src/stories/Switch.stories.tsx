@@ -6,17 +6,13 @@ export default {
     title: 'Switch',
     component: Switch,
     args: {
-        options:{
-            size: 'lg'
+        options: {
+            size: 'lg',
         },
     },
 } as ComponentMeta<typeof Switch>
 
-const Template: ComponentStory<typeof Switch> = (args) => {
-    return (
-        <Switch 
-            {...args}
-        />
-    )
+const Template: ComponentStory<typeof Switch> = args => {
+    return <Switch {...args} />
 }
 export const SwitchPrimary = Template.bind({})
