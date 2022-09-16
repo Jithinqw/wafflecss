@@ -3,6 +3,38 @@ import styled from "styled-components";
 import { commonConstant } from "../../utils/constants";
 import { ITableProps } from "./Table.props";
 
+/**
+ * @function resolveTableTheme
+ * @param {'light' | 'dark'} theme 
+ * @returns {string}
+ */
+const resolveTableTheme = (theme: 'light' | 'dark'):string => {
+    switch(theme) {
+        case 'dark':
+            return 'rgb(4 4 4)';
+        case 'light':
+            return 'rgb(229, 231, 235)';
+        default:
+            return 'rgb(229, 231, 235)';
+    }
+}
+
+/**
+ * @function resolveTableHeadTheme
+ * @param {'light' | 'dark'} theme 
+ * @returns {string}
+ */
+const resolveTableHeadTheme = (theme: 'light' | 'dark'):string => {
+    switch(theme) {
+        case 'dark':
+            return 'rgb(255 255 255)';
+        case 'light':
+            return 'rgb(0 0 0)';
+        default:
+            return 'rgb(0 0 0)';
+    }
+}
+
 const StyledContainer = styled.div`
     box-shadow: 0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000, 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
     overflow-x: auto;
@@ -25,8 +57,8 @@ const StyledTable = styled.table<ITableProps>`
 `;
 
 const StyledTableHead = styled.thead<ITableProps>`
-    color: rgb(156 163 175/1);
-    background-color: rgb(55 65 81/1);
+    color: ${props => props.options?.type ? resolveTableHeadTheme(props.options.type) : resolveTableHeadTheme('light')};
+    background-color: ${props => props.options?.type ? resolveTableTheme(props.options.type) : resolveTableTheme('light')};
     font-size: .75rem;
     line-height: 1rem;
     display: table-header-group;
@@ -54,7 +86,7 @@ const StyledTableHeadItem = styled.th<ITableProps>`
 `;
 
 const StyledTableData = styled.td<ITableProps>`
-    color: rgb(100 116 139/1);
+    color: rgb(4 4 4);
     padding-left: 2rem;
     padding: 1rem;
     border-color: rgb(241 245 249/1);
