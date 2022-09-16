@@ -30,6 +30,9 @@ export default {
                 },
             ],
         },
+        options: {
+            type: 'dark',
+        },
     },
 } as ComponentMeta<typeof Table>
 
