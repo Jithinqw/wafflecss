@@ -5,15 +5,19 @@ import Progress from '../components/Progress/Progress'
 export default {
     title: 'Progress',
     component: Progress,
-    argTypes: {
+    argTypes:{
         data: {
-            displayText: 'Hey Button',
+            color: {
+                name: 'color',
+                type: { name: 'string', required: true},
+                defaultValue: 'red',
+            }
         },
+        events: {
+            onClick: Function
+        }
     },
-} as ComponentMeta<typeof Progress>
-
-const ProgressTemplate: ComponentStory<typeof Progress> = args => {
-    const propArgs = {
+    args: {
         data: {
             color: 'red',
             width: '10%',
@@ -21,7 +25,10 @@ const ProgressTemplate: ComponentStory<typeof Progress> = args => {
             enableStripe: true,
             animateStripe: true,
         },
-    }
-    return <Progress {...propArgs} />
+    },
+} as ComponentMeta<typeof Progress>
+
+const ProgressTemplate: ComponentStory<typeof Progress> = args => {
+    return <Progress {...args} />
 }
 export const DefaultProgressBar = ProgressTemplate.bind({})
