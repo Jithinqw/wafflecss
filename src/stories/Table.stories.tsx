@@ -14,7 +14,7 @@ export default {
             ],
             tableRowData: [
                 {
-                    tableRow: 'McDonnell Douglas F-15E Strike Eagle',
+                    aircraft: 'McDonnell Douglas F-15E Strike Eagle',
                     country: 'USA',
                     year: '1985',
                 },
