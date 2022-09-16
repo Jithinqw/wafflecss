@@ -68,6 +68,7 @@ const Table = forwardRef((
         props: ITableProps,
         ref: React.Ref<HTMLTableElement>
     ) => {
+        console.log(props.data.tableRowData)
     return (
         <StyledContainer
             className={props.options?.className}
@@ -110,13 +111,12 @@ const Table = forwardRef((
                                     {...props}
                                 >
                                     {
-                                        props.data.tableRowData &&
-                                        props.data.tableRowData.length > 0 &&
+                                        e && Object.values(e).length > 0 && 
                                         Object.values(e).map((item, index) => {
                                             return (
                                                 <StyledTableData 
+                                                    {...props} 
                                                     key={index}
-                                                    {...props}
                                                 >
                                                     {item}
                                                 </StyledTableData>

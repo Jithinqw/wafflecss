@@ -7,7 +7,7 @@ export interface ITableProps {
 
 export interface ITableData {
     tableHead: Array<ITableTitleData>;
-    tableRowData: Array<ITableRow>;
+    tableRowData: Array<Object>;
 }
 
 export interface ITableTitleData {
