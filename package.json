@@ -1,6 +1,6 @@
 {
   "name": "wafflecss",
-  "version": "1.0.47",
+  "version": "1.0.48",
   "description": "Fast, Composable & Instant React Components, Utilities and Hooks.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
