@@ -62,7 +62,7 @@ Storybook can be build as an UI. Use
     npm run build-storybook
 ```
 
-Current version of storybook is deployed to Vercel can be found [here](https://wafflecss-jithinqw.vercel.app/.
+Current version of storybook is deployed to Vercel can be found [here](https://wafflecss-jithinqw.vercel.app/).
 
 ### Unit Testing
 
